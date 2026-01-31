@@ -10,7 +10,21 @@
         "@SpawnFlashwing",
         "@SpawnSnecko",
         "@SpawnWaxPinion",
-        "@SpawnEmberMaker"
+        "@SpawnEmberMaker",
+        "@SpawnAncientSavant",
+        "@SpawnAncientPyreSnail",
+        "@SpawnPowerWardBeta",
+        "@SpawnShifterWardBeta",
+        "@SpawnAppleElixir",
+        "@SpawnJellyScholar",
+        "@SpawnNewtons",
+        "@SpawnMinervaOwl",
+        "@SpawnMorsowl",
+        "@SpawnFireshaped",
+        "@SpawnEpochTome",
+        "@SpawnHaruspexWardBeta",
+        "@SpawnRocketSpeed",
+        "@SpawnPyreSpike"
       ]
     }
   ]

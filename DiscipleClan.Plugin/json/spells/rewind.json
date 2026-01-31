@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Rewind",
+      "names": { "english": "Rewind", "chinese": "倒带" },
+      "descriptions": { "english": "Return a card from discard to hand.", "chinese": "将一张牌从弃牌堆返回手牌。" },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "card_art": "@RewindCardArt",
+      "targetless": false,
+      "targets_room": false,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@RewindEffect" }],
+      "lore_tooltips": [{ "english": "Prophecy." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "RewindEffect",
+      "name": "CardEffectDraw",
+      "target_mode": "discard",
+      "param_int": 1
+    }
+  ],
+  "sprites": [{ "id": "RewindCardArt", "path": "textures/Rewind.png" }],
+  "game_objects": [
+    { "id": "RewindCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@RewindCardArt" } } }
+  ]
+}

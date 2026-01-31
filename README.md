@@ -83,11 +83,11 @@ Output is under `DiscipleClan.Plugin/bin/`.
 - **units.csv**, **spells.csv**, **relics.csv**, **status_effects.csv**, **card_effects.csv**, **assets.csv**  
   Track what’s ported, MT1 paths, JSON paths, and implementation notes. Add or complete `json/units/`, `json/spells/`, `json/relics/` per these CSVs and register new files in `Plugin.cs` and in the card pool JSONs (e.g. `banner_pool.json`) as you add cards.
 
-**Currently ported (JSON + Plugin):**  
-Units: Cindershell, Waxwing, Fortune Teller, Flashfeather, Galilizard, Wax Pinion, Embermaker.  
-Spells: Pattern Shift, Seek, Firewall, Dilation.  
+**Currently ported (JSON + Plugin; Port status = untested in CSVs):**  
+Units: Disciple (champion), Cindershell, Waxwing, Fortune Teller, Flashfeather, Galilizard, Wax Pinion, Embermaker, Shimmersnail (Ancient Savant), Ancient Pyresnail, Vigor Ward, Overward, Apple Elixir, Jelly Scholar, Newton, Minerva Owl, Morsowl, Fireshaped, Horizon Tome (Epoch Tome), Haruspex Ward Beta, Rocket Speed, Pyre Spike.  
+Spells: Pattern Shift, Seek, Firewall, Dilation, Rewind, Flashfire, Epoch Tome.  
 Relics: Rewind First Spell, Free Time, Gravity On Ascend.  
-Many units/spells use vanilla effects only; Relocate, Extinguish, and other MT1 triggers still need Conductor implementations (see CSVs).
+Many units/spells use vanilla effects only; Relocate, Extinguish, and other MT1 triggers still need Conductor implementations (see CSVs). After playtesting, set Port status to **done** in the CSVs.
 
 ---
 

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnPyreSpike",
+      "names": { "english": "Pyre Spike", "chinese": "圣火尖刺" },
+      "card_art": "@PyreSpikeCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnPyreSpikeEffect" }],
+      "lore_tooltips": [{ "english": "" }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "PyreSpike",
+      "names": { "english": "Pyre Spike", "chinese": "圣火尖刺" },
+      "character_art": "@PyreSpikeCharacterArt",
+      "size": 1,
+      "health": 5,
+      "attack_damage": 5,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnPyreSpikeEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@PyreSpike"
+    }
+  ],
+  "sprites": [
+    { "id": "PyreSpikeCardArt", "path": "textures/Pyrespike.png" },
+    { "id": "PyreSpikeCharacterArt", "path": "textures/Pyrespike.png" }
+  ],
+  "game_objects": [
+    { "id": "PyreSpikeCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@PyreSpikeCardArt" } } },
+    {
+      "id": "PyreSpikeCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@PyreSpikeCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

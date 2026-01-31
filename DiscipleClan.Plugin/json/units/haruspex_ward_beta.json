@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnHaruspexWardBeta",
+      "names": { "english": "Haruspex Ward Beta", "chinese": "占卜守卫乙" },
+      "card_art": "@HaruspexWardBetaCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnHaruspexWardBetaEffect" }],
+      "lore_tooltips": [{ "english": "Harvest." }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "HaruspexWardBeta",
+      "names": { "english": "Haruspex Ward Beta", "chinese": "占卜守卫乙" },
+      "character_art": "@HaruspexWardBetaCharacterArt",
+      "size": 1,
+      "health": 7,
+      "attack_damage": 4,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnHaruspexWardBetaEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@HaruspexWardBeta"
+    }
+  ],
+  "sprites": [
+    { "id": "HaruspexWardBetaCardArt", "path": "textures/Mirrorc.png" },
+    { "id": "HaruspexWardBetaCharacterArt", "path": "textures/Mirrorc.png" }
+  ],
+  "game_objects": [
+    { "id": "HaruspexWardBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@HaruspexWardBetaCardArt" } } },
+    {
+      "id": "HaruspexWardBetaCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@HaruspexWardBetaCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

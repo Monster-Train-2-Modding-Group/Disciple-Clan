@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnFireshaped",
+      "names": { "english": "Fireshaped", "chinese": "火塑" },
+      "card_art": "@FireshapedCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnFireshapedEffect" }],
+      "lore_tooltips": [{ "english": "" }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Fireshaped",
+      "names": { "english": "Fireshaped", "chinese": "火塑" },
+      "character_art": "@FireshapedCharacterArt",
+      "size": 1,
+      "health": 8,
+      "attack_damage": 4,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnFireshapedEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@Fireshaped"
+    }
+  ],
+  "sprites": [
+    { "id": "FireshapedCardArt", "path": "textures/FireshapedCharacterArt.png" },
+    { "id": "FireshapedCharacterArt", "path": "textures/FireshapedCharacterArt.png" }
+  ],
+  "game_objects": [
+    { "id": "FireshapedCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FireshapedCardArt" } } },
+    {
+      "id": "FireshapedCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@FireshapedCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

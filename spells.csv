@@ -1,12 +1,12 @@
 Name,ID,Cost,Rarity,Trait,Effect,Include,Unlock,Port status,Notes,MT1 file,JSON file,Card ID,Effect IDs,Effect implementation,Conception
 Seek,Seek,0,Uncommon,Consume,Choose and draw 1 from deck,Y,0,untested,Prophecy,DiscipleClan/Cards/Prophecy/Seek.cs,json/spells/seek.json,Seek,@SeekEffect,Vanilla CardEffectDraw (choose TBD),Choose and draw 1 from deck
-Rewind,Rewind,,,,,Y,,pending,Prophecy,DiscipleClan/Cards/Prophecy/Rewind.cs,TBD,Rewind,,TBD,TBD
+Rewind,Rewind,,,,,Y,,untested,Prophecy,DiscipleClan/Cards/Prophecy/Rewind.cs,json/spells/rewind.json,Rewind,,Vanilla CardEffectDraw target discard,Return card from discard
 Revelation,Revelation,,,,,Y,,pending,Prophecy,DiscipleClan/Cards/Prophecy/Revelation.cs,TBD,Revelation,,TBD,TBD
 Palm Reading,PalmReading,,,,,Y,,pending,Prophecy,DiscipleClan/Cards/Prophecy/PalmReading.cs,TBD,PalmReading,,TBD,TBD
 Firewall,Firewall,0,Common,,Apply armor to Pyre per ember,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/Firewall.cs,json/spells/firewall.json,Firewall,,Vanilla CardEffectAddStatusEffectPerEnergy,Apply armor to Pyre per ember
 Flashfire,Flashfire,,,,Damage to enemies,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/Flashfire.cs,TBD,Flashfire,,TBD,Damage to enemies
 Dilation,Dilation,,,,+capacity +health to target,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/Dilation.cs,json/spells/dilation.json,Dilation,,Vanilla CardEffectHeal + CardEffectAdjustRoomCapacity,+capacity +health to target
-Epoch Tome,EpochTome,,,,Sweep; reduce attack half,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/EpochTome.cs,TBD,EpochTome,,TBD,Sweep; reduce attack half
+Epoch Tome,EpochTome,,,,Sweep; reduce attack half,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/EpochTome.cs,json/spells/epoch_tome.json,EpochTomeSpell,,Vanilla CardEffectDamage + CardEffectDebuffDamage,Sweep; reduce attack half
 Emberwave Beta,EmberwaveBeta,,,,,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/EmberwaveBeta.cs,TBD,EmberwaveBeta,,Conductor: CardEffectEmberwave,TBD
 Pyre Spike,PyreSpike,,,,,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/PyreSpike.cs,TBD,PyreSpike,,TBD,TBD
 Rocket Speed,RocketSpeed,,,,,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/RocketSpeed.cs,TBD,RocketSpeed,,TBD,TBD

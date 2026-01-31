@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnMinervaOwl",
+      "names": { "english": "Minerva Owl", "chinese": "密涅瓦猫头鹰" },
+      "card_art": "@MinervaOwlCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnMinervaOwlEffect" }],
+      "lore_tooltips": [{ "english": "" }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "MinervaOwl",
+      "names": { "english": "Minerva Owl", "chinese": "密涅瓦猫头鹰" },
+      "character_art": "@MinervaOwlCharacterArt",
+      "size": 1,
+      "health": 7,
+      "attack_damage": 5,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnMinervaOwlEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@MinervaOwl"
+    }
+  ],
+  "sprites": [
+    { "id": "MinervaOwlCardArt", "path": "textures/MinervaOwlCharacterArt.png" },
+    { "id": "MinervaOwlCharacterArt", "path": "textures/MinervaOwlCharacterArt.png" }
+  ],
+  "game_objects": [
+    { "id": "MinervaOwlCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@MinervaOwlCardArt" } } },
+    {
+      "id": "MinervaOwlCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@MinervaOwlCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

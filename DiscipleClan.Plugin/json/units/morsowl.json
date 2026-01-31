@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnMorsowl",
+      "names": { "english": "Morsowl", "chinese": "莫索猫头鹰" },
+      "card_art": "@MorsowlCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnMorsowlEffect" }],
+      "lore_tooltips": [{ "english": "" }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Morsowl",
+      "names": { "english": "Morsowl", "chinese": "莫索猫头鹰" },
+      "character_art": "@MorsowlCharacterArt",
+      "size": 1,
+      "health": 6,
+      "attack_damage": 5,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnMorsowlEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@Morsowl"
+    }
+  ],
+  "sprites": [
+    { "id": "MorsowlCardArt", "path": "textures/MorsowlCharacterArt.png" },
+    { "id": "MorsowlCharacterArt", "path": "textures/MorsowlCharacterArt.png" }
+  ],
+  "game_objects": [
+    { "id": "MorsowlCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@MorsowlCardArt" } } },
+    {
+      "id": "MorsowlCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@MorsowlCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}
