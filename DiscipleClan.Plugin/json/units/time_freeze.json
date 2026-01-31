@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnTimeFreeze",
+      "names": { "english": "Time Freeze", "chinese": "时间凝固" },
+      "card_art": "@TimeFreezeCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnTimeFreezeEffect" }],
+      "lore_tooltips": [{ "english": "" }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "TimeFreeze",
+      "names": { "english": "Time Freeze", "chinese": "时间凝固" },
+      "character_art": "@TimeFreezeCharacterArt",
+      "size": 1,
+      "health": 10,
+      "attack_damage": 3,
+      "subtypes": ["SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnTimeFreezeEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@TimeFreeze"
+    }
+  ],
+  "sprites": [
+    { "id": "TimeFreezeCardArt", "path": "textures/Time-Freeze.png" },
+    { "id": "TimeFreezeCharacterArt", "path": "textures/Time-Freeze.png" }
+  ],
+  "game_objects": [
+    { "id": "TimeFreezeCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@TimeFreezeCardArt" } } },
+    {
+      "id": "TimeFreezeCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@TimeFreezeCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

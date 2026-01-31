@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "TimeStamp",
+      "names": { "english": "Time Stamp", "chinese": "时间戳" },
+      "descriptions": { "english": "TimeStamp effect. [consume]. Sacrifice a unit.", "chinese": "时间戳效果。[消耗]。牺牲一个单位。" },
+      "cost": 3,
+      "card_type": "spell",
+      "rarity": "rare",
+      "class": "@Chrono",
+      "card_art": "@TimeStampCardArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": ["MegaPool"],
+      "effects": [
+        { "id": "@TimeStampEffect" },
+        { "id": "@TimeStampSacrificeEffect" }
+      ],
+      "traits": ["@Consume"],
+      "lore_tooltips": [{ "english": "TimeStamp effect + sacrifice." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "TimeStampEffect",
+      "name": "CardEffectDraw",
+      "target_mode": "self",
+      "param_int": 2
+    },
+    {
+      "id": "TimeStampSacrificeEffect",
+      "name": "CardEffectSacrifice",
+      "target_mode": "front_in_room",
+      "param_int": 1
+    }
+  ],
+  "sprites": [{ "id": "TimeStampCardArt", "path": "textures/Time-Stamp.png" }],
+  "game_objects": [
+    { "id": "TimeStampCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@TimeStampCardArt" } } }
+  ]
+}

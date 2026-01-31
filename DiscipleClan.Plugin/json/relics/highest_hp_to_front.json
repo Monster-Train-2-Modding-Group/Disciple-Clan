@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "HighestHPToFront",
+      "type": "collectable",
+      "names": { "english": "Highest HP To Front", "chinese": "最高血上前" },
+      "descriptions": { "english": "Highest HP unit moves to front. (Placeholder: bump on turn end.)", "chinese": "最高血量单位移至前排。（占位：回合末 bump。）" },
+      "icon": "@HighestHPToFrontIcon",
+      "icon_small": "@HighestHPToFrontIcon",
+      "lore_tooltips": [{ "english": "Highest HP unit moves to front." }],
+      "relic_effects": ["@HighestHPToFrontEffect"],
+      "extensions": [{ "collectable": { "class": "@Chrono", "rarity": "uncommon", "pools": ["MegaRelicPool"] } }]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "HighestHPToFrontEffect",
+      "name": "RelicEffectBumpOnTurnEnd",
+      "param_int": 0
+    }
+  ],
+  "sprites": [{ "id": "HighestHPToFrontIcon", "path": "textures/Mirrorb.png" }]
+}

@@ -1,6 +1,6 @@
 Name,ID,Rarity,Pool,Traits,Effect,Type,Cost,Attack,Health,Size,Subtype,Include,Lore,Port status,Notes,MT1 file,JSON file,Card ID,Character ID,Character art scale,Triggers,Ability,Implementation,Conception
 Disciple,Disciple,Champion,Banner,,Champion (Wardmaster/Symbiote/Shifter),Champion,0,,,,Y,,untested,,DiscipleClan/Cards/Disciple.cs,json/champion/disciple_base.json,SpawnDisciple,Disciple,1.0,,,,Vanilla CardEffectSpawnMonster,Champion with upgrade paths Wardmaster/Symbiote/Shifter
-Glaukopis,SecondDisciple,Champion,Banner,,Second champion,Champion,0,,,,Y,,pending,,DiscipleClan/Cards/SecondDisciple.cs,TBD,SpawnSecondDisciple,SecondDisciple,TBD,,,,TBD,Second champion
+Glaukopis,SecondDisciple,Champion,Banner,,Second champion,Champion,0,,,,Y,,untested,,DiscipleClan/Cards/SecondDisciple.cs,json/units/second_disciple.json,SpawnSecondDisciple,SecondDisciple,TBD,,,,TBD,Second champion
 Shimmersnail,Ancient Savant,Common,Banner,,Grant Quick,Unit,,,,Y,,untested,Speedtime,DiscipleClan/Cards/Speedtime/AncientSavant.cs,json/units/ancient_savant.json,SpawnAncientSavant,AncientSavant,TBD,,,,TBD,Grant Quick on trigger
 Fulgursnail,Ancient Pyresnail,Common,Banner,,Grant Pyreboost,Unit,,,,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/AncientPyreSnail.cs,json/units/ancient_pyresnail.json,SpawnAncientPyreSnail,AncientPyreSnail,TBD,,,,TBD,Grant Pyreboost on trigger
 Cindershell,Cinderborn,Uncommon,Banner,Eternal,+2 attack,Unit,1,4,10,2,Eternal,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/Cinderborn.cs,json/units/cinderborn.json,SpawnCinderborn,Cinderborn,1.0,OnGainEmber,,Vanilla CardEffectSpawnMonster + Conductor CardEffectScalingUpgrade,On gain ember +2 attack (ScalingUpgrade)
@@ -12,13 +12,13 @@ Vigor Ward,PowerWardBeta,Uncommon,Banner,,+attack to units; +attack relocated,Un
 Overward,ShifterWardBeta,Uncommon,Banner,,Descend friendly units after combat,Unit,,,,Y,,untested,Shifter,DiscipleClan/Cards/Shifter/ShifterWardBeta.cs,json/units/shifter_ward_beta.json,SpawnShifterWardBeta,ShifterWardBeta,TBD,,,,TBD,Descend friendly units after combat
 Wax Pinion,WaxPinion,Common,Banner,,Ascend unit to Pyre,Unit,,,,Y,,untested,Shifter,DiscipleClan/Cards/Shifter/WaxPinion.cs,json/units/wax_pinion.json,SpawnWaxPinion,WaxPinion,TBD,,,,TBD,Ascend unit to Pyre
 Apple Elixir,AppleElixir,Common,Banner,,,Unit,,,,Y,,untested,Shifter,DiscipleClan/Cards/Shifter/AppleElixir.cs,json/units/apple_elixir.json,SpawnAppleElixir,AppleElixir,TBD,,,,TBD,TBD
-Pattern Shift,PatternShift,Starter,Banner,,Teleport unit to random floor,Unit,0,,,,Y,,pending,Champion starter,,,PatternShift,,,TBD,,,Starter spell: Teleport unit to random floor
-Fate Behemoth,Diviner of the Infinite,Rare,Banner,,Reserve: Cost -1 ember,Unit,,,,Y,,pending,Retain,DiscipleClan/Cards/Retain/DivineroftheInfinite.cs,TBD,SpawnDivineroftheInfinite,Diviner of the Infinite,TBD,Reserve,,TBD,Reserve: Cost -1 ember
+Pattern Shift,PatternShift,Starter,Banner,,Teleport unit to random floor,Unit,0,,,,Y,,untested,Champion starter,,json/spells/pattern_shift.json,PatternShift,,,TBD,,,Starter spell: Teleport unit to random floor
+Fate Behemoth,Diviner of the Infinite,Rare,Banner,,Reserve: Cost -1 ember,Unit,,,,Y,,untested,Retain,DiscipleClan/Cards/Retain/DivineroftheInfinite.cs,json/units/diviner_of_the_infinite.json,SpawnDivineroftheInfinite,DivineroftheInfinite,TBD,Reserve,,TBD,Reserve: Cost -1 ember
 Jelly Scholar,JellyScholar,Common,Banner,,Resolve: +12 health +1 capacity,Unit,,,,Y,,untested,Retain,DiscipleClan/Cards/Retain/JellyScholar.cs,json/units/jelly_scholar.json,SpawnJellyScholar,JellyScholar,TBD,Resolve,,TBD,Resolve: +12 health +1 capacity
 Newton,Newtons,Uncommon,Banner,,,Unit,,,,Y,,untested,Retain,DiscipleClan/Cards/Retain/Newtons.cs,json/units/newtons.json,SpawnNewtons,Newtons,TBD,,,,TBD,TBD
-Right Timing Beta,RightTimingBeta,Uncommon,Banner,,,Unit,,,,Y,,pending,Retain,DiscipleClan/Cards/Retain/RightTimingBeta.cs,TBD,SpawnRightTimingBeta,RightTimingBeta,TBD,,,,TBD,TBD
-Right Timing Delta,RightTimingDelta,Uncommon,Banner,,,Unit,,,,Y,,pending,Retain,DiscipleClan/Cards/Retain/RightTimingDelta.cs,TBD,SpawnRightTimingDelta,RightTimingDelta,TBD,,,,TBD,TBD
-Time Freeze,TimeFreeze,Rare,Banner,,,Unit,,,,Y,,pending,Retain,DiscipleClan/Cards/Retain/TimeFreeze.cs,TBD,SpawnTimeFreeze,TimeFreeze,TBD,,,,TBD,TBD
+Right Timing Beta,RightTimingBeta,Uncommon,Banner,,,Unit,,,,Y,,untested,Retain,DiscipleClan/Cards/Retain/RightTimingBeta.cs,json/units/right_timing_beta.json,SpawnRightTimingBeta,RightTimingBeta,TBD,,,,TBD,TBD
+Right Timing Delta,RightTimingDelta,Uncommon,Banner,,,Unit,,,,Y,,untested,Retain,DiscipleClan/Cards/Retain/RightTimingDelta.cs,json/units/right_timing_delta.json,SpawnRightTimingDelta,RightTimingDelta,TBD,,,,TBD,TBD
+Time Freeze,TimeFreeze,Rare,Banner,,,Unit,,,,Y,,untested,Retain,DiscipleClan/Cards/Retain/TimeFreeze.cs,json/units/time_freeze.json,SpawnTimeFreeze,TimeFreeze,TBD,,,,TBD,TBD
 Embermaker,EmberMaker,Uncommon,Banner,Eternal,On Attacking: emberboost,Unit,1,2,20,2,Eternal,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/EmberMaker.cs,json/units/embermaker.json,SpawnEmberMaker,EmberMaker,TBD,OnAttacking,,TBD,On Attacking: apply emberboost
 Minerva Owl,MinervaOwl,Uncommon,Banner,,,Unit,,,,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/MinervaOwl.cs,json/units/minerva_owl.json,SpawnMinervaOwl,MinervaOwl,TBD,,,,TBD,TBD
 Morsowl,Morsowl,Uncommon,Banner,,,Unit,,,,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/Morsowl.cs,json/units/morsowl.json,SpawnMorsowl,Morsowl,TBD,,,,TBD,TBD
@@ -28,5 +28,5 @@ Horizon Tome,EpochTome,Uncommon,Banner,,Sweep; reduce attack half,Unit,,,,Y,,unt
 Haruspex Ward Beta,HaruspexWardBeta,Uncommon,Banner,,,Unit,,,,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/HaruspexWardBeta.cs,json/units/haruspex_ward_beta.json,SpawnHaruspexWardBeta,HaruspexWardBeta,TBD,Harvest,,TBD,TBD
 Rocket Speed,RocketSpeed,Uncommon,Banner,,,Unit,,,,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/RocketSpeed.cs,json/units/rocket_speed.json,SpawnRocketSpeed,RocketSpeed,TBD,,,,TBD,TBD
 Pyre Spike,PyreSpike,Common,Banner,,,Unit,,,,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/PyreSpike.cs,json/units/pyre_spike.json,SpawnPyreSpike,PyreSpike,TBD,,,,TBD,TBD
-Flashfire,Flashfire,Common,Banner,,,Unit,,,,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/Flashfire.cs,TBD,SpawnFlashfire,Flashfire,TBD,,,,TBD,TBD
-Dilation,Dilation,Uncommon,Banner,,+capacity +health,Unit,,,,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/Dilation.cs,TBD,SpawnDilation,Dilation,TBD,,,,TBD,+capacity +health to target
+Flashfire,Flashfire,Common,Banner,,,Unit,,,,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/Flashfire.cs,json/units/flashfire_unit.json,SpawnFlashfire,FlashfireUnit,TBD,,,,TBD,TBD
+Dilation,Dilation,Uncommon,Banner,,+capacity +health,Unit,,,,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/Dilation.cs,json/units/dilation_unit.json,SpawnDilation,DilationUnit,TBD,,,,TBD,+capacity +health to target

@@ -83,11 +83,12 @@ Output is under `DiscipleClan.Plugin/bin/`.
 - **units.csv**, **spells.csv**, **relics.csv**, **status_effects.csv**, **card_effects.csv**, **assets.csv**  
   Track what’s ported, MT1 paths, JSON paths, and implementation notes. Add or complete `json/units/`, `json/spells/`, `json/relics/` per these CSVs and register new files in `Plugin.cs` and in the card pool JSONs (e.g. `banner_pool.json`) as you add cards.
 
-**Currently ported (JSON + Plugin; Port status = untested in CSVs):**  
-Units: Disciple (champion), Cindershell, Waxwing, Fortune Teller, Flashfeather, Galilizard, Wax Pinion, Embermaker, Shimmersnail (Ancient Savant), Ancient Pyresnail, Vigor Ward, Overward, Apple Elixir, Jelly Scholar, Newton, Minerva Owl, Morsowl, Fireshaped, Horizon Tome (Epoch Tome), Haruspex Ward Beta, Rocket Speed, Pyre Spike.  
-Spells: Pattern Shift, Seek, Firewall, Dilation, Rewind, Flashfire, Epoch Tome.  
-Relics: Rewind First Spell, Free Time, Gravity On Ascend.  
-Many units/spells use vanilla effects only; Relocate, Extinguish, and other MT1 triggers still need Conductor implementations (see CSVs). After playtesting, set Port status to **done** in the CSVs.
+**Currently ported (JSON + Plugin; Port status = untested in CSVs; no pending):**  
+Units: Disciple, Glaukopis (SecondDisciple), Shimmersnail, Ancient Pyresnail, Cindershell, Waxwing, Fortune Teller, Flashfeather, Galilizard, Vigor Ward, Overward, Wax Pinion, Apple Elixir, Fate Behemoth (Diviner of the Infinite), Jelly Scholar, Newton, Right Timing Beta/Delta, Time Freeze, Embermaker, Minerva Owl, Morsowl, Fireshaped, Horizon Tome, Haruspex Ward Beta, Rocket Speed, Pyre Spike, Flashfire (unit), Dilation (unit).  
+Spells: Pattern Shift, Seek, Firewall, Dilation, Rewind, Flashfire, Epoch Tome, Revelation, Palm Reading, Emberwave Beta, Pyre Spike, Rocket Speed, Haruspex Ward Beta, Chronomancy, Analog, Pendulum, Time Stamp.  
+Relics: Rewind First Spell, Free Time, Gravity On Ascend, Gold Over Time, Pyre Damage On Ember, Quick And Dirty, Rage Against The Pyre, Refund X Costs, First Buff Extra Stack, Gold On Pyre Kill, Highest HP To Front.  
+Status effects: Pyreboost, Loaded, Icarian, Emberboost, Gravity, Pyrelink, Hide Until Boss, Past Glory, Symbiote, Adapted (all untested; JSON TBD until StatusEffectState classes exist).  
+Many entries use vanilla or placeholder effects; Conductor/MT1 behavior still to be implemented where noted. After playtesting, set Port status to **done** in the CSVs.
 
 ---
 

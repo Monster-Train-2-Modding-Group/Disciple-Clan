@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnDivineroftheInfinite",
+      "names": { "english": "Fate Behemoth", "chinese": "命运巨兽" },
+      "card_art": "@DivinerCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnDivinerEffect" }],
+      "lore_tooltips": [{ "english": "Reserve: Cost -1 ember." }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "DivineroftheInfinite",
+      "names": { "english": "Fate Behemoth", "chinese": "命运巨兽" },
+      "character_art": "@DivinerCharacterArt",
+      "size": 2,
+      "health": 15,
+      "attack_damage": 5,
+      "subtypes": ["SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnDivinerEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@DivineroftheInfinite"
+    }
+  ],
+  "sprites": [
+    { "id": "DivinerCardArt", "path": "textures/SecondDiscipleCharacterArt.png" },
+    { "id": "DivinerCharacterArt", "path": "textures/SecondDiscipleCharacterArt.png" }
+  ],
+  "game_objects": [
+    { "id": "DivinerCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@DivinerCardArt" } } },
+    {
+      "id": "DivinerCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@DivinerCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

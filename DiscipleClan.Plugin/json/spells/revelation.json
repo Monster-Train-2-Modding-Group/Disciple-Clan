@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Revelation",
+      "names": { "english": "Revelation", "chinese": "启示" },
+      "descriptions": { "english": "Draw 2 cards.", "chinese": "抽2张牌。" },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "card_art": "@RevelationCardArt",
+      "targetless": true,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@RevelationEffect" }],
+      "lore_tooltips": [{ "english": "Prophecy." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "RevelationEffect",
+      "name": "CardEffectDraw",
+      "target_mode": "self",
+      "param_int": 2
+    }
+  ],
+  "sprites": [{ "id": "RevelationCardArt", "path": "textures/Revelation.png" }],
+  "game_objects": [
+    { "id": "RevelationCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@RevelationCardArt" } } }
+  ]
+}

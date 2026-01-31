@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "QuickAndDirty",
+      "type": "collectable",
+      "names": { "english": "Quick And Dirty", "chinese": "快而糙" },
+      "descriptions": { "english": "TBD. (Placeholder: draw.)", "chinese": "待定。（占位：抽牌。）" },
+      "icon": "@QuickAndDirtyIcon",
+      "icon_small": "@QuickAndDirtyIcon",
+      "lore_tooltips": [{ "english": "TBD." }],
+      "relic_effects": ["@QuickAndDirtyEffect"],
+      "extensions": [{ "collectable": { "class": "@Chrono", "rarity": "common", "pools": ["MegaRelicPool"] } }]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "QuickAndDirtyEffect",
+      "name": "RelicEffectAdditionalDrawPerCardType",
+      "param_int": 1
+    }
+  ],
+  "sprites": [{ "id": "QuickAndDirtyIcon", "path": "textures/QuickAndDirty.png" }]
+}

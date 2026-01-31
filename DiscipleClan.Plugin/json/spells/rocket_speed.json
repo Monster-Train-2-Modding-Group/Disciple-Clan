@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "RocketSpeedSpell",
+      "names": { "english": "Rocket Speed", "chinese": "火箭速度" },
+      "descriptions": { "english": "Deal [effect0.power] [damage] to [front_in_room].", "chinese": "对[front_in_room]造成[effect0.power][damage]。" },
+      "cost": 1,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "card_art": "@RocketSpeedSpellCardArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@RocketSpeedSpellEffect" }],
+      "lore_tooltips": [{ "english": "" }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "RocketSpeedSpellEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "front_in_room",
+      "param_int": 18
+    }
+  ],
+  "sprites": [{ "id": "RocketSpeedSpellCardArt", "path": "textures/Rocket-Speed.png" }],
+  "game_objects": [
+    { "id": "RocketSpeedSpellCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@RocketSpeedSpellCardArt" } } }
+  ]
+}

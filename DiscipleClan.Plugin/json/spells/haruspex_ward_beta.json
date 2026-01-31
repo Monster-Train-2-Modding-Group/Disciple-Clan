@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "HaruspexWardBetaSpell",
+      "names": { "english": "Haruspex Ward Beta", "chinese": "占卜守卫乙" },
+      "descriptions": { "english": "Apply [effect0.power] [damage] to [front_in_room]. Ward spell.", "chinese": "对[front_in_room]造成[effect0.power][damage]。守卫法术。" },
+      "cost": 1,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "card_art": "@HaruspexWardBetaSpellCardArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@HaruspexWardBetaSpellEffect" }],
+      "lore_tooltips": [{ "english": "Pyrepact ward spell." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "HaruspexWardBetaSpellEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "front_in_room",
+      "param_int": 10
+    }
+  ],
+  "sprites": [{ "id": "HaruspexWardBetaSpellCardArt", "path": "textures/Mirrorc.png" }],
+  "game_objects": [
+    { "id": "HaruspexWardBetaSpellCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@HaruspexWardBetaSpellCardArt" } } }
+  ]
+}

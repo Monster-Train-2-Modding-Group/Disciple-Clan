@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "GoldOverTime",
+      "type": "collectable",
+      "names": { "english": "Gold Over Time", "chinese": "随时间获金" },
+      "descriptions": { "english": "Gain [gold] over time. (Placeholder: vanilla effect.)", "chinese": "随时间获得[金币]。（占位：原版效果。）" },
+      "icon": "@GoldOverTimeIcon",
+      "icon_small": "@GoldOverTimeIcon",
+      "lore_tooltips": [{ "english": "TBD." }],
+      "relic_effects": ["@GoldOverTimeEffect"],
+      "extensions": [{ "collectable": { "class": "@Chrono", "rarity": "common", "pools": ["MegaRelicPool"] } }]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "GoldOverTimeEffect",
+      "name": "RelicEffectAddPostBattleReward",
+      "param_int": 10
+    }
+  ],
+  "sprites": [{ "id": "GoldOverTimeIcon", "path": "textures/FortuneCookie.png" }]
+}

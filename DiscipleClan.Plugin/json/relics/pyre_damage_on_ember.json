@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "PyreDamageOnEmber",
+      "type": "collectable",
+      "names": { "english": "Pyre Damage On Ember", "chinese": "余烬增伤" },
+      "descriptions": { "english": "Pyre deals extra damage per [ember]. (Placeholder: vanilla.)", "chinese": "圣火根据[余烬]造成额外伤害。（占位：原版。）" },
+      "icon": "@PyreDamageOnEmberIcon",
+      "icon_small": "@PyreDamageOnEmberIcon",
+      "lore_tooltips": [{ "english": "TBD." }],
+      "relic_effects": ["@PyreDamageOnEmberEffect"],
+      "extensions": [{ "collectable": { "class": "@Chrono", "rarity": "uncommon", "pools": ["MegaRelicPool"] } }]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "PyreDamageOnEmberEffect",
+      "name": "RelicEffectApplyExtraPyreDamage",
+      "param_int": 1
+    }
+  ],
+  "sprites": [{ "id": "PyreDamageOnEmberIcon", "path": "textures/PyreFyre.png" }]
+}

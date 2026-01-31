@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "RageAgainstThePyre",
+      "type": "collectable",
+      "names": { "english": "Rage Against The Pyre", "chinese": "怒对圣火" },
+      "descriptions": { "english": "TBD. (Placeholder: vanilla.)", "chinese": "待定。（占位：原版。）" },
+      "icon": "@RageAgainstThePyreIcon",
+      "icon_small": "@RageAgainstThePyreIcon",
+      "lore_tooltips": [{ "english": "TBD." }],
+      "relic_effects": ["@RageAgainstThePyreEffect"],
+      "extensions": [{ "collectable": { "class": "@Chrono", "rarity": "common", "pools": ["MegaRelicPool"] } }]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "RageAgainstThePyreEffect",
+      "name": "RelicEffectAddGoldOnPyreDamage",
+      "param_int": 1
+    }
+  ],
+  "sprites": [{ "id": "RageAgainstThePyreIcon", "path": "textures/FourtuneTellerB.png" }]
+}

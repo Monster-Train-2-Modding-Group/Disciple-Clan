@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "RefundXCosts",
+      "type": "collectable",
+      "names": { "english": "Refund X Costs", "chinese": "退还X费" },
+      "descriptions": { "english": "Refund X cost spells. (Placeholder: conserve energy.)", "chinese": "退还X费法术。（占位：保留能量。）" },
+      "icon": "@RefundXCostsIcon",
+      "icon_small": "@RefundXCostsIcon",
+      "lore_tooltips": [{ "english": "Refund X cost spells." }],
+      "relic_effects": ["@RefundXCostsEffect"],
+      "extensions": [{ "collectable": { "class": "@Chrono", "rarity": "uncommon", "pools": ["MegaRelicPool"] } }]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "RefundXCostsEffect",
+      "name": "RelicEffectConserveEnergyEndOfTurn",
+      "param_int": 1
+    }
+  ],
+  "sprites": [{ "id": "RefundXCostsIcon", "path": "textures/RefundXCosts.png" }]
+}

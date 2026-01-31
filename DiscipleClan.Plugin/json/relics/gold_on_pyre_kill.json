@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "GoldOnPyreKill",
+      "type": "collectable",
+      "names": { "english": "Gold On Pyre Kill", "chinese": "圣火击杀获金" },
+      "descriptions": { "english": "Gain [gold] when the Pyre kills a unit.", "chinese": "圣火击杀单位时获得[金币]。" },
+      "icon": "@GoldOnPyreKillIcon",
+      "icon_small": "@GoldOnPyreKillIcon",
+      "lore_tooltips": [{ "english": "Gold when Pyre kills unit." }],
+      "relic_effects": ["@GoldOnPyreKillEffect"],
+      "extensions": [{ "collectable": { "class": "@Chrono", "rarity": "common", "pools": ["MegaRelicPool"] } }]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "GoldOnPyreKillEffect",
+      "name": "RelicEffectAddGoldOnPyreDamage",
+      "param_int": 5
+    }
+  ],
+  "sprites": [{ "id": "GoldOnPyreKillIcon", "path": "textures/FoolsCrown.png" }]
+}

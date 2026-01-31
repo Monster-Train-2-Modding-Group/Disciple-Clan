@@ -1,15 +1,15 @@
 Name,ID,Effect summary,Include,Port status,Notes,MT1 file,JSON file,Relic effect class,Implementation,Conception
 Free Time,FreeTime,,Y,untested,,DiscipleClan/Artifacts/FreeTime.cs,json/relics/free_time.json,RelicEffectModifyCardTypeCost + RelicEffectAddTrait,Vanilla RelicEffectModifyCardTypeCost etc,Spell cost -1 and add trait
-Gold Over Time,GoldOverTime,,Y,pending,,DiscipleClan/Artifacts/GoldOverTime.cs,TBD,,TBD,TBD
+Gold Over Time,GoldOverTime,,Y,untested,,DiscipleClan/Artifacts/GoldOverTime.cs,json/relics/gold_over_time.json,,Vanilla RelicEffectAddPostBattleReward (placeholder),TBD
 Gravity On Ascend,GravityOnAscend,,Y,untested,,DiscipleClan/Artifacts/GravityOnAscend.cs,json/relics/gravity_on_ascend.json,RelicEffectAddStatusOnMonsterAscend,Conductor: RelicEffectAddStatusOnMonsterAscend,Apply status when unit ascends
 Rewind First Spell,RewindFirstSpell,,Y,untested,,DiscipleClan/Artifacts/RewindFirstSpell.cs,json/relics/rewind_first_spell.json,RelicEffectRewind,Conductor: DiscipleClan.Plugin.RelicEffects.RelicEffectRewind,First spell played each turn returns to hand next turn
-Pyre Damage On Ember,PyreDamageOnEmber,,Y,pending,,DiscipleClan/Artifacts/PyreDamageOnEmber.cs,TBD,RelicEffectPyreDamageOnEmber,Conductor: RelicEffectPyreDamageOnEmber,TBD
-Quick And Dirty,QuickAndDirty,,Y,pending,,DiscipleClan/Artifacts/QuickAndDirty.cs,TBD,,TBD,TBD
-Rage Against The Pyre,RageAgainstThePyre,,Y,pending,,DiscipleClan/Artifacts/RageAgainstThePyre.cs,TBD,,TBD,TBD
-Refund X Costs,RefundXCosts,,Y,pending,,DiscipleClan/Artifacts/RefundXCosts.cs,TBD,RelicEffectXCostRefund,Conductor: RelicEffectXCostRefund,Refund X cost spells
-First Buff Extra Stack,FirstBuffExtraStack,,Y,pending,,DiscipleClan/Artifacts/FirstBuffExtraStack.cs,TBD,RelicEffectFirstBuffExtraStack,Conductor: RelicEffectFirstBuffExtraStack,First buff each combat gets +1 stack
-Gold On Pyre Kill,GoldOnPyreKill,,Y,pending,,DiscipleClan/Artifacts/GoldOnPyreKill.cs,TBD,RelicEffectGoldOnPyreKill,Conductor: RelicEffectGoldOnPyreKill,Gold when Pyre kills unit
-Highest HP To Front,HighestHPToFront,,Y,pending,,DiscipleClan/Artifacts/HighestHPToFront.cs,TBD,RelicEffectHPToFront,Conductor: RelicEffectHPToFront,Highest HP unit moves to front
+Pyre Damage On Ember,PyreDamageOnEmber,,Y,untested,,DiscipleClan/Artifacts/PyreDamageOnEmber.cs,json/relics/pyre_damage_on_ember.json,RelicEffectPyreDamageOnEmber,Vanilla RelicEffectApplyExtraPyreDamage (placeholder),TBD
+Quick And Dirty,QuickAndDirty,,Y,untested,,DiscipleClan/Artifacts/QuickAndDirty.cs,json/relics/quick_and_dirty.json,,Vanilla RelicEffectAdditionalDrawPerCardType (placeholder),TBD
+Rage Against The Pyre,RageAgainstThePyre,,Y,untested,,DiscipleClan/Artifacts/RageAgainstThePyre.cs,json/relics/rage_against_the_pyre.json,,Vanilla RelicEffectAddGoldOnPyreDamage (placeholder),TBD
+Refund X Costs,RefundXCosts,,Y,untested,,DiscipleClan/Artifacts/RefundXCosts.cs,json/relics/refund_x_costs.json,RelicEffectXCostRefund,Vanilla RelicEffectConserveEnergyEndOfTurn (placeholder),Refund X cost spells
+First Buff Extra Stack,FirstBuffExtraStack,,Y,untested,,DiscipleClan/Artifacts/FirstBuffExtraStack.cs,json/relics/first_buff_extra_stack.json,RelicEffectFirstBuffExtraStack,Vanilla RelicEffectAddStatusEffectMultiplier (placeholder),First buff each combat +1 stack
+Gold On Pyre Kill,GoldOnPyreKill,,Y,untested,,DiscipleClan/Artifacts/GoldOnPyreKill.cs,json/relics/gold_on_pyre_kill.json,RelicEffectGoldOnPyreKill,Vanilla RelicEffectAddGoldOnPyreDamage,Gold when Pyre kills unit
+Highest HP To Front,HighestHPToFront,,Y,untested,,DiscipleClan/Artifacts/HighestHPToFront.cs,json/relics/highest_hp_to_front.json,RelicEffectHPToFront,Vanilla RelicEffectBumpOnTurnEnd (placeholder),Highest HP unit moves to front
 Ember On Divine,EmberOnDivine,,N,skip,Commented in MT1,,,,,
 Seers Boost Divine,SeersBoostDivine,,N,skip,Commented in MT1,,,,,
 Last Spell Magnets,LastSpellMagnets,,N,skip,Not registered in MT1,,,,,

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Chronomancy",
+      "names": { "english": "Chronomancy", "chinese": "时间术" },
+      "descriptions": { "english": "Divine and Quick. Draw 1 card.", "chinese": "预知与迅捷。抽1张牌。" },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "card_art": "@ChronomancyCardArt",
+      "targetless": true,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@ChronomancyEffect" }],
+      "lore_tooltips": [{ "english": "Divine and Quick." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "ChronomancyEffect",
+      "name": "CardEffectDraw",
+      "target_mode": "self",
+      "param_int": 1
+    }
+  ],
+  "sprites": [{ "id": "ChronomancyCardArt", "path": "textures/Chronomancy.png" }],
+  "game_objects": [
+    { "id": "ChronomancyCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@ChronomancyCardArt" } } }
+  ]
+}

@@ -24,7 +24,14 @@
         "@SpawnEpochTome",
         "@SpawnHaruspexWardBeta",
         "@SpawnRocketSpeed",
-        "@SpawnPyreSpike"
+        "@SpawnPyreSpike",
+        "@SpawnSecondDisciple",
+        "@SpawnDivineroftheInfinite",
+        "@SpawnRightTimingBeta",
+        "@SpawnRightTimingDelta",
+        "@SpawnTimeFreeze",
+        "@SpawnFlashfire",
+        "@SpawnDilation"
       ]
     }
   ]

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "EmberwaveBeta",
+      "names": { "english": "Emberwave Beta", "chinese": "余烬波乙" },
+      "descriptions": { "english": "Deal [effect0.power] [damage] to [front_in_room]. Scales with [ember].", "chinese": "对[front_in_room]造成[effect0.power][damage]。随[余烬]提升。" },
+      "cost": 1,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "card_art": "@EmberwaveBetaCardArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@EmberwaveBetaEffect" }],
+      "lore_tooltips": [{ "english": "Damage scaling with ember." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "EmberwaveBetaEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "front_in_room",
+      "param_int": 15
+    }
+  ],
+  "sprites": [{ "id": "EmberwaveBetaCardArt", "path": "textures/Emberwave.png" }],
+  "game_objects": [
+    { "id": "EmberwaveBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@EmberwaveBetaCardArt" } } }
+  ]
+}

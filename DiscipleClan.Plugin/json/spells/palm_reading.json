@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "PalmReading",
+      "names": { "english": "Palm Reading", "chinese": "掌纹占卜" },
+      "descriptions": { "english": "Draw 1 card. [consume].", "chinese": "抽1张牌。[消耗]。" },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Chrono",
+      "card_art": "@PalmReadingCardArt",
+      "targetless": true,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@PalmReadingEffect" }],
+      "traits": ["@Consume"],
+      "lore_tooltips": [{ "english": "Prophecy." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "PalmReadingEffect",
+      "name": "CardEffectDraw",
+      "target_mode": "self",
+      "param_int": 1
+    }
+  ],
+  "sprites": [{ "id": "PalmReadingCardArt", "path": "textures/Palm-Reading.png" }],
+  "game_objects": [
+    { "id": "PalmReadingCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@PalmReadingCardArt" } } }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Analog",
+      "names": { "english": "Analog", "chinese": "模拟" },
+      "descriptions": { "english": "Chronolock. Draw 1 card.", "chinese": "时锁。抽1张牌。" },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Chrono",
+      "card_art": "@AnalogCardArt",
+      "targetless": true,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@AnalogEffect" }],
+      "lore_tooltips": [{ "english": "Chronolock." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "AnalogEffect",
+      "name": "CardEffectDraw",
+      "target_mode": "self",
+      "param_int": 1
+    }
+  ],
+  "sprites": [{ "id": "AnalogCardArt", "path": "textures/Refractor.png" }],
+  "game_objects": [
+    { "id": "AnalogCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@AnalogCardArt" } } }
+  ]
+}

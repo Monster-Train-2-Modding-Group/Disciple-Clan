@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnSecondDisciple",
+      "names": { "english": "Glaukopis", "chinese": "灰眸" },
+      "card_art": "@SecondDiscipleCardArt",
+      "cost": 0,
+      "card_type": "monster",
+      "rarity": "champion",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnSecondDiscipleEffect" }],
+      "lore_tooltips": [{ "english": "Second champion." }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "SecondDisciple",
+      "names": { "english": "Glaukopis", "chinese": "灰眸" },
+      "character_art": "@SecondDiscipleCharacterArt",
+      "size": 2,
+      "health": 10,
+      "attack_damage": 0,
+      "subtypes": ["SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnSecondDiscipleEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@SecondDisciple"
+    }
+  ],
+  "sprites": [
+    { "id": "SecondDiscipleCardArt", "path": "textures/SecondDiscipleCharacterArt.png" },
+    { "id": "SecondDiscipleCharacterArt", "path": "textures/SecondDiscipleCharacterArt.png" }
+  ],
+  "game_objects": [
+    { "id": "SecondDiscipleCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@SecondDiscipleCardArt" } } },
+    {
+      "id": "SecondDiscipleCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@SecondDiscipleCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

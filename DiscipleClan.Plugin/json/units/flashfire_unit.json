@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnFlashfire",
+      "names": { "english": "Flashfire", "chinese": "闪火" },
+      "card_art": "@FlashfireUnitCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnFlashfireEffect" }],
+      "lore_tooltips": [{ "english": "" }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "FlashfireUnit",
+      "names": { "english": "Flashfire", "chinese": "闪火" },
+      "character_art": "@FlashfireUnitCharacterArt",
+      "size": 1,
+      "health": 5,
+      "attack_damage": 5,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnFlashfireEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@FlashfireUnit"
+    }
+  ],
+  "sprites": [
+    { "id": "FlashfireUnitCardArt", "path": "textures/Flashfire.png" },
+    { "id": "FlashfireUnitCharacterArt", "path": "textures/Flashfire.png" }
+  ],
+  "game_objects": [
+    { "id": "FlashfireUnitCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FlashfireUnitCardArt" } } },
+    {
+      "id": "FlashfireUnitCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@FlashfireUnitCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "PendulumBeta",
+      "names": { "english": "Pendulum", "chinese": "摆锤" },
+      "descriptions": { "english": "Increase buff/debuff by x. Apply [effect0.power] [damage] to [front_in_room].", "chinese": "增加增益/减益倍率。对[front_in_room]造成[effect0.power][damage]。" },
+      "cost": 1,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "card_art": "@PendulumBetaCardArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@PendulumBetaEffect" }],
+      "lore_tooltips": [{ "english": "Increase buff/debuff by x." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "PendulumBetaEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "front_in_room",
+      "param_int": 8
+    }
+  ],
+  "sprites": [{ "id": "PendulumBetaCardArt", "path": "textures/Pendulum.png" }],
+  "game_objects": [
+    { "id": "PendulumBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@PendulumBetaCardArt" } } }
+  ]
+}

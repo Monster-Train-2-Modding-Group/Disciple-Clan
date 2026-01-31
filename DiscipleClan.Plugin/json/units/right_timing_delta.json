@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnRightTimingDelta",
+      "names": { "english": "Right Timing Delta", "chinese": "正时丁" },
+      "card_art": "@RightTimingDeltaCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnRightTimingDeltaEffect" }],
+      "lore_tooltips": [{ "english": "" }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "RightTimingDelta",
+      "names": { "english": "Right Timing Delta", "chinese": "正时丁" },
+      "character_art": "@RightTimingDeltaCharacterArt",
+      "size": 1,
+      "health": 6,
+      "attack_damage": 4,
+      "subtypes": ["SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnRightTimingDeltaEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@RightTimingDelta"
+    }
+  ],
+  "sprites": [
+    { "id": "RightTimingDeltaCardArt", "path": "textures/Right-Timing.png" },
+    { "id": "RightTimingDeltaCharacterArt", "path": "textures/Right-Timing.png" }
+  ],
+  "game_objects": [
+    { "id": "RightTimingDeltaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@RightTimingDeltaCardArt" } } },
+    {
+      "id": "RightTimingDeltaCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@RightTimingDeltaCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

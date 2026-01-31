@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "PyreSpikeSpell",
+      "names": { "english": "Pyre Spike", "chinese": "圣火尖刺" },
+      "descriptions": { "english": "Deal [effect0.power] [damage] to [front_in_room].", "chinese": "对[front_in_room]造成[effect0.power][damage]。" },
+      "cost": 1,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Chrono",
+      "card_art": "@PyreSpikeSpellCardArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@PyreSpikeSpellEffect" }],
+      "lore_tooltips": [{ "english": "" }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "PyreSpikeSpellEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "front_in_room",
+      "param_int": 12
+    }
+  ],
+  "sprites": [{ "id": "PyreSpikeSpellCardArt", "path": "textures/Pyrespike.png" }],
+  "game_objects": [
+    { "id": "PyreSpikeSpellCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@PyreSpikeSpellCardArt" } } }
+  ]
+}

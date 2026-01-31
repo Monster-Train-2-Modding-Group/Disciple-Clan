@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "FirstBuffExtraStack",
+      "type": "collectable",
+      "names": { "english": "First Buff Extra Stack", "chinese": "首增益额外层" },
+      "descriptions": { "english": "First buff each combat gets +1 stack. (Placeholder: status multiplier.)", "chinese": "每战首个增益+1层。（占位：状态倍率。）" },
+      "icon": "@FirstBuffExtraStackIcon",
+      "icon_small": "@FirstBuffExtraStackIcon",
+      "lore_tooltips": [{ "english": "First buff each combat +1 stack." }],
+      "relic_effects": ["@FirstBuffExtraStackEffect"],
+      "extensions": [{ "collectable": { "class": "@Chrono", "rarity": "uncommon", "pools": ["MegaRelicPool"] } }]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "FirstBuffExtraStackEffect",
+      "name": "RelicEffectAddStatusEffectMultiplier",
+      "param_int": 1
+    }
+  ],
+  "sprites": [{ "id": "FirstBuffExtraStackIcon", "path": "textures/Mirrorc.png" }]
+}
