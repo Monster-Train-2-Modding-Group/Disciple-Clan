@@ -15,7 +15,7 @@ namespace DiscipleClan.Plugin.Patches
             if (__instance == null)
                 return;
 
-            string gravityStatusId = GetGravityStatusId(__instance);
+            string? gravityStatusId = GetGravityStatusId(__instance);
             if (string.IsNullOrEmpty(gravityStatusId))
                 return;
 
@@ -25,16 +25,16 @@ namespace DiscipleClan.Plugin.Patches
                 return;
 
             __result = 0;
-            __instance.RemoveStatusEffect(gravityStatusId, false, 1, true);
+            __instance.RemoveStatusEffect(gravityStatusId, 1, true);
         }
 
         private static string? GetGravityStatusId(CharacterState character)
         {
-            var stacks = new System.Collections.Generic.List<CharacterState.StatusEffectStack>();
+            var stacks = new List<CharacterState.StatusEffectStack>();
             character.GetStatusEffects(ref stacks, false);
             foreach (var stack in stacks)
             {
-                if (stack.State is DiscipleClan.Plugin.StatusEffects.StatusEffectGravityState)
+                if (stack.State is StatusEffects.StatusEffectGravityState)
                     return stack.State.GetStatusId();
             }
             return null;

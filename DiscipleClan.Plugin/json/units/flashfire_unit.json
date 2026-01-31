@@ -12,7 +12,7 @@
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnFlashfireEffect" }],
-      "lore_tooltips": [{ "english": "" }]
+      "lore_tooltips": [{ "english": "[ward]. Deal 15 [damage] to the front enemy in the room when played." }]
     }
   ],
   "characters": [

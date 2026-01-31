@@ -135,7 +135,7 @@ Gravity Status Effect is Missing, we should add this from Mechanics.
 
 **Fixed:** Relic must reference the custom status effect by reference, not by string id. In `json/relics/gravity_on_ascend.json`, changed `param_status_effects` from `"status": "gravity"` to `"status": "@gravity"` so the game resolves the StatusEffectData from the mod’s gravity status effect.
 
-### Runs 2 (Latest)
+### Runs 2
 
 Flashfire Text is wrong. 
 
@@ -173,3 +173,43 @@ ShinyShoe.CoroutineController+<Run>d__15.MoveNext () (at <d4189c17e1a745cbadc1bf
 UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c39a522eee05469b8171a6cfeb646c59>:0)
 
 **Fixed:** `GetCombatManager` now uses reflection for `GetCoreManagers().GetCombatManager()` instead of casting `allGameManagers` to `ICoreGameManagers`.
+
+### Loads 3
+
+No issues
+
+### Runs 3 (Latest)
+
+Symbiote needs some more tech to do. Wardmaster has double text, fixing it.
+
+If we divide Disciples size by 1.8, it will be good.
+
+Firewall should be targetless. It targets pyre, but there're no valid targets for it in rooms.
+
+Pattern shift is good, should be marked out as unbalanced.
+
+Triggers should not have their wording in the description. 
+
+Flashfire Ward does not have text.
+
+Jelly Scholar does not have Text either. nor a type line.
+
+Waxwing should not be a ward. Waxwing art need be 3x smaller.
+
+Palm Reading still demands a target, with no valid target.
+
+---
+
+**Resolved in JSON/code:**
+- **Disciple size** – Character art scale in `disciple_base.json` divided by 1.8 (0.7 → 0.39).
+- **Firewall** – Set `targetless: true`; removed `targets_pyre` so the card does not require a room target (effect still targets Pyre).
+- **Wardmaster double text** – Added explicit `descriptions` to each Wardmaster upgrade (one line each); set `hide_visual_and_ignore_silence: true` on Wardmaster character_triggers so trigger wording does not show twice on the card.
+- **Pattern Shift** – Marked `unbalanced` in `spells.csv`.
+- **Triggers in description** – Removed trigger wording from card lore for Waxwing and Fortune Teller (lore no longer duplicates trigger text).
+- **Flashfire (unit)** – Added lore_tooltips: "[ward]. Deal 15 [damage] to the front enemy in the room when played."
+- **Jelly Scholar** – Added lore "Resolve: +12 [health] and +1 capacity to this room."; added subtype `@ChronoSubtype_Seer` for type line.
+- **Waxwing** – Removed `@ChronoSubtype_Ward` from subtypes; character art scale set to 0.33 (1/3).
+
+**Still to do:**
+- **Symbiote** – Needs more tech/implementation.
+- **Palm Reading** – Still demands a target with no valid target; may need framework or effect fix (card already `targetless: true`).

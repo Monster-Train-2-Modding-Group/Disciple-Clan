@@ -38,29 +38,32 @@
         },
         {
             "id": "DiscipleWardmasterBasicAddWardTrigger",
-            "trigger": "post_combat",
+            "trigger": "pre_combat",
             "descriptions": {
-                "english": "Post combat: add a Ward to this room that deals 5 [damage] to a random enemy.",
+                "english": "Add a Ward to Hand that deals 5 [damage] to a random enemy.",
                 "chinese": "战斗后：在本房间添加守印，对随机敌人造成5[damage]。"
             },
+            "hide_visual_and_ignore_silence": true,
             "effects": ["@DiscipleWardmasterBasicAddWardEffect"]
         },
         {
             "id": "DiscipleWardmasterPremiumAddWardTrigger",
-            "trigger": "post_combat",
+            "trigger": "pre_combat",
             "descriptions": {
-                "english": "Post combat: add a Ward to this room that deals 10 [damage] to a random enemy.",
+                "english": "Add a Ward to Hand that deals 10 [damage] to a random enemy.",
                 "chinese": "战斗后：在本房间添加守印，对随机敌人造成10[damage]。"
             },
+            "hide_visual_and_ignore_silence": true,
             "effects": ["@DiscipleWardmasterPremiumAddWardEffect"]
         },
         {
             "id": "DiscipleWardmasterProAddWardTrigger",
-            "trigger": "post_combat",
+            "trigger": "pre_combat",
             "descriptions": {
-                "english": "Post combat: add a Ward to this room that deals 20 [damage] to a random enemy.",
+                "english": "Add a Ward to Hand that deals 20 [damage] to a random enemy.",
                 "chinese": "战斗后：在本房间添加守印，对随机敌人造成20[damage]。"
             },
+            "hide_visual_and_ignore_silence": true,
             "effects": ["@DiscipleWardmasterProAddWardEffect"]
         }
     ],
@@ -155,10 +158,7 @@
         {
             "id": "DiscipleWardmasterBasic",
             "titles": { "english": "Wardmaster", "chinese": "守印" },
-            "descriptions": {
-                "english": "Post combat: add a Ward to this room that deals 5 [damage] to a random enemy.",
-                "chinese": "战斗后：在本房间添加守印，对随机敌人造成5[damage]。"
-            },
+            "descriptions": { "english": "Pre-combat: Add a Ward to hand that deals 5 [damage] to a random enemy.", "chinese": "战前：将一张守印加入手牌，对随机敌人造成5[damage]。" },
             "bonus_damage": 0,
             "bonus_hp": 10,
             "trigger_upgrades": ["@DiscipleWardmasterBasicAddWardTrigger"],
@@ -168,10 +168,7 @@
         {
             "id": "DiscipleWardmasterPremium",
             "titles": { "english": "Wardmaster II", "chinese": "守印 II" },
-            "descriptions": {
-                "english": "Post combat: add a Ward to this room that deals 10 [damage] to a random enemy.",
-                "chinese": "战斗后：在本房间添加守印，对随机敌人造成10[damage]。"
-            },
+            "descriptions": { "english": "Pre-combat: Add a Ward to hand that deals 10 [damage] to a random enemy.", "chinese": "战前：将一张守印加入手牌，对随机敌人造成10[damage]。" },
             "bonus_damage": 0,
             "bonus_hp": 30,
             "trigger_upgrades": ["@DiscipleWardmasterPremiumAddWardTrigger"],
@@ -181,10 +178,7 @@
         {
             "id": "DiscipleWardmasterPro",
             "titles": { "english": "Wardmaster III", "chinese": "守印 III" },
-            "descriptions": {
-                "english": "Post combat: add a Ward to this room that deals 20 [damage] to a random enemy.",
-                "chinese": "战斗后：在本房间添加守印，对随机敌人造成20[damage]。"
-            },
+            "descriptions": { "english": "Pre-combat: Add a Ward to hand that deals 20 [damage] to a random enemy.", "chinese": "战前：将一张守印加入手牌，对随机敌人造成20[damage]。" },
             "bonus_damage": 0,
             "bonus_hp": 60,
             "trigger_upgrades": ["@DiscipleWardmasterProAddWardTrigger"],

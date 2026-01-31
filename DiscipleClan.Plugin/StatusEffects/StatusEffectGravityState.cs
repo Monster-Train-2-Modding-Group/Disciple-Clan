@@ -33,17 +33,16 @@ namespace DiscipleClan.Plugin.StatusEffects
 
             CardEffectParams cardEffectParams = new CardEffectParams
             {
-                saveManager = coreGameManagers.GetSaveManager(),
-                combatManager = coreGameManagers.GetCombatManager(),
-                heroManager = coreGameManagers.GetCombatManager()?.GetHeroManager(),
-                roomManager = roomManager,
-                targets = new List<CharacterState> { inputTriggerParams.associatedCharacter }
+                targets = new List<CharacterState> { inputTriggerParams.associatedCharacter },
+                selfTarget = inputTriggerParams.associatedCharacter,
+                cardTriggeredCharacter = inputTriggerParams.associatedCharacter,
+                selectedRoom = inputTriggerParams.associatedCharacter.GetCurrentRoomIndex()
             };
 
             // Bump(-1) = descend one floor. cardEffectState can be null when invoked from status effect.
             yield return CardEffectBump.Bump(null, cardEffectParams, coreGameManagers, -1, null);
 
-            inputTriggerParams.associatedCharacter.RemoveStatusEffect(statusId, false, 1, true);
+            inputTriggerParams.associatedCharacter.RemoveStatusEffect(statusId, 1, true);
         }
 
         private static bool CanDescend(CharacterState character, RoomManager roomManager)

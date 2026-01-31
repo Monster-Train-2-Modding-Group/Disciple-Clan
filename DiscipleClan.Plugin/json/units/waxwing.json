@@ -15,7 +15,7 @@
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnWaxwingEffect" }],
-      "lore_tooltips": [{ "english": "Relocate: +5 attack." }]
+      "lore_tooltips": [{ "english": "This unit gains +[effect0.power] [attack] per [relocate]." }]
     }
   ],
   "characters": [
@@ -26,7 +26,7 @@
       "size": 1,
       "health": 5,
       "attack_damage": 5,
-      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"],
+      "subtypes": ["SubtypesData_BannerUnit"],
       "triggers": ["@WaxwingOnRelocateTrigger"]
     }
   ],
@@ -34,8 +34,8 @@
     {
       "id": "WaxwingOnRelocateTrigger",
       "descriptions": {
-        "english": "Relocate: +5 [attack].",
-        "chinese": "位移时：+5[attack]。"
+        "english": " +[effect0.power] [attack].",
+        "chinese": "本回合+[effect0.power][attack]。"
       },
       "trigger": "@OnRelocate",
       "effects": [{ "id": "@WaxwingOnRelocateEffect" }]
@@ -67,7 +67,7 @@
       "extensions": {
         "character_art": {
           "sprite": "@WaxwingCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 0.33, "y": 0.33, "z": 0.33 } }
         }
       }
     }

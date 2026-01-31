@@ -12,7 +12,7 @@
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnJellyScholarEffect" }],
-      "lore_tooltips": [{ "english": "Resolve: +12 health +1 capacity." }]
+      "lore_tooltips": [{ "english": "Resolve: +12 [health] and +1 capacity to this room." }]
     }
   ],
   "characters": [
@@ -23,7 +23,7 @@
       "size": 1,
       "health": 8,
       "attack_damage": 2,
-      "subtypes": ["SubtypesData_BannerUnit"]
+      "subtypes": ["@ChronoSubtype_Seer", "SubtypesData_BannerUnit"]
     }
   ],
   "effects": [

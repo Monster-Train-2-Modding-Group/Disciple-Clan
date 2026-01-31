@@ -10,8 +10,7 @@
       "rarity": "common",
       "class": "@Chrono",
       "card_art": "@FirewallCardArt",
-      "targetless": false,
-      "targets_pyre": true,
+      "targetless": true,
       "pools": ["MegaPool"],
       "effects": [{ "id": "@FirewallEffect" }],
       "lore_tooltips": [{ "english": "Apply armor to Pyre per ember." }]
@@ -23,7 +22,7 @@
       "name": "CardEffectAddStatusEffectPerEnergy",
       "target_mode": "pyre",
       "param_int": 1,
-      "param_status_effect": "StatusEffectData_armor"
+      "param_status_effect": "armor"
     }
   ],
   "sprites": [{ "id": "FirewallCardArt", "path": "textures/Flashfire.png" }],
