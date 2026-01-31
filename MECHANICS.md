@@ -10,7 +10,7 @@ This document describes how each mechanic from the original Monster Train 1 Disc
 |----------|--------------|------------|
 | **CardEffectTeleport** (Pattern Shift) | `CardEffects/CardEffectTeleport.cs` | ✅ Implemented – `DiscipleClan.Plugin/CardEffects/CardEffectTeleport.cs` |
 | **RelicEffectRewind** (Rewind First Spell) | `CardEffects/RelicEffectRewind.cs` | ✅ Implemented – `DiscipleClan.Plugin/RelicEffects/RelicEffectRewind.cs` |
-| **OnRelocate** trigger | `Triggers/OnRelocate.cs` + Harmony on `CharacterState.MoveUpDownTrain` | ❌ TBD – needs Conductor/custom trigger + patch |
+| **OnRelocate** trigger | `Triggers/OnRelocate.cs` + Harmony on `CharacterState.MoveUpDownTrain` | ✅ Registered – `json/triggers/relocate.json`, `Enums/CharacterTriggers.cs`, `Patches/OnRelocatePatch.cs`; Waxwing/Fortune Finder use it |
 | **OnGainEmber** trigger | `Triggers/OnGainEmber.cs` + Harmony on `PlayerManager.AddEnergy` | ❌ TBD – Cinderborn uses vanilla spawn only |
 | **CardEffectScalingUpgrade** (Cinderborn) | `CardEffects/CardEffectScalingUpgrade.cs` | ❌ TBD – needs OnGainEmber + Conductor effect |
 | **Pyreboost** status | `StatusEffects/StatusEffectPyreboost.cs` | ❌ TBD – JSON + Conductor StatusEffectState |
@@ -76,8 +76,8 @@ This document describes how each mechanic from the original Monster Train 1 Disc
 - **Patch:** `[HarmonyPatch(typeof(CharacterState), "MoveUpDownTrain")]` Postfix: `CustomTriggerManager.QueueTrigger(OnRelocate.OnRelocateCharTrigger, __instance, ... paramInt = destinationRoomIndex - prevRoomIndex)`; `WardManager.TriggerWardsNow("Power", destinationRoomIndex, [__instance])`; then for each unit in destination and source room, call `IRoomStateSpawnPointsModifiedModifier.SpawnPointModifier(__instance)` / `SetSpawnPoint` / `ShiftSpawnPoints` as appropriate.
 
 **MT2 implementation:**
-- **Status:** Not implemented. No Conductor equivalent of custom character trigger + Harmony on move yet.
-- **Needed for:** Waxwing (+5 attack on relocate), Fortune Finder (+20 gold on relocate), Shifter champion path (buff room on relocate), Power Ward, Symbiote room modifier.
+- **Status:** Implemented. Trigger type in `json/triggers/relocate.json`; resolved in `Plugin.cs` ConfigurePostAction; Harmony patch `Patches/OnRelocatePatch.cs` on `CharacterState.MoveUpDownTrain` queues OnRelocate with paramInt = delta; Waxwing and Fortune Finder use trigger and effects (BuffDamage +5, RewardGold 20).
+- **Needed for:** Shifter champion path (buff room on relocate) still needs upgrade JSON referencing OnRelocate.
 
 **Notes:** In MT2 you need either a Harmony patch on the equivalent of `CharacterState.MoveUpDownTrain` / move-between-floors and a way to queue a custom trigger, or Conductor APIs for “on unit moved floor” and trigger firing. Then wire Shifter upgrade and Relocate units to that trigger.
 

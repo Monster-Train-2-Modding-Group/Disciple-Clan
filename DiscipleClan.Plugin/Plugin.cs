@@ -1,8 +1,11 @@
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using TrainworksReloaded.Base;
+using TrainworksReloaded.Base.Extensions;
 using TrainworksReloaded.Core;
 using TrainworksReloaded.Core.Extensions;
+using TrainworksReloaded.Core.Interfaces;
 
 namespace DiscipleClan.Plugin
 {
@@ -30,6 +33,7 @@ namespace DiscipleClan.Plugin
                         "json/subtypes/pythian.json",
                         "json/subtypes/eternal.json",
                         "json/subtypes/ward.json",
+                        "json/triggers/relocate.json",
                         "json/cardpool/banner_pool.json",
                         "json/map_nodes/banner.json",
                         "json/units/cinderborn.json",
@@ -91,6 +95,18 @@ namespace DiscipleClan.Plugin
                         "json/plugin.json",
                         "json/global.json"
                     );
+                }
+            );
+
+            Railend.ConfigurePostAction(
+                c =>
+                {
+                    var manager = c.GetInstance<IRegister<CharacterTriggerData.Trigger>>();
+                    CharacterTriggerData.Trigger GetTrigger(string id)
+                    {
+                        return manager.GetValueOrDefault(MyPluginInfo.PLUGIN_GUID.GetId(TemplateConstants.CharacterTriggerEnum, id));
+                    }
+                    CharacterTriggers.OnRelocate = GetTrigger("OnRelocate");
                 }
             );
 

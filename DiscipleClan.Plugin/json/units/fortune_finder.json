@@ -26,7 +26,19 @@
       "size": 1,
       "health": 5,
       "attack_damage": 3,
-      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"],
+      "triggers": ["@FortuneFinderOnRelocateTrigger"]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "FortuneFinderOnRelocateTrigger",
+      "descriptions": {
+        "english": "Relocate: +20 [gold].",
+        "chinese": "位移时：+20[gold]。"
+      },
+      "trigger": "@OnRelocate",
+      "effects": [{ "id": "@FortuneFinderOnRelocateEffect" }]
     }
   ],
   "effects": [
@@ -35,6 +47,12 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@FortuneFinder"
+    },
+    {
+      "id": "FortuneFinderOnRelocateEffect",
+      "name": "CardEffectRewardGold",
+      "target_mode": "self",
+      "param_int": 20
     }
   ],
   "sprites": [

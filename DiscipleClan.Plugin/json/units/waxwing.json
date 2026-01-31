@@ -26,7 +26,19 @@
       "size": 1,
       "health": 5,
       "attack_damage": 5,
-      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"],
+      "triggers": ["@WaxwingOnRelocateTrigger"]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "WaxwingOnRelocateTrigger",
+      "descriptions": {
+        "english": "Relocate: +5 [attack].",
+        "chinese": "位移时：+5[attack]。"
+      },
+      "trigger": "@OnRelocate",
+      "effects": [{ "id": "@WaxwingOnRelocateEffect" }]
     }
   ],
   "effects": [
@@ -35,6 +47,12 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@Waxwing"
+    },
+    {
+      "id": "WaxwingOnRelocateEffect",
+      "name": "CardEffectBuffDamage",
+      "target_mode": "self",
+      "param_int": 5
     }
   ],
   "sprites": [
