@@ -1,222 +1,255 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-  "character_triggers": [
-    {
-      "id": "DiscipleShifterBasicOnRelocateTrigger",
-      "descriptions": {
-        "english": "Relocate: Give friendly units in the room +2 [attack] and +2 [health].",
-        "chinese": "位移时：该房间友军+2[attack]，+2[health]。"
-      },
-      "trigger": "@OnRelocate",
-      "effects": [
-        "@DiscipleShifterBasicDamageEffect",
-        "@DiscipleShifterBasicHPEffect"
-      ]
-    },
-    {
-      "id": "DiscipleShifterPremiumOnRelocateTrigger",
-      "descriptions": {
-        "english": "Relocate: Give friendly units in the room +4 [attack] and +4 [health].",
-        "chinese": "位移时：该房间友军+4[attack]，+4[health]。"
-      },
-      "trigger": "@OnRelocate",
-      "effects": [
-        "@DiscipleShifterPremiumDamageEffect",
-        "@DiscipleShifterPremiumHPEffect"
-      ]
-    },
-    {
-      "id": "DiscipleShifterProOnRelocateTrigger",
-      "descriptions": {
-        "english": "Relocate: Give friendly units in the room +6 [attack] and +6 [health].",
-        "chinese": "位移时：该房间友军+6[attack]，+6[health]。"
-      },
-      "trigger": "@OnRelocate",
-      "effects": [
-        "@DiscipleShifterProDamageEffect",
-        "@DiscipleShifterProHPEffect"
-      ]
-    }
-  ],
-  "effects": [
-    {
-      "id": "DiscipleShifterBasicDamageEffect",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "room",
-      "target_team": "monsters",
-      "param_upgrade": "@DiscipleShifterTempDamage2"
-    },
-    {
-      "id": "DiscipleShifterBasicHPEffect",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "room",
-      "target_team": "monsters",
-      "param_upgrade": "@DiscipleShifterTempHP2"
-    },
-    {
-      "id": "DiscipleShifterPremiumDamageEffect",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "room",
-      "target_team": "monsters",
-      "param_upgrade": "@DiscipleShifterTempDamage4"
-    },
-    {
-      "id": "DiscipleShifterPremiumHPEffect",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "room",
-      "target_team": "monsters",
-      "param_upgrade": "@DiscipleShifterTempHP4"
-    },
-    {
-      "id": "DiscipleShifterProDamageEffect",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "room",
-      "target_team": "monsters",
-      "param_upgrade": "@DiscipleShifterTempDamage6"
-    },
-    {
-      "id": "DiscipleShifterProHPEffect",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "room",
-      "target_team": "monsters",
-      "param_upgrade": "@DiscipleShifterTempHP6"
-    }
-  ],
-  "upgrades": [
-    {
-      "id": "DiscipleShifterTempDamage2",
-      "bonus_damage": 2
-    },
-    {
-      "id": "DiscipleShifterTempHP2",
-      "bonus_hp": 2
-    },
-    {
-      "id": "DiscipleShifterTempDamage4",
-      "bonus_damage": 4
-    },
-    {
-      "id": "DiscipleShifterTempHP4",
-      "bonus_hp": 4
-    },
-    {
-      "id": "DiscipleShifterTempDamage6",
-      "bonus_damage": 6
-    },
-    {
-      "id": "DiscipleShifterTempHP6",
-      "bonus_hp": 6
-    },
-    {
-      "id": "DiscipleWardmasterBasic",
-      "titles": { "english": "Wardmaster", "chinese": "守印" },
-      "descriptions": {
-        "english": "+10 [health]. Post combat: add a Ward to this room that deals 5 damage to a random enemy.",
-        "chinese": "+10[health]。战斗后：在本房间添加守印，对随机敌人造成5点伤害。"
-      },
-      "bonus_damage": 0,
-      "bonus_hp": 10,
-      "show_description_on_cards": true,
-      "use_upgrade_highlight_tags": true
-    },
-    {
-      "id": "DiscipleWardmasterPremium",
-      "titles": { "english": "Wardmaster II", "chinese": "守印 II" },
-      "descriptions": {
-        "english": "+30 [health]. Post combat: add a Ward to this room that deals 10 damage to a random enemy.",
-        "chinese": "+30[health]。战斗后：在本房间添加守印，对随机敌人造成10点伤害。"
-      },
-      "bonus_damage": 0,
-      "bonus_hp": 30,
-      "show_description_on_cards": true,
-      "use_upgrade_highlight_tags": true
-    },
-    {
-      "id": "DiscipleWardmasterPro",
-      "titles": { "english": "Wardmaster III", "chinese": "守印 III" },
-      "descriptions": {
-        "english": "+60 [health]. Post combat: add a Ward to this room that deals 20 damage to a random enemy.",
-        "chinese": "+60[health]。战斗后：在本房间添加守印，对随机敌人造成20点伤害。"
-      },
-      "bonus_damage": 0,
-      "bonus_hp": 60,
-      "show_description_on_cards": true,
-      "use_upgrade_highlight_tags": true
-    },
-    {
-      "id": "DiscipleSymbioteBasic",
-      "titles": { "english": "Symbiote", "chinese": "共生" },
-      "descriptions": {
-        "english": "+10 [health]. Friendly units in this room gain +5 [attack] per capacity used.",
-        "chinese": "+10[health]。本房间友军每占用1容量获得+5[attack]。"
-      },
-      "bonus_damage": 0,
-      "bonus_hp": 10,
-      "show_description_on_cards": true,
-      "use_upgrade_highlight_tags": true
-    },
-    {
-      "id": "DiscipleSymbiotePremium",
-      "titles": { "english": "Symbiote II", "chinese": "共生 II" },
-      "descriptions": {
-        "english": "+20 [health]. Friendly units in this room gain +8 [attack] per capacity used.",
-        "chinese": "+20[health]。本房间友军每占用1容量获得+8[attack]。"
-      },
-      "bonus_damage": 0,
-      "bonus_hp": 20,
-      "show_description_on_cards": true,
-      "use_upgrade_highlight_tags": true
-    },
-    {
-      "id": "DiscipleSymbiotePro",
-      "titles": { "english": "Symbiote III", "chinese": "共生 III" },
-      "descriptions": {
-        "english": "+30 [health]. Friendly units in this room gain +13 [attack] per capacity used.",
-        "chinese": "+30[health]。本房间友军每占用1容量获得+13[attack]。"
-      },
-      "bonus_damage": 0,
-      "bonus_hp": 30,
-      "show_description_on_cards": true,
-      "use_upgrade_highlight_tags": true
-    },
-    {
-      "id": "DiscipleShifterBasic",
-      "titles": { "english": "Shifter", "chinese": "移形" },
-      "descriptions": {
-        "english": "+10 [attack]. Relocate: Give friendly units in the room +2 [attack] and +2 [health].",
-        "chinese": "+10[attack]。位移时：该房间友军+2[attack]，+2[health]。"
-      },
-      "bonus_damage": 10,
-      "bonus_hp": 0,
-      "trigger_upgrades": ["@DiscipleShifterBasicOnRelocateTrigger"],
-      "show_description_on_cards": true,
-      "use_upgrade_highlight_tags": true
-    },
-    {
-      "id": "DiscipleShifterPremium",
-      "titles": { "english": "Shifter II", "chinese": "移形 II" },
-      "descriptions": {
-        "english": "+20 [attack] and +10 [health]. Relocate: Give friendly units in the room +4 [attack] and +4 [health].",
-        "chinese": "+20[attack]，+10[health]。位移时：该房间友军+4[attack]，+4[health]。"
-      },
-      "bonus_damage": 20,
-      "bonus_hp": 10,
-      "trigger_upgrades": ["@DiscipleShifterPremiumOnRelocateTrigger"],
-      "show_description_on_cards": true,
-      "use_upgrade_highlight_tags": true
-    },
-    {
-      "id": "DiscipleShifterPro",
-      "titles": { "english": "Shifter III", "chinese": "移形 III" },
-      "descriptions": {
-        "english": "+45 [attack] and +35 [health]. Relocate: Give friendly units in the room +6 [attack] and +6 [health].",
-        "chinese": "+45[attack]，+35[health]。位移时：该房间友军+6[attack]，+6[health]。"
-      },
-      "bonus_damage": 45,
-      "bonus_hp": 35,
-      "trigger_upgrades": ["@DiscipleShifterProOnRelocateTrigger"],
-      "show_description_on_cards": true,
-      "use_upgrade_highlight_tags": true
-    }
-  ]
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "character_triggers": [{
+            "id": "DiscipleShifterBasicOnRelocateTrigger",
+            "trigger": "@OnRelocate",
+            "descriptions": {
+                "english": "Give friendly units in the room +[effect0.power] [attack] and +[effect0.power] [health].",
+                "chinese": "该房间友军+[effect0.power][attack]、+[effect0.power][health]。"
+            },
+            "effects": [
+                "@DiscipleShifterBasicDamageEffect",
+                "@DiscipleShifterBasicHPEffect"
+            ]
+        },
+        {
+            "id": "DiscipleShifterPremiumOnRelocateTrigger",
+            "trigger": "@OnRelocate",
+            "descriptions": {
+                "english": "Give friendly units in the room +[effect0.power] [attack] and +[effect0.power] [health].",
+                "chinese": "该房间友军+[effect0.power][attack]、+[effect0.power][health]。"
+            },
+            "effects": [
+                "@DiscipleShifterPremiumDamageEffect",
+                "@DiscipleShifterPremiumHPEffect"
+            ]
+        },
+        {
+            "id": "DiscipleShifterProOnRelocateTrigger",
+            "trigger": "@OnRelocate",
+            "descriptions": {
+                "english": "Give friendly units in the room +[effect0.power] [attack] and +[effect0.power] [health].",
+                "chinese": "该房间友军+[effect0.power][attack]、+[effect0.power][health]。"
+            },
+            "effects": [
+                "@DiscipleShifterProDamageEffect",
+                "@DiscipleShifterProHPEffect"
+            ]
+        },
+        {
+            "id": "DiscipleWardmasterBasicAddWardTrigger",
+            "trigger": "post_combat",
+            "descriptions": {
+                "english": "Post combat: add a Ward to this room that deals 5 [damage] to a random enemy.",
+                "chinese": "战斗后：在本房间添加守印，对随机敌人造成5[damage]。"
+            },
+            "effects": ["@DiscipleWardmasterBasicAddWardEffect"]
+        },
+        {
+            "id": "DiscipleWardmasterPremiumAddWardTrigger",
+            "trigger": "post_combat",
+            "descriptions": {
+                "english": "Post combat: add a Ward to this room that deals 10 [damage] to a random enemy.",
+                "chinese": "战斗后：在本房间添加守印，对随机敌人造成10[damage]。"
+            },
+            "effects": ["@DiscipleWardmasterPremiumAddWardEffect"]
+        },
+        {
+            "id": "DiscipleWardmasterProAddWardTrigger",
+            "trigger": "post_combat",
+            "descriptions": {
+                "english": "Post combat: add a Ward to this room that deals 20 [damage] to a random enemy.",
+                "chinese": "战斗后：在本房间添加守印，对随机敌人造成20[damage]。"
+            },
+            "effects": ["@DiscipleWardmasterProAddWardEffect"]
+        }
+    ],
+    "effects": [{
+            "id": "DiscipleShifterBasicDamageEffect",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@DiscipleShifterTempDamage2"
+        },
+        {
+            "id": "DiscipleShifterBasicHPEffect",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@DiscipleShifterTempHP2"
+        },
+        {
+            "id": "DiscipleShifterPremiumDamageEffect",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@DiscipleShifterTempDamage4"
+        },
+        {
+            "id": "DiscipleShifterPremiumHPEffect",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@DiscipleShifterTempHP4"
+        },
+        {
+            "id": "DiscipleShifterProDamageEffect",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@DiscipleShifterTempDamage6"
+        },
+        {
+            "id": "DiscipleShifterProHPEffect",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@DiscipleShifterTempHP6"
+        },
+        {
+            "id": "DiscipleWardmasterBasicAddWardEffect",
+            "name": "CardEffectAddBattleCard",
+            "param_card_pool": "@SpikeWard5Pool",
+            "param_int": 1,
+            "param_int_2": 1
+        },
+        {
+            "id": "DiscipleWardmasterPremiumAddWardEffect",
+            "name": "CardEffectAddBattleCard",
+            "param_card_pool": "@SpikeWard10Pool",
+            "param_int": 1,
+            "param_int_2": 1
+        },
+        {
+            "id": "DiscipleWardmasterProAddWardEffect",
+            "name": "CardEffectAddBattleCard",
+            "param_card_pool": "@SpikeWard20Pool",
+            "param_int": 1,
+            "param_int_2": 1
+        }
+    ],
+    "upgrades": [{
+            "id": "DiscipleShifterTempDamage2",
+            "bonus_damage": 2
+        },
+        {
+            "id": "DiscipleShifterTempHP2",
+            "bonus_hp": 2
+        },
+        {
+            "id": "DiscipleShifterTempDamage4",
+            "bonus_damage": 4
+        },
+        {
+            "id": "DiscipleShifterTempHP4",
+            "bonus_hp": 4
+        },
+        {
+            "id": "DiscipleShifterTempDamage6",
+            "bonus_damage": 6
+        },
+        {
+            "id": "DiscipleShifterTempHP6",
+            "bonus_hp": 6
+        },
+        {
+            "id": "DiscipleWardmasterBasic",
+            "titles": { "english": "Wardmaster", "chinese": "守印" },
+            "descriptions": {
+                "english": "Post combat: add a Ward to this room that deals 5 [damage] to a random enemy.",
+                "chinese": "战斗后：在本房间添加守印，对随机敌人造成5[damage]。"
+            },
+            "bonus_damage": 0,
+            "bonus_hp": 10,
+            "trigger_upgrades": ["@DiscipleWardmasterBasicAddWardTrigger"],
+            "show_description_on_cards": true,
+            "use_upgrade_highlight_tags": true
+        },
+        {
+            "id": "DiscipleWardmasterPremium",
+            "titles": { "english": "Wardmaster II", "chinese": "守印 II" },
+            "descriptions": {
+                "english": "Post combat: add a Ward to this room that deals 10 [damage] to a random enemy.",
+                "chinese": "战斗后：在本房间添加守印，对随机敌人造成10[damage]。"
+            },
+            "bonus_damage": 0,
+            "bonus_hp": 30,
+            "trigger_upgrades": ["@DiscipleWardmasterPremiumAddWardTrigger"],
+            "show_description_on_cards": true,
+            "use_upgrade_highlight_tags": true
+        },
+        {
+            "id": "DiscipleWardmasterPro",
+            "titles": { "english": "Wardmaster III", "chinese": "守印 III" },
+            "descriptions": {
+                "english": "Post combat: add a Ward to this room that deals 20 [damage] to a random enemy.",
+                "chinese": "战斗后：在本房间添加守印，对随机敌人造成20[damage]。"
+            },
+            "bonus_damage": 0,
+            "bonus_hp": 60,
+            "trigger_upgrades": ["@DiscipleWardmasterProAddWardTrigger"],
+            "show_description_on_cards": true,
+            "use_upgrade_highlight_tags": true
+        },
+        {
+            "id": "DiscipleSymbioteBasic",
+            "titles": { "english": "Symbiote", "chinese": "共生" },
+            "descriptions": {
+                "english": "Friendly units in this room gain +5 [attack] per capacity used.",
+                "chinese": "本房间友军每占用1容量获得+5[attack]。"
+            },
+            "bonus_damage": 0,
+            "bonus_hp": 10,
+            "show_description_on_cards": true,
+            "use_upgrade_highlight_tags": true
+        },
+        {
+            "id": "DiscipleSymbiotePremium",
+            "titles": { "english": "Symbiote II", "chinese": "共生 II" },
+            "descriptions": {
+                "english": "Friendly units in this room gain +8 [attack] per capacity used.",
+                "chinese": "本房间友军每占用1容量获得+8[attack]。"
+            },
+            "bonus_damage": 0,
+            "bonus_hp": 20,
+            "show_description_on_cards": true,
+            "use_upgrade_highlight_tags": true
+        },
+        {
+            "id": "DiscipleSymbiotePro",
+            "titles": { "english": "Symbiote III", "chinese": "共生 III" },
+            "descriptions": {
+                "english": "Friendly units in this room gain +13 [attack] per capacity used.",
+                "chinese": "本房间友军每占用1容量获得+13[attack]。"
+            },
+            "bonus_damage": 0,
+            "bonus_hp": 30,
+            "show_description_on_cards": true,
+            "use_upgrade_highlight_tags": true
+        },
+        {
+            "id": "DiscipleShifterBasic",
+            "titles": { "english": "Shifter", "chinese": "移形" },
+            "bonus_damage": 0,
+            "bonus_hp": 0,
+            "trigger_upgrades": ["@DiscipleShifterBasicOnRelocateTrigger"],
+            "use_upgrade_highlight_tags": true
+        },
+        {
+            "id": "DiscipleShifterPremium",
+            "titles": { "english": "Shifter II", "chinese": "移形 II" },
+            "bonus_damage": 20,
+            "bonus_hp": 10,
+            "trigger_upgrades": ["@DiscipleShifterPremiumOnRelocateTrigger"],
+            "use_upgrade_highlight_tags": true
+        },
+        {
+            "id": "DiscipleShifterPro",
+            "titles": { "english": "Shifter III", "chinese": "移形 III" },
+            "bonus_damage": 45,
+            "bonus_hp": 35,
+            "trigger_upgrades": ["@DiscipleShifterProOnRelocateTrigger"],
+            "use_upgrade_highlight_tags": true
+        }
+    ]
 }

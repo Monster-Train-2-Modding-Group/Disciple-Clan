@@ -1,32 +1,29 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-  "cards": [
-    {
-      "id": "FlashfireSpell",
-      "names": { "english": "Flashfire", "chinese": "闪火" },
-      "descriptions": { "english": "Deal [effect0.power] [damage] to [front_in_room].", "chinese": "对[front_in_room]造成[effect0.power][damage]。" },
-      "cost": 1,
-      "card_type": "spell",
-      "rarity": "common",
-      "class": "@Chrono",
-      "card_art": "@FlashfireSpellCardArt",
-      "targets_room": true,
-      "targetless": false,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@FlashfireSpellEffect" }],
-      "lore_tooltips": [{ "english": "Damage to enemies." }]
-    }
-  ],
-  "effects": [
-    {
-      "id": "FlashfireSpellEffect",
-      "name": "CardEffectDamage",
-      "target_mode": "front_in_room",
-      "param_int": 15
-    }
-  ],
-  "sprites": [{ "id": "FlashfireSpellCardArt", "path": "textures/Flashfire.png" }],
-  "game_objects": [
-    { "id": "FlashfireSpellCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FlashfireSpellCardArt" } } }
-  ]
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [{
+        "id": "FlashfireSpell",
+        "names": { "english": "Flashfire", "chinese": "闪火" },
+        "descriptions": { "english": "Deal [effect0.power] [damage] to the front enemy in the room.", "chinese": "对房间前排敌人造成15[damage]。" },
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "common",
+        "class": "@Chrono",
+        "card_art": "@FlashfireSpellCardArt",
+        "targets_room": true,
+        "targetless": false,
+        "pools": ["MegaPool"],
+        "effects": [{ "id": "@FlashfireSpellEffect" }],
+        "lore_tooltips": [{ "english": "Damage to enemies." }]
+    }],
+    "effects": [{
+        "id": "FlashfireSpellEffect",
+        "name": "CardEffectDamage",
+        "target_mode": "front_in_room",
+        "target_team": "heroes",
+        "param_int": 15
+    }],
+    "sprites": [{ "id": "FlashfireSpellCardArt", "path": "textures/Flashfire.png" }],
+    "game_objects": [
+        { "id": "FlashfireSpellCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FlashfireSpellCardArt" } } }
+    ]
 }

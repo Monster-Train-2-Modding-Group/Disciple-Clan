@@ -28,6 +28,7 @@ namespace DiscipleClan.Plugin
                     c.AddMergedJsonFile(
                         "json/class/chrono.json",
                         "json/champion/disciple_base.json",
+                        "json/spells/spike_ward.json",
                         "json/champion/disciple_upgrades.json",
                         "json/subtypes/seer.json",
                         "json/subtypes/pythian.json",

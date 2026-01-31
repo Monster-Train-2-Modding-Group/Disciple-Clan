@@ -43,12 +43,18 @@ namespace DiscipleClan.Plugin.Patches
 
         static CombatManager? GetCombatManager(CharacterState character)
         {
-            const BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic;
+            const BindingFlags flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
             var field = typeof(CharacterState).GetField("allGameManagers", flags);
             var allGameManagers = field?.GetValue(character);
             if (allGameManagers == null)
                 return null;
-            return ((ICoreGameManagers)allGameManagers).GetCombatManager();
+            // allGameManagers may not be ICoreGameManagers; use reflection to call GetCoreManagers().GetCombatManager()
+            var getCoreManagers = allGameManagers.GetType().GetMethod("GetCoreManagers", flags);
+            var coreManagers = getCoreManagers?.Invoke(allGameManagers, null);
+            if (coreManagers == null)
+                return null;
+            var getCombatManager = coreManagers.GetType().GetMethod("GetCombatManager", flags);
+            return getCombatManager?.Invoke(coreManagers, null) as CombatManager;
         }
     }
 }

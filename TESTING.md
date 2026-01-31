@@ -133,6 +133,8 @@ Firewall doesn't work, no valid target.
 
 Gravity Status Effect is Missing, we should add this from Mechanics.
 
+**Fixed:** Relic must reference the custom status effect by reference, not by string id. In `json/relics/gravity_on_ascend.json`, changed `param_status_effects` from `"status": "gravity"` to `"status": "@gravity"` so the game resolves the StatusEffectData from the mod’s gravity status effect.
+
 ### Runs 2 (Latest)
 
 Flashfire Text is wrong. 
@@ -145,6 +147,15 @@ Shifter has double the text. Also, shouldn't have +10 attack.
 Disciple Character is still scaled too much. Same with Horizon Tome. They both need to be smaller still.
 
 Flashfire doesn't do anything.
+
+**Resolved in JSON/code:**
+- **Gravity (Loads 2):** Relic `gravity_on_ascend.json` now uses `"status": "@gravity"` so the gravity status effect resolves.
+- **OnRelocate InvalidCastException:** `OnRelocatePatch.GetCombatManager` now uses reflection for `GetCoreManagers().GetCombatManager()` instead of casting to `ICoreGameManagers`.
+- **Flashfire:** Description set to "Deal 15 [damage] to the front enemy in the room."; effect given `target_team: "heroes"` so it targets enemies.
+- **Horizon Tome (Epoch Tome):** Spell description set to "Deal 10 [damage] to all enemies in the front. Reduce their [attack] by half."; unit character_art scale set to 0.7.
+- **Disciple / Horizon Tome scale:** Disciple character_art scale reduced to 0.7 in `disciple_base.json`; Epoch Tome unit character_art scale set to 0.7.
+- **Shifter:** Shifter Basic no longer gives +10 attack (bonus_damage 0); Shifter trigger descriptions hidden on card via `hide_visual_and_ignore_silence: true` to avoid double "Relocate" text.
+- **Wardmaster:** Descriptions already present in `disciple_upgrades.json`; if still missing in-game, may need framework/trigger wiring (Ward effect not implemented yet).
 
 This error stopped us from getting our relocate trigger:
 
@@ -160,3 +171,5 @@ ShinyShoe.EnumeratorStack.Advance () (at <d4189c17e1a745cbadc1bf14bed5181b>:0)
 ShinyShoe.EnumeratorStack.RunOnce () (at <d4189c17e1a745cbadc1bf14bed5181b>:0)
 ShinyShoe.CoroutineController+<Run>d__15.MoveNext () (at <d4189c17e1a745cbadc1bf14bed5181b>:0)
 UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c39a522eee05469b8171a6cfeb646c59>:0)
+
+**Fixed:** `GetCombatManager` now uses reflection for `GetCoreManagers().GetCombatManager()` instead of casting `allGameManagers` to `ICoreGameManagers`.
