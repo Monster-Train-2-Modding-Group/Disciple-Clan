@@ -13,6 +13,13 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+# Devcontainer / environment secrets
+.env
+.devcontainer/.env
+
+# Cursor
+.cursor/
+
 # Mono auto generated files
 mono_crash.*
 
