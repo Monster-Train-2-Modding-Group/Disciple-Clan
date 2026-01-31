@@ -1,0 +1,32 @@
+Name,ID,Rarity,Pool,Traits,Effect,Type,Cost,Attack,Health,Size,Subtype,Include,Lore,Port status,Notes
+Disciple,Disciple,Champion,Banner,,Champion (Wardmaster/Symbiote/Shifter),Champion,0,,,,Y,,pending,
+Glaukopis,SecondDisciple,Champion,Banner,,Second champion,Champion,0,,,,Y,,pending,
+Shimmersnail,Ancient Savant,Common,Banner,,Grant Quick,Unit,,,,Y,,pending,Speedtime
+Fulgursnail,Ancient Pyresnail,Common,Banner,,Grant Pyreboost,Unit,,,,Y,,pending,Pyrepact
+Cindershell,Cinderborn,Uncommon,Banner,Eternal,+2 attack,Unit,1,4,10,2,Eternal,Y,,pending,Pyrepact
+Waxwing,Waxwing,Common,Banner,,Relocate: +5 attack,Unit,,,,Y,,pending,Shifter
+Fortune Teller,Fortune Finder,Common,Banner,,Relocate: +20 gold,Unit,,,,Y,,pending,Shifter
+Flashfeather,Flashwing,Uncommon,Banner,,Extinguish: Dazed 2 to last attacker to Pyre,Unit,,,,Y,,pending,Shifter
+Galilizard,Snecko,Uncommon,Banner,,End of Turn: Ascend twice,Unit,,,,Y,,pending,Shifter
+Vigor Ward,PowerWardBeta,Uncommon,Banner,,+attack to units; +attack relocated,Unit,,,,Y,,pending,Shifter
+Overward,ShifterWardBeta,Uncommon,Banner,,Descend friendly units after combat,Unit,,,,Y,,pending,Shifter
+Wax Pinion,WaxPinion,Common,Banner,,Ascend unit to Pyre,Unit,,,,Y,,pending,Shifter
+Apple Elixir,AppleElixir,Common,Banner,,,Unit,,,,Y,,pending,Shifter
+Pattern Shift,PatternShift,Starter,Banner,,Teleport unit to random floor,Unit,0,,,,Y,,pending,Champion starter
+Fate Behemoth,Diviner of the Infinite,Rare,Banner,,Reserve: Cost -1 ember,Unit,,,,Y,,pending,Retain
+Jelly Scholar,JellyScholar,Common,Banner,,Resolve: +12 health +1 capacity,Unit,,,,Y,,pending,Retain
+Newton,Newtons,Uncommon,Banner,,,Unit,,,,Y,,pending,Retain
+Right Timing Beta,RightTimingBeta,Uncommon,Banner,,,Unit,,,,Y,,pending,Retain
+Right Timing Delta,RightTimingDelta,Uncommon,Banner,,,Unit,,,,Y,,pending,Retain
+Time Freeze,TimeFreeze,Rare,Banner,,,Unit,,,,Y,,pending,Retain
+Embermaker,EmberMaker,Uncommon,Banner,Eternal,On Attacking: emberboost,Unit,1,2,20,2,Eternal,Y,,pending,Pyrepact
+Minerva Owl,MinervaOwl,Uncommon,Banner,,,Unit,,,,Y,,pending,Pyrepact
+Morsowl,Morsowl,Uncommon,Banner,,,Unit,,,,Y,,pending,Pyrepact
+Pyresnail,AncientPyreSnail,Common,Banner,,,Unit,,,,Y,,pending,Pyrepact
+Fireshaped,Fireshaped,Uncommon,Banner,,,Unit,,,,Y,,pending,Pyrepact
+Horizon Tome,EpochTome,Uncommon,Banner,,Sweep; reduce attack half,Unit,,,,Y,,pending,Pyrepact
+Haruspex Ward Beta,HaruspexWardBeta,Uncommon,Banner,,,Unit,,,,Y,,pending,Pyrepact
+Rocket Speed,RocketSpeed,Uncommon,Banner,,,Unit,,,,Y,,pending,Pyrepact
+Pyre Spike,PyreSpike,Common,Banner,,,Unit,,,,Y,,pending,Pyrepact
+Flashfire,Flashfire,Common,Banner,,,Unit,,,,Y,,pending,Pyrepact
+Dilation,Dilation,Uncommon,Banner,,+capacity +health,Unit,,,,Y,,pending,Pyrepact

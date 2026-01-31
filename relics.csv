@@ -1,0 +1,15 @@
+Name,ID,Effect summary,Include,Port status,Notes
+Free Time,FreeTime,,Y,pending,
+Gold Over Time,GoldOverTime,,Y,pending,
+Gravity On Ascend,GravityOnAscend,,Y,pending,
+Rewind First Spell,RewindFirstSpell,,Y,pending,
+Pyre Damage On Ember,PyreDamageOnEmber,,Y,pending,
+Quick And Dirty,QuickAndDirty,,Y,pending,
+Rage Against The Pyre,RageAgainstThePyre,,Y,pending,
+Refund X Costs,RefundXCosts,,Y,pending,
+First Buff Extra Stack,FirstBuffExtraStack,,Y,pending,
+Gold On Pyre Kill,GoldOnPyreKill,,Y,pending,
+Highest HP To Front,HighestHPToFront,,Y,pending,
+Ember On Divine,EmberOnDivine,,N,skip,Commented in MT1
+Seers Boost Divine,SeersBoostDivine,,N,skip,Commented in MT1
+Last Spell Magnets,LastSpellMagnets,,N,skip,Not registered in MT1

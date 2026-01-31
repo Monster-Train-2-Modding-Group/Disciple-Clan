@@ -1,0 +1,18 @@
+Name,ID,Cost,Rarity,Trait,Effect,Include,Unlock,Port status,Notes
+Seek,Seek,0,Uncommon,Consume,Choose and draw 1 from deck,Y,0,pending,Prophecy
+Rewind,Rewind,,,,,Y,,pending,Prophecy
+Revelation,Revelation,,,,,Y,,pending,Prophecy
+Palm Reading,PalmReading,,,,,Y,,pending,Prophecy
+Firewall,Firewall,0,Common,,Apply armor to Pyre per ember,Y,,pending,Pyrepact
+Flashfire,Flashfire,,,,Damage to enemies,Y,,pending,Pyrepact
+Dilation,Dilation,,,,+capacity +health to target,Y,,pending,Pyrepact
+Epoch Tome,EpochTome,,,,Sweep; reduce attack half,Y,,pending,Pyrepact
+Emberwave Beta,EmberwaveBeta,,,,,Y,,pending,Pyrepact
+Pyre Spike,PyreSpike,,,,,Y,,pending,Pyrepact
+Rocket Speed,RocketSpeed,,,,,Y,,pending,Pyrepact
+Haruspex Ward Beta,HaruspexWardBeta,,,,,Y,,pending,Pyrepact (ward spell)
+Chronomancy,Chronomancy,,,,Divine and Quick,Y,,pending,Speedtime
+Analog,Analog,,,,,Y,,pending,Chronolock
+Pendulum,PendulumBeta,,,,Increase buff/debuff by x,Y,,pending,Chronolock
+Time Stamp,TimeStamp,3,Rare,Consume,TimeStamp effect + sacrifice,Y,,pending,Chronolock
+Pattern Shift,PatternShift,0,Starter,,Teleport unit to random floor,Y,,pending,Champion starter

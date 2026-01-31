@@ -1,0 +1,13 @@
+Name,ID,Icon path,Include,Port status,Notes
+Pyreboost,pyreboost,Status/burning-embers.png,Y,pending,
+Loaded,loaded,Status/two-coins.png,Y,pending,
+Icarian,icarian,Status/icarus.png,Y,pending,
+Emberboost,emberboost,Status/fire-silhouette.png,Y,pending,
+Gravity,gravity,Status/weight.png,Y,pending,
+Pyrelink,pyrelink,Status/fire-dash.png,Y,pending,
+Hide Until Boss,hideuntilboss,Status/time-trap.png,Y,pending,
+Past Glory,pastglory,Status/card-discard.png,Y,pending,
+Symbiote,symbiote,Status/card-discard.png,Y,pending,
+Adapted,adapted,Status/life-in-the-balance.png,Y,pending,
+Chronolock,chronolock,,N,skip,Commented in MT1
+Slow,slow,,N,skip,Commented in MT1
