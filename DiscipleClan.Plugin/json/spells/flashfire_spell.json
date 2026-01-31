@@ -25,7 +25,7 @@
       "param_int": 15
     }
   ],
-  "sprites": [{ "id": "FlashfireSpellCardArt", "path": "textures/FlashfireCardArt.png" }],
+  "sprites": [{ "id": "FlashfireSpellCardArt", "path": "textures/Flashfire.png" }],
   "game_objects": [
     { "id": "FlashfireSpellCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FlashfireSpellCardArt" } } }
   ]

@@ -25,7 +25,7 @@
       "param_int": 1
     }
   ],
-  "sprites": [{ "id": "SeekCardArt", "path": "textures/SeekCardArt.png" }],
+  "sprites": [{ "id": "SeekCardArt", "path": "textures/Seek.png" }],
   "game_objects": [
     { "id": "SeekCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@SeekCardArt" } } }
   ]

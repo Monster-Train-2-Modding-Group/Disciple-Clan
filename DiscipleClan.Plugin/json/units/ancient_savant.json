@@ -35,8 +35,8 @@
     }
   ],
   "sprites": [
-    { "id": "AncientSavantCardArt", "path": "textures/AncientSavantCharacterArt.png" },
-    { "id": "AncientSavantCharacterArt", "path": "textures/AncientSavantCharacterArt.png" }
+    { "id": "AncientSavantCardArt", "path": "textures/AncientCharacterArt.png" },
+    { "id": "AncientSavantCharacterArt", "path": "textures/AncientCharacterArt.png" }
   ],
   "game_objects": [
     { "id": "AncientSavantCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@AncientSavantCardArt" } } },

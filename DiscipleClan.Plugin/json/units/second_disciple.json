@@ -35,8 +35,8 @@
     }
   ],
   "sprites": [
-    { "id": "SecondDiscipleCardArt", "path": "textures/SecondDiscipleCharacterArt.png" },
-    { "id": "SecondDiscipleCharacterArt", "path": "textures/SecondDiscipleCharacterArt.png" }
+    { "id": "SecondDiscipleCardArt", "path": "textures/Hero2CharacterArt.png" },
+    { "id": "SecondDiscipleCharacterArt", "path": "textures/Hero2CharacterArt.png" }
   ],
   "game_objects": [
     { "id": "SecondDiscipleCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@SecondDiscipleCardArt" } } },

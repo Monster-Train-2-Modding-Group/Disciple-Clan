@@ -34,7 +34,7 @@
       "param_int": 1
     }
   ],
-  "sprites": [{ "id": "DilationCardArt", "path": "textures/DilationCardArt.png" }],
+  "sprites": [{ "id": "DilationCardArt", "path": "textures/Dilation.png" }],
   "game_objects": [
     { "id": "DilationCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@DilationCardArt" } } }
   ]

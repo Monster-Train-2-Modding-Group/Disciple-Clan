@@ -1,101 +1,263 @@
-# DiscipleClan
+# Disciple Clan
 
 A port of the Arcadian (Chrono) clan from Monster Train 1 to Monster Train 2.
 
----
+## Table of Contents
 
-## Steps you need to do
+* [Overview](#overview)
+* [Core Mechanics](#core-mechanics)
+* [Champion: Disciple](#champion-disciple)
+* [Units](#units)
+* [Spells](#spells)
+* [Relics](#relics)
+* [Installation](#installation)
+* [Bugs and Feedback](#bugs-and-feedback)
+* [Credits](#credits)
 
-### 1. NuGet / GitHub auth (required to build)
+For implementation details of each mechanic (MT1 source vs MT2 port status), see **[MECHANICS.md](MECHANICS.md)**.
 
-Restore uses the **Monster Train 2 Modding Group** GitHub NuGet feed. You must authenticate once:
+## Overview
 
-- **Option A – nuget.config (recommended)**  
-  In the repo root, create or edit `nuget.config` and add a `packageSourceCredentials` section with your GitHub username and a [Personal Access Token (PAT)](https://github.com/settings/tokens) that has `read:packages`:
+*Dead prophets and oracles who climbed from the abyss and eschewed redemption.*
 
-  ```xml
-  <packageSourceCredentials>
-    <monster-train-packages>
-      <add key="Username" value="YOUR_GITHUB_USERNAME" />
-      <add key="ClearTextPassword" value="YOUR_GITHUB_PAT" />
-    </monster-train-packages>
-  </packageSourceCredentials>
-  ```
+The Disciple Clan (Chrono / Arcadian) is a Monster Train 1 clan focused on time, prophecy, and movement. Fight with the Disciple champion and units that reward **Relocate** (moving between floors), **Pyreboost** (attack scaling with Pyre attack), **Ember** synergies, and **Wards** that trigger on combat or movement.
 
-- **Option B – Devcontainer**  
-  If you use the devcontainer, copy `.devcontainer/.env.template` to `.devcontainer/.env` and set `GITHUB_USERNAME` and `GITHUB_PERSONAL_ACCESS_TOKEN`. Run `setup.sh` (or the post-create command) so restore can use the token.
+Mechanically, the clan emphasizes:
 
-After this, `dotnet restore` and `dotnet build` can pull TrainworksReloaded.Base and Conductor from the private feed.
+- **Relocate** – Moving units between floors triggers abilities and Wards; the Shifter path rewards repositioning.
+- **Pyre and Ember** – Status effects and spells that scale with Pyre attack or current Ember.
+- **Wards** – Post-combat or on-Relocate effects that add damage, buffs, or control.
 
-### 2. Copy assets from MT1 (required for art)
+## Core Mechanics
 
-Art is not in this repo; it lives in the MT1 mod **Disciple-Monster-Train**. You need to copy it into the plugin’s `textures` folder.
+### Relocate Trigger
 
-- **Prerequisite:** Clone or have the [Disciple-Monster-Train](https://github.com/...) repo (MT1 mod) next to or inside your workspace, e.g.  
-  `.../projects/Disciple-Monster-Train/`  
-  so that the path `Disciple-Monster-Train/AssetSources/...` exists relative to where you run the script.
+**Relocate** is a custom trigger that fires when a unit moves to a different floor (ascend or descend). It drives many Shifter units and the Shifter champion path.
 
-- **Run the copy script** (from the **DiscipleClan** repo root):
+**In MT1:**
 
-  ```bash
-  python copy_assets.py
-  ```
+- When a unit moves (e.g. via Pattern Shift, Bump, or ability), the game queues the **OnRelocate** character trigger for that unit.
+- **Ward "Power"** triggers on the destination floor for the moving unit.
+- Room modifiers (e.g. **Symbiote** path) can apply temp upgrades when spawn points change.
 
-  Or, if you have the MT1 repo elsewhere:
+**Examples:** Waxwing gains +5 attack when *it* relocates. Fortune Finder gains gold on relocate. The **Shifter** champion path gives all friendly units in the room +2 attack and +2 HP (temp) whenever the Disciple relocates.
 
-  ```bash
-  python copy_assets.py --mt1 "C:\path\to\Disciple-Monster-Train"
-  ```
+### Pyreboost
 
-  This reads `assets.csv` and copies each file from the MT1 `AssetSources/...` path into `DiscipleClan.Plugin/textures/` (creating subdirs like `textures/card_art` if needed). Missing source files are skipped with a warning.
+**Pyreboost** is a stacking status effect. The unit’s attack is set to **Pyre attack × Pyre attacks × stacks** (e.g. if Pyre has 10 attack and 2 hits, and the unit has 2 Pyreboost, the unit gains 40 attack from the status). It updates when Pyre attack or stacks change.
 
-- **Without the script:** You can copy by hand using the mapping in `assets.csv` (columns `MT1 path` → `MT2 path`).
+- **How to gain:** Spells and effects that “apply Pyreboost” (e.g. Pyrepact cards).
+- **How it works:** Each stack multiplies the unit’s damage by the Pyre’s current attack output; the status listens to Pyre attack changes and reapplies the buff.
 
-### 3. Build
+### Emberboost
 
-From the **DiscipleClan** solution/repo root:
+**Emberboost** is a stacking status that gives **Ember** (energy) at the start of the monster turn: add Ember equal to stacks, then remove one stack.
+
+- **How to gain:** Certain units (e.g. Embermaker) apply Emberboost when they attack or on other triggers.
+- **How it works:** On monster turn begin, the unit’s room is selected, the player gains Ember equal to stacks, one stack is removed, and a notification is shown.
+
+### Gravity
+
+**Gravity** is a stacking status that restricts movement and forces descent.
+
+- **How to gain:** Relics like **Gravity On Ascend** (when a friendly unit ascends, apply 1 Gravity), or other effects.
+- **How it works:** While the unit has Gravity, movement speed is set to 0 (they cannot ascend). At end of turn, the unit descends one floor and removes one stack of Gravity.
+
+### Wards
+
+**Wards** are post-combat or on-Relocate effects that spawn or trigger “Ward” behaviors (e.g. **WardStateRandomDamage**, **WardStatePower**).
+
+- **Wardmaster path:** After combat, add a Ward that deals random damage (5 / 10 / 20 for Basic / Premium / Pro) to enemies.
+- **Power Ward:** When a unit relocates, the “Power” Ward triggers on the destination floor for that unit.
+- Other Ward types (Shifter, Pyrebound, Pyre Harvest, etc.) can trigger on relocate or post-combat.
+
+### Status Effects (MT1)
+
+| Status      | Idea |
+|------------|------|
+| **Pyreboost** | Unit attack = Pyre attack × stacks. |
+| **Emberboost** | Start of turn: gain Ember = stacks, then remove 1 stack. |
+| **Gravity** | Can’t ascend; end of turn descend 1 and remove 1 stack. |
+| **Loaded**  | (Two coins – economy/tooltip.) |
+| **Icarian** | (Thematic – high risk.) |
+| **Pyrelink** | (Fire dash – Pyre/synergy.) |
+| **Hide Until Boss** | (Time trap – delayed appearance.) |
+| **Past Glory** | (Card discard – comeback.) |
+| **Symbiote** | (Share stats with room.) |
+| **Adapted**  | (Life in balance – scaling.) |
+
+### Subtypes
+
+- **Seer** – Prophecy / draw themed (e.g. Waxwing in MT1).
+- **Ward** – Ward-trigger and support units.
+- **Eternal** – Persistent or scaling units (e.g. Cinderborn, Embermaker).
+
+## Champion: Disciple
+
+The Disciple is the Chrono clan champion: a 0-cost, 10 HP, 0 attack, size-2 unit. They start with the **Pattern Shift** starter spell and choose one of three upgrade paths.
+
+### Starter: Pattern Shift
+
+- **Pattern Shift** (1 Ember, Consume): Teleport a friendly or enemy unit to a **random** valid floor (not the current floor). In MT1 this uses **CardEffectTeleport** (random floor), not single-step move.
+
+### Upgrade Paths
+
+**Wardmaster** – Post-combat Wards that deal random damage.
+
+- **Basic:** +10 HP. Post-combat: add Ward (5 random damage).
+- **Premium:** +30 HP. Post-combat: add Ward (10 random damage).
+- **Pro:** +60 HP. Post-combat: add Ward (20 random damage).
+
+**Symbiote** – Room scaling; strength grows with room usage.
+
+- **Basic:** +10 HP. Room modifier: temp upgrade per space used (ParamInt 5) – units in the same room get temporary stats based on capacity used.
+- **Premium / Pro:** (Same idea, stronger room scaling.)
+
+**Shifter** – Relocate synergy; moving the Disciple buffs the room.
+
+- **Basic:** +10 attack. **On Relocate:** Give all friendly units in the room +2 attack and +2 HP (temp).
+- **Premium / Pro:** (Same trigger, larger buffs.)
+
+## Units
+
+Units are grouped by theme in MT1: **Speedtime** (Quick), **Pyrepact** (Pyre/Ember), **Shifter** (Relocate), **Retain** (Reserve/Resolve).
+
+### Pyrepact (Pyre / Ember)
+
+- **Cindershell (Cinderborn):** Eternal. **On Gain Ember:** +2 attack (permanent via ScalingUpgrade). 1 cost, 4 attack, 10 HP, size 2.
+- **Embermaker:** Eternal. **On Attacking:** apply Emberboost. 1 cost, 2 attack, 20 HP, size 2.
+- **Ancient Pyresnail:** Grant **Pyreboost** on trigger.
+- **Firewall (spell):** Apply armor to Pyre per current Ember (CardEffectAddPyreStatusEmpowered).
+- **Dilation (spell):** Heal and +capacity (e.g. +12 HP, +1 capacity).
+- **Epoch Tome (spell):** Sweep; reduce enemy attack by half (CardEffectHalveDamageDebuff style).
+- **Haruspex Ward Beta, Rocket Speed, Pyre Spike, Flashfire, Fireshaped, Minerva Owl, Morsowl:** Pyrepact units/spells with damage, wards, or Pyre synergy.
+
+### Shifter (Relocate)
+
+- **Waxwing:** **On Relocate:** +5 attack (self). 1 cost, 5 attack, 3 HP (MT1).
+- **Fortune Teller (Fortune Finder):** **On Relocate:** +20 gold.
+- **Flashfeather (Flashwing):** **Extinguish:** Apply Dazed 2 to last attacker to hit the Pyre.
+- **Galilizard (Snecko):** **End of Turn:** Ascend twice.
+- **Vigor Ward (PowerWardBeta):** +attack to units; +attack when units relocate (Ward “Power”).
+- **Overward (ShifterWardBeta):** Descend friendly units after combat.
+- **Wax Pinion:** Ascend a unit (e.g. Bump +1). **Apple Elixir:** Shifter unit.
+
+### Speedtime (Quick / Divine)
+
+- **Shimmersnail (Ancient Savant):** Grant **Quick** on trigger.
+- **Chronomancy (spell):** Divine and Quick.
+
+### Retain (Reserve / Resolve)
+
+- **Fate Behemoth (Diviner of the Infinite):** **Reserve:** Cost -1 Ember.
+- **Jelly Scholar:** **Resolve:** +12 health, +1 capacity.
+- **Newton, Right Timing Beta/Delta, Time Freeze:** Retain-themed units.
+
+### Chronolock (Time / Buff-Debuff)
+
+- **Pendulum:** Increase buff/debuff by x.
+- **Time Stamp (spell):** TimeStamp effect + sacrifice (Conductor).
+- **Analog:** Chronolock spell.
+
+### Prophecy (Draw / Choose)
+
+- **Seek:** 0 cost, Consume. Choose and draw 1 from deck (CardEffectChooseDraw).
+- **Rewind, Revelation, Palm Reading:** Prophecy spells (draw, return from discard, etc.).
+
+## Spells
+
+- **Pattern Shift** (Starter): Teleport target unit to a random floor. Consume.
+- **Seek:** 0 cost, Consume. Choose and draw 1 from deck.
+- **Firewall:** 0 cost. Apply armor to Pyre per current Ember.
+- **Dilation:** Heal + room capacity (e.g. +12 HP, +1 capacity).
+- **Epoch Tome:** Sweep; reduce front enemy attack by half.
+- **Rewind:** Return a card from discard to hand (Prophecy).
+- **Revelation, Palm Reading:** Prophecy draw/spell.
+- **Flashfire, Pyre Spike, Rocket Speed, Emberwave Beta, Haruspex Ward Beta:** Damage or Pyrepact effects.
+- **Chronomancy:** Divine and Quick.
+- **Analog, Pendulum, Time Stamp:** Chronolock spells.
+
+## Relics
+
+- **Rewind First Spell:** First spell you play each turn returns to your hand at the start of next turn (RelicEffectRewind).
+- **Free Time:** Spell cards cost 1 less Ember and gain Consume (RelicEffectModifyCardTypeCost + RelicEffectAddTrait).
+- **Gravity On Ascend:** When a friendly unit ascends, apply 1 Gravity (RelicEffectAddStatusOnMonsterAscend).
+- **Gold On Pyre Kill:** Gain gold when the Pyre kills a unit.
+- **Refund X Costs:** Refund X-cost spells (RelicEffectXCostRefund).
+- **First Buff Extra Stack:** First buff each combat gets +1 stack.
+- **Highest HP To Front:** Highest HP friendly unit moves to front (RelicEffectHPToFront).
+- **Pyre Damage On Ember:** Pyre deals extra damage per Ember (RelicEffectPyreDamageOnEmber).
+- **Gold Over Time, Quick And Dirty, Rage Against The Pyre:** Economy or utility (MT1 implementation varies).
+
+## Installation
+
+Using a mod manager is recommended. Alternatively, install manually as below.
+
+### Dependencies
+
+Install before using the mod:
+
+* [BepInEx](https://github.com/risk-of-thunder/BepInEx)
+* [Trainworks Reloaded](https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded)
+* [Conductor](https://thunderstore.io/c/monster-train-2/p/Conductor/) (as required by Trainworks Reloaded)
+
+Follow each project’s installation instructions.
+
+### NuGet / GitHub auth (for building from source)
+
+Restore uses the **Monster Train 2 Modding Group** GitHub NuGet feed. Authenticate once:
+
+- In the repo root, add a `packageSourceCredentials` section to `nuget.config` with your GitHub username and a [PAT](https://github.com/settings/tokens) with `read:packages`, or use `.devcontainer/.env` with `GITHUB_USERNAME` and `GITHUB_PERSONAL_ACCESS_TOKEN` when using the devcontainer.
+
+### Copy assets (for building from source)
+
+Art is not in this repo; it lives in the MT1 mod **Disciple-Monster-Train**. From the DiscipleClan repo root:
+
+```bash
+python copy_assets.py
+```
+
+Or with the MT1 repo elsewhere:
+
+```bash
+python copy_assets.py --mt1 "C:\path\to\Disciple-Monster-Train"
+```
+
+See `assets.csv` for the mapping.
+
+### Build
+
+From the DiscipleClan repo root:
 
 ```bash
 dotnet restore
 dotnet build
 ```
 
-Output is under `DiscipleClan.Plugin/bin/`.
+### Install the mod
 
-### 4. Install the mod (playtest)
+Copy the built plugin (e.g. contents of `DiscipleClan.Plugin/bin/Debug/netstandard2.1/`) into your Monster Train 2 BepInEx plugins folder, e.g.:
 
-1. Locate your **Monster Train 2** BepInEx folder, e.g.  
-   `Steam/steamapps/common/Monster Train 2/BepInEx/plugins/`
-2. Copy the built plugin (the contents of `DiscipleClan.Plugin/bin/Debug/netstandard2.1/` or your build output) into a folder such as `BepInEx/plugins/DiscipleClan/`.
-3. Ensure Trainworks-Reloaded and Conductor (and any dependencies) are also installed in `plugins/` as required by the mod.
+`Steam/steamapps/common/Monster Train 2/BepInEx/plugins/DiscipleClan/`
 
-### 5. Playtest checklist
+## Bugs and Feedback
 
-1. Start MT2 and begin a run.
-2. Select **Arcadian** (Chrono) as main or sub class.
-3. Verify: class select screen, Disciple champion and upgrades, starter spell **Pattern Shift**, banner draft (e.g. **Cindershell**, **Waxwing**, **Fortune Finder**, etc.), and relic **Rewind First Spell**.
-4. If something is missing: check BepInEx logs, `@` refs in JSON, sprite paths in `textures/`, and effect/param names against the schemas.
+This mod is a port in progress. Many cards use vanilla or placeholder effects; Relocate, Pyreboost, Wards, and Conductor-only effects are still being brought over. If you find bugs or have balance/design feedback, please open an issue on the project repository.
 
----
+After playtesting, update **Port status** in `units.csv`, `spells.csv`, and `relics.csv` to **done** for implemented content.
 
-## Content and CSVs
+## Credits
 
-- **units.csv**, **spells.csv**, **relics.csv**, **status_effects.csv**, **card_effects.csv**, **assets.csv**  
-  Track what’s ported, MT1 paths, JSON paths, and implementation notes. Add or complete `json/units/`, `json/spells/`, `json/relics/` per these CSVs and register new files in `Plugin.cs` and in the card pool JSONs (e.g. `banner_pool.json`) as you add cards.
+* **Original MT1 mod:** Disciple Clan (Chrono / Arcadian) for Monster Train 1
+* **MT2 port:** DiscipleClan project
+* **Monster Train / Monster Train 2:** Shiny Shoe
+* **Trainworks Reloaded:** Monster Train 2 Modding Group
+* **Conductor:** Monster Train 2 modding community
 
-**Currently ported (JSON + Plugin; Port status = untested in CSVs; no pending):**  
-Units: Disciple, Glaukopis (SecondDisciple), Shimmersnail, Ancient Pyresnail, Cindershell, Waxwing, Fortune Teller, Flashfeather, Galilizard, Vigor Ward, Overward, Wax Pinion, Apple Elixir, Fate Behemoth (Diviner of the Infinite), Jelly Scholar, Newton, Right Timing Beta/Delta, Time Freeze, Embermaker, Minerva Owl, Morsowl, Fireshaped, Horizon Tome, Haruspex Ward Beta, Rocket Speed, Pyre Spike, Flashfire (unit), Dilation (unit).  
-Spells: Pattern Shift, Seek, Firewall, Dilation, Rewind, Flashfire, Epoch Tome, Revelation, Palm Reading, Emberwave Beta, Pyre Spike, Rocket Speed, Haruspex Ward Beta, Chronomancy, Analog, Pendulum, Time Stamp.  
-Relics: Rewind First Spell, Free Time, Gravity On Ascend, Gold Over Time, Pyre Damage On Ember, Quick And Dirty, Rage Against The Pyre, Refund X Costs, First Buff Extra Stack, Gold On Pyre Kill, Highest HP To Front.  
-Status effects: Pyreboost, Loaded, Icarian, Emberboost, Gravity, Pyrelink, Hide Until Boss, Past Glory, Symbiote, Adapted (all untested; JSON TBD until StatusEffectState classes exist).  
-Many entries use vanilla or placeholder effects; Conductor/MT1 behavior still to be implemented where noted. After playtesting, set Port status to **done** in the CSVs.
-
----
-
-## Project layout
+### Project layout
 
 - **DiscipleClan.Plugin/** – MT2 plugin (JSON definitions, C# effects, textures).
 - **json/** – Class, champion, subtypes, card pools, map nodes, units, spells, relics.
-- **RelicEffects/** – e.g. `RelicEffectRewind` (first spell returns next turn).
-- **CardEffects/** – e.g. `CardEffectTeleport` (Pattern Shift).
-- **assets.csv** – Mapping from MT1 asset paths to `DiscipleClan.Plugin/textures/`.
+- **RelicEffects/** – e.g. RelicEffectRewind (first spell returns next turn).
+- **CardEffects/** – e.g. CardEffectTeleport (Pattern Shift).
+- **units.csv, spells.csv, relics.csv, status_effects.csv, assets.csv** – Port tracking and asset mapping.

@@ -38,8 +38,8 @@
     }
   ],
   "sprites": [
-    { "id": "SneckoCardArt", "path": "textures/SneckoCharacterArt.png" },
-    { "id": "SneckoCharacterArt", "path": "textures/SneckoCharacterArt.png" }
+    { "id": "SneckoCardArt", "path": "textures/WaxwingCharacterArt.png" },
+    { "id": "SneckoCharacterArt", "path": "textures/WaxwingCharacterArt.png" }
   ],
   "game_objects": [
     { "id": "SneckoCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@SneckoCardArt" } } },

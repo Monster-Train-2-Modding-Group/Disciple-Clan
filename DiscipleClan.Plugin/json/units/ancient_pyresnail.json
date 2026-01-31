@@ -35,8 +35,8 @@
     }
   ],
   "sprites": [
-    { "id": "AncientPyreSnailCardArt", "path": "textures/AncientPyreSnailCharacterArt.png" },
-    { "id": "AncientPyreSnailCharacterArt", "path": "textures/AncientPyreSnailCharacterArt.png" }
+    { "id": "AncientPyreSnailCardArt", "path": "textures/PyresnailCharacterArt.png" },
+    { "id": "AncientPyreSnailCharacterArt", "path": "textures/PyresnailCharacterArt.png" }
   ],
   "game_objects": [
     { "id": "AncientPyreSnailCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@AncientPyreSnailCardArt" } } },

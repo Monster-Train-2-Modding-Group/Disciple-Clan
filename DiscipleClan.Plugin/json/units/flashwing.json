@@ -38,8 +38,8 @@
     }
   ],
   "sprites": [
-    { "id": "FlashwingCardArt", "path": "textures/FlashwingCharacterArt.png" },
-    { "id": "FlashwingCharacterArt", "path": "textures/FlashwingCharacterArt.png" }
+    { "id": "FlashwingCardArt", "path": "textures/FlashfeatherCharacterArt.png" },
+    { "id": "FlashwingCharacterArt", "path": "textures/FlashfeatherCharacterArt.png" }
   ],
   "game_objects": [
     { "id": "FlashwingCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FlashwingCardArt" } } },

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "character_trigger_types": [
+    {
+      "id": "OnRelocate",
+      "names": {
+        "english": "On Relocate",
+        "chinese": "位移时"
+      },
+      "descriptions": {
+        "english": "Triggers whenever this unit moves to a different floor (ascend or descend)."
+      },
+      "notifications": {
+        "english": "On Relocate",
+        "chinese": "位移时"
+      },
+      "sprite": "@OnRelocate"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "OnRelocate",
+      "path": "textures/ErrantPinwheel.png"
+    }
+  ],
+  "atlas_icons": [
+    {
+      "id": "OnRelocate",
+      "path": "textures/ErrantPinwheel.png"
+    }
+  ]
+}

@@ -35,8 +35,8 @@
     }
   ],
   "sprites": [
-    { "id": "DivinerCardArt", "path": "textures/SecondDiscipleCharacterArt.png" },
-    { "id": "DivinerCharacterArt", "path": "textures/SecondDiscipleCharacterArt.png" }
+    { "id": "DivinerCardArt", "path": "textures/DivinerCharacterArt.png" },
+    { "id": "DivinerCharacterArt", "path": "textures/DivinerCharacterArt.png" }
   ],
   "game_objects": [
     { "id": "DivinerCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@DivinerCardArt" } } },

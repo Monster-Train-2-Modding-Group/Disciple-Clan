@@ -21,7 +21,11 @@ Runs are notes from an actual attempted run.
 
 ## Testing
 
-Loads 1 (Latest)
+### Loads 1 
+
+**Fixed:** RelicEffectDataPipeline error — added `RelicEffectAddStatusOnMonsterAscend` in `DiscipleClan.Plugin/RelicEffects/RelicEffectAddStatusOnMonsterAscend.cs` (inherits `RelicEffectBase`, implements `IRelicEffect`). The relic "Gravity On Ascend" now loads. In-game behavior when a unit ascends still requires an ascend hook (e.g. Harmony patch or framework interface if available).
+
+**Fixed (texture warnings):** All sprite paths in JSON now point to existing textures. Units: FortuneFinder/Flashwing/Snecko/AncientSavant/AncientPyreSnail/Newtons/MinervaOwl/SecondDisciple → FortuneTellerCharacterArt, FlashfeatherCharacterArt, WaxwingCharacterArt, AncientCharacterArt, PyresnailCharacterArt, NewtonCharacterArt, MinervaCharacterArt, Hero2CharacterArt. Diviner → DivinerCharacterArt.png. Spells: Seek/Dilation/Flashfire → Seek.png, Dilation.png, Flashfire.png. Relics: QuickAndDirty/RefundXCosts icons → Mirrorc.png, SecondHand.png.
 
 [Warning:TrainworksReloaded.Plugin] [17:40:39.173867] [SpritePipeline] Could not find asset at path: C:\Users\Jack\AppData\Roaming\r2modmanPlus-local\MonsterTrain2\profiles\mod\BepInEx\plugins\Disciple\textures/FortuneFinderCharacterArt.png. Sprite will not exist.
 [Warning:TrainworksReloaded.Plugin] [17:40:39.174867] [SpritePipeline] Could not find asset at path: C:\Users\Jack\AppData\Roaming\r2modmanPlus-local\MonsterTrain2\profiles\mod\BepInEx\plugins\Disciple\textures/FortuneFinderCharacterArt.png. Sprite will not exist.
@@ -81,3 +85,29 @@ Loads 1 (Latest)
 [Warning:RegisterExtensions] Could not find identifier of type Sprite with id (guid) DiscipleClan.Plugin-Sprite-MinervaOwlCharacterArt. Configuration Path: game_objects:33:extensions:character_art:sprite
 [Warning:RegisterExtensions] Could not find identifier of type Sprite with id (guid) DiscipleClan.Plugin-Sprite-SecondDiscipleCharacterArt. Configuration Path: game_objects:47:extensions:character_art:sprite
 [Warning:RegisterExtensions] Could not find identifier of type Sprite with id (guid) DiscipleClan.Plugin-Sprite-DivinerCharacterArt. Configuration Path: game_objects:49:extensions:character_art:sprite
+
+
+### Runs 1 (Latest)
+
+Champion Icon is too large and needs to be redone to proper 45 degree angled square.
+Champion Art is still too large.
+
+Palm Reading has two consume. It does not have prophecy. 
+
+Champion Upgrade Text is still missing. It should come from the effects, will have to take a look how it works.
+
+Palm Reading has no valid target, it isn't really targeted, no.
+
+Pattern Shift works as intended, but probably needs to be reworded to include the work random.
+
+Pyre Spike text is messed up. 
+
+Analog has Chronolock, which should be tool-tipped and made into a mechanics. No clue what is does. 
+
+Ancient Pyresnail, Fortune Teller, and Wax Pinion are all missing text/effects to inform me of what they do.
+
+Ancient Pyresnail is a ward, so is fortune Teller, and Wax Pinion is this correct?
+
+Art is way too big for Ancient Pyresnail too, character art needs to be scaled down to a 3rd.
+
+Firewall doesn't work, no valid target.
