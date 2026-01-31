@@ -11,7 +11,7 @@ This document describes how each mechanic from the original Monster Train 1 Disc
 | **CardEffectTeleport** (Pattern Shift) | `CardEffects/CardEffectTeleport.cs` | ✅ Implemented – `DiscipleClan.Plugin/CardEffects/CardEffectTeleport.cs` |
 | **RelicEffectRewind** (Rewind First Spell) | `CardEffects/RelicEffectRewind.cs` | ✅ Implemented – `DiscipleClan.Plugin/RelicEffects/RelicEffectRewind.cs` |
 | **OnRelocate** trigger | `Triggers/OnRelocate.cs` + Harmony on `CharacterState.MoveUpDownTrain` | ✅ Registered – `json/triggers/relocate.json`, `Enums/CharacterTriggers.cs`, `Patches/OnRelocatePatch.cs`; Waxwing/Fortune Finder use it |
-| **OnGainEmber** trigger | `Triggers/OnGainEmber.cs` + Harmony on `PlayerManager.AddEnergy` | ❌ TBD – Cinderborn uses vanilla spawn only |
+| **OnGainEmber** trigger | `Triggers/OnGainEmber.cs` + Harmony on `PlayerManager.AddEnergy` | ✅ Implemented – `json/triggers/gain_ember.json`, `Patches/OnGainEmberPatch.cs`; Cinderborn uses it |
 | **CardEffectScalingUpgrade** (Cinderborn) | `CardEffects/CardEffectScalingUpgrade.cs` | ❌ TBD – needs OnGainEmber + Conductor effect |
 | **Pyreboost** status | `StatusEffects/StatusEffectPyreboost.cs` | ❌ TBD – JSON + Conductor StatusEffectState |
 | **Emberboost** status | `StatusEffects/StatusEffectEmberboost.cs` | ❌ TBD – JSON + Conductor StatusEffectState |
@@ -24,6 +24,13 @@ This document describes how each mechanic from the original Monster Train 1 Disc
 | **Gravity On Ascend** relic | `Artifacts/GravityOnAscend.cs` – RelicEffectAddStatusOnMonsterAscend | ✅ JSON – refs Conductor/vanilla AddStatusOnMonsterAscend |
 | **Other status effects** | `StatusEffects/StatusEffect*.cs` | ❌ TBD – JSON + Conductor classes |
 | **Other card/relic effects** | `CardEffects/*.cs`, `Artifacts/*.cs` | See card_effects.csv, relics.csv – many placeholder or TBD |
+
+### Triggers
+
+| Trigger | MT1 hook | MT2 status | Section |
+|---------|----------|------------|---------|
+| **OnRelocate** | Harmony on `CharacterState.MoveUpDownTrain` | ✅ Implemented – `json/triggers/relocate.json`, `OnRelocatePatch.cs` | §3 |
+| **OnGainEmber** | Harmony on `PlayerManager.AddEnergy` | ✅ Implemented – `json/triggers/gain_ember.json`, `OnGainEmberPatch.cs` | §4 |
 
 ---
 
@@ -93,10 +100,10 @@ This document describes how each mechanic from the original Monster Train 1 Disc
 - **Patch:** `[HarmonyPatch(typeof(PlayerManager), "AddEnergy")]` Postfix: for each card in hand fire card trigger; for each relic get `RelicEffectPyreDamageOnEmber` and call `OnGainEmber(addEnergy)`; for rooms 2 down to 0, for each monster in room set `energyData[unit] = addEnergy` and `QueueTrigger(OnGainEmberCharTrigger, unit)`.
 
 **MT2 implementation:**
-- **Status:** Not implemented. No patch on energy gain and no Conductor OnGainEmber trigger.
-- **Needed for:** Cinderborn (“On Gain Ember: +2 attack” via CardEffectScalingUpgrade), and any relic that reacts to Ember gain.
+- **Status:** Implemented. Trigger type in `json/triggers/gain_ember.json`; resolved in `Plugin.cs` ConfigurePostAction; Harmony patch `Patches/OnGainEmberPatch.cs` on `PlayerManager.AddEnergy` (via TargetMethod) queues OnGainEmber for each unit in each room with `paramInt = addEnergy`; static `OnGainEmberPatch.EnergyData` stores Ember amount per unit for CardEffectScalingUpgrade. Cinderborn uses trigger and effect (CardEffectAddTempCardUpgradeToUnits +2 attack).
+- **Needed for:** Full Cinderborn scaling still needs Conductor `CardEffectScalingUpgrade` to scale by Ember amount (currently +2 attack flat per trigger).
 
-**Notes:** Port requires (1) a way to hook “player gained Ember” (Harmony or Conductor), (2) a per-unit or global “last Ember gained” value for the current resolution, and (3) a Conductor `CardEffectScalingUpgrade` that reads that value and applies `param_card_upgrade_data` scaled by it (and applies as permanent upgrade to the character/card).
+**Notes:** Patch uses reflection to get CombatManager/RoomManager from the AddEnergy call instance; `EnergyData` is cleared each AddEnergy and populated before triggers run so future CardEffectScalingUpgrade can read it.
 
 ---
 

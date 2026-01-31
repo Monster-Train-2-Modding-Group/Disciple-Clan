@@ -1,0 +1,26 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "character_trigger_types": [{
+        "id": "OnGainEmber",
+        "names": {
+            "english": "Gain Ember",
+            "chinese": "获得余烬"
+        },
+        "descriptions": {
+            "english": "Triggers whenever the player gains Ember (energy)."
+        },
+        "notifications": {
+            "english": "Gain Ember",
+            "chinese": "获得余烬时"
+        },
+        "sprite": "@OnGainEmber"
+    }],
+    "sprites": [{
+        "id": "OnGainEmber",
+        "path": "textures/Emberwave.png"
+    }],
+    "atlas_icons": [{
+        "id": "OnGainEmber",
+        "path": "textures/Emberwave.png"
+    }]
+}

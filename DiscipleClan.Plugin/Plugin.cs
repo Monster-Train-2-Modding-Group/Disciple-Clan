@@ -36,6 +36,7 @@ namespace DiscipleClan.Plugin
                         "json/status_effects/gravity.json",
                         "json/status_effects/pyreboost.json",
                         "json/triggers/relocate.json",
+                        "json/triggers/gain_ember.json",
                         "json/cardpool/banner_pool.json",
                         "json/map_nodes/banner.json",
                         "json/units/cinderborn.json",
@@ -109,6 +110,7 @@ namespace DiscipleClan.Plugin
                         return manager.GetValueOrDefault(MyPluginInfo.PLUGIN_GUID.GetId(TemplateConstants.CharacterTriggerEnum, id));
                     }
                     CharacterTriggers.OnRelocate = GetTrigger("OnRelocate");
+                    CharacterTriggers.OnGainEmber = GetTrigger("OnGainEmber");
                 }
             );
 

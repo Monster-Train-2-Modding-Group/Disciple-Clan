@@ -49,7 +49,7 @@
   "character_triggers": [
     {
       "id": "CinderbornTrigger",
-      "trigger": "@OnEmberGain",
+      "trigger": "@OnGainEmber",
       "descriptions": {
         "english": "Gain +2 [attack].",
         "chinese": "获得+2[attack]。"
