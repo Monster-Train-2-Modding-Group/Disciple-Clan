@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "card_pools": [
+    {
+      "id": "ChronoBannerPool",
+      "cards": [
+        "@SpawnCinderborn"
+      ]
+    }
+  ]
+}

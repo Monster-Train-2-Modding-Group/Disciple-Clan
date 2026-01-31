@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "RewindFirstSpell",
+      "type": "collectable",
+      "names": {
+        "english": "Rewind First Spell",
+        "chinese": "倒回首咒"
+      },
+      "descriptions": {
+        "english": "First spell you play each turn returns to your hand next turn.",
+        "chinese": "每回合你打出的第一张法术牌会在下回合返回手牌。"
+      },
+      "icon": "@RewindFirstSpellIcon",
+      "icon_small": "@RewindFirstSpellIcon",
+      "lore_tooltips": [
+        {
+          "english": "A second hand. Time bends for the disciple."
+        }
+      ],
+      "relic_effects": [
+        "@RewindFirstSpellEffect"
+      ],
+      "extensions": [
+        {
+          "collectable": {
+            "class": "@Chrono",
+            "rarity": "common",
+            "pools": ["MegaRelicPool"]
+          }
+        }
+      ]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "RewindFirstSpellEffect",
+      "name": "RelicEffectAddGoldOnExhaust",
+      "param_int": 0
+    }
+  ],
+  "sprites": [
+    {
+      "id": "RewindFirstSpellIcon",
+      "path": "textures/SecondHand.png"
+    }
+  ]
+}

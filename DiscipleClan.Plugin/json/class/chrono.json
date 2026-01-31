@@ -1,0 +1,108 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "classes": [
+    {
+      "id": "Chrono",
+      "titles": {
+        "english": "Arcadian",
+        "chinese": "阿卡迪亚"
+      },
+      "descriptions": {
+        "english": "Dead prophets and oracles who climbed from the abyss and eschewed redemption."
+      },
+      "subclass_descriptions": {
+        "english": "Arcadian"
+      },
+      "card_draft_icon": "@DiscipleCardDraftIcon",
+      "icons": {
+        "small": "@ClanIconSmall",
+        "medium": "@ClanIconMedium",
+        "large": "@ClanIconLarge",
+        "silhouette": "@ClanIconSilhouette"
+      },
+      "card_style": "@Chrono",
+      "ui_color": {
+        "r": 0.964,
+        "g": 0.729,
+        "b": 0.015,
+        "a": 1
+      },
+      "ui_color_dark": {
+        "r": 0.12,
+        "g": 0.375,
+        "b": 0.5,
+        "a": 1
+      },
+      "ui_gradient": [
+        {
+          "time": 0,
+          "color": {
+            "r": 0.964,
+            "g": 0.729,
+            "b": 0.015,
+            "a": 1
+          }
+        },
+        {
+          "time": 1,
+          "color": {
+            "r": 0.12,
+            "g": 0.375,
+            "b": 0.5,
+            "a": 1
+          }
+        }
+      ],
+      "class_select_character_displays": [
+        "@DiscipleClassDisplay"
+      ],
+      "champions": [
+        {
+          "id": "DiscipleChampion",
+          "card_data": "@SpawnDisciple",
+          "starter_card": "@PatternShift",
+          "upgrade_tree": [
+            ["@DiscipleWardmaster1"],
+            ["@DiscipleSymbiote1"],
+            ["@DiscipleShifter1"]
+          ],
+          "icon": "@DiscipleChampionIcon",
+          "portrait": "@DiscipleChampionIcon",
+          "locked_icon": "@DiscipleChampionIcon"
+        }
+      ]
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "DiscipleClassDisplay",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@DiscipleCharacterArt",
+          "transform": {
+            "position": { "x": 2, "y": -0.2, "z": 0 },
+            "scale": { "x": 3.6, "y": 3.6, "z": 4 }
+          }
+        }
+      }
+    }
+  ],
+  "sprites": [
+    { "id": "DiscipleCardDraftIcon", "path": "textures/DiscipleCardDraftIcon.png" },
+    { "id": "ClanIconSmall", "path": "textures/ClanIconSmall.png" },
+    { "id": "ClanIconMedium", "path": "textures/ClanIconMedium.png" },
+    { "id": "ClanIconLarge", "path": "textures/ClanIconLarge.png" },
+    { "id": "ClanIconSilhouette", "path": "textures/ClanIconSilhouette.png" },
+    { "id": "DiscipleChampionIcon", "path": "textures/DiscipleChampionIcon.png" },
+    { "id": "ChronoUnitCardFrame", "path": "textures/UnitCardFrame.png" },
+    { "id": "ChronoSpellCardFrame", "path": "textures/SpellCardFrame.png" }
+  ],
+  "class_card_styles": [
+    {
+      "id": "Chrono",
+      "unit_card_frame_sprite": "@ChronoUnitCardFrame",
+      "spell_card_frame_sprite": "@ChronoSpellCardFrame"
+    }
+  ]
+}

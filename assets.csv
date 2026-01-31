@@ -1,0 +1,43 @@
+Category,MT1 path,MT2 path
+clan,AssetSources/Clan Assets/ClanLogo_92_Stroke1.png,DiscipleClan.Plugin/textures/ClanIconSmall.png
+clan,AssetSources/Clan Assets/ClanLogo_92_Stroke2.png,DiscipleClan.Plugin/textures/ClanIconMedium.png
+clan,AssetSources/Clan Assets/ClanLogo_92_Stroke1.png,DiscipleClan.Plugin/textures/ClanIconLarge.png
+clan,AssetSources/Clan Assets/ClanLogo_Silhouette.png,DiscipleClan.Plugin/textures/ClanIconSilhouette.png
+clan,AssetSources/Clan Assets/Icon_CardBack_CDisciple.png,DiscipleClan.Plugin/textures/DiscipleCardDraftIcon.png
+clan,AssetSources/Clan Assets/unit-cardframe-arcadian.png,DiscipleClan.Plugin/textures/UnitCardFrame.png
+clan,AssetSources/Clan Assets/spell-cardframe-arcadian.png,DiscipleClan.Plugin/textures/SpellCardFrame.png
+clan,AssetSources/Clan Assets/POI_Map_Clan_CDisciple_Enabled.png,DiscipleClan.Plugin/textures/BannerEnabled.png
+clan,AssetSources/Clan Assets/POI_Map_Clan_CDisciple_Disabled.png,DiscipleClan.Plugin/textures/BannerDisabled.png
+clan,AssetSources/Clan Assets/POI_Map_Clan_CDisciple_Frozen.png,DiscipleClan.Plugin/textures/BannerFrozen.png
+clan,AssetSources/Clan Assets/selection_outlines.png,DiscipleClan.Plugin/textures/selection_outlines.png
+clan,AssetSources/Clan Assets/Icon_ClassSelect_Disciple.png,DiscipleClan.Plugin/textures/DiscipleChampionIcon.png
+spell,AssetSources/Card Assets/DiscipleMTBetaArt/Seek.png,DiscipleClan.Plugin/textures/SeekCardArt.png
+spell,AssetSources/Card Assets/DiscipleMTBetaArt/Pattern-Shift.png,DiscipleClan.Plugin/textures/PatternShiftCardArt.png
+spell,AssetSources/Card Assets/DiscipleMTBetaArt/Flashfire.png,DiscipleClan.Plugin/textures/FlashfireCardArt.png
+spell,AssetSources/Card Assets/DiscipleMTBetaArt/Dilation.png,DiscipleClan.Plugin/textures/DilationCardArt.png
+relic,AssetSources/ArtifactAssets/PNG/FreeTime.png,DiscipleClan.Plugin/textures/FreeTime.png
+relic,AssetSources/ArtifactAssets/PNG/SecondHand.png,DiscipleClan.Plugin/textures/RewindFirstSpell.png
+relic,AssetSources/ArtifactAssets/PNG/FortuneCookie.png,DiscipleClan.Plugin/textures/GoldOverTime.png
+relic,AssetSources/ArtifactAssets/PNG/ErrantPinwheel.png,DiscipleClan.Plugin/textures/GravityOnAscend.png
+relic,AssetSources/ArtifactAssets/PNG/PyreFyre.png,DiscipleClan.Plugin/textures/PyreDamageOnEmber.png
+relic,AssetSources/ArtifactAssets/PNG/Metronome,DiscipleClan.Plugin/textures/QuickAndDirty.png
+relic,AssetSources/ArtifactAssets/PNG/FourtuneTellerB.png,DiscipleClan.Plugin/textures/RageAgainstThePyre.png
+relic,AssetSources/ArtifactAssets/PNG/Nightwatch,DiscipleClan.Plugin/textures/RefundXCosts.png
+relic,AssetSources/ArtifactAssets/PNG/Mirrorc.png,DiscipleClan.Plugin/textures/FirstBuffExtraStack.png
+relic,AssetSources/ArtifactAssets/PNG/FoolsCrown.png,DiscipleClan.Plugin/textures/GoldOnPyreKill.png
+relic,AssetSources/ArtifactAssets/PNG/Mirrorb.png,DiscipleClan.Plugin/textures/HighestHPToFront.png
+unit_character,AssetSources/Unit Assets/Portraits/Disciple.png,DiscipleClan.Plugin/textures/DiscipleCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Cinderborn.png,DiscipleClan.Plugin/textures/CinderbornCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Embermaker.png,DiscipleClan.Plugin/textures/EmberMakerCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Waxwing.png,DiscipleClan.Plugin/textures/WaxwingCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/FortuneTeller.png,DiscipleClan.Plugin/textures/FortuneFinderCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Flashfeather.png,DiscipleClan.Plugin/textures/FlashwingCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Galilizard.png,DiscipleClan.Plugin/textures/SneckoCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/JellyScholar.png,DiscipleClan.Plugin/textures/JellyScholarCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Newton.png,DiscipleClan.Plugin/textures/NewtonsCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Minerva.png,DiscipleClan.Plugin/textures/MinervaOwlCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Morsowl.png,DiscipleClan.Plugin/textures/MorsowlCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Pyresnail.png,DiscipleClan.Plugin/textures/AncientPyreSnailCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Fireshaped.png,DiscipleClan.Plugin/textures/FireshapedCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Ancient.png,DiscipleClan.Plugin/textures/AncientSavantCharacterArt.png
+unit_character,AssetSources/Unit Assets/Portraits/Diviner.png,DiscipleClan.Plugin/textures/SecondDiscipleCharacterArt.png

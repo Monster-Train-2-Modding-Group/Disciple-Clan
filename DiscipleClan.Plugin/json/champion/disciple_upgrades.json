@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "upgrades": [
+    {
+      "id": "DiscipleWardmaster1",
+      "titles": {
+        "english": "Wardmaster",
+        "chinese": "守印"
+      },
+      "bonus_damage": 5,
+      "bonus_hp": 5,
+      "show_description_on_cards": true
+    },
+    {
+      "id": "DiscipleSymbiote1",
+      "titles": {
+        "english": "Symbiote",
+        "chinese": "共生"
+      },
+      "bonus_damage": 5,
+      "bonus_hp": 5,
+      "show_description_on_cards": true
+    },
+    {
+      "id": "DiscipleShifter1",
+      "titles": {
+        "english": "Shifter",
+        "chinese": "移形"
+      },
+      "bonus_damage": 5,
+      "bonus_hp": 5,
+      "show_description_on_cards": true
+    }
+  ]
+}

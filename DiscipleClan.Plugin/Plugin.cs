@@ -1,4 +1,4 @@
-﻿using BepInEx;
+using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
 using TrainworksReloaded.Core;
@@ -21,8 +21,20 @@ namespace DiscipleClan.Plugin
                 MyPluginInfo.PLUGIN_GUID,
                 c =>
                 {
-                    // Be sure to include any new json files if you add more.
+                    // Class first, then champions, subtypes, cardpools, map_nodes, units, spells, relics, plugin, global
                     c.AddMergedJsonFile(
+                        "json/class/chrono.json",
+                        "json/champion/disciple_base.json",
+                        "json/champion/disciple_upgrades.json",
+                        "json/subtypes/seer.json",
+                        "json/subtypes/pythian.json",
+                        "json/subtypes/eternal.json",
+                        "json/subtypes/ward.json",
+                        "json/cardpool/banner_pool.json",
+                        "json/map_nodes/banner.json",
+                        "json/units/cinderborn.json",
+                        "json/spells/pattern_shift.json",
+                        "json/relics/rewind_first_spell.json",
                         "json/plugin.json",
                         "json/global.json"
                     );

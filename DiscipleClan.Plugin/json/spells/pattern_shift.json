@@ -1,0 +1,65 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "PatternShift",
+      "names": {
+        "english": "Pattern Shift",
+        "chinese": "形态转换"
+      },
+      "descriptions": {
+        "english": "Move a unit to another floor.",
+        "chinese": "将一个单位移动到另一层。"
+      },
+      "cost": 1,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Chrono",
+      "card_art": "@PatternShiftCardArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@PatternShiftEffect"
+        }
+      ],
+      "traits": [
+        "@Consume"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Teleport a unit to a random floor."
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "PatternShiftEffect",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": 0
+    }
+  ],
+  "sprites": [
+    {
+      "id": "PatternShiftCardArt",
+      "path": "textures/Pattern-Shift.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "PatternShiftCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@PatternShiftCardArt"
+        }
+      }
+    }
+  ]
+}

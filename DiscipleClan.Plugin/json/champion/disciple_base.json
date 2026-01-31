@@ -1,0 +1,82 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnDisciple",
+      "names": {
+        "english": "Disciple",
+        "chinese": "门徒"
+      },
+      "card_art": "@DiscipleCardArt",
+      "cost": 0,
+      "card_type": "monster",
+      "rarity": "champion",
+      "class": "@Chrono",
+      "unlock_level": 0,
+      "targets_room": true,
+      "targetless": false,
+      "effects": [
+        {
+          "id": "@SpawnDiscipleEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Dead prophets and oracles who climbed from the abyss and eschewed redemption."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Disciple",
+      "names": {
+        "english": "Disciple",
+        "chinese": "门徒"
+      },
+      "character_art": "@DiscipleCharacterArt",
+      "size": 2,
+      "attack_damage": 0,
+      "health": 10,
+      "subtypes": [
+        "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnDiscipleEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@Disciple"
+    }
+  ],
+  "sprites": [
+    { "id": "DiscipleCardArt", "path": "textures/DiscipleCharacterArt.png" },
+    { "id": "DiscipleCharacterArt", "path": "textures/DiscipleCharacterArt.png" }
+  ],
+  "game_objects": [
+    {
+      "id": "DiscipleCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@DiscipleCardArt"
+        }
+      }
+    },
+    {
+      "id": "DiscipleCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@DiscipleCharacterArt",
+          "transform": {
+            "position": { "x": 0, "y": 0.2, "z": 0 },
+            "scale": { "x": 1.5, "y": 1.5, "z": 1 }
+          }
+        }
+      }
+    }
+  ]
+}

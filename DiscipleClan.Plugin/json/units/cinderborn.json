@@ -1,0 +1,84 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnCinderborn",
+      "names": {
+        "english": "Cindershell",
+        "chinese": "灰壳"
+      },
+      "card_art": "@CinderbornCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "pools": [
+        "UnitsAllBanner"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnCinderbornEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "+2 attack."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Cinderborn",
+      "names": {
+        "english": "Cindershell",
+        "chinese": "灰壳"
+      },
+      "character_art": "@CinderbornCharacterArt",
+      "size": 2,
+      "health": 10,
+      "attack_damage": 4,
+      "subtypes": [
+        "@ChronoSubtype_Eternal",
+        "SubtypesData_BannerUnit"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnCinderbornEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@Cinderborn"
+    }
+  ],
+  "sprites": [
+    { "id": "CinderbornCardArt", "path": "textures/CinderbornCharacterArt.png" },
+    { "id": "CinderbornCharacterArt", "path": "textures/CinderbornCharacterArt.png" }
+  ],
+  "game_objects": [
+    {
+      "id": "CinderbornCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@CinderbornCardArt"
+        }
+      }
+    },
+    {
+      "id": "CinderbornCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@CinderbornCharacterArt",
+          "transform": {
+            "position": { "x": 0, "y": 0.2, "z": 0 },
+            "scale": { "x": 1.5, "y": 1.5, "z": 1 }
+          }
+        }
+      }
+    }
+  ]
+}

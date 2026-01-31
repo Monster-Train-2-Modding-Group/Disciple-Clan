@@ -1,0 +1,76 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "map_nodes": [
+    {
+      "id": "ChronoBannerMapNode",
+      "type": "reward",
+      "map_icon": "@ClanIconSmall",
+      "minimap_icon": "@ClanIconSmall",
+      "prefab": "@ChronoBannerMapIcon",
+      "titles": {
+        "english": "Arcadian Banner",
+        "chinese": "阿卡迪亚战旗"
+      },
+      "descriptions": {
+        "english": "Hire an Arcadian Unit",
+        "chinese": "获得一个阿卡迪亚单位。"
+      },
+      "pools": [
+        "RandomChosenMainClassUnit",
+        "RandomChosenSubClassUnit"
+      ],
+      "is_banner_node": true,
+      "extensions": [
+        {
+          "reward": {
+            "class": "@Chrono",
+            "rewards": [
+              {
+                "id": "@ChronoBannerReward"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ChronoBannerMapIcon",
+      "type": "map_node_icon",
+      "extensions": {
+        "map_node_icon": {
+          "disabled_sprite": "@BannerDisabled",
+          "enabled_sprite": "@BannerEnabled",
+          "frozen_sprite": "@BannerFrozen",
+          "visited_sprite_disabled": "@BannerDisabled",
+          "visited_sprite_enabled": "@BannerEnabled"
+        }
+      }
+    }
+  ],
+  "rewards": [
+    {
+      "id": "ChronoBannerReward",
+      "type": "draft",
+      "costs": [
+        100
+      ],
+      "extensions": [
+        {
+          "draft": {
+            "draft_pool": "@ChronoBannerPool",
+            "class_type": "main|subclass|nonclass",
+            "draft_options_count": 3,
+            "rarity_floor": "common"
+          }
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    { "id": "BannerDisabled", "path": "textures/BannerDisabled.png" },
+    { "id": "BannerEnabled", "path": "textures/BannerEnabled.png" },
+    { "id": "BannerFrozen", "path": "textures/BannerFrozen.png" }
+  ]
+}
