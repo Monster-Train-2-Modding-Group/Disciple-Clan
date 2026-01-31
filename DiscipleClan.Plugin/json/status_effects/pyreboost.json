@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "status_effects": [
+    {
+      "id": "pyreboost",
+      "class_name": "@StatusEffectPyreboostState",
+      "names": {
+        "english": "Pyreboost",
+        "chinese": "圣火强化"
+      },
+      "stackable_names": {
+        "english": "<nobr>Pyreboost {0}</nobr>",
+        "chinese": "<nobr>圣火强化 {0}</nobr>"
+      },
+      "card_tooltips": {
+        "english": "Attack = stacks × Pyre Attack × Pyre Num Attacks."
+      },
+      "character_tooltips": {
+        "english": "This unit's attack from Pyreboost equals stacks × Pyre Attack × Pyre Num Attacks."
+      },
+      "notifications": {
+        "english": "Pyreboost",
+        "chinese": "圣火强化"
+      },
+      "replacement_texts": {
+        "english": "<b>Pyreboost</b>",
+        "chinese": "<b>圣火强化</b>"
+      },
+      "display_category": "positive",
+      "trigger_stage": "on_monster_team_turn_begin",
+      "is_stackable": true,
+      "show_stack_count": true,
+      "icon": "@PyreboostIcon"
+    }
+  ],
+  "sprites": [
+    { "id": "PyreboostIcon", "path": "textures/PyreFyre.png" }
+  ],
+  "atlas_icons": [
+    { "id": "PyreboostIcon", "path": "textures/PyreFyre.png" }
+  ]
+}

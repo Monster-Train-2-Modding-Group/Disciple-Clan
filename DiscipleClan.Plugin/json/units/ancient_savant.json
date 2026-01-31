@@ -3,27 +3,66 @@
   "cards": [
     {
       "id": "SpawnAncientSavant",
-      "names": { "english": "Shimmersnail", "chinese": "闪蜗" },
+      "names": {
+        "english": "Shimmersnail",
+        "chinese": "闪蜗"
+      },
       "card_art": "@AncientSavantCardArt",
-      "cost": 1,
+      "cost": 2,
       "card_type": "monster",
-      "rarity": "common",
+      "rarity": "uncommon",
       "class": "@Chrono",
-      "pools": ["UnitsAllBanner"],
+      "pools": [
+        "UnitsAllBanner"
+      ],
       "targets_room": true,
-      "effects": [{ "id": "@SpawnAncientSavantEffect" }],
-      "lore_tooltips": [{ "english": "Grant Quick on trigger." }]
+      "effects": [
+        {
+          "id": "@SpawnAncientSavantEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Enchants other friendly units in the room with Quick (Ambush)."
+        }
+      ]
     }
   ],
   "characters": [
     {
       "id": "AncientSavant",
-      "names": { "english": "Shimmersnail", "chinese": "闪蜗" },
+      "names": {
+        "english": "Shimmersnail",
+        "chinese": "闪蜗"
+      },
       "character_art": "@AncientSavantCharacterArt",
-      "size": 1,
-      "health": 5,
-      "attack_damage": 4,
-      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+      "size": 3,
+      "health": 40,
+      "attack_damage": 0,
+      "starting_status_effects": [
+        {
+          "count": 1,
+          "status": "immobile"
+        }
+      ],
+      "subtypes": [
+        "@ChronoSubtype_Eternal",
+        "SubtypesData_BannerUnit"
+      ],
+      "triggers": [
+        "@AncientSavantEnchantTrigger"
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "AncientSavantEnchantTrigger",
+      "trigger": "after_spawn_enchant",
+      "effects": [
+        {
+          "id": "@AncientSavantEnchantEffect"
+        }
+      ]
     }
   ],
   "effects": [
@@ -32,21 +71,58 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@AncientSavant"
+    },
+    {
+      "id": "AncientSavantEnchantEffect",
+      "name": "CardEffectEnchant",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "count": 1,
+          "status": "ambush"
+        }
+      ]
     }
   ],
   "sprites": [
-    { "id": "AncientSavantCardArt", "path": "textures/AncientCharacterArt.png" },
-    { "id": "AncientSavantCharacterArt", "path": "textures/AncientCharacterArt.png" }
+    {
+      "id": "AncientSavantCardArt",
+      "path": "textures/AncientCharacterArt.png"
+    },
+    {
+      "id": "AncientSavantCharacterArt",
+      "path": "textures/AncientCharacterArt.png"
+    }
   ],
   "game_objects": [
-    { "id": "AncientSavantCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@AncientSavantCardArt" } } },
+    {
+      "id": "AncientSavantCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@AncientSavantCardArt"
+        }
+      }
+    },
     {
       "id": "AncientSavantCharacterArt",
       "type": "character_art",
       "extensions": {
         "character_art": {
           "sprite": "@AncientSavantCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 0.2,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
         }
       }
     }

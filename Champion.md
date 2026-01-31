@@ -1,6 +1,24 @@
 # Champions and Upgrades – MT1 Implementation Reference
 
-This document details the Disciple clan champions and their upgrade paths as implemented in Monster Train 1 (MT1), so they can be faithfully recreated in Monster Train 2 (MT2).
+This document details the Disciple clan champions and their upgrade paths as implemented in Monster Train 1 (MT1), so they can be faithfully recreated in Monster Train 2 (MT2). Champion data is also reflected in `units.csv`; units-only reference is in `UNITS.md`.
+
+---
+
+## Champion Summary (from units.csv)
+
+| Name | ID | Effect | Port status |
+|------|-----|--------|-------------|
+| Disciple | Disciple | Champion (Wardmaster/Symbiote/Shifter) | untested |
+| Glaukopis | SecondDisciple | Second champion | untested |
+
+---
+
+## Implementation Reference
+
+| Name | Card ID | MT1 file | JSON file |
+|------|---------|----------|-----------|
+| Disciple | SpawnDisciple | DiscipleClan/Cards/Disciple.cs | json/champion/disciple_base.json |
+| Glaukopis | SpawnSecondDisciple | DiscipleClan/Cards/SecondDisciple.cs | json/units/second_disciple.json |
 
 ---
 

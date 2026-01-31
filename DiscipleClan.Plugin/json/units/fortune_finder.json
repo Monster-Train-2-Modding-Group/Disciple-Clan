@@ -26,7 +26,7 @@
       "size": 1,
       "health": 5,
       "attack_damage": 3,
-      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"],
+      "subtypes": ["SubtypesData_BannerUnit"],
       "triggers": ["@FortuneFinderOnRelocateTrigger"]
     }
   ],

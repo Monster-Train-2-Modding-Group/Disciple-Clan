@@ -23,7 +23,7 @@
       "size": 1,
       "health": 8,
       "attack_damage": 3,
-      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+      "subtypes": ["SubtypesData_BannerUnit"]
     }
   ],
   "effects": [

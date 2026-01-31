@@ -3,27 +3,66 @@
   "cards": [
     {
       "id": "SpawnAncientPyreSnail",
-      "names": { "english": "Ancient Pyresnail", "chinese": "古余烬蜗" },
+      "names": {
+        "english": "Ancient Pyresnail",
+        "chinese": "古余烬蜗"
+      },
       "card_art": "@AncientPyreSnailCardArt",
       "cost": 1,
       "card_type": "monster",
       "rarity": "common",
       "class": "@Chrono",
-      "pools": ["UnitsAllBanner"],
+      "pools": [
+        "UnitsAllBanner"
+      ],
       "targets_room": true,
-      "effects": [{ "id": "@SpawnAncientPyreSnailEffect" }],
-      "lore_tooltips": [{ "english": "[ward]. When this unit triggers, apply 1 Pyreboost to it." }]
+      "effects": [
+        {
+          "id": "@SpawnAncientPyreSnailEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Enchants other friendly units in the room with Pyreboost."
+        }
+      ]
     }
   ],
   "characters": [
     {
       "id": "AncientPyreSnail",
-      "names": { "english": "Ancient Pyresnail", "chinese": "古余烬蜗" },
+      "names": {
+        "english": "Ancient Pyresnail",
+        "chinese": "古余烬蜗"
+      },
       "character_art": "@AncientPyreSnailCharacterArt",
-      "size": 1,
-      "health": 6,
-      "attack_damage": 3,
-      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+      "size": 5,
+      "health": 50,
+      "attack_damage": 0,
+      "starting_status_effects": [
+        {
+          "count": 1,
+          "status": "immobile"
+        }
+      ],
+      "subtypes": [
+        "@ChronoSubtype_Eternal",
+        "SubtypesData_BannerUnit"
+      ],
+      "triggers": [
+        "@AncientPyreSnailEnchantTrigger"
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "AncientPyreSnailEnchantTrigger",
+      "trigger": "after_spawn_enchant",
+      "effects": [
+        {
+          "id": "@AncientPyreSnailEnchantEffect"
+        }
+      ]
     }
   ],
   "effects": [
@@ -32,21 +71,58 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@AncientPyreSnail"
+    },
+    {
+      "id": "AncientPyreSnailEnchantEffect",
+      "name": "CardEffectEnchant",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "count": 1,
+          "status": "@pyreboost"
+        }
+      ]
     }
   ],
   "sprites": [
-    { "id": "AncientPyreSnailCardArt", "path": "textures/PyresnailCharacterArt.png" },
-    { "id": "AncientPyreSnailCharacterArt", "path": "textures/PyresnailCharacterArt.png" }
+    {
+      "id": "AncientPyreSnailCardArt",
+      "path": "textures/PyresnailCharacterArt.png"
+    },
+    {
+      "id": "AncientPyreSnailCharacterArt",
+      "path": "textures/PyresnailCharacterArt.png"
+    }
   ],
   "game_objects": [
-    { "id": "AncientPyreSnailCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@AncientPyreSnailCardArt" } } },
+    {
+      "id": "AncientPyreSnailCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@AncientPyreSnailCardArt"
+        }
+      }
+    },
     {
       "id": "AncientPyreSnailCharacterArt",
       "type": "character_art",
       "extensions": {
         "character_art": {
           "sprite": "@AncientPyreSnailCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 0.33, "y": 0.33, "z": 0.33 } }
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 0.2,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.33,
+              "y": 0.33,
+              "z": 0.33
+            }
+          }
         }
       }
     }

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "AppleElixir",
+      "names": {
+        "english": "Apple Elixir",
+        "chinese": "苹果灵药"
+      },
+      "descriptions": {
+        "english": "Apply [effect0.power] [gravity] to target unit.",
+        "chinese": "对目标单位施加3层[重力]。"
+      },
+      "cost": 1,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Chrono",
+      "card_art": "@AppleElixirCardArt",
+      "targetless": false,
+      "targets_room": true,
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@AppleElixirEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Add Gravity stacks to a unit."
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "AppleElixirEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_int": 3,
+      "param_status_effect": "@gravity"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "AppleElixirCardArt",
+      "path": "textures/Apple-Elixir.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "AppleElixirCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@AppleElixirCardArt"
+        }
+      }
+    }
+  ]
+}
