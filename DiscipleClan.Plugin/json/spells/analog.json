@@ -4,7 +4,7 @@
     {
       "id": "Analog",
       "names": { "english": "Analog", "chinese": "模拟" },
-      "descriptions": { "english": "Chronolock. Draw 1 card.", "chinese": "时锁。抽1张牌。" },
+      "descriptions": { "english": "Draw 1 card.", "chinese": "抽1张牌。" },
       "cost": 0,
       "card_type": "spell",
       "rarity": "common",
@@ -13,7 +13,7 @@
       "targetless": true,
       "pools": ["MegaPool"],
       "effects": [{ "id": "@AnalogEffect" }],
-      "lore_tooltips": [{ "english": "Chronolock." }]
+      "lore_tooltips": [{ "english": "[chronolock]: (Class mechanic; see class tooltip)." }]
     }
   ],
   "effects": [

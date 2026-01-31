@@ -7,8 +7,8 @@
             "chinese": "形态转换"
         },
         "descriptions": {
-            "english": "Move a unit to another floor.",
-            "chinese": "将一个单位移动到另一层。"
+            "english": "Teleport a unit to a random floor.",
+            "chinese": "将单位随机传送到另一层。"
         },
         "cost": 1,
         "card_type": "spell",
@@ -27,7 +27,7 @@
             "@Consume"
         ],
         "lore_tooltips": [{
-            "english": "Teleport a unit to a random floor."
+            "english": "Random floor (excluding current)."
         }]
     }],
     "effects": [{

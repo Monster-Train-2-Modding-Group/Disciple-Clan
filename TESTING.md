@@ -92,7 +92,7 @@ Runs are notes from an actual attempted run.
 Champion Icon is too large and needs to be redone to proper 45 degree angled square.
 Champion Art is still too large.
 
-Palm Reading has two consume. It does not have prophecy. 
+Palm Reading has two consume. It does not have prophecy.
 
 Champion Upgrade Text is still missing. It should come from the effects, will have to take a look how it works.
 
@@ -100,9 +100,9 @@ Palm Reading has no valid target, it isn't really targeted, no.
 
 Pattern Shift works as intended, but probably needs to be reworded to include the work random.
 
-Pyre Spike text is messed up. 
+Pyre Spike text is messed up.
 
-Analog has Chronolock, which should be tool-tipped and made into a mechanics. No clue what is does. 
+Analog has Chronolock, which should be tool-tipped and made into a mechanics. No clue what is does.
 
 Ancient Pyresnail, Fortune Teller, and Wax Pinion are all missing text/effects to inform me of what they do.
 
@@ -111,3 +111,18 @@ Ancient Pyresnail is a ward, so is fortune Teller, and Wax Pinion is this correc
 Art is way too big for Ancient Pyresnail too, character art needs to be scaled down to a 3rd.
 
 Firewall doesn't work, no valid target.
+
+---
+
+**Resolved in JSON/code:**
+- **Champion Art** – Scaled down class character art (DiscipleClassDisplay) in `class/chrono.json` from 3.6 to 1.2.
+- **Palm Reading** – Removed duplicate “[consume]” from description (trait still applies); lore now explains consume. Removed “Prophecy” (card doesn’t have it).
+- **Pattern Shift** – Description reworded to “Teleport a unit to a random floor.”; lore “Random floor (excluding current).”.
+- **Pyre Spike** – Description fixed from broken placeholders to “Deal 12 [damage] to the front enemy in the room.”.
+- **Analog** – Description simplified to “Draw 1 card.”; lore_tooltip added for [chronolock] (class mechanic).
+- **Ancient Pyresnail, Fortune Teller, Wax Pinion** – Lore/descriptions clarified; all three are [ward] (ChronoSubtype_Ward in subtypes). Ancient Pyresnail character art scale set to 0.33 in game_objects.
+- **Firewall** – Set `targetless: false` and `targets_pyre: true` so Pyre can be selected as target; effect already `target_mode: pyre`.
+
+**Still to do (art / framework):**
+- **Champion Icon** – Too large; needs to be redone as proper 45° angled square (texture asset: `DiscipleChampionIcon.png`).
+- **Champion Upgrade Text** – Still missing in UI; should come from effects – needs framework/effect wiring check.

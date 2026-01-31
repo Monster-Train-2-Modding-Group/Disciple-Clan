@@ -15,7 +15,7 @@
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnWaxPinionEffect" }],
-      "lore_tooltips": [{ "english": "Ascend unit to Pyre." }]
+      "lore_tooltips": [{ "english": "[ward]. (Ascend / Pyre synergy; see triggers.)" }]
     }
   ],
   "characters": [

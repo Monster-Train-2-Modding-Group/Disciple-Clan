@@ -3,8 +3,14 @@
   "cards": [
     {
       "id": "PyreSpikeSpell",
-      "names": { "english": "Pyre Spike", "chinese": "圣火尖刺" },
-      "descriptions": { "english": "Deal [effect0.power] [damage] to [front_in_room].", "chinese": "对[front_in_room]造成[effect0.power][damage]。" },
+      "names": {
+        "english": "Pyre Spike",
+        "chinese": "圣火尖刺"
+      },
+      "descriptions": {
+        "english": "Deal [effect0.power] [damage] to the front enemy in the room.",
+        "chinese": "对房间前排敌人造成[effect0.param_int][damage]。"
+      },
       "cost": 1,
       "card_type": "spell",
       "rarity": "common",
@@ -12,9 +18,19 @@
       "card_art": "@PyreSpikeSpellCardArt",
       "targets_room": true,
       "targetless": false,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@PyreSpikeSpellEffect" }],
-      "lore_tooltips": [{ "english": "" }]
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@PyreSpikeSpellEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "This spike"
+        }
+      ]
     }
   ],
   "effects": [
@@ -25,8 +41,21 @@
       "param_int": 12
     }
   ],
-  "sprites": [{ "id": "PyreSpikeSpellCardArt", "path": "textures/Pyrespike.png" }],
+  "sprites": [
+    {
+      "id": "PyreSpikeSpellCardArt",
+      "path": "textures/Pyrespike.png"
+    }
+  ],
   "game_objects": [
-    { "id": "PyreSpikeSpellCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@PyreSpikeSpellCardArt" } } }
+    {
+      "id": "PyreSpikeSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@PyreSpikeSpellCardArt"
+        }
+      }
+    }
   ]
 }

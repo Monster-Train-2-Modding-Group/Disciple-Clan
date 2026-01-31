@@ -10,7 +10,8 @@
       "rarity": "common",
       "class": "@Chrono",
       "card_art": "@FirewallCardArt",
-      "targetless": true,
+      "targetless": false,
+      "targets_pyre": true,
       "pools": ["MegaPool"],
       "effects": [{ "id": "@FirewallEffect" }],
       "lore_tooltips": [{ "english": "Apply armor to Pyre per ember." }]

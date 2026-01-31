@@ -15,7 +15,7 @@
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnFortuneFinderEffect" }],
-      "lore_tooltips": [{ "english": "Relocate: +20 gold." }]
+      "lore_tooltips": [{ "english": "[ward]. Relocate: +20 [gold]." }]
     }
   ],
   "characters": [

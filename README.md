@@ -14,7 +14,7 @@ A port of the Arcadian (Chrono) clan from Monster Train 1 to Monster Train 2.
 * [Bugs and Feedback](#bugs-and-feedback)
 * [Credits](#credits)
 
-For implementation details of each mechanic (MT1 source vs MT2 port status), see **[MECHANICS.md](MECHANICS.md)**.
+For implementation details of each mechanic (MT1 source vs MT2 port status), see **[MECHANICS.md](MECHANICS.md)**. For champion upgrade specs and MT1 implementation details (stats, triggers, effects), see **[Champion.md](Champion.md)**.
 
 ## Overview
 
@@ -94,7 +94,7 @@ Mechanically, the clan emphasizes:
 
 ## Champion: Disciple
 
-The Disciple is the Chrono clan champion: a 0-cost, 10 HP, 0 attack, size-2 unit. They start with the **Pattern Shift** starter spell and choose one of three upgrade paths.
+The Disciple is the Chrono clan champion: a 0-cost, 10 HP, 0 attack, size-2 unit. They start with the **Pattern Shift** starter spell and choose one of three upgrade paths. For full MT1 upgrade specs (stats, triggers, effects, and MT2 checklist), see **[Champion.md](Champion.md)**.
 
 ### Starter: Pattern Shift
 

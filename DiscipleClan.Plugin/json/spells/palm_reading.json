@@ -4,7 +4,7 @@
     {
       "id": "PalmReading",
       "names": { "english": "Palm Reading", "chinese": "掌纹占卜" },
-      "descriptions": { "english": "Draw 1 card. [consume].", "chinese": "抽1张牌。[消耗]。" },
+      "descriptions": { "english": "Draw 1 card.", "chinese": "抽1张牌。" },
       "cost": 0,
       "card_type": "spell",
       "rarity": "common",
@@ -14,7 +14,7 @@
       "pools": ["MegaPool"],
       "effects": [{ "id": "@PalmReadingEffect" }],
       "traits": ["@Consume"],
-      "lore_tooltips": [{ "english": "Prophecy." }]
+      "lore_tooltips": [{ "english": "[consume]: Remove from deck after play." }]
     }
   ],
   "effects": [

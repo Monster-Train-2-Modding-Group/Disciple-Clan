@@ -12,7 +12,7 @@
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnAncientPyreSnailEffect" }],
-      "lore_tooltips": [{ "english": "Grant Pyreboost on trigger." }]
+      "lore_tooltips": [{ "english": "[ward]. When this unit triggers, apply 1 Pyreboost to it." }]
     }
   ],
   "characters": [
@@ -46,7 +46,7 @@
       "extensions": {
         "character_art": {
           "sprite": "@AncientPyreSnailCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 0.33, "y": 0.33, "z": 0.33 } }
         }
       }
     }
