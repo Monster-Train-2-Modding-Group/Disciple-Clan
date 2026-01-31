@@ -62,9 +62,9 @@
           "card_data": "@SpawnDisciple",
           "starter_card": "@PatternShift",
           "upgrade_tree": [
-            ["@DiscipleWardmaster1"],
-            ["@DiscipleSymbiote1"],
-            ["@DiscipleShifter1"]
+            ["@DiscipleWardmasterBasic", "@DiscipleWardmasterPremium", "@DiscipleWardmasterPro"],
+            ["@DiscipleSymbioteBasic", "@DiscipleSymbiotePremium", "@DiscipleSymbiotePro"],
+            ["@DiscipleShifterBasic", "@DiscipleShifterPremium", "@DiscipleShifterPro"]
           ],
           "icon": "@DiscipleChampionIcon",
           "portrait": "@DiscipleChampionIcon",
