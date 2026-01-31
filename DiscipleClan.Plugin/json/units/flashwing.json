@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnFlashwing",
+      "names": {
+        "english": "Flashfeather",
+        "chinese": "闪羽"
+      },
+      "card_art": "@FlashwingCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnFlashwingEffect" }],
+      "lore_tooltips": [{ "english": "Extinguish: Dazed 2 to last attacker to Pyre." }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Flashwing",
+      "names": { "english": "Flashfeather", "chinese": "闪羽" },
+      "character_art": "@FlashwingCharacterArt",
+      "size": 1,
+      "health": 8,
+      "attack_damage": 6,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnFlashwingEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@Flashwing"
+    }
+  ],
+  "sprites": [
+    { "id": "FlashwingCardArt", "path": "textures/FlashwingCharacterArt.png" },
+    { "id": "FlashwingCharacterArt", "path": "textures/FlashwingCharacterArt.png" }
+  ],
+  "game_objects": [
+    { "id": "FlashwingCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FlashwingCardArt" } } },
+    {
+      "id": "FlashwingCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@FlashwingCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

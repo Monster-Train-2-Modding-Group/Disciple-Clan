@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Firewall",
+      "names": { "english": "Firewall", "chinese": "火墙" },
+      "descriptions": { "english": "Apply [armor] to the Pyre per [ember] you have.", "chinese": "根据当前[余烬]为圣火施加[护甲]。" },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Chrono",
+      "card_art": "@FirewallCardArt",
+      "targetless": true,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@FirewallEffect" }],
+      "lore_tooltips": [{ "english": "Apply armor to Pyre per ember." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "FirewallEffect",
+      "name": "CardEffectAddStatusEffectPerEnergy",
+      "target_mode": "pyre",
+      "param_int": 1,
+      "param_status_effect": "StatusEffectData_armor"
+    }
+  ],
+  "sprites": [{ "id": "FirewallCardArt", "path": "textures/Flashfire.png" }],
+  "game_objects": [
+    { "id": "FirewallCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FirewallCardArt" } } }
+  ]
+}

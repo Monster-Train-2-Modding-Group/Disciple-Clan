@@ -1,13 +1,13 @@
-Name,ID,Icon path,Include,Port status,Notes
-Pyreboost,pyreboost,Status/burning-embers.png,Y,pending,
-Loaded,loaded,Status/two-coins.png,Y,pending,
-Icarian,icarian,Status/icarus.png,Y,pending,
-Emberboost,emberboost,Status/fire-silhouette.png,Y,pending,
-Gravity,gravity,Status/weight.png,Y,pending,
-Pyrelink,pyrelink,Status/fire-dash.png,Y,pending,
-Hide Until Boss,hideuntilboss,Status/time-trap.png,Y,pending,
-Past Glory,pastglory,Status/card-discard.png,Y,pending,
-Symbiote,symbiote,Status/card-discard.png,Y,pending,
-Adapted,adapted,Status/life-in-the-balance.png,Y,pending,
-Chronolock,chronolock,,N,skip,Commented in MT1
-Slow,slow,,N,skip,Commented in MT1
+Name,ID,Icon path,Include,Port status,Notes,MT1 file,JSON file,Stack mode,Implementation,Conception
+Pyreboost,pyreboost,Status/burning-embers.png,Y,pending,,DiscipleClan/StatusEffects/StatusEffectPyreboost.cs,TBD,stacking,JSON + Conductor trigger,Unit attack = Pyre attack × stacks
+Loaded,loaded,Status/two-coins.png,Y,pending,,DiscipleClan/StatusEffects/StatusEffectLoaded.cs,TBD,,JSON only or + Harmony,TBD
+Icarian,icarian,Status/icarus.png,Y,pending,,DiscipleClan/StatusEffects/StatusEffectIcarian.cs,TBD,,JSON only,TBD
+Emberboost,emberboost,Status/fire-silhouette.png,Y,pending,,DiscipleClan/StatusEffects/StatusEffectEmberboost.cs,TBD,,JSON only,TBD
+Gravity,gravity,Status/weight.png,Y,pending,,DiscipleClan/StatusEffects/StatusEffectGravity.cs,TBD,,JSON only,TBD
+Pyrelink,pyrelink,Status/fire-dash.png,Y,pending,,DiscipleClan/StatusEffects/StatusEffectPyrelink.cs,TBD,,JSON only,TBD
+Hide Until Boss,hideuntilboss,Status/time-trap.png,Y,pending,,DiscipleClan/StatusEffects/StatusEffectHideUntilBoss.cs,TBD,,JSON only,TBD
+Past Glory,pastglory,Status/card-discard.png,Y,pending,,DiscipleClan/StatusEffects/StatusEffectPastGlory.cs,TBD,,JSON only,TBD
+Symbiote,symbiote,Status/card-discard.png,Y,pending,,DiscipleClan/StatusEffects/StatusEffectSymbiote.cs,TBD,,JSON only,TBD
+Adapted,adapted,Status/life-in-the-balance.png,Y,pending,,DiscipleClan/StatusEffects/StatusEffectAdapted.cs,TBD,,JSON only,TBD
+Chronolock,chronolock,,N,skip,Commented in MT1,,,,,,
+Slow,slow,,N,skip,Commented in MT1,,,,,,

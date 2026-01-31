@@ -1,74 +1,74 @@
-Name,Type,Used by,Port strategy,Notes
-CardEffectAddClassStatus,CardEffect,,Conductor C#,
-CardEffectAddPyreStatus,CardEffect,Firewall etc,Conductor C#,
-CardEffectAddPyreStatusEmpowered,CardEffect,,Conductor C#,
-CardEffectAddTempUpgrade,CardEffect,,Conductor C#,
-CardEffectAddWard,CardEffect,Wards,Conductor C#,
-CardEffectBuffOnCapacityChange,CardEffect,,Conductor C#,
-CardEffectBuffOnDeckSize,CardEffect,,Conductor C#,
-CardEffectChooseDraw,CardEffect,Seek,Conductor C#,
-CardEffectEmberwave,CardEffect,,Conductor C#,
-CardEffectEmberwaveEmberDmg,CardEffect,,Conductor C#,
-CardEffectEmberwaveFibonacci,CardEffect,,Conductor C#,
-CardEffectEmpowerOnSpawn,CardEffect,,Conductor C#,
-CardEffectEmpowerStatusOnSpawn,CardEffect,,Conductor C#,
-CardEffectEntropyBuffDamage,CardEffect,,Conductor C#,
-CardEffectFlipStatusEffects,CardEffect,,Conductor C#,
-CardEffectFreezeAllCards,CardEffect,,Conductor C#,
-CardEffectHalveDamageDebuff,CardEffect,,Conductor C#,
-CardEffectHealTrainPassive,CardEffect,,Conductor C#,
-CardEffectIncreaseStatusEffects,CardEffect,,Conductor C#,
-CardEffectPyreAttack,CardEffect,,Conductor C#,
-CardEffectPyreAttackDispatch,CardEffect,,Conductor C#,
-CardEffectScalingUpgrade,CardEffect,,Conductor C#,
-CardEffectScry,CardEffect,,Conductor C#,
-CardEffectScryApplyPyreboost,CardEffect,,Conductor C#,
-CardEffectScryApplyUpgrade,CardEffect,,Conductor C#,
-CardEffectScryConsume,CardEffect,,Conductor C#,
-CardEffectScryConsumeFortune,CardEffect,,Conductor C#,
-CardEffectScryConsumePyrehit,CardEffect,,Conductor C#,
-CardEffectScryCopy,CardEffect,,Conductor C#,
-CardEffectScryDiscard,CardEffect,,Conductor C#,
-CardEffectScryFreebies,CardEffect,,Conductor C#,
-CardEffectScryUnitsDrawFree,CardEffect,,Conductor C#,
-CardEffectShareBuffs,CardEffect,,Conductor C#,
-CardEffectTeleport,CardEffect,Pattern Shift,Conductor C#,
-CardEffectTimeStamp,CardEffect,TimeStamp,Conductor C#,
-CardTraitApplyStatusToPlayedUnits,CardTrait,,Conductor C#,
-CardTraitFreebie,CardTrait,,Conductor C#,
-CardTraitJustPyreka,CardTrait,,Conductor C#,
-CardTraitMultiplyCharacterUpgrade,CardTrait,,Conductor C#,
-CardTraitPyreboost,CardTrait,,Conductor C#,
-CardTraitRequireFreeCapacity,CardTrait,,Conductor C#,
-CardTraitScalingAddDamagePerCard,CardTrait,,Conductor C#,
-CardTraitScalingEmberwave,CardTrait,,Conductor C#,
-CardTraitScalingEveryStatusEffect,CardTrait,,Conductor C#,
-CardTraitScalingReturnConsumedCardsFixed,CardTrait,,Conductor C#,
-CardTraitSuppressExhaust,CardTrait,,Conductor C#,
-CardTriggerEffectBuffSpellDamageForEveryCardOfType,CardTriggerEffect,,Conductor C#,
-RelicEffectAddStatusOnMonsterAscend,RelicEffect,GravityOnAscend,Conductor C#,
-RelicEffectApplyStatusOnHitIfStatus,RelicEffect,,Conductor C#,
-RelicEffectEmberOnDivine,RelicEffect,,Conductor C#,
-RelicEffectFirstBuffExtraStack,RelicEffect,FirstBuffExtraStack,Conductor C#,
-RelicEffectGoldOnPyreKill,RelicEffect,GoldOnPyreKill,Conductor C#,
-RelicEffectHPToFront,RelicEffect,HighestHPToFront,Conductor C#,
-RelicEffectPyreDamageOnEmber,RelicEffect,PyreDamageOnEmber,Conductor C#,
-RelicEffectReturnLastSpellToHandNextTurn,RelicEffect,RewindFirstSpell,Conductor C#,
-RelicEffectRewind,RelicEffect,RewindFirstSpell,Conductor C#,
-RelicEffectXCostRefund,RelicEffect,RefundXCosts,Conductor C#,
-RoomStateModifierHoldover,RoomStateModifier,,Conductor C#,
-RoomStateModifierRefund,RoomStateModifier,,Conductor C#,
-RoomStateModifierRelocateBuff,RoomStateModifier,,Conductor C#,
-RoomStateModifierRelocateDamage,RoomStateModifier,,Conductor C#,
-RoomStateModifierRelocateStatusEffect,RoomStateModifier,,Conductor C#,
-RoomStateModifierRewind,RoomStateModifier,,Conductor C#,
-RoomStateModifierStartersConsumeRebate,RoomStateModifier,,Conductor C#,
-RoomStateModifierStartersTempConsume,RoomStateModifier,,Conductor C#,
-RoomStateModifierTempUpgradePerSpaceUsed,RoomStateModifier,,Conductor C#,
-WardManager,Ward,,Conductor C#,
-WardState,Ward,,Conductor C#,
-WardStatePower,Ward,,Conductor C#,
-WardStatePyrebound,Ward,,Conductor C#,
-WardStatePyreHarvest,Ward,,Conductor C#,
-WardStateRandomDamage,Ward,,Conductor C#,
-WardStateShifter,Ward,,Conductor C#,
+Name,Type,Used by,Port strategy,Notes,MT1 file,MT2 approach,Param mapping,Conception,Dependencies
+CardEffectAddClassStatus,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectAddClassStatus.cs,Conductor: Full.ClassName,target_mode param_status_effects,Add class status to target,TBD
+CardEffectAddPyreStatus,CardEffect,Firewall etc,Conductor C#,,DiscipleClan/CardEffects/CardEffectAddPyreStatus.cs,Conductor,,Add status to Pyre,TBD
+CardEffectAddPyreStatusEmpowered,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectAddPyreStatusEmpowered.cs,Conductor,,Add status to Pyre (empowered by ember),TBD
+CardEffectAddTempUpgrade,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectAddTempUpgrade.cs,Conductor,,Add temp upgrade to target,TBD
+CardEffectAddWard,CardEffect,Wards,Conductor C#,,DiscipleClan/CardEffects/CardEffectAddWard.cs,Conductor,,Spawn ward unit,TBD
+CardEffectBuffOnCapacityChange,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectBuffOnCapacityChange.cs,Conductor,,Buff based on capacity change,TBD
+CardEffectBuffOnDeckSize,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectBuffOnDeckSize.cs,Conductor,,Buff based on deck size,TBD
+CardEffectChooseDraw,CardEffect,Seek,Conductor C#,,DiscipleClan/CardEffects/CardEffectChooseDraw.cs,Conductor: DiscipleClan.Plugin.CardEffects.CardEffectChooseDraw,param_int (count) target_mode DrawPile,Choose and draw N from deck,TBD
+CardEffectEmberwave,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectEmberwave.cs,Conductor,,Damage scaling with ember,TBD
+CardEffectEmberwaveEmberDmg,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectEmberwaveEmberDmg.cs,Conductor,,TBD,TBD
+CardEffectEmberwaveFibonacci,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectEmberwaveFibonacci.cs,Conductor,,TBD,TBD
+CardEffectEmpowerOnSpawn,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectEmpowerOnSpawn.cs,Conductor,,TBD,TBD
+CardEffectEmpowerStatusOnSpawn,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectEmpowerStatusOnSpawn.cs,Conductor,,TBD,TBD
+CardEffectEntropyBuffDamage,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectEntropyBuffDamage.cs,Conductor,,TBD,TBD
+CardEffectFlipStatusEffects,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectFlipStatusEffects.cs,Conductor,,TBD,TBD
+CardEffectFreezeAllCards,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectFreezeAllCards.cs,Conductor,,TBD,TBD
+CardEffectHalveDamageDebuff,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectHalveDamageDebuff.cs,Conductor,,TBD,TBD
+CardEffectHealTrainPassive,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectHealTrainPassive.cs,Conductor,,TBD,TBD
+CardEffectIncreaseStatusEffects,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectIncreaseStatusEffects.cs,Conductor,,TBD,TBD
+CardEffectPyreAttack,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectPyreAttack.cs,Conductor,,TBD,TBD
+CardEffectPyreAttackDispatch,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectPyreAttackDispatch.cs,Conductor,,TBD,TBD
+CardEffectScalingUpgrade,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectScalingUpgrade.cs,Conductor,,param_card_upgrade_data,Cinderborn: OnGainEmber +2 attack,TBD
+CardEffectScry,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectScry.cs,Conductor,,TBD,TBD
+CardEffectScryApplyPyreboost,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectScryApplyPyreboost.cs,Conductor,,TBD,TBD
+CardEffectScryApplyUpgrade,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectScryApplyUpgrade.cs,Conductor,,TBD,TBD
+CardEffectScryConsume,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectScryConsume.cs,Conductor,,TBD,TBD
+CardEffectScryConsumeFortune,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectScryConsumeFortune.cs,Conductor,,TBD,TBD
+CardEffectScryConsumePyrehit,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectScryConsumePyrehit.cs,Conductor,,TBD,TBD
+CardEffectScryCopy,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectScryCopy.cs,Conductor,,TBD,TBD
+CardEffectScryDiscard,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectScryDiscard.cs,Conductor,,TBD,TBD
+CardEffectScryFreebies,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectScryFreebies.cs,Conductor,,TBD,TBD
+CardEffectScryUnitsDrawFree,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectScryUnitsDrawFree.cs,Conductor,,TBD,TBD
+CardEffectShareBuffs,CardEffect,,Conductor C#,,DiscipleClan/CardEffects/CardEffectShareBuffs.cs,Conductor,,TBD,TBD
+CardEffectTeleport,CardEffect,Pattern Shift,Conductor C#,,DiscipleClan/CardEffects/CardEffectTeleport.cs,Conductor: DiscipleClan.Plugin.CardEffects.CardEffectTeleport,target_mode drop_target_character target_team both,Move target to a random floor,TBD
+CardEffectTimeStamp,CardEffect,TimeStamp,Conductor C#,,DiscipleClan/CardEffects/CardEffectTimeStamp.cs,Conductor,,TBD,TBD
+CardTraitApplyStatusToPlayedUnits,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitApplyStatusToPlayedUnits.cs,Conductor,,TBD,TBD
+CardTraitFreebie,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitFreebie.cs,Conductor,,TBD,TBD
+CardTraitJustPyreka,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitJustPyreka.cs,Conductor,,TBD,TBD
+CardTraitMultiplyCharacterUpgrade,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitMultiplyCharacterUpgrade.cs,Conductor,,TBD,TBD
+CardTraitPyreboost,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitPyreboost.cs,Conductor,,TBD,TBD
+CardTraitRequireFreeCapacity,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitRequireFreeCapacity.cs,Conductor,,TBD,TBD
+CardTraitScalingAddDamagePerCard,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitScalingAddDamagePerCard.cs,Conductor,,TBD,TBD
+CardTraitScalingEmberwave,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitScalingEmberwave.cs,Conductor,,TBD,TBD
+CardTraitScalingEveryStatusEffect,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitScalingEveryStatusEffect.cs,Conductor,,TBD,TBD
+CardTraitScalingReturnConsumedCardsFixed,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitScalingReturnConsumedCardsFixed.cs,Conductor,,TBD,TBD
+CardTraitSuppressExhaust,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitSuppressExhaust.cs,Conductor,,TBD,TBD
+CardTriggerEffectBuffSpellDamageForEveryCardOfType,CardTriggerEffect,,Conductor C#,,DiscipleClan/CardEffects/CardTriggerEffectBuffSpellDamageForEveryCardOfType.cs,Conductor,,TBD,TBD
+RelicEffectAddStatusOnMonsterAscend,RelicEffect,GravityOnAscend,Conductor C#,,DiscipleClan/CardEffects/RelicEffectAddStatusOnMonsterAscend.cs,Conductor,,param_status_effects,Apply status when unit ascends,TBD
+RelicEffectApplyStatusOnHitIfStatus,RelicEffect,,Conductor C#,,DiscipleClan/CardEffects/RelicEffectApplyStatusOnHitIfStatus.cs,Conductor,,TBD,TBD
+RelicEffectEmberOnDivine,RelicEffect,,Conductor C#,,DiscipleClan/CardEffects/RelicEffectEmberOnDivine.cs,Conductor,,TBD,TBD
+RelicEffectFirstBuffExtraStack,RelicEffect,FirstBuffExtraStack,Conductor C#,,DiscipleClan/CardEffects/RelicEffectFirstBuffExtraStack.cs,Conductor,,param_int,First buff each combat +1 stack,TBD
+RelicEffectGoldOnPyreKill,RelicEffect,GoldOnPyreKill,Conductor C#,,DiscipleClan/CardEffects/RelicEffectGoldOnPyreKill.cs,Conductor,,param_int,Gold when Pyre kills unit,TBD
+RelicEffectHPToFront,RelicEffect,HighestHPToFront,Conductor C#,,DiscipleClan/CardEffects/RelicEffectHPToFront.cs,Conductor,,,Highest HP unit to front,TBD
+RelicEffectPyreDamageOnEmber,RelicEffect,PyreDamageOnEmber,Conductor C#,,DiscipleClan/CardEffects/RelicEffectPyreDamageOnEmber.cs,Conductor,,TBD,TBD
+RelicEffectReturnLastSpellToHandNextTurn,RelicEffect,RewindFirstSpell,Conductor C#,,DiscipleClan/CardEffects/RelicEffectReturnLastSpellToHandNextTurn.cs,Conductor,,TBD,Same as RelicEffectRewind,TBD
+RelicEffectRewind,RelicEffect,RewindFirstSpell,Conductor C#,,DiscipleClan/CardEffects/RelicEffectRewind.cs,Conductor: DiscipleClan.Plugin.RelicEffects.RelicEffectRewind,,First spell each turn returns to hand next turn,TBD
+RelicEffectXCostRefund,RelicEffect,RefundXCosts,Conductor C#,,DiscipleClan/CardEffects/RelicEffectXCostRefund.cs,Conductor,,TBD,Refund X cost,TBD
+RoomStateModifierHoldover,RoomStateModifier,,Conductor C#,,DiscipleClan/CardEffects/RoomStateModifierHoldover.cs,Conductor,,TBD,TBD
+RoomStateModifierRefund,RoomStateModifier,,Conductor C#,,DiscipleClan/CardEffects/RoomStateModifierRefund.cs,Conductor,,TBD,TBD
+RoomStateModifierRelocateBuff,RoomStateModifier,,Conductor C#,,DiscipleClan/CardEffects/RoomStateModifierRelocateBuff.cs,Conductor,,TBD,TBD
+RoomStateModifierRelocateDamage,RoomStateModifier,,Conductor C#,,DiscipleClan/CardEffects/RoomStateModifierRelocateDamage.cs,Conductor,,TBD,TBD
+RoomStateModifierRelocateStatusEffect,RoomStateModifier,,Conductor C#,,DiscipleClan/CardEffects/RoomStateModifierRelocateStatusEffect.cs,Conductor,,TBD,TBD
+RoomStateModifierRewind,RoomStateModifier,,Conductor C#,,DiscipleClan/CardEffects/RoomStateModifierRewind.cs,Conductor,,TBD,TBD
+RoomStateModifierStartersConsumeRebate,RoomStateModifier,,Conductor C#,,DiscipleClan/CardEffects/RoomStateModifierStartersConsumeRebate.cs,Conductor,,TBD,TBD
+RoomStateModifierStartersTempConsume,RoomStateModifier,,Conductor C#,,DiscipleClan/CardEffects/RoomStateModifierStartersTempConsume.cs,Conductor,,TBD,TBD
+RoomStateModifierTempUpgradePerSpaceUsed,RoomStateModifier,,Conductor C#,,DiscipleClan/CardEffects/RoomStateModifierTempUpgradePerSpaceUsed.cs,Conductor,,TBD,TBD
+WardManager,Ward,,Conductor C#,,DiscipleClan/CardEffects/WardManager.cs,Conductor,,TBD,TBD
+WardState,Ward,,Conductor C#,,DiscipleClan/CardEffects/WardState.cs,Conductor,,TBD,TBD
+WardStatePower,Ward,,Conductor C#,,DiscipleClan/CardEffects/WardStatePower.cs,Conductor,,TBD,TBD
+WardStatePyrebound,Ward,,Conductor C#,,DiscipleClan/CardEffects/WardStatePyrebound.cs,Conductor,,TBD,TBD
+WardStatePyreHarvest,Ward,,Conductor C#,,DiscipleClan/CardEffects/WardStatePyreHarvest.cs,Conductor,,TBD,TBD
+WardStateRandomDamage,Ward,,Conductor C#,,DiscipleClan/CardEffects/WardStateRandomDamage.cs,Conductor,,TBD,TBD
+WardStateShifter,Ward,,Conductor C#,,DiscipleClan/CardEffects/WardStateShifter.cs,Conductor,,TBD,TBD

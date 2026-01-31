@@ -4,7 +4,13 @@
     {
       "id": "ChronoBannerPool",
       "cards": [
-        "@SpawnCinderborn"
+        "@SpawnCinderborn",
+        "@SpawnWaxwing",
+        "@SpawnFortuneFinder",
+        "@SpawnFlashwing",
+        "@SpawnSnecko",
+        "@SpawnWaxPinion",
+        "@SpawnEmberMaker"
       ]
     }
   ]

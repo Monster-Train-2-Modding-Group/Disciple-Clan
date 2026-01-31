@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnAncientPyreSnail",
+      "names": { "english": "Ancient Pyresnail", "chinese": "古余烬蜗" },
+      "card_art": "@AncientPyreSnailCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnAncientPyreSnailEffect" }],
+      "lore_tooltips": [{ "english": "Grant Pyreboost on trigger." }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "AncientPyreSnail",
+      "names": { "english": "Ancient Pyresnail", "chinese": "古余烬蜗" },
+      "character_art": "@AncientPyreSnailCharacterArt",
+      "size": 1,
+      "health": 6,
+      "attack_damage": 3,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnAncientPyreSnailEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@AncientPyreSnail"
+    }
+  ],
+  "sprites": [
+    { "id": "AncientPyreSnailCardArt", "path": "textures/AncientPyreSnailCharacterArt.png" },
+    { "id": "AncientPyreSnailCharacterArt", "path": "textures/AncientPyreSnailCharacterArt.png" }
+  ],
+  "game_objects": [
+    { "id": "AncientPyreSnailCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@AncientPyreSnailCardArt" } } },
+    {
+      "id": "AncientPyreSnailCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@AncientPyreSnailCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

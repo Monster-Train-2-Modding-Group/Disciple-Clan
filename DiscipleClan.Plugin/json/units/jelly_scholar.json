@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnJellyScholar",
+      "names": { "english": "Jelly Scholar", "chinese": "果冻学者" },
+      "card_art": "@JellyScholarCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnJellyScholarEffect" }],
+      "lore_tooltips": [{ "english": "Resolve: +12 health +1 capacity." }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "JellyScholar",
+      "names": { "english": "Jelly Scholar", "chinese": "果冻学者" },
+      "character_art": "@JellyScholarCharacterArt",
+      "size": 1,
+      "health": 8,
+      "attack_damage": 2,
+      "subtypes": ["SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnJellyScholarEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@JellyScholar"
+    }
+  ],
+  "sprites": [
+    { "id": "JellyScholarCardArt", "path": "textures/JellyScholarCharacterArt.png" },
+    { "id": "JellyScholarCharacterArt", "path": "textures/JellyScholarCharacterArt.png" }
+  ],
+  "game_objects": [
+    { "id": "JellyScholarCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@JellyScholarCardArt" } } },
+    {
+      "id": "JellyScholarCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@JellyScholarCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

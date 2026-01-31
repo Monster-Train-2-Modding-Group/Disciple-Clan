@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnWaxwing",
+      "names": {
+        "english": "Waxwing",
+        "chinese": "蜡翼"
+      },
+      "card_art": "@WaxwingCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnWaxwingEffect" }],
+      "lore_tooltips": [{ "english": "Relocate: +5 attack." }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Waxwing",
+      "names": { "english": "Waxwing", "chinese": "蜡翼" },
+      "character_art": "@WaxwingCharacterArt",
+      "size": 1,
+      "health": 5,
+      "attack_damage": 5,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnWaxwingEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@Waxwing"
+    }
+  ],
+  "sprites": [
+    { "id": "WaxwingCardArt", "path": "textures/WaxwingCharacterArt.png" },
+    { "id": "WaxwingCharacterArt", "path": "textures/WaxwingCharacterArt.png" }
+  ],
+  "game_objects": [
+    { "id": "WaxwingCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@WaxwingCardArt" } } },
+    {
+      "id": "WaxwingCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@WaxwingCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

@@ -7,6 +7,10 @@
         "english": "Wardmaster",
         "chinese": "守印"
       },
+      "descriptions": {
+        "english": "+5 [attack] and +5 [health]. Empower ward units.",
+        "chinese": "+5 [attack]，+5 [health]。强化守印单位。"
+      },
       "bonus_damage": 5,
       "bonus_hp": 5,
       "show_description_on_cards": true
@@ -17,6 +21,10 @@
         "english": "Symbiote",
         "chinese": "共生"
       },
+      "descriptions": {
+        "english": "+5 [attack] and +5 [health]. Share strength with allies.",
+        "chinese": "+5 [attack]，+5 [health]。与友军共享力量。"
+      },
       "bonus_damage": 5,
       "bonus_hp": 5,
       "show_description_on_cards": true
@@ -26,6 +34,10 @@
       "titles": {
         "english": "Shifter",
         "chinese": "移形"
+      },
+      "descriptions": {
+        "english": "+5 [attack] and +5 [health]. Master movement and teleport.",
+        "chinese": "+5 [attack]，+5 [health]。精通位移与传送。"
       },
       "bonus_damage": 5,
       "bonus_hp": 5,

@@ -1,18 +1,18 @@
-Name,ID,Cost,Rarity,Trait,Effect,Include,Unlock,Port status,Notes
-Seek,Seek,0,Uncommon,Consume,Choose and draw 1 from deck,Y,0,pending,Prophecy
-Rewind,Rewind,,,,,Y,,pending,Prophecy
-Revelation,Revelation,,,,,Y,,pending,Prophecy
-Palm Reading,PalmReading,,,,,Y,,pending,Prophecy
-Firewall,Firewall,0,Common,,Apply armor to Pyre per ember,Y,,pending,Pyrepact
-Flashfire,Flashfire,,,,Damage to enemies,Y,,pending,Pyrepact
-Dilation,Dilation,,,,+capacity +health to target,Y,,pending,Pyrepact
-Epoch Tome,EpochTome,,,,Sweep; reduce attack half,Y,,pending,Pyrepact
-Emberwave Beta,EmberwaveBeta,,,,,Y,,pending,Pyrepact
-Pyre Spike,PyreSpike,,,,,Y,,pending,Pyrepact
-Rocket Speed,RocketSpeed,,,,,Y,,pending,Pyrepact
-Haruspex Ward Beta,HaruspexWardBeta,,,,,Y,,pending,Pyrepact (ward spell)
-Chronomancy,Chronomancy,,,,Divine and Quick,Y,,pending,Speedtime
-Analog,Analog,,,,,Y,,pending,Chronolock
-Pendulum,PendulumBeta,,,,Increase buff/debuff by x,Y,,pending,Chronolock
-Time Stamp,TimeStamp,3,Rare,Consume,TimeStamp effect + sacrifice,Y,,pending,Chronolock
-Pattern Shift,PatternShift,0,Starter,,Teleport unit to random floor,Y,,pending,Champion starter
+Name,ID,Cost,Rarity,Trait,Effect,Include,Unlock,Port status,Notes,MT1 file,JSON file,Card ID,Effect IDs,Effect implementation,Conception
+Seek,Seek,0,Uncommon,Consume,Choose and draw 1 from deck,Y,0,untested,Prophecy,DiscipleClan/Cards/Prophecy/Seek.cs,json/spells/seek.json,Seek,@SeekEffect,Vanilla CardEffectDraw (choose TBD),Choose and draw 1 from deck
+Rewind,Rewind,,,,,Y,,pending,Prophecy,DiscipleClan/Cards/Prophecy/Rewind.cs,TBD,Rewind,,TBD,TBD
+Revelation,Revelation,,,,,Y,,pending,Prophecy,DiscipleClan/Cards/Prophecy/Revelation.cs,TBD,Revelation,,TBD,TBD
+Palm Reading,PalmReading,,,,,Y,,pending,Prophecy,DiscipleClan/Cards/Prophecy/PalmReading.cs,TBD,PalmReading,,TBD,TBD
+Firewall,Firewall,0,Common,,Apply armor to Pyre per ember,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/Firewall.cs,json/spells/firewall.json,Firewall,,Vanilla CardEffectAddStatusEffectPerEnergy,Apply armor to Pyre per ember
+Flashfire,Flashfire,,,,Damage to enemies,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/Flashfire.cs,TBD,Flashfire,,TBD,Damage to enemies
+Dilation,Dilation,,,,+capacity +health to target,Y,,untested,Pyrepact,DiscipleClan/Cards/Pyrepact/Dilation.cs,json/spells/dilation.json,Dilation,,Vanilla CardEffectHeal + CardEffectAdjustRoomCapacity,+capacity +health to target
+Epoch Tome,EpochTome,,,,Sweep; reduce attack half,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/EpochTome.cs,TBD,EpochTome,,TBD,Sweep; reduce attack half
+Emberwave Beta,EmberwaveBeta,,,,,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/EmberwaveBeta.cs,TBD,EmberwaveBeta,,Conductor: CardEffectEmberwave,TBD
+Pyre Spike,PyreSpike,,,,,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/PyreSpike.cs,TBD,PyreSpike,,TBD,TBD
+Rocket Speed,RocketSpeed,,,,,Y,,pending,Pyrepact,DiscipleClan/Cards/Pyrepact/RocketSpeed.cs,TBD,RocketSpeed,,TBD,TBD
+Haruspex Ward Beta,HaruspexWardBeta,,,,,Y,,pending,Pyrepact (ward spell),DiscipleClan/Cards/Pyrepact/HaruspexWardBeta.cs,TBD,HaruspexWardBeta,,TBD,TBD
+Chronomancy,Chronomancy,,,,Divine and Quick,Y,,pending,Speedtime,DiscipleClan/Cards/Speedtime/Chronomancy.cs,TBD,Chronomancy,,TBD,Divine and Quick
+Analog,Analog,,,,,Y,,pending,Chronolock,DiscipleClan/Cards/Chronolock/Analog.cs,TBD,Analog,,TBD,TBD
+Pendulum,PendulumBeta,,,,Increase buff/debuff by x,Y,,pending,Chronolock,DiscipleClan/Cards/Chronolock/PendulumBeta.cs,TBD,PendulumBeta,,TBD,Increase buff/debuff by x
+Time Stamp,TimeStamp,3,Rare,Consume,TimeStamp effect + sacrifice,Y,,pending,Chronolock,DiscipleClan/Cards/Chronolock/TimeStamp.cs,TBD,TimeStamp,,Conductor: CardEffectTimeStamp + CardEffectSacrifice,TimeStamp effect + sacrifice
+Pattern Shift,PatternShift,0,Starter,,Teleport unit to random floor,Y,,untested,Champion starter,DiscipleClan/Cards/Shifter/PatternShift.cs,json/spells/pattern_shift.json,PatternShift,@PatternShiftEffect,Conductor: CardEffectTeleport,Teleport target to a random floor

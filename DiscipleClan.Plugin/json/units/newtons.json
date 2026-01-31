@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnNewtons",
+      "names": { "english": "Newton", "chinese": "牛顿" },
+      "card_art": "@NewtonsCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnNewtonsEffect" }],
+      "lore_tooltips": [{ "english": "" }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Newtons",
+      "names": { "english": "Newton", "chinese": "牛顿" },
+      "character_art": "@NewtonsCharacterArt",
+      "size": 1,
+      "health": 6,
+      "attack_damage": 4,
+      "subtypes": ["SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnNewtonsEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@Newtons"
+    }
+  ],
+  "sprites": [
+    { "id": "NewtonsCardArt", "path": "textures/NewtonsCharacterArt.png" },
+    { "id": "NewtonsCharacterArt", "path": "textures/NewtonsCharacterArt.png" }
+  ],
+  "game_objects": [
+    { "id": "NewtonsCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@NewtonsCardArt" } } },
+    {
+      "id": "NewtonsCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@NewtonsCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

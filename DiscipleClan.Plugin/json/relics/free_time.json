@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "FreeTime",
+      "type": "collectable",
+      "names": { "english": "Free Time", "chinese": "闲暇" },
+      "descriptions": {
+        "english": "Spell cards cost 1 less [ember] and gain [consume].",
+        "chinese": "法术牌消耗减少1[余烬]并获得[消耗]。"
+      },
+      "icon": "@FreeTimeIcon",
+      "icon_small": "@FreeTimeIcon",
+      "lore_tooltips": [{ "english": "Spell cost -1 and add trait." }],
+      "relic_effects": ["@FreeTimeCostEffect", "@FreeTimeTraitEffect"],
+      "extensions": [
+        {
+          "collectable": {
+            "class": "@Chrono",
+            "rarity": "common",
+            "pools": ["MegaRelicPool"]
+          }
+        }
+      ]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "FreeTimeCostEffect",
+      "name": "RelicEffectModifyCardTypeCost",
+      "param_card_type": "spell",
+      "param_int": -1
+    },
+    {
+      "id": "FreeTimeTraitEffect",
+      "name": "RelicEffectAddTrait",
+      "param_card_type": "spell",
+      "target_card_trait": "CardTraitExhaustState"
+    }
+  ],
+  "sprites": [{ "id": "FreeTimeIcon", "path": "textures/FreeTime.png" }]
+}

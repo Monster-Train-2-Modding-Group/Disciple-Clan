@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "GravityOnAscend",
+      "type": "collectable",
+      "names": { "english": "Gravity On Ascend", "chinese": "上升重力" },
+      "descriptions": {
+        "english": "When a friendly unit ascends, apply 1 [gravity] to it.",
+        "chinese": "当友方单位上升时，对其施加1层[重力]。"
+      },
+      "icon": "@GravityOnAscendIcon",
+      "icon_small": "@GravityOnAscendIcon",
+      "lore_tooltips": [{ "english": "Apply status when unit ascends." }],
+      "relic_effects": ["@GravityOnAscendEffect"],
+      "extensions": [
+        {
+          "collectable": {
+            "class": "@Chrono",
+            "rarity": "common",
+            "pools": ["MegaRelicPool"]
+          }
+        }
+      ]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "GravityOnAscendEffect",
+      "name": "RelicEffectAddStatusOnMonsterAscend",
+      "param_status_effects": [{ "status": "gravity", "count": 1 }],
+      "source_team": "monsters"
+    }
+  ],
+  "sprites": [{ "id": "GravityOnAscendIcon", "path": "textures/ErrantPinwheel.png" }]
+}

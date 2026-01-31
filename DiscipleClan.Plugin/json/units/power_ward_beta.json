@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnPowerWardBeta",
+      "names": { "english": "Vigor Ward", "chinese": "活力守卫" },
+      "card_art": "@PowerWardBetaCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnPowerWardBetaEffect" }],
+      "lore_tooltips": [{ "english": "+attack to units; +attack relocated." }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "PowerWardBeta",
+      "names": { "english": "Vigor Ward", "chinese": "活力守卫" },
+      "character_art": "@PowerWardBetaCharacterArt",
+      "size": 1,
+      "health": 8,
+      "attack_damage": 4,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnPowerWardBetaEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@PowerWardBeta"
+    }
+  ],
+  "sprites": [
+    { "id": "PowerWardBetaCardArt", "path": "textures/Mirrorb.png" },
+    { "id": "PowerWardBetaCharacterArt", "path": "textures/Mirrorb.png" }
+  ],
+  "game_objects": [
+    { "id": "PowerWardBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@PowerWardBetaCardArt" } } },
+    {
+      "id": "PowerWardBetaCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@PowerWardBetaCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

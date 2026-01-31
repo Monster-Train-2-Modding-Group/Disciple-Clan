@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Seek",
+      "names": { "english": "Seek", "chinese": "探寻" },
+      "descriptions": { "english": "Draw 1 card from your deck.", "chinese": "从牌组抽1张牌。" },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "card_art": "@SeekCardArt",
+      "targetless": true,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@SeekEffect" }],
+      "traits": ["@Consume"],
+      "lore_tooltips": [{ "english": "Choose and draw 1 from deck." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SeekEffect",
+      "name": "CardEffectDraw",
+      "target_mode": "self",
+      "param_int": 1
+    }
+  ],
+  "sprites": [{ "id": "SeekCardArt", "path": "textures/SeekCardArt.png" }],
+  "game_objects": [
+    { "id": "SeekCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@SeekCardArt" } } }
+  ]
+}

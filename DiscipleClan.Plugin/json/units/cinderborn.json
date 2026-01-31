@@ -75,7 +75,7 @@
           "sprite": "@CinderbornCharacterArt",
           "transform": {
             "position": { "x": 0, "y": 0.2, "z": 0 },
-            "scale": { "x": 1.5, "y": 1.5, "z": 1 }
+            "scale": { "x": 1.0, "y": 1.0, "z": 1.0 }
           }
         }
       }

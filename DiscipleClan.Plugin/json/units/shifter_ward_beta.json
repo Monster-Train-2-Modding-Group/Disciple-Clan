@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnShifterWardBeta",
+      "names": { "english": "Overward", "chinese": "越卫" },
+      "card_art": "@ShifterWardBetaCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnShifterWardBetaEffect" }],
+      "lore_tooltips": [{ "english": "Descend friendly units after combat." }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "ShifterWardBeta",
+      "names": { "english": "Overward", "chinese": "越卫" },
+      "character_art": "@ShifterWardBetaCharacterArt",
+      "size": 1,
+      "health": 7,
+      "attack_damage": 5,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnShifterWardBetaEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@ShifterWardBeta"
+    }
+  ],
+  "sprites": [
+    { "id": "ShifterWardBetaCardArt", "path": "textures/ErrantPinwheel.png" },
+    { "id": "ShifterWardBetaCharacterArt", "path": "textures/ErrantPinwheel.png" }
+  ],
+  "game_objects": [
+    { "id": "ShifterWardBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@ShifterWardBetaCardArt" } } },
+    {
+      "id": "ShifterWardBetaCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@ShifterWardBetaCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}

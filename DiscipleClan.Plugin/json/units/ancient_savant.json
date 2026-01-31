@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnAncientSavant",
+      "names": { "english": "Shimmersnail", "chinese": "闪蜗" },
+      "card_art": "@AncientSavantCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Chrono",
+      "pools": ["UnitsAllBanner"],
+      "targets_room": true,
+      "effects": [{ "id": "@SpawnAncientSavantEffect" }],
+      "lore_tooltips": [{ "english": "Grant Quick on trigger." }]
+    }
+  ],
+  "characters": [
+    {
+      "id": "AncientSavant",
+      "names": { "english": "Shimmersnail", "chinese": "闪蜗" },
+      "character_art": "@AncientSavantCharacterArt",
+      "size": 1,
+      "health": 5,
+      "attack_damage": 4,
+      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnAncientSavantEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@AncientSavant"
+    }
+  ],
+  "sprites": [
+    { "id": "AncientSavantCardArt", "path": "textures/AncientSavantCharacterArt.png" },
+    { "id": "AncientSavantCharacterArt", "path": "textures/AncientSavantCharacterArt.png" }
+  ],
+  "game_objects": [
+    { "id": "AncientSavantCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@AncientSavantCardArt" } } },
+    {
+      "id": "AncientSavantCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@AncientSavantCharacterArt",
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        }
+      }
+    }
+  ]
+}
