@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "status_effects": [
+    {
+      "id": "gravity",
+      "class_name": "@StatusEffectGravityState",
+      "names": {
+        "english": "Gravity",
+        "chinese": "重力"
+      },
+      "stackable_names": {
+        "english": "<nobr>Gravity {0}</nobr>",
+        "chinese": "<nobr>重力 {0}</nobr>"
+      },
+      "card_tooltips": {
+        "english": "Cannot ascend. At end of turn, descend one floor and remove 1 stack."
+      },
+      "character_tooltips": {
+        "english": "Cannot ascend. At end of turn, descends one floor and removes 1 stack."
+      },
+      "notifications": {
+        "english": "Gravity",
+        "chinese": "重力"
+      },
+      "replacement_texts": {
+        "english": "<b>Gravity</b>",
+        "chinese": "<b>重力</b>"
+      },
+      "display_category": "positive",
+      "trigger_stage": "on_post_room_combat",
+      "is_stackable": true,
+      "show_stack_count": true,
+      "icon": "@GravityIcon"
+    }
+  ],
+  "sprites": [
+    { "id": "GravityIcon", "path": "textures/ErrantPinwheel.png" }
+  ],
+  "atlas_icons": [
+    { "id": "GravityIcon", "path": "textures/ErrantPinwheel.png" }
+  ]
+}

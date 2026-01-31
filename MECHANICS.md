@@ -15,7 +15,7 @@ This document describes how each mechanic from the original Monster Train 1 Disc
 | **CardEffectScalingUpgrade** (Cinderborn) | `CardEffects/CardEffectScalingUpgrade.cs` | ❌ TBD – needs OnGainEmber + Conductor effect |
 | **Pyreboost** status | `StatusEffects/StatusEffectPyreboost.cs` | ❌ TBD – JSON + Conductor StatusEffectState |
 | **Emberboost** status | `StatusEffects/StatusEffectEmberboost.cs` | ❌ TBD – JSON + Conductor StatusEffectState |
-| **Gravity** status | `StatusEffects/StatusEffectGravity.cs` + Harmony on `GetMovementSpeed` | ❌ TBD – JSON + Conductor StatusEffectState |
+| **Gravity** status | `StatusEffects/StatusEffectGravity.cs` + Harmony on `GetMovementSpeed` | ✅ Implemented – `StatusEffects/StatusEffectGravityState.cs`, `Patches/GravityGetMovementSpeedPatch.cs`, `json/status_effects/gravity.json` |
 | **Wards** (WardManager, CardEffectAddWard, WardState*) | `CardEffects/WardManager.cs`, `CardEffectAddWard.cs`, `WardState*.cs` | ❌ TBD – full Ward system |
 | **Symbiote path** (RoomStateModifierTempUpgradePerSpaceUsed) | `CardEffects/RoomStateModifierTempUpgradePerSpaceUsed.cs` + Harmony on RoomState/CharacterState | ❌ TBD – room modifier + spawn-point hooks |
 | **Wardmaster path** (post-combat Ward) | `Upgrades/DiscipleWardmaster*.cs` → CardEffectAddWard | ❌ TBD – needs CardEffectAddWard + WardManager |
@@ -159,10 +159,11 @@ This document describes how each mechanic from the original Monster Train 1 Disc
 - **OnTriggered:** Build CardEffectParams with target = self; if `canMove` (room below valid), `bumper.Bump(cardEffectParams, -1)` and `Descend` (remove one stack).
 
 **MT2 implementation:**
-- **Status:** Not implemented. No StatusEffectState; no status_effects JSON. Gravity On Ascend relic uses Conductor/vanilla “add status on ascend” but the Gravity status itself is not implemented.
-- **Needed for:** Gravity On Ascend relic (apply 1 Gravity when unit ascends) and any card that applies or interacts with Gravity.
-
-**Notes:** Port needs (1) a Conductor StatusEffectState for Gravity, (2) a way to set “movement speed” to 0 (or block ascend) while the unit has stacks, and (3) an end-of-turn or similar trigger that descends the unit one floor and removes one stack. May require Harmony on the MT2 equivalent of GetMovementSpeed and a trigger phase for “end of turn descend.”
+- **Status:** Implemented.
+- **Files:** `DiscipleClan.Plugin/StatusEffects/StatusEffectGravityState.cs` – Conductor StatusEffectState; `OnTriggered` builds CardEffectParams, calls `CardEffectBump.Bump(null, cardEffectParams, coreGameManagers, -1, null)` to descend one floor, then removes one Gravity stack. `CanDescend` checks room below exists and is enabled.
+- **Patch:** `DiscipleClan.Plugin/Patches/GravityGetMovementSpeedPatch.cs` – `[HarmonyPatch(typeof(CharacterState), "GetMovementSpeed")]` Postfix: if unit has Gravity (identified via `StatusEffectGravityState` type) and is not miniboss/outer boss, set `__result = 0` and remove one stack.
+- **JSON:** `json/status_effects/gravity.json` – id `gravity`, class_name `@StatusEffectGravityState`, trigger_stage `on_post_room_combat`, is_stackable true, display_category positive. Registered in Plugin.cs AddMergedJsonFile.
+- **Gravity On Ascend relic** (`json/relics/gravity_on_ascend.json`) uses `status: "gravity"` and now applies the implemented Gravity status.
 
 ---
 
@@ -222,7 +223,7 @@ This document describes how each mechanic from the original Monster Train 1 Disc
 - **File:** `DiscipleClan/Artifacts/GravityOnAscend.cs` – RelicEffectDataBuilder with RelicEffectClassName = RelicEffectAddStatusOnMonsterAscend, ParamStatusEffects = [gravity, 1], ParamSourceTeam = Monsters.
 
 **MT2 implementation:**
-- **Status:** JSON only. `json/relics/gravity_on_ascend.json` – relic effect name RelicEffectAddStatusOnMonsterAscend, param_status_effects [{ status: "gravity", count: 1 }], source_team monsters. The Gravity *status* itself is not yet implemented (see §8).
+- **Status:** Implemented. `json/relics/gravity_on_ascend.json` – relic effect RelicEffectAddStatusOnMonsterAscend, param_status_effects [{ status: "gravity", count: 1 }], source_team monsters. The Gravity status is implemented (see §8).
 
 ---
 

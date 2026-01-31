@@ -34,6 +34,7 @@ namespace DiscipleClan.Plugin
                         "json/subtypes/eternal.json",
                         "json/subtypes/ward.json",
                         "json/triggers/relocate.json",
+                        "json/status_effects/gravity.json",
                         "json/cardpool/banner_pool.json",
                         "json/map_nodes/banner.json",
                         "json/units/cinderborn.json",

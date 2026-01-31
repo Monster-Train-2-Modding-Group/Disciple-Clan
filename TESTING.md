@@ -87,7 +87,7 @@ Runs are notes from an actual attempted run.
 [Warning:RegisterExtensions] Could not find identifier of type Sprite with id (guid) DiscipleClan.Plugin-Sprite-DivinerCharacterArt. Configuration Path: game_objects:49:extensions:character_art:sprite
 
 
-### Runs 1 (Latest)
+### Runs 1 
 
 Champion Icon is too large and needs to be redone to proper 45 degree angled square.
 Champion Art is still too large.
@@ -126,3 +126,37 @@ Firewall doesn't work, no valid target.
 **Still to do (art / framework):**
 - **Champion Icon** – Too large; needs to be redone as proper 45° angled square (texture asset: `DiscipleChampionIcon.png`).
 - **Champion Upgrade Text** – Still missing in UI; should come from effects – needs framework/effect wiring check.
+
+### Loads 2 
+
+[Warning:RegisterExtensions] Could not find identifier of type StatusEffectData with id (guid) gravity. Configuration Path: relic_effects:3:param_status_effects:0:status
+
+Gravity Status Effect is Missing, we should add this from Mechanics.
+
+### Runs 2 (Latest)
+
+Flashfire Text is wrong. 
+
+Horizon Tome also looks to be wrong
+
+Wardmaster is missing text.
+Shifter has double the text. Also, shouldn't have +10 attack.
+
+Disciple Character is still scaled too much. Same with Horizon Tome. They both need to be smaller still.
+
+Flashfire doesn't do anything.
+
+This error stopped us from getting our relocate trigger:
+
+[Warning: Unity Log] There can be only one active Event System.
+[Error  : Unity Log] InvalidCastException: Specified cast is not valid.
+Stack trace:
+DiscipleClan.Plugin.Patches.OnRelocatePatch.GetCombatManager (CharacterState character) (at /workspaces/DiscipleClan/DiscipleClan.Plugin/patches/OnRelocatePatch.cs:51)
+DiscipleClan.Plugin.Patches.OnRelocatePatch.Postfix (CharacterState __instance, SpawnPoint destinationSpawnPoint, System.Int32 delayIndex, System.Int32 prevRoomIndex) (at /workspaces/DiscipleClan/DiscipleClan.Plugin/patches/OnRelocatePatch.cs:24)
+(wrapper dynamic-method) CharacterState.DMD<CharacterState::MoveUpDownTrain>(CharacterState,SpawnPoint,int,int,System.Action,bool)
+CardEffectBump+<Bump>d__8.MoveNext () (at <d4189c17e1a745cbadc1bf14bed5181b>:0)
+Conductor.Patches.CardEffectBumpEncounterPatch+<Postfix>d__1.MoveNext () (at /home/runner/work/Conductor/Conductor/Conductor/patches/SpawnBumpTriggerPatches.cs:112)
+ShinyShoe.EnumeratorStack.Advance () (at <d4189c17e1a745cbadc1bf14bed5181b>:0)
+ShinyShoe.EnumeratorStack.RunOnce () (at <d4189c17e1a745cbadc1bf14bed5181b>:0)
+ShinyShoe.CoroutineController+<Run>d__15.MoveNext () (at <d4189c17e1a745cbadc1bf14bed5181b>:0)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c39a522eee05469b8171a6cfeb646c59>:0)
