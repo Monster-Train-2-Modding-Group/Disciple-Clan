@@ -50,7 +50,7 @@
       "extensions": {
         "character_art": {
           "sprite": "@MinervaOwlCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 0.33, "y": 0.33, "z": 0.33 } }
         }
       }
     }

@@ -3,27 +3,45 @@
   "cards": [
     {
       "id": "SpawnMorsowl",
-      "names": { "english": "Morsowl", "chinese": "莫索猫头鹰" },
+      "names": {
+        "english": "Morsowl",
+        "chinese": "莫索猫头鹰"
+      },
       "card_art": "@MorsowlCardArt",
       "cost": 1,
       "card_type": "monster",
       "rarity": "uncommon",
       "class": "@Chrono",
-      "pools": ["UnitsAllBanner"],
+      "pools": [
+        "UnitsAllBanner"
+      ],
       "targets_room": true,
-      "effects": [{ "id": "@SpawnMorsowlEffect" }],
-      "lore_tooltips": [{ "english": "" }]
+      "effects": [
+        {
+          "id": "@SpawnMorsowlEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": ""
+        }
+      ]
     }
   ],
   "characters": [
     {
       "id": "Morsowl",
-      "names": { "english": "Morsowl", "chinese": "莫索猫头鹰" },
+      "names": {
+        "english": "Morsowl",
+        "chinese": "莫索猫头鹰"
+      },
       "character_art": "@MorsowlCharacterArt",
       "size": 1,
       "health": 6,
       "attack_damage": 5,
-      "subtypes": ["SubtypesData_BannerUnit"]
+      "subtypes": [
+        "SubtypesData_BannerUnit"
+      ]
     }
   ],
   "effects": [
@@ -35,18 +53,43 @@
     }
   ],
   "sprites": [
-    { "id": "MorsowlCardArt", "path": "textures/MorsowlCharacterArt.png" },
-    { "id": "MorsowlCharacterArt", "path": "textures/MorsowlCharacterArt.png" }
+    {
+      "id": "MorsowlCardArt",
+      "path": "textures/MorsowlCharacterArt.png"
+    },
+    {
+      "id": "MorsowlCharacterArt",
+      "path": "textures/MorsowlCharacterArt.png"
+    }
   ],
   "game_objects": [
-    { "id": "MorsowlCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@MorsowlCardArt" } } },
+    {
+      "id": "MorsowlCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@MorsowlCardArt"
+        }
+      }
+    },
     {
       "id": "MorsowlCharacterArt",
       "type": "character_art",
       "extensions": {
         "character_art": {
           "sprite": "@MorsowlCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 0.2,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.33,
+              "y": 0.33,
+              "z": 0.33
+            }
+          }
         }
       }
     }

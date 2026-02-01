@@ -214,4 +214,17 @@ Palm Reading still demands a target, with no valid target.
 - **Symbiote** – Needs more tech/implementation.
 - **Palm Reading** – Still demands a target with no valid target; may need framework or effect fix (card already `targetless: true`).
 
-### Load 4 (Latest)
+### Load 4
+
+[Warning:RegisterExtensions] Could not find identifier of type CardData with id (name) DiscipleClan.Plugin-Card-SpawnAppleElixir. Configuration Path: card_pools:0:cards:8
+[Warning:RegisterExtensions] Could not find identifier of type CardData with id (name) DiscipleClan.Plugin-Card-SpawnTimeFreeze. Configuration Path: card_pools:0:cards:15
+
+Missing Card Data should be handled
+
+### Runs 4 (Latest)
+
+Analog doesn't work, needs Chronolock anyways. No Valid Target.
+
+Pyre Spike is wrong. Flashfire is wrong. We will need to do a spells run
+
+Flashfeather art is way to big, needs to be 3x smaller

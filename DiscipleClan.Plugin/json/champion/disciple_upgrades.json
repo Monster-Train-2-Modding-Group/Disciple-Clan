@@ -1,11 +1,12 @@
 {
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-    "character_triggers": [{
+    "character_triggers": [
+        {
             "id": "DiscipleShifterBasicOnRelocateTrigger",
             "trigger": "@OnRelocate",
             "descriptions": {
-                "english": "Give friendly units in the room +[effect0.power] [attack] and +[effect0.power] [health].",
-                "chinese": "该房间友军+[effect0.power][attack]、+[effect0.power][health]。"
+                "english": "Give friendly units in the room +[effect0.upgrade.bonus_damage] [attack] and +[effect0.upgrade.bonus_hp] [health].",
+                "chinese": "该房间友军+[effect0.upgrade.bonus_damage][attack]、+[effect0.upgrade.bonus_hp][health]。"
             },
             "effects": [
                 "@DiscipleShifterBasicDamageEffect",
@@ -16,8 +17,8 @@
             "id": "DiscipleShifterPremiumOnRelocateTrigger",
             "trigger": "@OnRelocate",
             "descriptions": {
-                "english": "Give friendly units in the room +[effect0.power] [attack] and +[effect0.power] [health].",
-                "chinese": "该房间友军+[effect0.power][attack]、+[effect0.power][health]。"
+                "english": "Give friendly units in the room +[effect0.upgrade.bonus_damage] [attack] and +[effect0.upgrade.bonus_hp] [health].",
+                "chinese": "该房间友军+[effect0.upgrade.bonus_damage][attack]、+[effect0.upgrade.bonus_hp][health]。"
             },
             "effects": [
                 "@DiscipleShifterPremiumDamageEffect",
@@ -28,8 +29,8 @@
             "id": "DiscipleShifterProOnRelocateTrigger",
             "trigger": "@OnRelocate",
             "descriptions": {
-                "english": "Give friendly units in the room +[effect0.power] [attack] and +[effect0.power] [health].",
-                "chinese": "该房间友军+[effect0.power][attack]、+[effect0.power][health]。"
+                "english": "Give friendly units in the room +[effect0.upgrade.bonus_damage] [attack] and +[effect0.upgrade.bonus_hp] [health].",
+                "chinese": "该房间友军+[effect0.upgrade.bonus_damage][attack]、+[effect0.upgrade.bonus_hp][health]。"
             },
             "effects": [
                 "@DiscipleShifterProDamageEffect",
@@ -44,7 +45,9 @@
                 "chinese": "战斗后：在本房间添加守印，对随机敌人造成5[damage]。"
             },
             "hide_visual_and_ignore_silence": true,
-            "effects": ["@DiscipleWardmasterBasicAddWardEffect"]
+            "effects": [
+                "@DiscipleWardmasterBasicAddWardEffect"
+            ]
         },
         {
             "id": "DiscipleWardmasterPremiumAddWardTrigger",
@@ -54,7 +57,9 @@
                 "chinese": "战斗后：在本房间添加守印，对随机敌人造成10[damage]。"
             },
             "hide_visual_and_ignore_silence": true,
-            "effects": ["@DiscipleWardmasterPremiumAddWardEffect"]
+            "effects": [
+                "@DiscipleWardmasterPremiumAddWardEffect"
+            ]
         },
         {
             "id": "DiscipleWardmasterProAddWardTrigger",
@@ -64,10 +69,13 @@
                 "chinese": "战斗后：在本房间添加守印，对随机敌人造成20[damage]。"
             },
             "hide_visual_and_ignore_silence": true,
-            "effects": ["@DiscipleWardmasterProAddWardEffect"]
+            "effects": [
+                "@DiscipleWardmasterProAddWardEffect"
+            ]
         }
     ],
-    "effects": [{
+    "effects": [
+        {
             "id": "DiscipleShifterBasicDamageEffect",
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "room",
@@ -131,7 +139,8 @@
             "param_int_2": 1
         }
     ],
-    "upgrades": [{
+    "upgrades": [
+        {
             "id": "DiscipleShifterTempDamage2",
             "bonus_damage": 2
         },
@@ -157,37 +166,52 @@
         },
         {
             "id": "DiscipleWardmasterBasic",
-            "titles": { "english": "Wardmaster", "chinese": "守印" },
-            "descriptions": { "english": "Pre-combat: Add a Ward to hand that deals 5 [damage] to a random enemy.", "chinese": "战前：将一张守印加入手牌，对随机敌人造成5[damage]。" },
+            "titles": {
+                "english": "Wardmaster",
+                "chinese": "守印"
+            },
             "bonus_damage": 0,
             "bonus_hp": 10,
-            "trigger_upgrades": ["@DiscipleWardmasterBasicAddWardTrigger"],
+            "trigger_upgrades": [
+                "@DiscipleWardmasterBasicAddWardTrigger"
+            ],
             "show_description_on_cards": true,
             "use_upgrade_highlight_tags": true
         },
         {
             "id": "DiscipleWardmasterPremium",
-            "titles": { "english": "Wardmaster II", "chinese": "守印 II" },
-            "descriptions": { "english": "Pre-combat: Add a Ward to hand that deals 10 [damage] to a random enemy.", "chinese": "战前：将一张守印加入手牌，对随机敌人造成10[damage]。" },
+            "titles": {
+                "english": "Wardmaster II",
+                "chinese": "守印 II"
+            },
             "bonus_damage": 0,
             "bonus_hp": 30,
-            "trigger_upgrades": ["@DiscipleWardmasterPremiumAddWardTrigger"],
+            "trigger_upgrades": [
+                "@DiscipleWardmasterPremiumAddWardTrigger"
+            ],
             "show_description_on_cards": true,
             "use_upgrade_highlight_tags": true
         },
         {
             "id": "DiscipleWardmasterPro",
-            "titles": { "english": "Wardmaster III", "chinese": "守印 III" },
-            "descriptions": { "english": "Pre-combat: Add a Ward to hand that deals 20 [damage] to a random enemy.", "chinese": "战前：将一张守印加入手牌，对随机敌人造成20[damage]。" },
+            "titles": {
+                "english": "Wardmaster III",
+                "chinese": "守印 III"
+            },
             "bonus_damage": 0,
             "bonus_hp": 60,
-            "trigger_upgrades": ["@DiscipleWardmasterProAddWardTrigger"],
+            "trigger_upgrades": [
+                "@DiscipleWardmasterProAddWardTrigger"
+            ],
             "show_description_on_cards": true,
             "use_upgrade_highlight_tags": true
         },
         {
             "id": "DiscipleSymbioteBasic",
-            "titles": { "english": "Symbiote", "chinese": "共生" },
+            "titles": {
+                "english": "Symbiote",
+                "chinese": "共生"
+            },
             "descriptions": {
                 "english": "Friendly units in this room gain +5 [attack] per capacity used.",
                 "chinese": "本房间友军每占用1容量获得+5[attack]。"
@@ -199,7 +223,10 @@
         },
         {
             "id": "DiscipleSymbiotePremium",
-            "titles": { "english": "Symbiote II", "chinese": "共生 II" },
+            "titles": {
+                "english": "Symbiote II",
+                "chinese": "共生 II"
+            },
             "descriptions": {
                 "english": "Friendly units in this room gain +8 [attack] per capacity used.",
                 "chinese": "本房间友军每占用1容量获得+8[attack]。"
@@ -211,7 +238,10 @@
         },
         {
             "id": "DiscipleSymbiotePro",
-            "titles": { "english": "Symbiote III", "chinese": "共生 III" },
+            "titles": {
+                "english": "Symbiote III",
+                "chinese": "共生 III"
+            },
             "descriptions": {
                 "english": "Friendly units in this room gain +13 [attack] per capacity used.",
                 "chinese": "本房间友军每占用1容量获得+13[attack]。"
@@ -223,26 +253,41 @@
         },
         {
             "id": "DiscipleShifterBasic",
-            "titles": { "english": "Shifter", "chinese": "移形" },
+            "titles": {
+                "english": "Shifter",
+                "chinese": "移形"
+            },
             "bonus_damage": 0,
             "bonus_hp": 0,
-            "trigger_upgrades": ["@DiscipleShifterBasicOnRelocateTrigger"],
+            "trigger_upgrades": [
+                "@DiscipleShifterBasicOnRelocateTrigger"
+            ],
             "use_upgrade_highlight_tags": true
         },
         {
             "id": "DiscipleShifterPremium",
-            "titles": { "english": "Shifter II", "chinese": "移形 II" },
+            "titles": {
+                "english": "Shifter II",
+                "chinese": "移形 II"
+            },
             "bonus_damage": 20,
             "bonus_hp": 10,
-            "trigger_upgrades": ["@DiscipleShifterPremiumOnRelocateTrigger"],
+            "trigger_upgrades": [
+                "@DiscipleShifterPremiumOnRelocateTrigger"
+            ],
             "use_upgrade_highlight_tags": true
         },
         {
             "id": "DiscipleShifterPro",
-            "titles": { "english": "Shifter III", "chinese": "移形 III" },
+            "titles": {
+                "english": "Shifter III",
+                "chinese": "移形 III"
+            },
             "bonus_damage": 45,
             "bonus_hp": 35,
-            "trigger_upgrades": ["@DiscipleShifterProOnRelocateTrigger"],
+            "trigger_upgrades": [
+                "@DiscipleShifterProOnRelocateTrigger"
+            ],
             "use_upgrade_highlight_tags": true
         }
     ]
