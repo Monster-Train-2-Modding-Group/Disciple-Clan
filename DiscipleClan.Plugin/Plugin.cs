@@ -92,9 +92,7 @@ namespace DiscipleClan.Plugin
                         "json/relics/refund_x_costs.json",
                         "json/relics/first_buff_extra_stack.json",
                         "json/relics/gold_on_pyre_kill.json",
-                        "json/relics/highest_hp_to_front.json",
-                        "json/plugin.json",
-                        "json/global.json"
+                        "json/relics/highest_hp_to_front.json"
                     );
                 }
             );
