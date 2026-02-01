@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "RightTimingBeta",
+      "names": { "english": "Right Timing Beta", "chinese": "正时乙" },
+      "descriptions": {
+        "english": "Deal 5 [damage] to target unit.",
+        "chinese": "对目标单位造成5[damage]。"
+      },
+      "cost": 1,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Chrono",
+      "card_art": "@RightTimingBetaCardArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@RightTimingBetaEffect" }],
+      "lore_tooltips": [{ "english": "On unplayed: +10 spell damage next time (per Right Timing Beta in deck)." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "RightTimingBetaEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": 5
+    }
+  ],
+  "sprites": [{ "id": "RightTimingBetaCardArt", "path": "textures/Right-Timing.png" }],
+  "game_objects": [
+    {
+      "id": "RightTimingBetaCardArt",
+      "type": "card_art",
+      "extensions": { "card_art": { "sprite": "@RightTimingBetaCardArt" } }
+    }
+  ]
+}

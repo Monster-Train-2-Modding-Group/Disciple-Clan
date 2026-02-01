@@ -8,25 +8,64 @@
         "chinese": "加利蜥"
       },
       "card_art": "@SneckoCardArt",
-      "cost": 1,
+      "cost": 2,
       "card_type": "monster",
       "rarity": "uncommon",
       "class": "@Chrono",
-      "pools": ["UnitsAllBanner"],
+      "pools": [
+        "UnitsAllBanner"
+      ],
       "targets_room": true,
-      "effects": [{ "id": "@SpawnSneckoEffect" }],
-      "lore_tooltips": [{ "english": "End of Turn: Ascend twice." }]
+      "effects": [
+        {
+          "id": "@SpawnSneckoEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Starts with 12 [gravity]. End of turn: ascend 2 floors."
+        }
+      ]
     }
   ],
   "characters": [
     {
       "id": "Snecko",
-      "names": { "english": "Galilizard", "chinese": "加利蜥" },
+      "names": {
+        "english": "Galilizard",
+        "chinese": "加利蜥"
+      },
       "character_art": "@SneckoCharacterArt",
-      "size": 1,
-      "health": 6,
-      "attack_damage": 6,
-      "subtypes": ["SubtypesData_BannerUnit"]
+      "size": 3,
+      "health": 30,
+      "attack_damage": 15,
+      "subtypes": [
+        "@ChronoSubtype_Pythian",
+        "SubtypesData_BannerUnit"
+      ],
+      "starting_status_effects": [
+        {
+          "count": 12,
+          "status": "@gravity"
+        }
+      ],
+      "triggers": [
+        "@SneckoEndTurnTrigger"
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "SneckoEndTurnTrigger",
+      "trigger": "end_turn_pre_hand_discard",
+      "descriptions": {
+        "english": "End of turn: ascend 2 floors."
+      },
+      "effects": [
+        {
+          "id": "@SneckoAscendEffect"
+        }
+      ]
     }
   ],
   "effects": [
@@ -35,21 +74,52 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@Snecko"
+    },
+    {
+      "id": "SneckoAscendEffect",
+      "name": "CardEffectBump",
+      "target_mode": "self",
+      "param_int": 2
     }
   ],
   "sprites": [
-    { "id": "SneckoCardArt", "path": "textures/WaxwingCharacterArt.png" },
-    { "id": "SneckoCharacterArt", "path": "textures/WaxwingCharacterArt.png" }
+    {
+      "id": "SneckoCardArt",
+      "path": "textures/WaxwingCharacterArt.png"
+    },
+    {
+      "id": "SneckoCharacterArt",
+      "path": "textures/WaxwingCharacterArt.png"
+    }
   ],
   "game_objects": [
-    { "id": "SneckoCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@SneckoCardArt" } } },
+    {
+      "id": "SneckoCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SneckoCardArt"
+        }
+      }
+    },
     {
       "id": "SneckoCharacterArt",
       "type": "character_art",
       "extensions": {
         "character_art": {
           "sprite": "@SneckoCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 0.2,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
         }
       }
     }

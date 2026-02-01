@@ -10,12 +10,12 @@
       "card_art": "@WaxwingCardArt",
       "cost": 1,
       "card_type": "monster",
-      "rarity": "common",
+      "rarity": "rare",
       "class": "@Chrono",
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnWaxwingEffect" }],
-      "lore_tooltips": [{ "english": "This unit gains +[effect0.power] [attack] per [relocate]." }]
+      "lore_tooltips": [{ "english": "Starts with [icarian]. On [relocate]: +5 [attack] to self (temp)." }]
     }
   ],
   "characters": [
@@ -24,9 +24,10 @@
       "names": { "english": "Waxwing", "chinese": "蜡翼" },
       "character_art": "@WaxwingCharacterArt",
       "size": 1,
-      "health": 5,
-      "attack_damage": 5,
-      "subtypes": ["SubtypesData_BannerUnit"],
+      "health": 3,
+      "attack_damage": 20,
+      "subtypes": ["@ChronoSubtype_Seer", "SubtypesData_BannerUnit"],
+      "starting_status_effects": [{ "status": "@icarian", "count": 1 }],
       "triggers": ["@WaxwingOnRelocateTrigger"]
     }
   ],
@@ -34,8 +35,8 @@
     {
       "id": "WaxwingOnRelocateTrigger",
       "descriptions": {
-        "english": " +[effect0.power] [attack].",
-        "chinese": "本回合+[effect0.power][attack]。"
+        "english": "+5 [attack].",
+        "chinese": "本回合+5[attack]（临时）。"
       },
       "trigger": "@OnRelocate",
       "effects": [{ "id": "@WaxwingOnRelocateEffect" }]
@@ -50,9 +51,15 @@
     },
     {
       "id": "WaxwingOnRelocateEffect",
-      "name": "CardEffectBuffDamage",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
-      "param_int": 5
+      "param_upgrade": "@WaxwingRelocateUpgrade"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "WaxwingRelocateUpgrade",
+      "bonus_damage": 5
     }
   ],
   "sprites": [

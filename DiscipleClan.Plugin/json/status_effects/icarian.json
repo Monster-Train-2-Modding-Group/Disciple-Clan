@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "status_effects": [
+    {
+      "id": "icarian",
+      "class_name": "@StatusEffectIcarianState",
+      "names": {
+        "english": "Icarian",
+        "chinese": "伊卡洛斯"
+      },
+      "card_tooltips": {
+        "english": "At end of turn, ascend one floor. If at top floor, this unit is sacrificed."
+      },
+      "character_tooltips": {
+        "english": "At end of turn, ascends one floor. If at top floor, this unit is sacrificed."
+      },
+      "notifications": {
+        "english": "Icarian",
+        "chinese": "伊卡洛斯"
+      },
+      "replacement_texts": {
+        "english": "<b>Icarian</b>",
+        "chinese": "<b>伊卡洛斯</b>"
+      },
+      "display_category": "persistent",
+      "trigger_stage": "on_post_room_combat",
+      "is_stackable": false,
+      "show_stack_count": false,
+      "icon": "@IcarianIcon"
+    }
+  ],
+  "sprites": [
+    { "id": "IcarianIcon", "path": "textures/ErrantPinwheel.png" }
+  ],
+  "atlas_icons": [
+    { "id": "IcarianIcon", "path": "textures/ErrantPinwheel.png" }
+  ]
+}

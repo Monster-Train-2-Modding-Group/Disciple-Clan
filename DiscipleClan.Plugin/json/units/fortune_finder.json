@@ -15,7 +15,7 @@
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnFortuneFinderEffect" }],
-      "lore_tooltips": [{ "english": "[ward]." }]
+      "lore_tooltips": [{ "english": "On Relocate: +20 [gold]." }]
     }
   ],
   "characters": [
@@ -24,9 +24,9 @@
       "names": { "english": "Fortune Teller", "chinese": "占卜师" },
       "character_art": "@FortuneFinderCharacterArt",
       "size": 1,
-      "health": 5,
-      "attack_damage": 3,
-      "subtypes": ["SubtypesData_BannerUnit"],
+      "health": 10,
+      "attack_damage": 2,
+      "subtypes": ["@ChronoSubtype_Pythian", "SubtypesData_BannerUnit"],
       "triggers": ["@FortuneFinderOnRelocateTrigger"]
     }
   ],
@@ -34,11 +34,11 @@
     {
       "id": "FortuneFinderOnRelocateTrigger",
       "descriptions": {
-        "english": "Relocate: +20 [gold].",
-        "chinese": "位移时：+20[gold]。"
+        "english": "+[effect0.power] [gold].",
+        "chinese": "+[effect0.power][gold]。"
       },
       "trigger": "@OnRelocate",
-      "effects": [{ "id": "@FortuneFinderOnRelocateEffect" }]
+      "effects": ["@FortuneFinderOnRelocateEffect" ]
     }
   ],
   "effects": [

@@ -18,7 +18,7 @@ This document details the Disciple clan champions and their upgrade paths as imp
 | Name | Card ID | MT1 file | JSON file |
 |------|---------|----------|-----------|
 | Disciple | SpawnDisciple | DiscipleClan/Cards/Disciple.cs | json/champion/disciple_base.json |
-| Glaukopis | SpawnSecondDisciple | DiscipleClan/Cards/SecondDisciple.cs | json/units/second_disciple.json |
+| Glaukopis | SpawnSecondDisciple | DiscipleClan/Cards/SecondDisciple.cs | json/champion/second_disciple.json |
 
 ---
 

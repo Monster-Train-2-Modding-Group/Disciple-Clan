@@ -9,7 +9,7 @@
       "card_type": "monster",
       "rarity": "uncommon",
       "class": "@Chrono",
-      "pools": ["UnitsAllBanner"],
+      "pools": [],
       "targets_room": true,
       "effects": [{ "id": "@SpawnHaruspexWardBetaEffect" }],
       "lore_tooltips": [{ "english": "Harvest." }]

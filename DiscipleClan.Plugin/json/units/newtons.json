@@ -5,14 +5,14 @@
       "id": "SpawnNewtons",
       "names": { "english": "Newton", "chinese": "牛顿" },
       "card_art": "@NewtonsCardArt",
-      "cost": 1,
+      "cost": 2,
       "card_type": "monster",
-      "rarity": "uncommon",
+      "rarity": "rare",
       "class": "@Chrono",
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnNewtonsEffect" }],
-      "lore_tooltips": [{ "english": "" }]
+      "lore_tooltips": [{ "english": "Starts with [gravity]." }]
     }
   ],
   "characters": [
@@ -21,9 +21,12 @@
       "names": { "english": "Newton", "chinese": "牛顿" },
       "character_art": "@NewtonsCharacterArt",
       "size": 1,
-      "health": 6,
-      "attack_damage": 4,
-      "subtypes": ["SubtypesData_BannerUnit"]
+      "health": 1,
+      "attack_damage": 1,
+      "subtypes": ["@ChronoSubtype_Pythian", "SubtypesData_BannerUnit"],
+      "starting_status_effects": [
+        { "count": 1, "status": "@gravity" }
+      ]
     }
   ],
   "effects": [
@@ -31,7 +34,8 @@
       "id": "SpawnNewtonsEffect",
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
-      "param_character": "@Newtons"
+      "param_character": "@Newtons",
+      "param_int": 3
     }
   ],
   "sprites": [

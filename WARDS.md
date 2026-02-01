@@ -18,9 +18,9 @@ Reference for ward units in the mod. Only these units have the Ward subtype. For
 
 | Name | Card ID | MT1 file | JSON file |
 |------|---------|----------|-----------|
-| Vigor Ward | SpawnPowerWardBeta | DiscipleClan/Cards/Shifter/PowerWardBeta.cs | json/units/power_ward_beta.json |
-| Overward | SpawnShifterWardBeta | DiscipleClan/Cards/Shifter/ShifterWardBeta.cs | json/units/shifter_ward_beta.json |
-| Haruspex Ward Beta | SpawnHaruspexWardBeta | DiscipleClan/Cards/Pyrepact/HaruspexWardBeta.cs | json/units/haruspex_ward_beta.json |
+| Vigor Ward | SpawnPowerWardBeta | DiscipleClan/Cards/Shifter/PowerWardBeta.cs | json/wards/power_ward_beta.json |
+| Overward | SpawnShifterWardBeta | DiscipleClan/Cards/Shifter/ShifterWardBeta.cs | json/wards/shifter_ward_beta.json |
+| Haruspex Ward Beta | SpawnHaruspexWardBeta | DiscipleClan/Cards/Pyrepact/HaruspexWardBeta.cs | json/wards/haruspex_ward_beta.json |
 
 ---
 

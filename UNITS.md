@@ -11,35 +11,28 @@ Reference for all units in the mod. Data derived from `units.csv`. For champions
 | Shimmersnail | Ancient Savant | Uncommon | Unit | Enchant other units in room with Quick (Ambush) | Eternal | untested |
 | Fulgursnail | Ancient Pyresnail | Common | Unit | Enchant with Pyreboost | Eternal | untested |
 | Cindershell | Cinderborn | Uncommon | Unit | +2 attack | Eternal | untested |
-| Waxwing | Waxwing | Common | Unit | Relocate: +5 attack | Shifter | unbalanced |
-| Fortune Teller | Fortune Finder | Common | Unit | Relocate: +20 gold | Shifter | untested |
-| Flashfeather | Flashwing | Uncommon | Unit | Extinguish: Dazed 2 to last attacker to Pyre | Shifter | untested |
-| Galilizard | Snecko | Uncommon | Unit | End of Turn: Ascend twice | Shifter | untested |
-| Wax Pinion | WaxPinion | Common | Unit | Ascend unit to Pyre | Shifter | untested |
+| Waxwing | Waxwing | Rare | Unit | Starts with [icarian]. On relocate: +5 attack (temp) to self | Seer | untested |
+| Fortune Teller | Fortune Finder | Common | Unit | On Relocate: +20 [gold] | Pythian | untested |
+| Flashfeather | Flashwing | Common | Unit | Starts with [icarian]. When dies: Dazed 2 to last attacker | Seer | untested |
+| Galilizard | Snecko | Uncommon | Unit | Starts with 12 [gravity]. End of turn: ascend 2 floors | Pythian | untested |
 | Fate Behemoth | Diviner of the Infinite | Uncommon | Unit | Retained; -1 cost each turn unplayed | Eternal | untested |
-| Jelly Scholar | JellyScholar | Common | Unit | Resolve: +12 health +1 capacity | Retain | untested |
-| Newton | Newtons | Uncommon | Unit | — | Retain | untested |
-| Right Timing Beta | RightTimingBeta | Uncommon | Unit | — | Retain | untested |
-| Right Timing Delta | RightTimingDelta | Uncommon | Unit | — | Retain | untested |
-| Time Freeze | TimeFreeze | Rare | Unit | — | Retain | untested |
+| Jelly Scholar | JellyScholar | Uncommon | Unit | Post combat: +12 [health] and +1 capacity to self | Eternal | untested |
+| Newton | Newtons | Rare | Unit | Starts with [gravity] | Pythian | untested |
 | Embermaker | EmberMaker | Uncommon | Unit | On hit: add [emberboost] to last attacked | Eternal | untested |
-| Minerva Owl | MinervaOwl | Uncommon | Unit | — | Pyrepact | untested |
+| Minerva Owl | MinervaOwl | Rare | Unit | Starts with [sweep] and [pyreboost] | Seer | untested |
 | Morsowl | Morsowl | Uncommon | Unit | — | Pyrepact | untested |
 | Pyresnail | AncientPyreSnail | Common | Unit | — | Pyrepact | untested |
 | Fireshaped | Fireshaped | Uncommon | Unit | On spawn: +3 [buff], +2 [rage] | Pythian | untested |
-| Rocket Speed | RocketSpeed | Uncommon | Unit | — | Pyrepact | untested |
-| Pyre Spike | PyreSpike | Common | Unit | — | Pyrepact | untested |
 ---
 
 ## By Type
 
 ### Units by Subtype
 
-- **Pyrepact** — Minerva Owl, Morsowl, Pyresnail, Rocket Speed, Pyre Spike
-- **Pythian** — Fireshaped (On spawn: +3 buff, +2 rage)
-- **Shifter** — Waxwing, Fortune Teller, Flashfeather, Galilizard, Wax Pinion
-- **Retain** — Jelly Scholar, Newton, Right Timing Beta, Right Timing Delta, Time Freeze
-- **Eternal** — Shimmersnail (Grant Quick to others), Fulgursnail (Enchant with Pyreboost), Cindershell, Embermaker (On hit: emberboost to last attacked), Fate Behemoth (Retained; -1 cost per turn unplayed)
+- **Pyrepact** — Morsowl, Pyresnail
+- **Pythian** — Fireshaped (On spawn: +3 buff, +2 rage), Fortune Teller (On Relocate: +20 gold), Newton (Starts with gravity), Galilizard (Starts with 12 gravity; end of turn ascend 2)
+- **Seer** — Waxwing (Starts with Icarian; on relocate +5 attack temp to self), Flashfeather (Starts with Icarian; when dies Dazed 2 to last attacker), Minerva Owl (Starts with sweep + pyreboost)
+- **Eternal** — Shimmersnail (Grant Quick to others), Fulgursnail (Enchant with Pyreboost), Cindershell, Embermaker (On hit: emberboost to last attacked), Jelly Scholar (Post combat: +12 health +1 capacity to self), Fate Behemoth (Retained; -1 cost per turn unplayed)
 ---
 
 ## Implementation Reference
@@ -53,20 +46,14 @@ Reference for all units in the mod. Data derived from `units.csv`. For champions
 | Fortune Teller | SpawnFortuneFinder | DiscipleClan/Cards/Shifter/FortuneFinder.cs | json/units/fortune_finder.json |
 | Flashfeather | SpawnFlashwing | DiscipleClan/Cards/Shifter/Flashwing.cs | json/units/flashwing.json |
 | Galilizard | SpawnSnecko | DiscipleClan/Cards/Shifter/Snecko.cs | json/units/snecko.json |
-| Wax Pinion | SpawnWaxPinion | DiscipleClan/Cards/Shifter/WaxPinion.cs | json/units/wax_pinion.json |
 | Fate Behemoth | SpawnDivineroftheInfinite | DiscipleClan/Cards/Retain/DivineroftheInfinite.cs | json/units/diviner_of_the_infinite.json |
 | Jelly Scholar | SpawnJellyScholar | DiscipleClan/Cards/Retain/JellyScholar.cs | json/units/jelly_scholar.json |
 | Newton | SpawnNewtons | DiscipleClan/Cards/Retain/Newtons.cs | json/units/newtons.json |
-| Right Timing Beta | SpawnRightTimingBeta | DiscipleClan/Cards/Retain/RightTimingBeta.cs | json/units/right_timing_beta.json |
-| Right Timing Delta | SpawnRightTimingDelta | DiscipleClan/Cards/Retain/RightTimingDelta.cs | json/units/right_timing_delta.json |
-| Time Freeze | SpawnTimeFreeze | DiscipleClan/Cards/Retain/TimeFreeze.cs | json/units/time_freeze.json |
 | Embermaker | SpawnEmberMaker | DiscipleClan/Cards/Pyrepact/EmberMaker.cs | json/units/embermaker.json |
 | Minerva Owl | SpawnMinervaOwl | DiscipleClan/Cards/Pyrepact/MinervaOwl.cs | json/units/minerva_owl.json |
 | Morsowl | SpawnMorsowl | DiscipleClan/Cards/Pyrepact/Morsowl.cs | json/units/morsowl.json |
 | Pyresnail | SpawnAncientPyreSnail | DiscipleClan/Cards/Pyrepact/AncientPyreSnail.cs | json/units/ancient_pyresnail.json |
 | Fireshaped | SpawnFireshaped | DiscipleClan/Cards/Pyrepact/Fireshaped.cs | json/units/fireshaped.json |
-| Rocket Speed | SpawnRocketSpeed | DiscipleClan/Cards/Pyrepact/RocketSpeed.cs | json/units/rocket_speed.json |
-| Pyre Spike | SpawnPyreSpike | DiscipleClan/Cards/Pyrepact/PyreSpike.cs | json/units/pyre_spike.json |
 ---
 
 *Generated from `units.csv` (units only; champions in `Champion.md`, wards in `WARDS.md`).*

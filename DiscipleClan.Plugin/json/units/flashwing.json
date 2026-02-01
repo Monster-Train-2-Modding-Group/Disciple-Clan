@@ -10,23 +10,60 @@
       "card_art": "@FlashwingCardArt",
       "cost": 1,
       "card_type": "monster",
-      "rarity": "uncommon",
+      "rarity": "common",
       "class": "@Chrono",
-      "pools": ["UnitsAllBanner"],
+      "pools": [
+        "UnitsAllBanner"
+      ],
       "targets_room": true,
-      "effects": [{ "id": "@SpawnFlashwingEffect" }],
-      "lore_tooltips": [{ "english": "Extinguish: Dazed 2 to last attacker to Pyre." }]
+      "effects": [
+        {
+          "id": "@SpawnFlashwingEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Starts with [icarian]. When this unit dies: apply Dazed 2 to the enemy that last attacked it."
+        }
+      ]
     }
   ],
   "characters": [
     {
       "id": "Flashwing",
-      "names": { "english": "Flashfeather", "chinese": "闪羽" },
+      "names": {
+        "english": "Flashfeather",
+        "chinese": "闪羽"
+      },
       "character_art": "@FlashwingCharacterArt",
       "size": 1,
-      "health": 8,
-      "attack_damage": 6,
-      "subtypes": ["SubtypesData_BannerUnit"]
+      "health": 5,
+      "attack_damage": 3,
+      "subtypes": [
+        "@ChronoSubtype_Seer",
+        "SubtypesData_BannerUnit"
+      ],
+      "starting_status_effects": [
+        {
+          "count": 1,
+          "status": "@icarian"
+        }
+      ],
+      "triggers": [
+        "@FlashwingOnDeathTrigger"
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "FlashwingOnDeathTrigger",
+      "trigger": "on_death",
+      "descriptions": {
+        "english": "Apply [effect0.status0.power] [dazed] to and Ascend the enemy that last attacked this unit."
+      },
+      "effects": [
+        "@FlashwingDazedLastAttackerEffect"
+      ]
     }
   ],
   "effects": [
@@ -35,21 +72,65 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@Flashwing"
+    },
+    {
+      "id": "FlashwingDazedLastAttackerEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "last_attacker_character",
+      "param_status_effects": [
+        {
+          "count": 2,
+          "status": "dazed"
+        }
+      ]
+    },
+    {
+      "id": "FlashwingRemoveIcarianEffect",
+      "name": "CardEffectBump",
+      "target_mode": "last_attacker_character",
+      "param_int": 4,
+      "target_team": "heroes",
+      "target_ignore_bosses": true
     }
   ],
   "sprites": [
-    { "id": "FlashwingCardArt", "path": "textures/FlashfeatherCharacterArt.png" },
-    { "id": "FlashwingCharacterArt", "path": "textures/FlashfeatherCharacterArt.png" }
+    {
+      "id": "FlashwingCardArt",
+      "path": "textures/FlashfeatherCharacterArt.png"
+    },
+    {
+      "id": "FlashwingCharacterArt",
+      "path": "textures/FlashfeatherCharacterArt.png"
+    }
   ],
   "game_objects": [
-    { "id": "FlashwingCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FlashwingCardArt" } } },
+    {
+      "id": "FlashwingCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@FlashwingCardArt"
+        }
+      }
+    },
     {
       "id": "FlashwingCharacterArt",
       "type": "character_art",
       "extensions": {
         "character_art": {
           "sprite": "@FlashwingCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 0.2,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
         }
       }
     }

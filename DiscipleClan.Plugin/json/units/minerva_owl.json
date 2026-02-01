@@ -7,12 +7,12 @@
       "card_art": "@MinervaOwlCardArt",
       "cost": 1,
       "card_type": "monster",
-      "rarity": "uncommon",
+      "rarity": "rare",
       "class": "@Chrono",
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnMinervaOwlEffect" }],
-      "lore_tooltips": [{ "english": "" }]
+      "lore_tooltips": [{ "english": "Starts with [sweep] and [pyreboost]." }]
     }
   ],
   "characters": [
@@ -21,9 +21,13 @@
       "names": { "english": "Minerva Owl", "chinese": "密涅瓦猫头鹰" },
       "character_art": "@MinervaOwlCharacterArt",
       "size": 1,
-      "health": 7,
-      "attack_damage": 5,
-      "subtypes": ["SubtypesData_BannerUnit"]
+      "health": 3,
+      "attack_damage": 0,
+      "subtypes": ["@ChronoSubtype_Seer", "SubtypesData_BannerUnit"],
+      "starting_status_effects": [
+        { "count": 1, "status": "sweep" },
+        { "count": 1, "status": "@pyreboost" }
+      ]
     }
   ],
   "effects": [

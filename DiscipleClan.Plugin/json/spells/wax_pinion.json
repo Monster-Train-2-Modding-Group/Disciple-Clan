@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "WaxPinion",
+      "names": { "english": "Wax Pinion", "chinese": "蜡羽" },
+      "descriptions": {
+        "english": "Ascend target unit [effect0.power] floors.",
+        "chinese": "使目标单位上升[effect0.power]层。"
+      },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Chrono",
+      "card_art": "@WaxPinionCardArt",
+      "targetless": false,
+      "targets_room": true,
+      "pools": ["MegaPool"],
+      "effects": [{ "id": "@WaxPinionEffect" }],
+      "lore_tooltips": [{ "english": "Ascend a friendly or enemy unit 4 floors." }]
+    }
+  ],
+  "effects": [
+    {
+      "id": "WaxPinionEffect",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": 4
+    }
+  ],
+  "sprites": [{ "id": "WaxPinionCardArt", "path": "textures/Wax-Pinion.png" }],
+  "game_objects": [
+    {
+      "id": "WaxPinionCardArt",
+      "type": "card_art",
+      "extensions": { "card_art": { "sprite": "@WaxPinionCardArt" } }
+    }
+  ]
+}

@@ -26,6 +26,9 @@ Reference for all spells in the mod. Data derived from `spells.csv`.
 | Time Stamp | TimeStamp | 3 | Rare | Consume | TimeStamp effect + sacrifice | untested |
 | Pattern Shift | PatternShift | 0 | Starter | — | Teleport unit to random floor | unbalanced |
 | Apple Elixir | AppleElixir | 1 | Common | — | Add 3 [gravity] to target unit | untested |
+| Right Timing Beta | RightTimingBeta | 1 | Common | — | Deal 5 [damage] to target; On unplayed: +10 spell damage next time | untested |
+| Right Timing Delta | RightTimingDelta | 2 | Rare | — | Deal 15 [damage] to target; On kill: add copy; scales with copies in deck | untested |
+| Wax Pinion | WaxPinion | 0 | Common | — | Ascend target unit 4 floors (friendly or enemy) | untested |
 
 ---
 
@@ -37,6 +40,8 @@ Reference for all spells in the mod. Data derived from `spells.csv`.
 - **Chronolock** — Analog, Pendulum, Time Stamp
 - **Champion starter** — Pattern Shift
 - **Gravity** — Apple Elixir (add 3 Gravity to target unit)
+- **Shifter** — Wax Pinion (ascend target unit 4 floors; friendly or enemy)
+- **Retain** — Right Timing Beta (damage; On unplayed: buff spell damage), Right Timing Delta (damage; On kill: add copy; scaling)
 
 ---
 
@@ -62,6 +67,9 @@ Reference for all spells in the mod. Data derived from `spells.csv`.
 | Time Stamp | TimeStamp | DiscipleClan/Cards/Chronolock/TimeStamp.cs | json/spells/time_stamp.json | Vanilla CardEffectDraw + CardEffectSacrifice |
 | Pattern Shift | PatternShift | DiscipleClan/Cards/Shifter/PatternShift.cs | json/spells/pattern_shift.json | Conductor: CardEffectTeleport |
 | Apple Elixir | AppleElixir | — | json/spells/apple_elixir.json | Vanilla CardEffectAddStatusEffect (@gravity, 3) |
+| Right Timing Beta | RightTimingBeta | DiscipleClan/Cards/Retain/RightTimingBeta.cs | json/spells/right_timing_beta.json | Vanilla CardEffectDamage (5); OnUnplayed trigger TBD |
+| Right Timing Delta | RightTimingDelta | DiscipleClan/Cards/Retain/RightTimingDelta.cs | json/spells/right_timing_delta.json | Vanilla CardEffectDamage (15); OnKill + scaling TBD |
+| Wax Pinion | WaxPinion | DiscipleClan/Cards/Shifter/WaxPinion.cs | json/spells/wax_pinion.json | Vanilla CardEffectBump (param_int 4, target both) |
 
 ---
 

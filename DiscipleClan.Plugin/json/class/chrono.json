@@ -69,6 +69,19 @@
           "icon": "@DiscipleChampionIcon",
           "portrait": "@DiscipleChampionIcon",
           "locked_icon": "@DiscipleChampionIcon"
+        },
+        {
+          "id": "SecondDiscipleChampion",
+          "card_data": "@SpawnSecondDisciple",
+          "starter_card": "@Analog",
+          "upgrade_tree": [
+            ["@DiscipleWardmasterBasic", "@DiscipleWardmasterPremium", "@DiscipleWardmasterPro"],
+            ["@DiscipleSymbioteBasic", "@DiscipleSymbiotePremium", "@DiscipleSymbiotePro"],
+            ["@DiscipleShifterBasic", "@DiscipleShifterPremium", "@DiscipleShifterPro"]
+          ],
+          "icon": "@SecondDiscipleChampionIcon",
+          "portrait": "@SecondDiscipleChampionIcon",
+          "locked_icon": "@SecondDiscipleChampionIcon"
         }
       ]
     }
@@ -95,6 +108,7 @@
     { "id": "ClanIconLarge", "path": "textures/ClanIconLarge.png" },
     { "id": "ClanIconSilhouette", "path": "textures/ClanIconSilhouette.png" },
     { "id": "DiscipleChampionIcon", "path": "textures/DiscipleChampionIcon.png" },
+    { "id": "SecondDiscipleChampionIcon", "path": "textures/Hero2CharacterArt.png" },
     { "id": "ChronoUnitCardFrame", "path": "textures/UnitCardFrame.png" },
     { "id": "ChronoSpellCardFrame", "path": "textures/SpellCardFrame.png" }
   ],

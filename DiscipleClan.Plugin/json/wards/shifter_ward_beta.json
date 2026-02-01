@@ -9,7 +9,7 @@
       "card_type": "monster",
       "rarity": "uncommon",
       "class": "@Chrono",
-      "pools": ["UnitsAllBanner"],
+      "pools": [],
       "targets_room": true,
       "effects": [{ "id": "@SpawnShifterWardBetaEffect" }],
       "lore_tooltips": [{ "english": "Descend friendly units after combat." }]

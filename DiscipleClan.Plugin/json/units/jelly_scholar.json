@@ -5,14 +5,14 @@
       "id": "SpawnJellyScholar",
       "names": { "english": "Jelly Scholar", "chinese": "果冻学者" },
       "card_art": "@JellyScholarCardArt",
-      "cost": 1,
+      "cost": 2,
       "card_type": "monster",
-      "rarity": "common",
+      "rarity": "uncommon",
       "class": "@Chrono",
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnJellyScholarEffect" }],
-      "lore_tooltips": [{ "english": "Resolve: +12 [health] and +1 capacity to this room." }]
+      "lore_tooltips": [{ "english": "Post combat: +12 [health] and +1 capacity to self." }]
     }
   ],
   "characters": [
@@ -21,9 +21,18 @@
       "names": { "english": "Jelly Scholar", "chinese": "果冻学者" },
       "character_art": "@JellyScholarCharacterArt",
       "size": 1,
-      "health": 8,
-      "attack_damage": 2,
-      "subtypes": ["@ChronoSubtype_Seer", "SubtypesData_BannerUnit"]
+      "health": 4,
+      "attack_damage": 10,
+      "subtypes": ["@ChronoSubtype_Eternal", "SubtypesData_BannerUnit"],
+      "triggers": ["@JellyScholarPostCombatTrigger"]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "JellyScholarPostCombatTrigger",
+      "trigger": "post_combat",
+      "descriptions": { "english": "The Jelly Grows: +12 [health] and +1 capacity to self." },
+      "effects": [{ "id": "@JellyScholarGrowEffect" }]
     }
   ],
   "effects": [
@@ -32,6 +41,19 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@JellyScholar"
+    },
+    {
+      "id": "JellyScholarGrowEffect",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@JellyScholarGrowUpgrade"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "JellyScholarGrowUpgrade",
+      "bonus_hp": 12,
+      "bonus_size": 1
     }
   ],
   "sprites": [
