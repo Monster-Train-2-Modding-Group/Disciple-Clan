@@ -8,9 +8,13 @@ namespace DiscipleClan.Plugin.Patches
     /// <summary>
     /// When the player gains Ember (AddEnergy), queue the OnGainEmber character trigger for each
     /// unit in each room so units with "On Gain Ember" triggers (e.g. Cinderborn) fire.
-    /// Ported from MT1 OnGainEmber. Uses TargetMethod to resolve PlayerManager at runtime.
+    /// Ported from MT1 OnGainEmber.
     /// </summary>
-    [HarmonyPatch]
+    /// <remarks>
+    /// PlayerManager holds private saveManager (DepInjector.MapProvider). SaveManager has
+    /// GetRoomManager() and private combatManager; we get both via SaveManager.
+    /// </remarks>
+    [HarmonyPatch(typeof(PlayerManager), "AddEnergy")]
     public static class OnGainEmberPatch
     {
         /// <summary>
@@ -18,27 +22,22 @@ namespace DiscipleClan.Plugin.Patches
         /// </summary>
         public static Dictionary<CharacterState, int> EnergyData { get; } = new Dictionary<CharacterState, int>();
 
-        public static MethodBase TargetMethod()
-        {
-            var type = AccessTools.TypeByName("PlayerManager");
-            if (type == null)
-                return null;
-            return AccessTools.Method(type, "AddEnergy");
-        }
-
-        static void Postfix(object __instance, int addEnergy)
+        static void Postfix(PlayerManager __instance, int addEnergy, bool suppressSignal = false)
         {
             if (__instance == null || addEnergy <= 0)
                 return;
 
-            var combatManager = GetCombatManager(__instance);
-            var roomManager = GetRoomManager(__instance);
+            var saveManager = GetSaveManager(__instance);
+            if (saveManager == null)
+                return;
+
+            var combatManager = GetCombatManager(saveManager);
+            var roomManager = saveManager.GetRoomManager();
             if (combatManager == null || roomManager == null)
                 return;
 
             EnergyData.Clear();
 
-            // Rooms top to bottom (e.g. numRooms-1 down to 0)
             int numRooms = roomManager.GetNumRooms();
             for (int roomIndex = numRooms - 1; roomIndex >= 0; roomIndex--)
             {
@@ -46,11 +45,11 @@ namespace DiscipleClan.Plugin.Patches
                 if (room == null || room.IsDestroyedOrInactive())
                     continue;
 
-                var monsters = room.GetCharacters();
-                if (monsters == null)
-                    continue;
+                var characters = new List<CharacterState>();
+                room.AddCharactersToList(characters, Team.Type.Monsters, false, true);
+                room.AddCharactersToList(characters, Team.Type.Heroes, false, true);
 
-                foreach (var unit in monsters)
+                foreach (var unit in characters)
                 {
                     if (unit == null)
                         continue;
@@ -68,47 +67,22 @@ namespace DiscipleClan.Plugin.Patches
             }
         }
 
-        static CombatManager GetCombatManager(object instance)
+        static SaveManager? GetSaveManager(PlayerManager instance)
         {
             if (instance == null)
                 return null;
-            const BindingFlags f = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
-            var core = GetCoreManagers(instance);
-            if (core == null)
-                return null;
-            var getCombat = core.GetType().GetMethod("GetCombatManager", f);
-            return getCombat?.Invoke(core, null) as CombatManager;
+            const BindingFlags flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+            var field = instance.GetType().GetField("saveManager", flags);
+            return field?.GetValue(instance) as SaveManager;
         }
 
-        static RoomManager GetRoomManager(object instance)
+        static CombatManager? GetCombatManager(SaveManager saveManager)
         {
-            if (instance == null)
+            if (saveManager == null)
                 return null;
-            var core = GetCoreManagers(instance);
-            if (core == null)
-                return null;
-            const BindingFlags f = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
-            var getRoom = core.GetType().GetMethod("GetRoomManager", f);
-            return getRoom?.Invoke(core, null) as RoomManager;
-        }
-
-        static object GetCoreManagers(object instance)
-        {
-            if (instance == null)
-                return null;
-            const BindingFlags f = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
-            var getCore = instance.GetType().GetMethod("GetCoreManagers", f);
-            if (getCore != null)
-                return getCore.Invoke(instance, null);
-            var field = instance.GetType().GetField("coreManagers", f) ?? instance.GetType().GetField("allGameManagers", f);
-            if (field != null)
-            {
-                var val = field.GetValue(instance);
-                if (val != null && val.GetType().GetMethod("GetCoreManagers", f) != null)
-                    return val.GetType().GetMethod("GetCoreManagers", f).Invoke(val, null);
-                return val;
-            }
-            return null;
+            const BindingFlags flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+            var field = saveManager.GetType().GetField("combatManager", flags);
+            return field?.GetValue(saveManager) as CombatManager;
         }
     }
 }

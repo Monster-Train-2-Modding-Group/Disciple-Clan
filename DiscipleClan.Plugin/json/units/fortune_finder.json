@@ -34,8 +34,8 @@
     {
       "id": "FortuneFinderOnRelocateTrigger",
       "descriptions": {
-        "english": "+[effect0.power] [gold].",
-        "chinese": "+[effect0.power][gold]。"
+        "english": "Gain +[effect0.power] [coin].",
+        "chinese": "获得 +[effect0.power] [currency]。"
       },
       "trigger": "@OnRelocate",
       "effects": ["@FortuneFinderOnRelocateEffect" ]

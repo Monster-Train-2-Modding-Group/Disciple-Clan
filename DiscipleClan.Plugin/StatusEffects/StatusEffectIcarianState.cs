@@ -14,10 +14,6 @@ namespace DiscipleClan.Plugin.StatusEffects
     /// </summary>
     public class StatusEffectIcarianState : StatusEffectState
     {
-        public const string StatusId = "icarian";
-
-        public override string GetStatusId() => StatusId;
-
         protected override IEnumerator OnTriggered(
             InputTriggerParams inputTriggerParams,
             OutputTriggerParams outputTriggerParams,
@@ -34,10 +30,10 @@ namespace DiscipleClan.Plugin.StatusEffects
                 yield break;
 
             // Don't ascend during Relentless (any hero in room has relentless)
-            object combatManager = GetCombatManager(coreGameManagers);
+            CombatManager? combatManager = GetCombatManager(coreGameManagers);
             if (combatManager != null)
             {
-                object heroManager = GetHeroManager(combatManager);
+                HeroManager? heroManager = GetHeroManager(combatManager);
                 if (heroManager != null)
                 {
                     var heroes = GetCharactersInRoom(heroManager, roomIndex);
@@ -73,38 +69,27 @@ namespace DiscipleClan.Plugin.StatusEffects
             yield return CardEffectBump.Bump(null, cardEffectParams, coreGameManagers, 1, null);
         }
 
-        static object GetCombatManager(ICoreGameManagers core)
+        static CombatManager? GetCombatManager(ICoreGameManagers core)
         {
             if (core == null) return null;
             const BindingFlags f = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
             var getCombat = core.GetType().GetMethod("GetCombatManager", f);
-            return getCombat?.Invoke(core, null);
+            return (CombatManager?)getCombat?.Invoke(core, null);
         }
 
-        static object GetHeroManager(object combatManager)
+        static HeroManager? GetHeroManager(object combatManager)
         {
             if (combatManager == null) return null;
             const BindingFlags f = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
             var getHero = combatManager.GetType().GetMethod("GetHeroManager", f);
-            return getHero?.Invoke(combatManager, null);
+            return (HeroManager?)getHero?.Invoke(combatManager, null);
         }
 
-        static List<CharacterState> GetCharactersInRoom(object heroManager, int roomIndex)
+        static List<CharacterState> GetCharactersInRoom(HeroManager heroManager, int roomIndex)
         {
-            if (heroManager == null) return null;
-            const BindingFlags f = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
-            var method = heroManager.GetType().GetMethod("AddCharactersInRoomToList", f);
-            if (method == null) return null;
             var list = new List<CharacterState>();
-            try
-            {
-                method.Invoke(heroManager, new object[] { list, roomIndex });
-                return list;
-            }
-            catch
-            {
-                return null;
-            }
+            heroManager.AddCharactersInRoomToList(list, roomIndex);
+            return list;
         }
     }
 }

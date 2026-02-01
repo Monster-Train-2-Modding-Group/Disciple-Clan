@@ -58,6 +58,9 @@
     {
       "id": "AncientPyreSnailEnchantTrigger",
       "trigger": "after_spawn_enchant",
+      "descriptions": {
+        "english": "Grants [pyreboost]"
+      },
       "effects": [
         {
           "id": "@AncientPyreSnailEnchantEffect"

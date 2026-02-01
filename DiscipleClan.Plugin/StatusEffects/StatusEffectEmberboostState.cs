@@ -12,10 +12,6 @@ namespace DiscipleClan.Plugin.StatusEffects
     /// </summary>
     public class StatusEffectEmberboostState : StatusEffectState
     {
-        public const string StatusId = "emberboost";
-
-        public override string GetStatusId() => StatusId;
-
         protected override IEnumerator OnTriggered(
             InputTriggerParams inputTriggerParams,
             OutputTriggerParams outputTriggerParams,
@@ -44,16 +40,8 @@ namespace DiscipleClan.Plugin.StatusEffects
                 catch { /* optional UI */ }
             }
 
-            object playerManager = GetPlayerManager(coreGameManagers);
-            if (playerManager != null)
-            {
-                try
-                {
-                    var addEnergy = playerManager.GetType().GetMethod("AddEnergy", new[] { typeof(int) });
-                    addEnergy?.Invoke(playerManager, new object[] { stacks });
-                }
-                catch { /* ignore */ }
-            }
+            PlayerManager? playerManager = GetPlayerManager(coreGameManagers);
+            playerManager?.AddEnergy(stacks);
 
             inputTriggerParams.associatedCharacter.ShowNotification(
                 $"+{stacks} [ember]",
@@ -62,14 +50,14 @@ namespace DiscipleClan.Plugin.StatusEffects
             inputTriggerParams.associatedCharacter.RemoveStatusEffect(statusId, 1, true);
         }
 
-        static object GetPlayerManager(ICoreGameManagers coreGameManagers)
+        static PlayerManager? GetPlayerManager(ICoreGameManagers coreGameManagers)
         {
             if (coreGameManagers == null)
                 return null;
             const BindingFlags f = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
             var getPlayer = coreGameManagers.GetType().GetMethod("GetPlayerManager", f);
             if (getPlayer != null)
-                return getPlayer.Invoke(coreGameManagers, null);
+                return (PlayerManager?)getPlayer.Invoke(coreGameManagers, null);
             return null;
         }
     }

@@ -178,7 +178,7 @@ UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumer
 
 No issues
 
-### Runs 3 (Latest)
+### Runs 3
 
 Symbiote needs some more tech to do. Wardmaster has double text, fixing it.
 
@@ -213,3 +213,5 @@ Palm Reading still demands a target, with no valid target.
 **Still to do:**
 - **Symbiote** – Needs more tech/implementation.
 - **Palm Reading** – Still demands a target with no valid target; may need framework or effect fix (card already `targetless: true`).
+
+### Load 4 (Latest)
