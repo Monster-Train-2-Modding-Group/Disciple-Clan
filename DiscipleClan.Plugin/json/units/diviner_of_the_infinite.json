@@ -3,27 +3,67 @@
   "cards": [
     {
       "id": "SpawnDivineroftheInfinite",
-      "names": { "english": "Fate Behemoth", "chinese": "命运巨兽" },
+      "names": {
+        "english": "Diviner of the Infinite",
+        "chinese": "无限占卜师"
+      },
       "card_art": "@DivinerCardArt",
-      "cost": 2,
+      "cost": 5,
       "card_type": "monster",
-      "rarity": "rare",
+      "rarity": "uncommon",
       "class": "@Chrono",
-      "pools": ["UnitsAllBanner"],
+      "pools": [
+        "UnitsAllBanner"
+      ],
       "targets_room": true,
-      "effects": [{ "id": "@SpawnDivinerEffect" }],
-      "lore_tooltips": [{ "english": "Reserve: Cost -1 ember." }]
+      "effects": [
+        {
+          "id": "@SpawnDivinerEffect"
+        }
+      ],
+      "traits": [
+        "@CardTraitRetainState"
+      ],
+      "triggers": [
+        "@DivinerOfTheInfiniteRetainStateTrigger"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "[retain]. Each turn this is not played, it gains -1 [ember]."
+        }
+      ]
+    }
+  ],
+  "card_triggers": [
+    {
+      "id": "DivinerOfTheInfiniteRetainStateTrigger",
+      "trigger": "on_unplayed_positive",
+      "effects": [
+        "@DivinerOfTheInfiniteRetainStateEffect"
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "CardTraitRetainState",
+      "name": "CardTraitRetain"
     }
   ],
   "characters": [
     {
       "id": "DivineroftheInfinite",
-      "names": { "english": "Fate Behemoth", "chinese": "命运巨兽" },
+      "names": {
+        "english": "Diviner of the Infinite",
+        "chinese": "命运巨兽"
+      },
       "character_art": "@DivinerCharacterArt",
-      "size": 2,
-      "health": 15,
-      "attack_damage": 5,
-      "subtypes": ["SubtypesData_BannerUnit"]
+      "size": 3,
+      "health": 50,
+      "attack_damage": 35,
+      "subtypes": [
+        "@ChronoSubtype_Eternal",
+        "SubtypesData_BannerUnit"
+      ]
     }
   ],
   "effects": [
@@ -32,21 +72,58 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@DivineroftheInfinite"
+    },
+    {
+      "id": "DivinerOfTheInfiniteRetainStateEffect",
+      "name": "CardEffectAddTempCardUpgradeToCardsInHand",
+      "target_mode": "self",
+      "param_upgrade": "@DivinerOfTheInfiniteRetainStateUpgrade"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "DivinerOfTheInfiniteRetainStateUpgrade",
+      "cost_reduction": 1
     }
   ],
   "sprites": [
-    { "id": "DivinerCardArt", "path": "textures/DivinerCharacterArt.png" },
-    { "id": "DivinerCharacterArt", "path": "textures/DivinerCharacterArt.png" }
+    {
+      "id": "DivinerCardArt",
+      "path": "textures/DivinerCharacterArt.png"
+    },
+    {
+      "id": "DivinerCharacterArt",
+      "path": "textures/DivinerCharacterArt.png"
+    }
   ],
   "game_objects": [
-    { "id": "DivinerCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@DivinerCardArt" } } },
+    {
+      "id": "DivinerCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@DivinerCardArt"
+        }
+      }
+    },
     {
       "id": "DivinerCharacterArt",
       "type": "character_art",
       "extensions": {
         "character_art": {
           "sprite": "@DivinerCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 0.2,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
         }
       }
     }

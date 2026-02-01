@@ -3,27 +3,66 @@
   "cards": [
     {
       "id": "SpawnFireshaped",
-      "names": { "english": "Fireshaped", "chinese": "火塑" },
+      "names": {
+        "english": "Fireshaped",
+        "chinese": "火塑"
+      },
       "card_art": "@FireshapedCardArt",
-      "cost": 1,
+      "cost": 0,
       "card_type": "monster",
       "rarity": "uncommon",
       "class": "@Chrono",
-      "pools": ["UnitsAllBanner"],
+      "pools": [
+        "UnitsAllBanner"
+      ],
       "targets_room": true,
-      "effects": [{ "id": "@SpawnFireshapedEffect" }],
-      "lore_tooltips": [{ "english": "" }]
+      "effects": [
+        {
+          "id": "@SpawnFireshapedEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "When it spawns: +3 [buff] and +2 [regen]."
+        }
+      ]
     }
   ],
   "characters": [
     {
       "id": "Fireshaped",
-      "names": { "english": "Fireshaped", "chinese": "火塑" },
+      "names": {
+        "english": "Fireshaped",
+        "chinese": "火塑"
+      },
       "character_art": "@FireshapedCharacterArt",
-      "size": 1,
-      "health": 8,
-      "attack_damage": 4,
-      "subtypes": ["SubtypesData_BannerUnit"]
+      "size": 2,
+      "health": 20,
+      "attack_damage": 0,
+      "subtypes": [
+        "@ChronoSubtype_Pythian",
+        "SubtypesData_BannerUnit"
+      ],
+      "triggers": [
+        "@FireshapedOnSpawnTrigger"
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "FireshapedOnSpawnTrigger",
+      "trigger": "on_spawn",
+      "descriptions": {
+        "english": " +[effect0.power] [buff], +[effect1.power] [regen]."
+      },
+      "effects": [
+        {
+          "id": "@FireshapedBuffEffect"
+        },
+        {
+          "id": "@FireshapedRegenEffect"
+        }
+      ]
     }
   ],
   "effects": [
@@ -32,21 +71,68 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@Fireshaped"
+    },
+    {
+      "id": "FireshapedBuffEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "count": 3,
+          "status": "buff"
+        }
+      ]
+    },
+    {
+      "id": "FireshapedRegenEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "count": 2,
+          "status": "regen"
+        }
+      ]
     }
   ],
   "sprites": [
-    { "id": "FireshapedCardArt", "path": "textures/FireshapedCharacterArt.png" },
-    { "id": "FireshapedCharacterArt", "path": "textures/FireshapedCharacterArt.png" }
+    {
+      "id": "FireshapedCardArt",
+      "path": "textures/FireshapedCharacterArt.png"
+    },
+    {
+      "id": "FireshapedCharacterArt",
+      "path": "textures/FireshapedCharacterArt.png"
+    }
   ],
   "game_objects": [
-    { "id": "FireshapedCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FireshapedCardArt" } } },
+    {
+      "id": "FireshapedCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@FireshapedCardArt"
+        }
+      }
+    },
     {
       "id": "FireshapedCharacterArt",
       "type": "character_art",
       "extensions": {
         "character_art": {
           "sprite": "@FireshapedCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 0.2,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
+          }
         }
       }
     }

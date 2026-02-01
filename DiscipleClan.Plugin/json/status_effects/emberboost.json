@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "status_effects": [
+    {
+      "id": "emberboost",
+      "class_name": "@StatusEffectEmberboostState",
+      "names": {
+        "english": "Emberboost",
+        "chinese": "余烬强化"
+      },
+      "stackable_names": {
+        "english": "<nobr>Emberboost {0}</nobr>",
+        "chinese": "<nobr>余烬强化 {0}</nobr>"
+      },
+      "card_tooltips": {
+        "english": "At start of monster turn: gain Ember equal to stacks, then remove 1 stack."
+      },
+      "character_tooltips": {
+        "english": "At start of monster turn, you gain Ember equal to stacks; then 1 stack is removed."
+      },
+      "notifications": {
+        "english": "Emberboost",
+        "chinese": "余烬强化"
+      },
+      "replacement_texts": {
+        "english": "<b>Emberboost</b>",
+        "chinese": "<b>余烬强化</b>"
+      },
+      "display_category": "positive",
+      "trigger_stage": "on_monster_team_turn_begin",
+      "is_stackable": true,
+      "show_stack_count": true,
+      "icon": "@EmberboostIcon"
+    }
+  ],
+  "sprites": [
+    { "id": "EmberboostIcon", "path": "textures/PyreFyre.png" }
+  ],
+  "atlas_icons": [
+    { "id": "EmberboostIcon", "path": "textures/PyreFyre.png" }
+  ]
+}

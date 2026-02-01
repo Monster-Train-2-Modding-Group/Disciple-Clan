@@ -16,33 +16,30 @@ Reference for all units in the mod. Data derived from `units.csv`. For champions
 | Flashfeather | Flashwing | Uncommon | Unit | Extinguish: Dazed 2 to last attacker to Pyre | Shifter | untested |
 | Galilizard | Snecko | Uncommon | Unit | End of Turn: Ascend twice | Shifter | untested |
 | Wax Pinion | WaxPinion | Common | Unit | Ascend unit to Pyre | Shifter | untested |
-| Fate Behemoth | Diviner of the Infinite | Rare | Unit | Reserve: Cost -1 ember | Retain | untested |
+| Fate Behemoth | Diviner of the Infinite | Uncommon | Unit | Retained; -1 cost each turn unplayed | Eternal | untested |
 | Jelly Scholar | JellyScholar | Common | Unit | Resolve: +12 health +1 capacity | Retain | untested |
 | Newton | Newtons | Uncommon | Unit | — | Retain | untested |
 | Right Timing Beta | RightTimingBeta | Uncommon | Unit | — | Retain | untested |
 | Right Timing Delta | RightTimingDelta | Uncommon | Unit | — | Retain | untested |
 | Time Freeze | TimeFreeze | Rare | Unit | — | Retain | untested |
-| Embermaker | EmberMaker | Uncommon | Unit | On Attacking: emberboost | Eternal | untested |
+| Embermaker | EmberMaker | Uncommon | Unit | On hit: add [emberboost] to last attacked | Eternal | untested |
 | Minerva Owl | MinervaOwl | Uncommon | Unit | — | Pyrepact | untested |
 | Morsowl | Morsowl | Uncommon | Unit | — | Pyrepact | untested |
 | Pyresnail | AncientPyreSnail | Common | Unit | — | Pyrepact | untested |
-| Fireshaped | Fireshaped | Uncommon | Unit | — | Pyrepact | untested |
-| Horizon Tome | EpochTome | Uncommon | Unit | Sweep; reduce attack half | Pyrepact | untested |
+| Fireshaped | Fireshaped | Uncommon | Unit | On spawn: +3 [buff], +2 [rage] | Pythian | untested |
 | Rocket Speed | RocketSpeed | Uncommon | Unit | — | Pyrepact | untested |
 | Pyre Spike | PyreSpike | Common | Unit | — | Pyrepact | untested |
-| Flashfire | Flashfire | Common | Unit | — | Pyrepact | untested |
-| Dilation | Dilation | Uncommon | Unit | +capacity +health | Pyrepact | untested |
-
 ---
 
 ## By Type
 
 ### Units by Subtype
 
-- **Pyrepact** — Minerva Owl, Morsowl, Pyresnail, Fireshaped, Horizon Tome, Rocket Speed, Pyre Spike, Flashfire, Dilation
+- **Pyrepact** — Minerva Owl, Morsowl, Pyresnail, Rocket Speed, Pyre Spike
+- **Pythian** — Fireshaped (On spawn: +3 buff, +2 rage)
 - **Shifter** — Waxwing, Fortune Teller, Flashfeather, Galilizard, Wax Pinion
-- **Retain** — Fate Behemoth, Jelly Scholar, Newton, Right Timing Beta, Right Timing Delta, Time Freeze
-- **Eternal** — Shimmersnail (Grant Quick to others), Fulgursnail (Enchant with Pyreboost), Cindershell, Embermaker
+- **Retain** — Jelly Scholar, Newton, Right Timing Beta, Right Timing Delta, Time Freeze
+- **Eternal** — Shimmersnail (Grant Quick to others), Fulgursnail (Enchant with Pyreboost), Cindershell, Embermaker (On hit: emberboost to last attacked), Fate Behemoth (Retained; -1 cost per turn unplayed)
 ---
 
 ## Implementation Reference
@@ -68,12 +65,8 @@ Reference for all units in the mod. Data derived from `units.csv`. For champions
 | Morsowl | SpawnMorsowl | DiscipleClan/Cards/Pyrepact/Morsowl.cs | json/units/morsowl.json |
 | Pyresnail | SpawnAncientPyreSnail | DiscipleClan/Cards/Pyrepact/AncientPyreSnail.cs | json/units/ancient_pyresnail.json |
 | Fireshaped | SpawnFireshaped | DiscipleClan/Cards/Pyrepact/Fireshaped.cs | json/units/fireshaped.json |
-| Horizon Tome | SpawnEpochTome | DiscipleClan/Cards/Pyrepact/EpochTome.cs | json/units/epoch_tome.json |
 | Rocket Speed | SpawnRocketSpeed | DiscipleClan/Cards/Pyrepact/RocketSpeed.cs | json/units/rocket_speed.json |
 | Pyre Spike | SpawnPyreSpike | DiscipleClan/Cards/Pyrepact/PyreSpike.cs | json/units/pyre_spike.json |
-| Flashfire | SpawnFlashfire | DiscipleClan/Cards/Pyrepact/Flashfire.cs | json/units/flashfire_unit.json |
-| Dilation | SpawnDilation | DiscipleClan/Cards/Pyrepact/Dilation.cs | json/units/dilation_unit.json |
-
 ---
 
 *Generated from `units.csv` (units only; champions in `Champion.md`, wards in `WARDS.md`).*

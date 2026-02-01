@@ -21,7 +21,6 @@
         "@SpawnMinervaOwl",
         "@SpawnMorsowl",
         "@SpawnFireshaped",
-        "@SpawnEpochTome",
         "@SpawnHaruspexWardBeta",
         "@SpawnRocketSpeed",
         "@SpawnPyreSpike",
@@ -29,9 +28,7 @@
         "@SpawnDivineroftheInfinite",
         "@SpawnRightTimingBeta",
         "@SpawnRightTimingDelta",
-        "@SpawnTimeFreeze",
-        "@SpawnFlashfire",
-        "@SpawnDilation"
+        "@SpawnTimeFreeze"
       ]
     }
   ]

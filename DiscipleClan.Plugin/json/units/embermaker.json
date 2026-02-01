@@ -15,7 +15,7 @@
       "pools": ["UnitsAllBanner"],
       "targets_room": true,
       "effects": [{ "id": "@SpawnEmberMakerEffect" }],
-      "lore_tooltips": [{ "english": "On Attacking: emberboost." }]
+      "lore_tooltips": [{ "english": "On hit: add [emberboost] to the character you attacked." }]
     }
   ],
   "characters": [
@@ -26,7 +26,16 @@
       "size": 2,
       "health": 20,
       "attack_damage": 2,
-      "subtypes": ["@ChronoSubtype_Eternal", "SubtypesData_BannerUnit"]
+      "subtypes": ["@ChronoSubtype_Eternal", "SubtypesData_BannerUnit"],
+      "triggers": ["@EmberMakerOnHitTrigger"]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "EmberMakerOnHitTrigger",
+      "trigger": "on_hit",
+      "descriptions": { "english": "Add [emberboost]." },
+      "effects": [{ "id": "@EmberMakerAddEmberboostEffect" }]
     }
   ],
   "effects": [
@@ -35,6 +44,13 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@EmberMaker"
+    },
+    {
+      "id": "EmberMakerAddEmberboostEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "last_attacked_character",
+      "param_status_effect": "@emberboost",
+      "param_int": 1
     }
   ],
   "sprites": [
