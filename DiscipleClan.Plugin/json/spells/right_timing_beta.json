@@ -3,7 +3,10 @@
   "cards": [
     {
       "id": "RightTimingBeta",
-      "names": { "english": "Right Timing Beta", "chinese": "正时乙" },
+      "names": {
+        "english": "Right Timing Beta",
+        "chinese": "正时乙"
+      },
       "descriptions": {
         "english": "Deal 5 [damage] to target unit.",
         "chinese": "对目标单位造成5[damage]。"
@@ -15,9 +18,22 @@
       "card_art": "@RightTimingBetaCardArt",
       "targets_room": true,
       "targetless": false,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@RightTimingBetaEffect" }],
-      "lore_tooltips": [{ "english": "On unplayed: +10 spell damage next time (per Right Timing Beta in deck)." }]
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@RightTimingBetaEffect"
+        }
+      ],
+      "triggers": [
+        "@RightTimingBetaOnUnplayedTrigger"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "On unplayed: +10 spell damage next time (per Right Timing in deck)."
+        }
+      ]
     }
   ],
   "effects": [
@@ -29,12 +45,34 @@
       "param_int": 5
     }
   ],
-  "sprites": [{ "id": "RightTimingBetaCardArt", "path": "textures/Right-Timing.png" }],
+  "card_triggers": [
+    {
+      "id": "RightTimingBetaOnUnplayedTrigger",
+      "trigger": "on_unplayed_positive",
+      "trigger_effects": [
+        {
+          "trigger_effect": "CardTriggerEffectBuffSpellDamageForEveryCardOfType",
+          "param_int": 10,
+          "persistence_mode": "single_battle"
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "RightTimingBetaCardArt",
+      "path": "textures/Right-Timing.png"
+    }
+  ],
   "game_objects": [
     {
       "id": "RightTimingBetaCardArt",
       "type": "card_art",
-      "extensions": { "card_art": { "sprite": "@RightTimingBetaCardArt" } }
+      "extensions": {
+        "card_art": {
+          "sprite": "@RightTimingBetaCardArt"
+        }
+      }
     }
   ]
 }
