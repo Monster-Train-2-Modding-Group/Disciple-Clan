@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace DiscipleClan.Plugin.CardEffects
 {
-    class CardEffectScry : CardEffectBase
+    public class CardEffectScry : CardEffectBase
     {
         public CardEffectData.CardSelectionMode cardSelectionMode;
 

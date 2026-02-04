@@ -3,30 +3,93 @@
   "cards": [
     {
       "id": "PendulumBeta",
-      "names": { "english": "Pendulum", "chinese": "摆锤" },
-      "descriptions": { "english": "Increase buff/debuff by x. Apply [effect0.power] [damage] to [front_in_room].", "chinese": "增加增益/减益倍率。对[front_in_room]造成[effect0.power][damage]。" },
-      "cost": 1,
+      "names": {
+        "english": "Pendulum",
+        "chinese": "摆锤"
+      },
+      "descriptions": {
+        "english": "Propogate on all units for every [ember] spent this turn.",
+        "chinese": "对房间内所有单位施加 status 效果。随本战[余烬]消耗提升。"
+      },
+      "cost": 0,
+      "cost_type": "x",
       "card_type": "spell",
       "rarity": "uncommon",
       "class": "@Chrono",
       "card_art": "@PendulumBetaCardArt",
       "targets_room": true,
       "targetless": false,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@PendulumBetaEffect" }],
-      "lore_tooltips": [{ "english": "Increase buff/debuff by x." }]
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@PendulumBetaEffectMonsters"
+        },
+        {
+          "id": "@PendulumBetaEffectHeroes"
+        }
+      ],
+      "traits": [
+        "@PendulumBetaScaling",
+        "@PendulumBetaExhaust"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Increase buff/debuff in room. Scales with ember spent. [exhaust]."
+        }
+      ]
     }
   ],
   "effects": [
     {
-      "id": "PendulumBetaEffect",
-      "name": "CardEffectDamage",
-      "target_mode": "front_in_room",
-      "param_int": 8
+      "id": "PendulumBetaEffectMonsters",
+      "name": "CardEffectAdjustAllStatusEffects",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_bool": true,
+      "param_int": 0,
+      "param_int_2": 1
+    },
+    {
+      "id": "PendulumBetaEffectHeroes",
+      "name": "CardEffectAdjustAllStatusEffects",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_bool": false,
+      "param_int": 0,
+      "param_int_2": 1
     }
   ],
-  "sprites": [{ "id": "PendulumBetaCardArt", "path": "textures/Pendulum.png" }],
+  "traits": [
+    {
+      "id": "PendulumBetaScaling",
+      "name": "CardTraitScalingAddStatusEffect",
+      "param_tracked_value": "played_cost",
+      "param_entry_duration": "this_turn",
+      "param_use_scaling_params": true,
+      "param_int": 1
+    },
+    {
+      "id": "PendulumBetaExhaust",
+      "name": "CardTraitExhaustState"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "PendulumBetaCardArt",
+      "path": "textures/Pendulum.png"
+    }
+  ],
   "game_objects": [
-    { "id": "PendulumBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@PendulumBetaCardArt" } } }
+    {
+      "id": "PendulumBetaCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@PendulumBetaCardArt"
+        }
+      }
+    }
   ]
 }

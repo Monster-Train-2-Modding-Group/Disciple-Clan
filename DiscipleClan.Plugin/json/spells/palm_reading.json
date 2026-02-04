@@ -3,31 +3,60 @@
   "cards": [
     {
       "id": "PalmReading",
-      "names": { "english": "Palm Reading", "chinese": "掌纹占卜" },
-      "descriptions": { "english": "Look at the top 2 cards of your draw pile. Discard any of them.", "chinese": "查看牌堆顶2张牌，可丢弃其中任意张。" },
+      "names": {
+        "english": "Palm Reading",
+        "chinese": "掌纹占卜"
+      },
+      "descriptions": {
+        "english": "Look at the top 2 cards of your draw pile. Discard any of them.",
+        "chinese": "查看牌堆顶2张牌，可丢弃其中任意张。"
+      },
       "cost": 0,
       "card_type": "spell",
       "rarity": "uncommon",
       "class": "@Chrono",
       "card_art": "@PalmReadingCardArt",
       "targetless": true,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@PalmReadingEffect" }],
-      "lore_tooltips": [{ "english": "Scry 2 from draw pile; discard any." }]
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@PalmReadingEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Scry 2 from draw pile; discard any."
+        }
+      ]
     }
   ],
   "effects": [
     {
       "id": "PalmReadingEffect",
-      "name": "CardEffectScryDiscard",
+      "name": "@CardEffectScryDiscard",
       "target_mode": "draw_pile",
       "param_int": 2,
       "param_bool": true,
       "additional_param_int": 99
     }
   ],
-  "sprites": [{ "id": "PalmReadingCardArt", "path": "textures/Palm-Reading.png" }],
+  "sprites": [
+    {
+      "id": "PalmReadingCardArt",
+      "path": "textures/Palm-Reading.png"
+    }
+  ],
   "game_objects": [
-    { "id": "PalmReadingCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@PalmReadingCardArt" } } }
+    {
+      "id": "PalmReadingCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@PalmReadingCardArt"
+        }
+      }
+    }
   ]
 }

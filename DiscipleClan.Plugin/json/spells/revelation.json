@@ -4,8 +4,8 @@
     {
       "id": "Revelation",
       "names": { "english": "Revelation", "chinese": "启示" },
-      "descriptions": { "english": "Draw 2 cards.", "chinese": "抽2张牌。" },
-      "cost": 0,
+      "descriptions": { "english": "Look at the top 4 cards of your draw pile. Add a copy of 1 to your hand. [exhaust].", "chinese": "查看牌堆顶4张牌，将其中1张的复制加入手牌。[exhaust]。" },
+      "cost": 1,
       "card_type": "spell",
       "rarity": "uncommon",
       "class": "@Chrono",
@@ -13,16 +13,21 @@
       "targetless": true,
       "pools": ["MegaPool"],
       "effects": [{ "id": "@RevelationEffect" }],
-      "lore_tooltips": [{ "english": "Prophecy." }]
+      "traits": ["@RevelationExhaust"],
+      "lore_tooltips": [{ "english": "Scry 4, copy 1 to hand. [exhaust]." }]
     }
   ],
   "effects": [
     {
       "id": "RevelationEffect",
-      "name": "CardEffectDraw",
-      "target_mode": "self",
-      "param_int": 2
+      "name": "@CardEffectScryCopy",
+      "target_mode": "draw_pile",
+      "param_int": 4,
+      "additional_param_int": 1
     }
+  ],
+  "traits": [
+    { "id": "RevelationExhaust", "name": "CardTraitExhaustState" }
   ],
   "sprites": [{ "id": "RevelationCardArt", "path": "textures/Revelation.png" }],
   "game_objects": [
