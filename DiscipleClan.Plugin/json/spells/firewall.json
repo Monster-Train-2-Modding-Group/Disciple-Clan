@@ -3,30 +3,71 @@
   "cards": [
     {
       "id": "Firewall",
-      "names": { "english": "Firewall", "chinese": "火墙" },
-      "descriptions": { "english": "Apply [armor] to the Pyre per [ember] you have.", "chinese": "根据当前[余烬]为圣火施加[护甲]。" },
+      "names": {
+        "english": "Firewall",
+        "chinese": "火墙"
+      },
+      "descriptions": {
+        "english": "Apply [effect0.power] [armor] to the Pyre. (Equal to 3x Energy spent this turn)",
+        "chinese": "为圣火施加[effect0.power] [护甲]。（等于3x本回合消耗的[余烬]）"
+      },
       "cost": 0,
       "card_type": "spell",
       "rarity": "common",
       "class": "@Chrono",
       "card_art": "@FirewallCardArt",
       "targetless": true,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@FirewallEffect" }],
-      "lore_tooltips": [{ "english": "Apply armor to Pyre per ember." }]
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@FirewallEffect"
+        }
+      ],
+      "traits": [
+        "@FirewallScaling"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Apply [effect0.power] [armor] to the Pyre. (Equal to 3x Energy spent this turn)"
+        }
+      ]
     }
   ],
   "effects": [
     {
       "id": "FirewallEffect",
-      "name": "CardEffectAddStatusEffectPerEnergy",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "pyre",
-      "param_int": 1,
-      "param_status_effect": "armor"
+      "param_status_effect": "armor",
+      "param_int": 0
     }
   ],
-  "sprites": [{ "id": "FirewallCardArt", "path": "textures/Flashfire.png" }],
+  "traits": [
+    {
+      "id": "FirewallScaling",
+      "name": "CardTraitScalingAddStatusEffect",
+      "param_tracked_value": "played_cost",
+      "param_entry_duration": "this_turn",
+      "param_int": 3
+    }
+  ],
+  "sprites": [
+    {
+      "id": "FirewallCardArt",
+      "path": "textures/Flashfire.png"
+    }
+  ],
   "game_objects": [
-    { "id": "FirewallCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FirewallCardArt" } } }
+    {
+      "id": "FirewallCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@FirewallCardArt"
+        }
+      }
+    }
   ]
 }

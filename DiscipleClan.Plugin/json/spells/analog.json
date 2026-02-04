@@ -3,29 +3,58 @@
   "cards": [
     {
       "id": "Analog",
-      "names": { "english": "Analog", "chinese": "模拟" },
-      "descriptions": { "english": "Draw 1 card.", "chinese": "抽1张牌。" },
-      "cost": 0,
+      "names": {
+        "english": "Analog",
+        "chinese": "模拟"
+      },
+      "descriptions": {
+        "english": "Apply [effect0.power] [chronolock] to target unit.",
+        "chinese": "对目标单位施加[effect0.power]层[chronolock]。"
+      },
+      "cost": 1,
       "card_type": "spell",
       "rarity": "common",
       "class": "@Chrono",
       "card_art": "@AnalogCardArt",
-      "targetless": true,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@AnalogEffect" }],
-      "lore_tooltips": [{ "english": "[chronolock]: (Class mechanic; see class tooltip)." }]
+      "targetless": false,
+      "targets_room": true,
+      "pools": [],
+      "effects": [
+        {
+          "id": "@AnalogEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "[chronolock]: (Class mechanic; see class tooltip)."
+        }
+      ]
     }
   ],
   "effects": [
     {
       "id": "AnalogEffect",
-      "name": "CardEffectDraw",
-      "target_mode": "self",
-      "param_int": 1
+      "name": "@CardEffectAddClassStatus",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": 2
     }
   ],
-  "sprites": [{ "id": "AnalogCardArt", "path": "textures/Refractor.png" }],
+  "sprites": [
+    {
+      "id": "AnalogCardArt",
+      "path": "textures/Pendulum.png"
+    }
+  ],
   "game_objects": [
-    { "id": "AnalogCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@AnalogCardArt" } } }
+    {
+      "id": "AnalogCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@AnalogCardArt"
+        }
+      }
+    }
   ]
 }

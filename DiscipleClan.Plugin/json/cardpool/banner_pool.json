@@ -12,14 +12,12 @@
         "@SpawnEmberMaker",
         "@SpawnAncientSavant",
         "@SpawnAncientPyreSnail",
-        "@SpawnAppleElixir",
         "@SpawnJellyScholar",
         "@SpawnNewtons",
         "@SpawnMinervaOwl",
         "@SpawnMorsowl",
         "@SpawnFireshaped",
-        "@SpawnDivineroftheInfinite",
-        "@SpawnTimeFreeze"
+        "@SpawnDivineroftheInfinite"
       ]
     }
   ]

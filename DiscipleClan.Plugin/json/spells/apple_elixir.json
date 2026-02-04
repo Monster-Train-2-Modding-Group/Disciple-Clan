@@ -26,11 +26,20 @@
           "id": "@AppleElixirEffect"
         }
       ],
+      "traits": [
+        "@AppleElixirExhaust"
+      ],
       "lore_tooltips": [
         {
-          "english": "Add Gravity stacks to a unit."
+          "english": "Add 3 [gravity] to target unit. [exhaust]."
         }
       ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "AppleElixirExhaust",
+      "name": "CardTraitExhaustState"
     }
   ],
   "effects": [
@@ -38,7 +47,8 @@
       "id": "AppleElixirEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "drop_target_character",
-      "target_team": "monsters",
+      "target_team": "both",
+      "target_ignore_bosses": true,
       "param_int": 3,
       "param_status_effect": "@gravity"
     }

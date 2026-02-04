@@ -1,29 +1,71 @@
 {
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-    "cards": [{
-        "id": "FlashfireSpell",
-        "names": { "english": "Flashfire", "chinese": "闪火" },
-        "descriptions": { "english": "Deal [effect0.power] [damage] to the front enemy in the room.", "chinese": "对房间前排敌人造成15[damage]。" },
-        "cost": 1,
-        "card_type": "spell",
-        "rarity": "common",
-        "class": "@Chrono",
-        "card_art": "@FlashfireSpellCardArt",
-        "targets_room": true,
-        "targetless": false,
-        "pools": ["MegaPool"],
-        "effects": [{ "id": "@FlashfireSpellEffect" }],
-        "lore_tooltips": [{ "english": "Damage to enemies." }]
-    }],
-    "effects": [{
-        "id": "FlashfireSpellEffect",
-        "name": "CardEffectDamage",
-        "target_mode": "front_in_room",
-        "target_team": "heroes",
-        "param_int": 15
-    }],
-    "sprites": [{ "id": "FlashfireSpellCardArt", "path": "textures/Flashfire.png" }],
+    "cards": [
+        {
+            "id": "FlashfireSpell",
+            "names": {
+                "english": "Flashfire",
+                "chinese": "闪火"
+            },
+            "descriptions": {
+                "english": "Deal [effect0.power] [damage] to enemies in the chosen room.",
+                "chinese": "对所选房间的敌人造成[effect0.power][damage]。随[pyreboost]提升。"
+            },
+            "cost": 3,
+            "card_type": "spell",
+            "rarity": "common",
+            "class": "@Chrono",
+            "card_art": "@FlashfireSpellCardArt",
+            "targets_room": true,
+            "targetless": true,
+            "pools": [
+                "MegaPool"
+            ],
+            "effects": [
+                {
+                    "id": "@FlashfireSpellEffect"
+                }
+            ],
+            "traits": [
+                "@FlashfirePyreboost"
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Damage to room. Scales with Pyre attack."
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "FlashfireSpellEffect",
+            "name": "CardEffectDamage",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_int": 0
+        }
+    ],
+    "traits": [
+        {
+            "id": "FlashfirePyreboost",
+            "name": "@CardTraitPyreboost"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "FlashfireSpellCardArt",
+            "path": "textures/Flashfire.png"
+        }
+    ],
     "game_objects": [
-        { "id": "FlashfireSpellCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FlashfireSpellCardArt" } } }
+        {
+            "id": "FlashfireSpellCardArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@FlashfireSpellCardArt"
+                }
+            }
+        }
     ]
 }

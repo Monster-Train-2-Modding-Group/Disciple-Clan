@@ -23,7 +23,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": ""
+          "english": "Starts with [icarian]. Room: +1 [ember]. When this unit dies: gain 3 [ember]."
         }
       ]
     }
@@ -37,10 +37,34 @@
       },
       "character_art": "@MorsowlCharacterArt",
       "size": 1,
-      "health": 6,
-      "attack_damage": 5,
+      "health": 1,
+      "attack_damage": 3,
       "subtypes": [
+        "@ChronoSubtype_Seer",
         "SubtypesData_BannerUnit"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "@icarian",
+          "count": 1
+        }
+      ],
+      "triggers": [
+        "@MorsowlOnDeathTrigger"
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "MorsowlOnDeathTrigger",
+      "trigger": "on_death",
+      "descriptions": {
+        "english": "Gain [effect0.power] [ember]."
+      },
+      "effects": [
+        {
+          "id": "@MorsowlGainEnergyEffect"
+        }
       ]
     }
   ],
@@ -50,6 +74,12 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@Morsowl"
+    },
+    {
+      "id": "MorsowlGainEnergyEffect",
+      "name": "CardEffectGainEnergy",
+      "target_mode": "self",
+      "param_int": 3
     }
   ],
   "sprites": [

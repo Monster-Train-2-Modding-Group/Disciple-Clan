@@ -3,29 +3,66 @@
   "cards": [
     {
       "id": "Chronomancy",
-      "names": { "english": "Chronomancy", "chinese": "时间术" },
-      "descriptions": { "english": "Divine and Quick. Draw 1 card.", "chinese": "预知与迅捷。抽1张牌。" },
+      "names": {
+        "english": "Chronomancy",
+        "chinese": "时间术"
+      },
+      "descriptions": {
+        "english": "Unplayable. Units you play gain Ambush 1.",
+        "chinese": "无法打出。你打出的单位获得1层先攻。"
+      },
       "cost": 0,
       "card_type": "spell",
-      "rarity": "uncommon",
+      "rarity": "rare",
       "class": "@Chrono",
       "card_art": "@ChronomancyCardArt",
       "targetless": true,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@ChronomancyEffect" }],
-      "lore_tooltips": [{ "english": "Divine and Quick." }]
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [],
+      "traits": [
+        "@ChronomancyAmbushTrait",
+        "@CardTraitUnplayable"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Unplayable. Units you play gain [ambush] 1."
+        }
+      ]
     }
   ],
-  "effects": [
+  "traits": [
     {
-      "id": "ChronomancyEffect",
-      "name": "CardEffectDraw",
-      "target_mode": "self",
-      "param_int": 1
+      "id": "ChronomancyAmbushTrait",
+      "name": "@CardTraitApplyStatusToPlayedUnits",
+      "param_status_effects": [
+        {
+          "status": "ambush",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "CardTraitUnplayable",
+      "name": "CardTraitUnplayable"
     }
   ],
-  "sprites": [{ "id": "ChronomancyCardArt", "path": "textures/Chronomancy.png" }],
+  "sprites": [
+    {
+      "id": "ChronomancyCardArt",
+      "path": "textures/Chronomancy.png"
+    }
+  ],
   "game_objects": [
-    { "id": "ChronomancyCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@ChronomancyCardArt" } } }
+    {
+      "id": "ChronomancyCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ChronomancyCardArt"
+        }
+      }
+    }
   ]
 }

@@ -3,39 +3,82 @@
   "cards": [
     {
       "id": "Dilation",
-      "names": { "english": "Dilation", "chinese": "扩张" },
-      "descriptions": { "english": "Heal a unit and increase room capacity.", "chinese": "治疗一个单位并增加房间容量。" },
-      "cost": 1,
+      "names": {
+        "english": "Dilation",
+        "chinese": "扩张"
+      },
+      "descriptions": {
+        "english": "Apply +[effect0.upgrade.bonus_hp] [health] and +[effect0.upgrade.bonus_size] capacity to target unit. Scales with [ember] spent this battle.",
+        "chinese": "对目标单位施加+8[health]和+1容量（临时）。消耗所有剩余[ember]。本回合消耗的[ember]越多，效果越强。"
+      },
+      "cost": 0,
+      "cost_type": "x",
       "card_type": "spell",
       "rarity": "uncommon",
       "class": "@Chrono",
       "card_art": "@DilationCardArt",
       "targets_room": true,
       "targetless": false,
-      "pools": ["MegaPool"],
-      "effects": [
-        { "id": "@DilationHealEffect" },
-        { "id": "@DilationCapacityEffect" }
+      "pools": [
+        "MegaPool"
       ],
-      "lore_tooltips": [{ "english": "+capacity +health to target." }]
+      "effects": [
+        {
+          "id": "@DilationTempUpgradeEffect"
+        }
+      ],
+      "traits": [
+        "@DilationScaleTrait",
+        "@Exhaust"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Temp +8 [health] and +1 capacity to target. Scales with [ember] spent this battle. [exhaust]."
+        }
+      ]
     }
   ],
   "effects": [
     {
-      "id": "DilationHealEffect",
-      "name": "CardEffectHeal",
-      "target_mode": "room",
-      "param_int": 12
-    },
+      "id": "DilationTempUpgradeEffect",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_upgrade": "@DilationUpgrade"
+    }
+  ],
+  "upgrades": [
     {
-      "id": "DilationCapacityEffect",
-      "name": "CardEffectAdjustRoomCapacity",
-      "target_mode": "room",
+      "id": "DilationUpgrade",
+      "bonus_hp": 8,
+      "bonus_size": 1
+    }
+  ],
+  "traits": [
+    {
+      "id": "DilationScaleTrait",
+      "name": "CardTraitScalingUpgradeUnitHealth",
+      "param_tracked_value": "played_cost",
+      "param_entry_duration": "this_battle",
+      "param_use_scaling_params": true,
       "param_int": 1
     }
   ],
-  "sprites": [{ "id": "DilationCardArt", "path": "textures/Dilation.png" }],
+  "sprites": [
+    {
+      "id": "DilationCardArt",
+      "path": "textures/Dilation.png"
+    }
+  ],
   "game_objects": [
-    { "id": "DilationCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@DilationCardArt" } } }
+    {
+      "id": "DilationCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@DilationCardArt"
+        }
+      }
+    }
   ]
 }

@@ -20,18 +20,16 @@ Reference for all units in the mod. Data derived from `units.csv`. For champions
 | Newton | Newtons | Rare | Unit | Starts with [gravity] | Pythian | untested |
 | Embermaker | EmberMaker | Uncommon | Unit | On hit: add [emberboost] to last attacked | Eternal | untested |
 | Minerva Owl | MinervaOwl | Rare | Unit | Starts with [sweep] and [pyreboost] | Seer | untested |
-| Morsowl | Morsowl | Uncommon | Unit | — | Pyrepact | untested |
-| Pyresnail | AncientPyreSnail | Common | Unit | — | Pyrepact | untested |
-| Fireshaped | Fireshaped | Uncommon | Unit | On spawn: +3 [buff], +2 [rage] | Pythian | untested |
+| Morsowl | Morsowl | Uncommon | Unit | Starts with [icarian]. Room: +1 [ember]. When dies: gain 3 [ember] | Seer | untested |
+| Fireshaped | Fireshaped | Uncommon | Unit | On spawn: +3 [buff], +2 [regen] | Pythian | untested |
 ---
 
 ## By Type
 
 ### Units by Subtype
 
-- **Pyrepact** — Morsowl, Pyresnail
-- **Pythian** — Fireshaped (On spawn: +3 buff, +2 rage), Fortune Teller (On Relocate: +20 gold), Newton (Starts with gravity), Galilizard (Starts with 12 gravity; end of turn ascend 2)
-- **Seer** — Waxwing (Starts with Icarian; on relocate +5 attack temp to self), Flashfeather (Starts with Icarian; when dies Dazed 2 to last attacker), Minerva Owl (Starts with sweep + pyreboost)
+- **Pythian** — Fireshaped (On spawn: +3 buff, +2 regen), Fortune Teller (On Relocate: +20 gold), Newton (Starts with gravity), Galilizard (Starts with 12 gravity; end of turn ascend 2)
+- **Seer** — Waxwing (Starts with Icarian; on relocate +5 attack temp to self), Flashfeather (Starts with Icarian; when dies Dazed 2 to last attacker), Minerva Owl (Starts with sweep + pyreboost), Morsowl (Starts with Icarian; room +1 ember; when dies gain 3 ember)
 - **Eternal** — Shimmersnail (Grant Quick to others), Fulgursnail (Enchant with Pyreboost), Cindershell, Embermaker (On hit: emberboost to last attacked), Jelly Scholar (Post combat: +12 health +1 capacity to self), Fate Behemoth (Retained; -1 cost per turn unplayed)
 ---
 
@@ -52,7 +50,6 @@ Reference for all units in the mod. Data derived from `units.csv`. For champions
 | Embermaker | SpawnEmberMaker | DiscipleClan/Cards/Pyrepact/EmberMaker.cs | json/units/embermaker.json |
 | Minerva Owl | SpawnMinervaOwl | DiscipleClan/Cards/Pyrepact/MinervaOwl.cs | json/units/minerva_owl.json |
 | Morsowl | SpawnMorsowl | DiscipleClan/Cards/Pyrepact/Morsowl.cs | json/units/morsowl.json |
-| Pyresnail | SpawnAncientPyreSnail | DiscipleClan/Cards/Pyrepact/AncientPyreSnail.cs | json/units/ancient_pyresnail.json |
 | Fireshaped | SpawnFireshaped | DiscipleClan/Cards/Pyrepact/Fireshaped.cs | json/units/fireshaped.json |
 ---
 

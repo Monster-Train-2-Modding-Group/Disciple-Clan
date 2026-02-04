@@ -3,41 +3,79 @@
   "cards": [
     {
       "id": "EpochTomeSpell",
-      "names": { "english": "Epoch Tome", "chinese": "纪元之书" },
-      "descriptions": { "english": "Deal [effect0.power] [damage] to all enemies in the front. Reduce their [attack] by half.", "chinese": "对前排所有敌人造成[effect0.power][damage]，其[attack]减半。" },
+      "names": {
+        "english": "Epoch Tome",
+        "chinese": "纪元之书"
+      },
+      "descriptions": {
+        "english": "Apply 1 [sweep] to target unit. Halve their [attack].",
+        "chinese": "对目标单位施加1层[横扫]。其[attack]减半。[exhaust]。"
+      },
       "cost": 2,
       "card_type": "spell",
-      "rarity": "uncommon",
+      "rarity": "rare",
       "class": "@Chrono",
       "card_art": "@EpochTomeSpellCardArt",
       "targets_room": true,
       "targetless": false,
-      "pools": ["MegaPool"],
-      "effects": [
-        { "id": "@EpochTomeDamageEffect" },
-        { "id": "@EpochTomeDebuffEffect" }
+      "pools": [
+        "MegaPool"
       ],
-      "lore_tooltips": [{ "english": "Sweep; reduce attack half." }]
+      "effects": [
+        {
+          "id": "@EpochTomeSweepEffect"
+        },
+        {
+          "id": "@EpochTomeHalveEffect"
+        }
+      ],
+      "traits": [
+        "@EpochTomeExhaust"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Sweep; halve attack. [exhaust]."
+        }
+      ]
     }
   ],
   "effects": [
     {
-      "id": "EpochTomeDamageEffect",
-      "name": "CardEffectDamage",
-      "target_mode": "front_in_room",
-      "target_team": "heroes",
-      "param_int": 10
+      "id": "EpochTomeSweepEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_status_effect": "sweep",
+      "param_int": 1
     },
     {
-      "id": "EpochTomeDebuffEffect",
-      "name": "CardEffectDebuffDamage",
-      "target_mode": "front_in_room",
-      "target_team": "heroes",
-      "param_int": 50
+      "id": "EpochTomeHalveEffect",
+      "name": "@CardEffectHalveDamageDebuff",
+      "target_mode": "drop_target_character",
+      "target_team": "both"
     }
   ],
-  "sprites": [{ "id": "EpochTomeSpellCardArt", "path": "textures/Epoch-Tome.png" }],
+  "traits": [
+    {
+      "id": "EpochTomeExhaust",
+      "name": "CardTraitExhaustState"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "EpochTomeSpellCardArt",
+      "path": "textures/Epoch-Tome.png"
+    }
+  ],
   "game_objects": [
-    { "id": "EpochTomeSpellCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@EpochTomeSpellCardArt" } } }
+    {
+      "id": "EpochTomeSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@EpochTomeSpellCardArt"
+        }
+      }
+    }
   ]
 }

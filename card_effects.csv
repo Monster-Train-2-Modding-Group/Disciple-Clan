@@ -37,7 +37,7 @@ CardEffectTimeStamp,CardEffect,TimeStamp,Conductor C#,,DiscipleClan/CardEffects/
 CardTraitApplyStatusToPlayedUnits,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitApplyStatusToPlayedUnits.cs,Conductor,,TBD,TBD
 CardTraitFreebie,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitFreebie.cs,Conductor,,TBD,TBD
 CardTraitJustPyreka,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitJustPyreka.cs,Conductor,,TBD,TBD
-CardTraitMultiplyCharacterUpgrade,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitMultiplyCharacterUpgrade.cs,Conductor,,TBD,TBD
+CardTraitMultiplyCharacterUpgrade,CardTrait,Dilation,Conductor C#,"Multiply upgrade (attack, HP, size) by stat value (e.g. played cost this battle)",DiscipleClan/CardEffects/CardTraitMultiplyCharacterUpgrade.cs,Conductor: DiscipleClan.Plugin.CardTraits.CardTraitMultiplyCharacterUpgrade,param_tracked_value param_entry_duration param_use_scaling_params param_int,TBD,TBD
 CardTraitPyreboost,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitPyreboost.cs,Conductor,,TBD,TBD
 CardTraitRequireFreeCapacity,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitRequireFreeCapacity.cs,Conductor,,TBD,TBD
 CardTraitScalingAddDamagePerCard,CardTrait,,Conductor C#,,DiscipleClan/CardEffects/CardTraitScalingAddDamagePerCard.cs,Conductor,,TBD,TBD
