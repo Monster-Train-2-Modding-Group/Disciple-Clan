@@ -3,30 +3,65 @@
   "cards": [
     {
       "id": "Rewind",
-      "names": { "english": "Rewind", "chinese": "倒带" },
-      "descriptions": { "english": "Return a card from discard to hand.", "chinese": "将一张牌从弃牌堆返回手牌。" },
+      "names": {
+        "english": "Rewind",
+        "chinese": "倒带"
+      },
+      "descriptions": {
+        "english": "Return consumed cards to your hand. Scales with [ember] spent this battle.",
+        "chinese": "将已消耗的牌返回手牌。随本战[余烬]消耗提升。"
+      },
       "cost": 0,
+      "cost_type": "x",
       "card_type": "spell",
       "rarity": "uncommon",
       "class": "@Chrono",
       "card_art": "@RewindCardArt",
-      "targetless": false,
-      "targets_room": false,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@RewindEffect" }],
-      "lore_tooltips": [{ "english": "Prophecy." }]
+      "targetless": true,
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [],
+      "traits": [
+        "@RewindScaling",
+        "@RewindExhaust"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Return consumed cards. Scales with ember spent."
+        }
+      ]
     }
   ],
-  "effects": [
+  "traits": [
     {
-      "id": "RewindEffect",
-      "name": "CardEffectDraw",
-      "target_mode": "discard",
+      "id": "RewindScaling",
+      "name": "CardTraitScalingReturnConsumedCards",
+      "param_tracked_value": "played_cost",
+      "param_entry_duration": "this_battle",
+      "param_use_scaling_params": true,
       "param_int": 1
+    },
+    {
+      "id": "RewindExhaust",
+      "name": "CardTraitExhaustState"
     }
   ],
-  "sprites": [{ "id": "RewindCardArt", "path": "textures/Rewind.png" }],
+  "sprites": [
+    {
+      "id": "RewindCardArt",
+      "path": "textures/Rewind.png"
+    }
+  ],
   "game_objects": [
-    { "id": "RewindCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@RewindCardArt" } } }
+    {
+      "id": "RewindCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@RewindCardArt"
+        }
+      }
+    }
   ]
 }
