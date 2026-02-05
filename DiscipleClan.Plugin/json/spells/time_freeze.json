@@ -3,7 +3,10 @@
   "cards": [
     {
       "id": "TimeFreeze",
-      "names": { "english": "Time Freeze", "chinese": "时间凝固" },
+      "names": {
+        "english": "Time Freeze",
+        "chinese": "时间凝固"
+      },
       "descriptions": {
         "english": "Freeze all cards in hand.",
         "chinese": "冻结手牌中所有卡牌。"
@@ -14,11 +17,28 @@
       "class": "@Chrono",
       "card_art": "@TimeFreezeCardArt",
       "targetless": true,
-      "targets_room": false,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@TimeFreezeEffect" }],
-      "traits": ["@Consume"],
-      "lore_tooltips": [{ "english": "Freeze all cards in hand. [consume]." }]
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@TimeFreezeEffect"
+        }
+      ],
+      "traits": [
+        "@TimeFreezeExhaust"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Freeze all cards in hand. [exhaust]."
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "TimeFreezeExhaust",
+      "name": "CardTraitExhaustState"
     }
   ],
   "effects": [
@@ -28,12 +48,21 @@
       "target_mode": "self"
     }
   ],
-  "sprites": [{ "id": "TimeFreezeCardArt", "path": "textures/Time-Freeze.png" }],
+  "sprites": [
+    {
+      "id": "TimeFreezeCardArt",
+      "path": "textures/Time-Freeze.png"
+    }
+  ],
   "game_objects": [
     {
       "id": "TimeFreezeCardArt",
       "type": "card_art",
-      "extensions": { "card_art": { "sprite": "@TimeFreezeCardArt" } }
+      "extensions": {
+        "card_art": {
+          "sprite": "@TimeFreezeCardArt"
+        }
+      }
     }
   ]
 }

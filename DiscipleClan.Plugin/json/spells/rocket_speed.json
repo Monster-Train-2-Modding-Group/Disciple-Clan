@@ -3,30 +3,68 @@
   "cards": [
     {
       "id": "RocketSpeedSpell",
-      "names": { "english": "Rocket Speed", "chinese": "火箭速度" },
-      "descriptions": { "english": "Deal [effect0.power] [damage] to [front_in_room].", "chinese": "对[front_in_room]造成[effect0.power][damage]。" },
+      "names": {
+        "english": "Rocket Speed",
+        "chinese": "火箭速度"
+      },
+      "descriptions": {
+        "english": "Apply [quick] to the Pyre.",
+        "chinese": "为圣火施加1层[quick]。[exhaust]。"
+      },
       "cost": 1,
       "card_type": "spell",
-      "rarity": "uncommon",
+      "rarity": "rare",
       "class": "@Chrono",
       "card_art": "@RocketSpeedSpellCardArt",
-      "targets_room": true,
-      "targetless": false,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@RocketSpeedSpellEffect" }],
-      "lore_tooltips": [{ "english": "" }]
+      "targetless": true,
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@RocketSpeedSpellEffect"
+        }
+      ],
+      "traits": [
+        "@RocketSpeedExhaust"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Add [quick] to Pyre."
+        }
+      ]
     }
   ],
   "effects": [
     {
       "id": "RocketSpeedSpellEffect",
-      "name": "CardEffectDamage",
-      "target_mode": "front_in_room",
-      "param_int": 18
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "pyre",
+      "param_status_effect": "quick",
+      "param_int": 1
     }
   ],
-  "sprites": [{ "id": "RocketSpeedSpellCardArt", "path": "textures/Rocket-Speed.png" }],
+  "traits": [
+    {
+      "id": "RocketSpeedExhaust",
+      "name": "CardTraitExhaustState"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "RocketSpeedSpellCardArt",
+      "path": "textures/Rocket-Speed.png"
+    }
+  ],
   "game_objects": [
-    { "id": "RocketSpeedSpellCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@RocketSpeedSpellCardArt" } } }
+    {
+      "id": "RocketSpeedSpellCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@RocketSpeedSpellCardArt"
+        }
+      }
+    }
   ]
 }

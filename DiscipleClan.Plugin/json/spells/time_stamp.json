@@ -4,7 +4,7 @@
     {
       "id": "TimeStamp",
       "names": { "english": "Time Stamp", "chinese": "时间戳" },
-      "descriptions": { "english": "TimeStamp effect. [consume]. Sacrifice a unit.", "chinese": "时间戳效果。[消耗]。牺牲一个单位。" },
+      "descriptions": { "english": "Apply Time Stamp to a friendly unit, then sacrifice it. [exhaust].", "chinese": "对友方单位施加时间戳，然后牺牲该单位。[exhaust]。" },
       "cost": 3,
       "card_type": "spell",
       "rarity": "rare",
@@ -17,22 +17,31 @@
         { "id": "@TimeStampEffect" },
         { "id": "@TimeStampSacrificeEffect" }
       ],
-      "traits": ["@Consume"],
-      "lore_tooltips": [{ "english": "TimeStamp effect + sacrifice." }]
+      "traits": ["@TimeStampExhaust"],
+      "lore_tooltips": [{ "english": "Time Stamp + sacrifice. [exhaust]." }]
+    }
+  ],
+  "traits": [
+    {
+      "id": "TimeStampExhaust",
+      "name": "CardTraitExhaustState"
     }
   ],
   "effects": [
     {
       "id": "TimeStampEffect",
-      "name": "CardEffectDraw",
-      "target_mode": "self",
-      "param_int": 2
+      "name": "@CardEffectTimeStamp",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "target_ignore_bosses": true
     },
     {
       "id": "TimeStampSacrificeEffect",
       "name": "CardEffectSacrifice",
-      "target_mode": "front_in_room",
-      "param_int": 1
+      "target_mode": "last_targeted_characters",
+      "target_team": "monsters",
+      "target_ignore_bosses": true,
+      "param_subtype": "SubtypesData_None"
     }
   ],
   "sprites": [{ "id": "TimeStampCardArt", "path": "textures/Time-Stamp.png" }],

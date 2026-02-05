@@ -3,7 +3,10 @@
   "cards": [
     {
       "id": "WaxPinion",
-      "names": { "english": "Wax Pinion", "chinese": "蜡羽" },
+      "names": {
+        "english": "Wax Pinion",
+        "chinese": "蜡羽"
+      },
       "descriptions": {
         "english": "Ascend target unit [effect0.power] floors.",
         "chinese": "使目标单位上升[effect0.power]层。"
@@ -15,9 +18,19 @@
       "card_art": "@WaxPinionCardArt",
       "targetless": false,
       "targets_room": true,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@WaxPinionEffect" }],
-      "lore_tooltips": [{ "english": "Ascend a friendly or enemy unit 4 floors." }]
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@WaxPinionEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Ascend a friendly or enemy unit 4 floors."
+        }
+      ]
     }
   ],
   "effects": [
@@ -29,12 +42,21 @@
       "param_int": 4
     }
   ],
-  "sprites": [{ "id": "WaxPinionCardArt", "path": "textures/Wax-Pinion.png" }],
+  "sprites": [
+    {
+      "id": "WaxPinionCardArt",
+      "path": "textures/Wax-Pinion.png"
+    }
+  ],
   "game_objects": [
     {
       "id": "WaxPinionCardArt",
       "type": "card_art",
-      "extensions": { "card_art": { "sprite": "@WaxPinionCardArt" } }
+      "extensions": {
+        "card_art": {
+          "sprite": "@WaxPinionCardArt"
+        }
+      }
     }
   ]
 }

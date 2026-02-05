@@ -3,10 +3,13 @@
   "cards": [
     {
       "id": "RightTimingDelta",
-      "names": { "english": "Right Timing Delta", "chinese": "正时丁" },
+      "names": {
+        "english": "Right Timing Delta",
+        "chinese": "正时丁"
+      },
       "descriptions": {
-        "english": "Deal 15 [damage] to target unit.",
-        "chinese": "对目标单位造成15[damage]。"
+        "english": "Deal [effect0.power] [damage] to target unit. Scales with Right Timing Delta in deck.",
+        "chinese": "对目标单位造成[effect0.power][damage]。随牌组中正时丁数量提升。"
       },
       "cost": 2,
       "card_type": "spell",
@@ -15,9 +18,26 @@
       "card_art": "@RightTimingDeltaCardArt",
       "targets_room": true,
       "targetless": false,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@RightTimingDeltaEffect" }],
-      "lore_tooltips": [{ "english": "On kill: add a copy to hand. Scales with Right Timing Delta in deck." }]
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@RightTimingDeltaEffect"
+        }
+      ],
+      "traits": [
+        "@RightTimingDeltaScaling",
+        "@RightTimingDeltaStrongerMagic"
+      ],
+      "triggers": [
+        "@RightTimingDeltaOnKillTrigger"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Damage scales with Right Timing Delta in deck."
+        }
+      ]
     }
   ],
   "effects": [
@@ -29,12 +49,56 @@
       "param_int": 15
     }
   ],
-  "sprites": [{ "id": "RightTimingDeltaCardArt", "path": "textures/Right-Timing.png" }],
+  "traits": [
+    {
+      "id": "RightTimingDeltaScaling",
+      "name": "CardTraitScalingAddDamagePerCard",
+      "param_tracked_value": "type_in_deck",
+      "param_entry_duration": "this_battle",
+      "param_card_type": "any",
+      "param_card": "@RightTimingDelta",
+      "param_use_scaling_params": true,
+      "param_int": 15
+    },
+    {
+      "id": "RightTimingDeltaStrongerMagic",
+      "name": "CardTraitStrongerMagicPower"
+    }
+  ],
+  "card_triggers": [
+    {
+      "id": "RightTimingDeltaOnKillTrigger",
+      "trigger": "on_kill",
+      "descriptions": {
+        "english": "Add a copy to hand.",
+        "chinese": "将一张复制加入手牌。"
+      },
+      "trigger_effects": [
+        {
+          "trigger_effect": "CardEffectAddBattleCard",
+          "param_int": 1,
+          "additional_param_int": 2,
+          "copy_modifiers_from_source": true,
+          "param_card_pool": "@RightTimingDeltaPool"
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "RightTimingDeltaCardArt",
+      "path": "textures/Right-Timing.png"
+    }
+  ],
   "game_objects": [
     {
       "id": "RightTimingDeltaCardArt",
       "type": "card_art",
-      "extensions": { "card_art": { "sprite": "@RightTimingDeltaCardArt" } }
+      "extensions": {
+        "card_art": {
+          "sprite": "@RightTimingDeltaCardArt"
+        }
+      }
     }
   ]
 }

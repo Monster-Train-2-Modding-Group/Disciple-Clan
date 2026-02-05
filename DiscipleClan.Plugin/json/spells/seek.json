@@ -3,30 +3,67 @@
   "cards": [
     {
       "id": "Seek",
-      "names": { "english": "Seek", "chinese": "探寻" },
-      "descriptions": { "english": "Draw 1 card from your deck.", "chinese": "从牌组抽1张牌。" },
+      "names": {
+        "english": "Seek",
+        "chinese": "探寻"
+      },
+      "descriptions": {
+        "english": "Choose 1 card from your draw pile and draw it.",
+        "chinese": "从牌堆中选择1张牌并抽到手中。[exhaust]。"
+      },
       "cost": 0,
       "card_type": "spell",
       "rarity": "uncommon",
       "class": "@Chrono",
       "card_art": "@SeekCardArt",
       "targetless": true,
-      "pools": ["MegaPool"],
-      "effects": [{ "id": "@SeekEffect" }],
-      "traits": ["@Consume"],
-      "lore_tooltips": [{ "english": "Choose and draw 1 from deck." }]
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@SeekEffect"
+        }
+      ],
+      "traits": [
+        "@SeekExhaust"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Choose and draw 1 from deck. [exhaust]."
+        }
+      ]
     }
   ],
   "effects": [
     {
       "id": "SeekEffect",
-      "name": "CardEffectDraw",
-      "target_mode": "self",
+      "name": "@CardEffectChooseDraw",
+      "target_mode": "draw_pile",
       "param_int": 1
     }
   ],
-  "sprites": [{ "id": "SeekCardArt", "path": "textures/Seek.png" }],
+  "traits": [
+    {
+      "id": "SeekExhaust",
+      "name": "CardTraitExhaustState"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SeekCardArt",
+      "path": "textures/Seek.png"
+    }
+  ],
   "game_objects": [
-    { "id": "SeekCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@SeekCardArt" } } }
+    {
+      "id": "SeekCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SeekCardArt"
+        }
+      }
+    }
   ]
 }
