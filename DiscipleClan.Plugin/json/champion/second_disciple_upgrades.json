@@ -1,0 +1,237 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "character_triggers": [
+    {
+      "id": "DiscipleEchoBasicOnSpawnTrigger",
+      "trigger": "on_status_effect_changed",
+      "descriptions": {
+        "english": "Give 50% stacks to friendly units in the room.",
+        "chinese": "给房间内友军50%层数。"
+      },
+      "effects": [
+        "@DiscipleEchoBasicShareBuffsEffect"
+      ]
+    },
+    {
+      "id": "DiscipleEchoPremiumOnSpawnTrigger",
+      "trigger": "on_spawn",
+      "descriptions": {
+        "english": "Give 100% stacks to friendly units in the room.",
+        "chinese": "给房间内友军100%层数。"
+      },
+      "effects": [
+        "@DiscipleEchoPremiumShareBuffsEffect"
+      ]
+    },
+    {
+      "id": "DiscipleEchoProOnSpawnTrigger",
+      "trigger": "on_spawn",
+      "descriptions": {
+        "english": "Give 200% stacks to friendly units in the room.",
+        "chinese": "给房间内友军200%层数。"
+      },
+      "effects": [
+        "@DiscipleEchoProShareBuffsEffect"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "DiscipleEchoBasicShareBuffsEffect",
+      "name": "@CardEffectAddStatusEffectPerAppliedStatus",
+      "target_mode": "room",
+      "target_character_excluded_subtypes": ["SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"],
+      "target_team": "monsters",
+      "param_multiplier": 0.5
+    },
+    {
+      "id": "DiscipleEchoPremiumShareBuffsEffect",
+      "name": "@CardEffectAddStatusEffectPerAppliedStatus",
+      "target_mode": "room",
+      "target_character_excluded_subtypes": ["SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"],
+      "target_team": "monsters",
+      "param_multiplier": 1
+    },
+    {
+      "id": "DiscipleEchoProShareBuffsEffect",
+      "name": "@CardEffectAddStatusEffectPerAppliedStatus",
+      "target_mode": "room",
+      "target_character_excluded_subtypes": ["SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"],
+      "target_team": "monsters",
+      "param_multiplier": 2
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "DiscipleEphemeralBasic",
+      "titles": {
+        "english": "Ephemeral",
+        "chinese": "昙华"
+      },
+      "descriptions": {
+        "english": "When you play a [consume] card in this room, discard it instead and gain rebate (1).",
+        "chinese": "在本房间打出[消耗]牌时改为弃掉并获得回馈(1)。"
+      },
+      "bonus_damage": 0,
+      "bonus_hp": 20,
+      "show_description_on_cards": true,
+      "use_upgrade_highlight_tags": true
+    },
+    {
+      "id": "DiscipleEphemeralPremium",
+      "titles": {
+        "english": "Ephemeral II",
+        "chinese": "昙华 II"
+      },
+      "descriptions": {
+        "english": "When you play a [consume] card in this room, discard it instead and gain rebate (2).",
+        "chinese": "在本房间打出[消耗]牌时改为弃掉并获得回馈(2)。"
+      },
+      "bonus_damage": 5,
+      "bonus_hp": 50,
+      "show_description_on_cards": true,
+      "use_upgrade_highlight_tags": true
+    },
+    {
+      "id": "DiscipleEphemeralPro",
+      "titles": {
+        "english": "Ephemeral III",
+        "chinese": "昙华 III"
+      },
+      "descriptions": {
+        "english": "When you play a [consume] card in this room, discard it instead and gain rebate (3).",
+        "chinese": "在本房间打出[消耗]牌时改为弃掉并获得回馈(3)。"
+      },
+      "bonus_damage": 5,
+      "bonus_hp": 110,
+      "show_description_on_cards": true,
+      "use_upgrade_highlight_tags": true
+    },
+    {
+      "id": "DiscipleFlamelinkedBasic",
+      "titles": {
+        "english": "Flamelinked",
+        "chinese": "焰契"
+      },
+      "descriptions": {
+        "english": "Gain 1 [pyreboost] and 1 [hide until boss].",
+        "chinese": "获得1层[焰增]和1层[遇王前隐匿]。"
+      },
+      "bonus_damage": 0,
+      "bonus_hp": 2,
+      "status_effect_upgrades": [
+        {
+          "status": "@pyreboost",
+          "count": 1
+        },
+        {
+          "status": "@hideuntilboss",
+          "count": 1
+        }
+      ],
+      "show_description_on_cards": true,
+      "use_upgrade_highlight_tags": true
+    },
+    {
+      "id": "DiscipleFlamelinkedPremium",
+      "titles": {
+        "english": "Flamelinked II",
+        "chinese": "焰契 II"
+      },
+      "descriptions": {
+        "english": "Gain 2 [pyreboost] and 1 [hide until boss].",
+        "chinese": "获得2层[焰增]和1层[遇王前隐匿]。"
+      },
+      "bonus_damage": 0,
+      "bonus_hp": 2,
+      "status_effect_upgrades": [
+        {
+          "status": "@pyreboost",
+          "count": 2
+        },
+        {
+          "status": "@hideuntilboss",
+          "count": 1
+        }
+      ],
+      "show_description_on_cards": true,
+      "use_upgrade_highlight_tags": true
+    },
+    {
+      "id": "DiscipleFlamelinkedPro",
+      "titles": {
+        "english": "Flamelinked III",
+        "chinese": "焰契 III"
+      },
+      "descriptions": {
+        "english": "Gain 3 [pyreboost] and 1 [hide until boss].",
+        "chinese": "获得3层[焰增]和1层[遇王前隐匿]。"
+      },
+      "bonus_damage": 0,
+      "bonus_hp": 2,
+      "status_effect_upgrades": [
+        {
+          "status": "@pyreboost",
+          "count": 3
+        },
+        {
+          "status": "@hideuntilboss",
+          "count": 1
+        }
+      ],
+      "show_description_on_cards": true,
+      "use_upgrade_highlight_tags": true
+    },
+    {
+      "id": "DiscipleEchoBasic",
+      "titles": {
+        "english": "Echo",
+        "chinese": "回响"
+      },
+      "descriptions": {
+        "english": "When spawned: share 1 buff type with friendly units (50% stacks).",
+        "chinese": "入场时：与友军分享1种增益（50%层数）。"
+      },
+      "bonus_damage": 10,
+      "bonus_hp": 0,
+      "trigger_upgrades": [
+        "@DiscipleEchoBasicOnSpawnTrigger"
+      ],
+      "use_upgrade_highlight_tags": true
+    },
+    {
+      "id": "DiscipleEchoPremium",
+      "titles": {
+        "english": "Echo II",
+        "chinese": "回响 II"
+      },
+      "descriptions": {
+        "english": "When spawned: share 2 buff types with friendly units (50% stacks).",
+        "chinese": "入场时：与友军分享2种增益（50%层数）。"
+      },
+      "bonus_damage": 35,
+      "bonus_hp": 10,
+      "trigger_upgrades": [
+        "@DiscipleEchoPremiumOnSpawnTrigger"
+      ],
+      "use_upgrade_highlight_tags": true
+    },
+    {
+      "id": "DiscipleEchoPro",
+      "titles": {
+        "english": "Echo III",
+        "chinese": "回响 III"
+      },
+      "descriptions": {
+        "english": "When spawned: share 3 buff types with friendly units (50% stacks).",
+        "chinese": "入场时：与友军分享3种增益（50%层数）。"
+      },
+      "bonus_damage": 75,
+      "bonus_hp": 30,
+      "trigger_upgrades": [
+        "@DiscipleEchoProOnSpawnTrigger"
+      ],
+      "use_upgrade_highlight_tags": true
+    }
+  ]
+}

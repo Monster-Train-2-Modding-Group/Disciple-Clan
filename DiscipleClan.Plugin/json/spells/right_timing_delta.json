@@ -47,6 +47,12 @@
       "target_mode": "drop_target_character",
       "target_team": "both",
       "param_int": 15
+    },
+    {
+      "id": "RightTimingDeltaOnKillEffect",
+      "name": "CardEffectAddUpgradedCopy",
+      "param_int": 3,
+      "copy_modifiers_from_source": true
     }
   ],
   "traits": [
@@ -73,14 +79,8 @@
         "english": "Add a copy to hand.",
         "chinese": "将一张复制加入手牌。"
       },
-      "trigger_effects": [
-        {
-          "trigger_effect": "CardEffectAddBattleCard",
-          "param_int": 1,
-          "additional_param_int": 2,
-          "copy_modifiers_from_source": true,
-          "param_card_pool": "@RightTimingDeltaPool"
-        }
+      "effects": [
+        "@RightTimingDeltaOnKillEffect"
       ]
     }
   ],

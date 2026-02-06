@@ -9,10 +9,11 @@
       "card_type": "monster",
       "rarity": "champion",
       "class": "@Chrono",
-      "pools": [],
+      "unlock_level": 0,
       "targets_room": true,
+      "targetless": false,
       "effects": [{ "id": "@SpawnSecondDiscipleEffect" }],
-      "lore_tooltips": [{ "english": "Second champion. Starter: Analog. Paths: Ephemeral, Flamelinked, Echo (MT1)." }]
+      "lore_tooltips": [{ "english": "Second champion. Starter: Analog. Paths: Ephemeral, Flamelinked, Echo." }]
     }
   ],
   "characters": [

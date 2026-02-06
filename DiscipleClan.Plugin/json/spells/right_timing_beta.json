@@ -51,7 +51,7 @@
       "trigger": "on_unplayed_positive",
       "trigger_effects": [
         {
-          "trigger_effect": "CardTriggerEffectBuffSpellDamageForEveryCardOfType",
+          "trigger_effect": "CardTriggerEffectBuffSpellDamageAllCardsOfThisType",
           "param_int": 10,
           "persistence_mode": "single_battle"
         }

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "status_effects": [
+    {
+      "id": "hideuntilboss",
+      "class_name": "@StatusEffectHideUntilBossState",
+      "names": {
+        "english": "Hidden",
+        "chinese": "遇王前隐匿"
+      },
+      "card_tooltips": {
+        "english": "This unit cannot be targeted until the boss wave."
+      },
+      "character_tooltips": {
+        "english": "Cannot be targeted until the boss wave."
+      },
+      "notifications": {
+        "english": "Hidden",
+        "chinese": "遇王前隐匿"
+      },
+      "replacement_texts": {
+        "english": "<b>Hidden</b>",
+        "chinese": "<b>遇王前隐匿</b>"
+      },
+      "display_category": "persistent",
+      "is_stackable": false,
+      "show_stack_count": false,
+      "icon": "@HideUntilBossIcon"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "HideUntilBossIcon",
+      "path": "textures/Time-Trap.png"
+    }
+  ],
+  "atlas_icons": [
+    {
+      "id": "HideUntilBossIcon",
+      "path": "textures/Time-Trap.png"
+    }
+  ]
+}

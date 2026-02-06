@@ -75,9 +75,9 @@
           "card_data": "@SpawnSecondDisciple",
           "starter_card": "@Analog",
           "upgrade_tree": [
-            ["@DiscipleWardmasterBasic", "@DiscipleWardmasterPremium", "@DiscipleWardmasterPro"],
-            ["@DiscipleSymbioteBasic", "@DiscipleSymbiotePremium", "@DiscipleSymbiotePro"],
-            ["@DiscipleShifterBasic", "@DiscipleShifterPremium", "@DiscipleShifterPro"]
+            ["@DiscipleEphemeralBasic", "@DiscipleEphemeralPremium", "@DiscipleEphemeralPro"],
+            ["@DiscipleFlamelinkedBasic", "@DiscipleFlamelinkedPremium", "@DiscipleFlamelinkedPro"],
+            ["@DiscipleEchoBasic", "@DiscipleEchoPremium", "@DiscipleEchoPro"]
           ],
           "icon": "@SecondDiscipleChampionIcon",
           "portrait": "@SecondDiscipleChampionIcon",

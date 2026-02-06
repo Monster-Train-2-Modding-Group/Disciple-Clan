@@ -24,7 +24,7 @@
             "id": "@PatternShiftEffect"
         }],
         "traits": [
-            "@Consume"
+            "@PatternShiftExhaust"
         ],
         "lore_tooltips": [{
             "english": "Random floor (excluding current)."
@@ -36,6 +36,12 @@
         "target_mode": "drop_target_character",
         "target_team": "both"
     }],
+    "traits": [
+        {
+            "id": "PatternShiftExhaust",
+            "name": "CardTraitExhaustState"
+        }
+    ],
     "sprites": [{
         "id": "PatternShiftCardArt",
         "path": "textures/Pattern-Shift.png"
