@@ -38,13 +38,13 @@
   "sprites": [
     {
       "id": "Emberboost",
-      "path": "textures/status_effects/PyreFyre.png"
+      "path": "textures/status_effects/Emberboost.png"
     }
   ],
   "atlas_icons": [
     {
       "id": "Emberboost",
-      "path": "textures/status_effects/PyreFyre.png"
+      "path": "textures/status_effects/Emberboost.png"
     }
   ]
 }

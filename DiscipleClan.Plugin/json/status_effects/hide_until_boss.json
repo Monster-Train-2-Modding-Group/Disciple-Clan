@@ -33,13 +33,13 @@
   "sprites": [
     {
       "id": "HideUntilBoss",
-      "path": "textures/status_effects/time-trap.png"
+      "path": "textures/status_effects/Hidden.png"
     }
   ],
   "atlas_icons": [
     {
       "id": "HideUntilBoss",
-      "path": "textures/status_effects/time-trap.png"
+      "path": "textures/status_effects/Hidden.png"
     }
   ]
 }

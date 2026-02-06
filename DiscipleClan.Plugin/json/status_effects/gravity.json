@@ -38,13 +38,13 @@
   "sprites": [
     {
       "id": "Gravity",
-      "path": "textures/status_effects/ErrantPinwheel.png"
+      "path": "textures/status_effects/Gravity.png"
     }
   ],
   "atlas_icons": [
     {
       "id": "Gravity",
-      "path": "textures/status_effects/ErrantPinwheel.png"
+      "path": "textures/status_effects/Gravity.png"
     }
   ]
 }

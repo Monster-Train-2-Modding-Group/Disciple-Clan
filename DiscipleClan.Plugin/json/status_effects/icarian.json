@@ -34,13 +34,13 @@
   "sprites": [
     {
       "id": "Icarian",
-      "path": "textures/status_effects/ErrantPinwheel.png"
+      "path": "textures/status_effects/Icarian.png"
     }
   ],
   "atlas_icons": [
     {
       "id": "Icarian",
-      "path": "textures/status_effects/ErrantPinwheel.png"
+      "path": "textures/status_effects/Icarian.png"
     }
   ]
 }
