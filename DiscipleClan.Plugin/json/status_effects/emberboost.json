@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
   "status_effects": [
     {
       "id": "emberboost",
@@ -9,14 +9,16 @@
         "chinese": "余烬强化"
       },
       "stackable_names": {
-        "english": "<nobr>Emberboost {0}</nobr>",
-        "chinese": "<nobr>余烬强化 {0}</nobr>"
+        "english": "Emberboost {0}",
+        "chinese": "余烬强化 {0}"
       },
       "card_tooltips": {
-        "english": "At start of monster turn: gain Ember equal to stacks, then remove 1 stack."
+        "english": "At start of monster turn: gain Ember equal to stacks, then remove 1 stack.",
+        "chinese": "怪物回合开始时：获得等同于层数的余烬，然后移除1层。"
       },
       "character_tooltips": {
-        "english": "At start of monster turn, you gain Ember equal to stacks; then 1 stack is removed."
+        "english": "At start of monster turn, you gain Ember equal to stacks; then 1 stack is removed.",
+        "chinese": "怪物回合开始时，你获得等同于层数的余烬；然后移除1层。"
       },
       "notifications": {
         "english": "Emberboost",
@@ -30,13 +32,19 @@
       "trigger_stage": "on_monster_team_turn_begin",
       "is_stackable": true,
       "show_stack_count": true,
-      "icon": "@EmberboostIcon"
+      "icon": "@Emberboost"
     }
   ],
   "sprites": [
-    { "id": "EmberboostIcon", "path": "textures/PyreFyre.png" }
+    {
+      "id": "Emberboost",
+      "path": "textures/status_effects/PyreFyre.png"
+    }
   ],
   "atlas_icons": [
-    { "id": "EmberboostIcon", "path": "textures/PyreFyre.png" }
+    {
+      "id": "Emberboost",
+      "path": "textures/status_effects/PyreFyre.png"
+    }
   ]
 }

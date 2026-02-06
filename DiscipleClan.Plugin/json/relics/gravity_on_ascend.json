@@ -26,5 +26,5 @@
         "param_status_effects": [{ "status": "@gravity", "count": 1 }],
         "source_team": "monsters"
     }],
-    "sprites": [{ "id": "GravityOnAscendIcon", "path": "textures/ErrantPinwheel.png" }]
+    "sprites": [{ "id": "GravityOnAscendIcon", "path": "textures/status_effects/ErrantPinwheel.png" }]
 }

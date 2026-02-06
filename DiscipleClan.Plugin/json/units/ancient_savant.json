@@ -88,11 +88,11 @@
   "sprites": [
     {
       "id": "AncientSavantCardArt",
-      "path": "textures/AncientCharacterArt.png"
+      "path": "textures/units/AncientCharacterArt.png"
     },
     {
       "id": "AncientSavantCharacterArt",
-      "path": "textures/AncientCharacterArt.png"
+      "path": "textures/units/AncientCharacterArt.png"
     }
   ],
   "game_objects": [

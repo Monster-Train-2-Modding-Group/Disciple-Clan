@@ -33,6 +33,6 @@
     }],
     "sprites": [{
         "id": "RewindFirstSpellIcon",
-        "path": "textures/SecondHand.png"
+        "path": "textures/relics/SecondHand.png"
     }]
 }

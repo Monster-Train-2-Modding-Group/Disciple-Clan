@@ -53,7 +53,7 @@
   "sprites": [
     {
       "id": "RocketSpeedSpellCardArt",
-      "path": "textures/Rocket-Speed.png"
+      "path": "textures/spells/Rocket-Speed.png"
     }
   ],
   "game_objects": [

@@ -39,8 +39,8 @@
     }
   ],
   "sprites": [
-    { "id": "NewtonsCardArt", "path": "textures/NewtonCharacterArt.png" },
-    { "id": "NewtonsCharacterArt", "path": "textures/NewtonCharacterArt.png" }
+    { "id": "NewtonsCardArt", "path": "textures/units/NewtonCharacterArt.png" },
+    { "id": "NewtonsCharacterArt", "path": "textures/units/NewtonCharacterArt.png" }
   ],
   "game_objects": [
     { "id": "NewtonsCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@NewtonsCardArt" } } },

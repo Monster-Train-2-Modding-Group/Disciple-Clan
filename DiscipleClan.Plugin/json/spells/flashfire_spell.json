@@ -54,7 +54,7 @@
     "sprites": [
         {
             "id": "FlashfireSpellCardArt",
-            "path": "textures/Flashfire.png"
+            "path": "textures/spells/Flashfire.png"
         }
     ],
     "game_objects": [

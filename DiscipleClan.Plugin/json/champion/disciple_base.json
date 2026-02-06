@@ -52,8 +52,8 @@
     }
   ],
   "sprites": [
-    { "id": "DiscipleCardArt", "path": "textures/DiscipleCharacterArt.png" },
-    { "id": "DiscipleCharacterArt", "path": "textures/DiscipleCharacterArt.png" }
+    { "id": "DiscipleCardArt", "path": "textures/units/DiscipleCharacterArt.png" },
+    { "id": "DiscipleCharacterArt", "path": "textures/units/DiscipleCharacterArt.png" }
   ],
   "game_objects": [
     {

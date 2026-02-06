@@ -96,11 +96,11 @@
   "sprites": [
     {
       "id": "FlashwingCardArt",
-      "path": "textures/FlashfeatherCharacterArt.png"
+      "path": "textures/units/FlashfeatherCharacterArt.png"
     },
     {
       "id": "FlashwingCharacterArt",
-      "path": "textures/FlashfeatherCharacterArt.png"
+      "path": "textures/units/FlashfeatherCharacterArt.png"
     }
   ],
   "game_objects": [

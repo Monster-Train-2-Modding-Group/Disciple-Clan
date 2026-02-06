@@ -44,7 +44,7 @@
     ],
     "sprites": [{
         "id": "PatternShiftCardArt",
-        "path": "textures/Pattern-Shift.png"
+        "path": "textures/spells/Pattern-Shift.png"
     }],
     "game_objects": [{
         "id": "PatternShiftCardArt",

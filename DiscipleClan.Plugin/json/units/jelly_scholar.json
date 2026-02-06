@@ -86,11 +86,11 @@
   "sprites": [
     {
       "id": "JellyScholarCardArt",
-      "path": "textures/JellyScholarCharacterArt.png"
+      "path": "textures/units/JellyScholarCharacterArt.png"
     },
     {
       "id": "JellyScholarCharacterArt",
-      "path": "textures/JellyScholarCharacterArt.png"
+      "path": "textures/units/JellyScholarCharacterArt.png"
     }
   ],
   "game_objects": [

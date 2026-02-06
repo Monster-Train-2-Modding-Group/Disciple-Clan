@@ -20,5 +20,5 @@
       "param_int": 1
     }
   ],
-  "sprites": [{ "id": "QuickAndDirtyIcon", "path": "textures/Mirrorc.png" }]
+  "sprites": [{ "id": "QuickAndDirtyIcon", "path": "textures/relics/Mirrorc.png" }]
 }

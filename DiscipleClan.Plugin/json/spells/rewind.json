@@ -50,7 +50,7 @@
   "sprites": [
     {
       "id": "RewindCardArt",
-      "path": "textures/Rewind.png"
+      "path": "textures/spells/Rewind.png"
     }
   ],
   "game_objects": [

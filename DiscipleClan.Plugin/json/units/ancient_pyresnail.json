@@ -91,11 +91,11 @@
   "sprites": [
     {
       "id": "AncientPyreSnailCardArt",
-      "path": "textures/PyresnailCharacterArt.png"
+      "path": "textures/units/PyresnailCharacterArt.png"
     },
     {
       "id": "AncientPyreSnailCharacterArt",
-      "path": "textures/PyresnailCharacterArt.png"
+      "path": "textures/units/PyresnailCharacterArt.png"
     }
   ],
   "game_objects": [

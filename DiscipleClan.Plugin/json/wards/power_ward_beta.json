@@ -35,8 +35,8 @@
     }
   ],
   "sprites": [
-    { "id": "PowerWardBetaCardArt", "path": "textures/Mirrorb.png" },
-    { "id": "PowerWardBetaCharacterArt", "path": "textures/Mirrorb.png" }
+    { "id": "PowerWardBetaCardArt", "path": "textures/relics/Mirrorb.png" },
+    { "id": "PowerWardBetaCharacterArt", "path": "textures/relics/Mirrorb.png" }
   ],
   "game_objects": [
     { "id": "PowerWardBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@PowerWardBetaCardArt" } } },

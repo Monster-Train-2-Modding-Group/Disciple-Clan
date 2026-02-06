@@ -71,7 +71,7 @@
   "sprites": [
     {
       "id": "DilationCardArt",
-      "path": "textures/Dilation.png"
+      "path": "textures/spells/Dilation.png"
     }
   ],
   "game_objects": [

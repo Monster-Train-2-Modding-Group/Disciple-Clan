@@ -54,8 +54,8 @@
     }
   ],
   "sprites": [
-    { "id": "EmberMakerCardArt", "path": "textures/EmbermakerCharacterArt.png" },
-    { "id": "EmberMakerCharacterArt", "path": "textures/EmbermakerCharacterArt.png" }
+    { "id": "EmberMakerCardArt", "path": "textures/units/EmbermakerCharacterArt.png" },
+    { "id": "EmberMakerCharacterArt", "path": "textures/units/EmbermakerCharacterArt.png" }
   ],
   "game_objects": [
     { "id": "EmberMakerCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@EmberMakerCardArt" } } },

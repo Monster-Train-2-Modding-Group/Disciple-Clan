@@ -102,15 +102,15 @@
     }
   ],
   "sprites": [
-    { "id": "DiscipleCardDraftIcon", "path": "textures/DiscipleCardDraftIcon.png" },
-    { "id": "ClanIconSmall", "path": "textures/ClanIconSmall.png" },
-    { "id": "ClanIconMedium", "path": "textures/ClanIconMedium.png" },
-    { "id": "ClanIconLarge", "path": "textures/ClanIconLarge.png" },
-    { "id": "ClanIconSilhouette", "path": "textures/ClanIconSilhouette.png" },
-    { "id": "DiscipleChampionIcon", "path": "textures/DiscipleChampionIcon.png" },
-    { "id": "SecondDiscipleChampionIcon", "path": "textures/Hero2CharacterArt.png" },
-    { "id": "ChronoUnitCardFrame", "path": "textures/UnitCardFrame.png" },
-    { "id": "ChronoSpellCardFrame", "path": "textures/SpellCardFrame.png" }
+    { "id": "DiscipleCardDraftIcon", "path": "textures/class/DiscipleCardDraftIcon.png" },
+    { "id": "ClanIconSmall", "path": "textures/class/ClanIconSmall.png" },
+    { "id": "ClanIconMedium", "path": "textures/class/ClanIconMedium.png" },
+    { "id": "ClanIconLarge", "path": "textures/class/ClanIconLarge.png" },
+    { "id": "ClanIconSilhouette", "path": "textures/class/ClanIconSilhouette.png" },
+    { "id": "DiscipleChampionIcon", "path": "textures/class/DiscipleChampionIcon.png" },
+    { "id": "SecondDiscipleChampionIcon", "path": "textures/units/Hero2CharacterArt.png" },
+    { "id": "ChronoUnitCardFrame", "path": "textures/class/UnitCardFrame.png" },
+    { "id": "ChronoSpellCardFrame", "path": "textures/class/SpellCardFrame.png" }
   ],
   "class_card_styles": [
     {

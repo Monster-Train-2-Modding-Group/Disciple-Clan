@@ -85,11 +85,11 @@
   "sprites": [
     {
       "id": "SneckoCardArt",
-      "path": "textures/WaxwingCharacterArt.png"
+      "path": "textures/units/WaxwingCharacterArt.png"
     },
     {
       "id": "SneckoCharacterArt",
-      "path": "textures/WaxwingCharacterArt.png"
+      "path": "textures/units/WaxwingCharacterArt.png"
     }
   ],
   "game_objects": [

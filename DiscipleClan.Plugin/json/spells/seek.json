@@ -52,7 +52,7 @@
   "sprites": [
     {
       "id": "SeekCardArt",
-      "path": "textures/Seek.png"
+      "path": "textures/spells/Seek.png"
     }
   ],
   "game_objects": [

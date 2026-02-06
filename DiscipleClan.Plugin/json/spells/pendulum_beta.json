@@ -78,7 +78,7 @@
   "sprites": [
     {
       "id": "PendulumBetaCardArt",
-      "path": "textures/Pendulum.png"
+      "path": "textures/spells/Pendulum.png"
     }
   ],
   "game_objects": [

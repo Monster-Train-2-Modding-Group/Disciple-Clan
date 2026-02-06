@@ -35,8 +35,8 @@
     }
   ],
   "sprites": [
-    { "id": "HaruspexWardBetaCardArt", "path": "textures/Mirrorc.png" },
-    { "id": "HaruspexWardBetaCharacterArt", "path": "textures/Mirrorc.png" }
+    { "id": "HaruspexWardBetaCardArt", "path": "textures/relics/Mirrorc.png" },
+    { "id": "HaruspexWardBetaCharacterArt", "path": "textures/relics/Mirrorc.png" }
   ],
   "game_objects": [
     { "id": "HaruspexWardBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@HaruspexWardBetaCardArt" } } },

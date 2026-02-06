@@ -20,5 +20,5 @@
       "param_int": 1
     }
   ],
-  "sprites": [{ "id": "RefundXCostsIcon", "path": "textures/SecondHand.png" }]
+  "sprites": [{ "id": "RefundXCostsIcon", "path": "textures/relics/SecondHand.png" }]
 }

@@ -29,7 +29,7 @@
   "traits": [
     { "id": "RevelationExhaust", "name": "CardTraitExhaustState" }
   ],
-  "sprites": [{ "id": "RevelationCardArt", "path": "textures/Revelation.png" }],
+  "sprites": [{ "id": "RevelationCardArt", "path": "textures/spells/Revelation.png" }],
   "game_objects": [
     { "id": "RevelationCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@RevelationCardArt" } } }
   ]

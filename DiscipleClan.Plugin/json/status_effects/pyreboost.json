@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
   "status_effects": [
     {
       "id": "pyreboost",
@@ -9,14 +9,16 @@
         "chinese": "圣火强化"
       },
       "stackable_names": {
-        "english": "<nobr>Pyreboost {0}</nobr>",
-        "chinese": "<nobr>圣火强化 {0}</nobr>"
+        "english": "Pyreboost {0}",
+        "chinese": "圣火强化 {0}"
       },
       "card_tooltips": {
-        "english": "Attack = stacks × Pyre Attack × Pyre Num Attacks."
+        "english": "Attack = stacks × Pyre Attack × Pyre Num Attacks.",
+        "chinese": "攻击 = 层数 × 圣火攻击 × 圣火攻击次数。"
       },
       "character_tooltips": {
-        "english": "This unit's attack from Pyreboost equals stacks × Pyre Attack × Pyre Num Attacks."
+        "english": "This unit's attack from Pyreboost equals stacks × Pyre Attack × Pyre Num Attacks.",
+        "chinese": "此单位由圣火强化获得的攻击 = 层数 × 圣火攻击 × 圣火攻击次数。"
       },
       "notifications": {
         "english": "Pyreboost",
@@ -30,13 +32,19 @@
       "trigger_stage": "on_monster_team_turn_begin",
       "is_stackable": true,
       "show_stack_count": true,
-      "icon": "@PyreboostIcon"
+      "icon": "@Pyreboost"
     }
   ],
   "sprites": [
-    { "id": "PyreboostIcon", "path": "textures/PyreFyre.png" }
+    {
+      "id": "Pyreboost",
+      "path": "textures/status_effects/PyreFyre.png"
+    }
   ],
   "atlas_icons": [
-    { "id": "PyreboostIcon", "path": "textures/PyreFyre.png" }
+    {
+      "id": "Pyreboost",
+      "path": "textures/status_effects/PyreFyre.png"
+    }
   ]
 }

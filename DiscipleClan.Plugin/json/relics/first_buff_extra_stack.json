@@ -20,5 +20,5 @@
       "param_int": 1
     }
   ],
-  "sprites": [{ "id": "FirstBuffExtraStackIcon", "path": "textures/Mirrorc.png" }]
+  "sprites": [{ "id": "FirstBuffExtraStackIcon", "path": "textures/relics/Mirrorc.png" }]
 }

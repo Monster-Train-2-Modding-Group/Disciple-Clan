@@ -35,8 +35,8 @@
     }
   ],
   "sprites": [
-    { "id": "ShifterWardBetaCardArt", "path": "textures/ErrantPinwheel.png" },
-    { "id": "ShifterWardBetaCharacterArt", "path": "textures/ErrantPinwheel.png" }
+    { "id": "ShifterWardBetaCardArt", "path": "textures/status_effects/ErrantPinwheel.png" },
+    { "id": "ShifterWardBetaCharacterArt", "path": "textures/status_effects/ErrantPinwheel.png" }
   ],
   "game_objects": [
     { "id": "ShifterWardBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@ShifterWardBetaCardArt" } } },

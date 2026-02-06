@@ -44,7 +44,7 @@
       "param_subtype": "SubtypesData_None"
     }
   ],
-  "sprites": [{ "id": "TimeStampCardArt", "path": "textures/Time-Stamp.png" }],
+  "sprites": [{ "id": "TimeStampCardArt", "path": "textures/spells/Time-Stamp.png" }],
   "game_objects": [
     { "id": "TimeStampCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@TimeStampCardArt" } } }
   ]

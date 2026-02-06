@@ -56,8 +56,8 @@
     }
   ],
   "sprites": [
-    { "id": "FortuneFinderCardArt", "path": "textures/FortuneTellerCharacterArt.png" },
-    { "id": "FortuneFinderCharacterArt", "path": "textures/FortuneTellerCharacterArt.png" }
+    { "id": "FortuneFinderCardArt", "path": "textures/units/FortuneTellerCharacterArt.png" },
+    { "id": "FortuneFinderCharacterArt", "path": "textures/units/FortuneTellerCharacterArt.png" }
   ],
   "game_objects": [
     { "id": "FortuneFinderCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FortuneFinderCardArt" } } },

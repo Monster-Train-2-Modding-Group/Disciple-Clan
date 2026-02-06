@@ -35,7 +35,7 @@
       "param_entry_duration": "this_battle"
     }
   ],
-  "sprites": [{ "id": "EmberwaveBetaCardArt", "path": "textures/Emberwave.png" }],
+  "sprites": [{ "id": "EmberwaveBetaCardArt", "path": "textures/spells/Emberwave.png" }],
   "game_objects": [
     { "id": "EmberwaveBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@EmberwaveBetaCardArt" } } }
   ]

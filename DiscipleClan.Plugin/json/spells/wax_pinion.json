@@ -45,7 +45,7 @@
   "sprites": [
     {
       "id": "WaxPinionCardArt",
-      "path": "textures/Wax-Pinion.png"
+      "path": "textures/spells/Wax-Pinion.png"
     }
   ],
   "game_objects": [

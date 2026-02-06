@@ -56,7 +56,7 @@
   "sprites": [
     {
       "id": "AppleElixirCardArt",
-      "path": "textures/Apple-Elixir.png"
+      "path": "textures/spells/Apple-Elixir.png"
     }
   ],
   "game_objects": [

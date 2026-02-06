@@ -78,8 +78,8 @@
     }
   ],
   "sprites": [
-    { "id": "CinderbornCardArt", "path": "textures/CinderbornCharacterArt.png" },
-    { "id": "CinderbornCharacterArt", "path": "textures/CinderbornCharacterArt.png" }
+    { "id": "CinderbornCardArt", "path": "textures/units/CinderbornCharacterArt.png" },
+    { "id": "CinderbornCharacterArt", "path": "textures/units/CinderbornCharacterArt.png" }
   ],
   "game_objects": [
     {

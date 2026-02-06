@@ -20,5 +20,5 @@
       "param_int": 5
     }
   ],
-  "sprites": [{ "id": "GoldOnPyreKillIcon", "path": "textures/FoolsCrown.png" }]
+  "sprites": [{ "id": "GoldOnPyreKillIcon", "path": "textures/relics/FoolsCrown.png" }]
 }

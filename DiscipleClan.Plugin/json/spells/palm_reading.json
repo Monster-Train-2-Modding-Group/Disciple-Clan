@@ -45,7 +45,7 @@
   "sprites": [
     {
       "id": "PalmReadingCardArt",
-      "path": "textures/Palm-Reading.png"
+      "path": "textures/spells/Palm-Reading.png"
     }
   ],
   "game_objects": [

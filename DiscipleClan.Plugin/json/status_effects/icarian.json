@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
   "status_effects": [
     {
       "id": "icarian",
@@ -9,10 +9,12 @@
         "chinese": "伊卡洛斯"
       },
       "card_tooltips": {
-        "english": "At end of turn, ascend one floor. If at top floor, this unit is sacrificed."
+        "english": "At end of turn, ascend one floor. If at top floor, this unit is sacrificed.",
+        "chinese": "回合结束时上升一层。若已在顶层，该单位被牺牲。"
       },
       "character_tooltips": {
-        "english": "At end of turn, ascends one floor. If at top floor, this unit is sacrificed."
+        "english": "At end of turn, ascends one floor. If at top floor, this unit is sacrificed.",
+        "chinese": "回合结束时上升一层。若已在顶层，该单位被牺牲。"
       },
       "notifications": {
         "english": "Icarian",
@@ -26,13 +28,19 @@
       "trigger_stage": "on_post_room_combat",
       "is_stackable": false,
       "show_stack_count": false,
-      "icon": "@IcarianIcon"
+      "icon": "@Icarian"
     }
   ],
   "sprites": [
-    { "id": "IcarianIcon", "path": "textures/ErrantPinwheel.png" }
+    {
+      "id": "Icarian",
+      "path": "textures/status_effects/ErrantPinwheel.png"
+    }
   ],
   "atlas_icons": [
-    { "id": "IcarianIcon", "path": "textures/ErrantPinwheel.png" }
+    {
+      "id": "Icarian",
+      "path": "textures/status_effects/ErrantPinwheel.png"
+    }
   ]
 }

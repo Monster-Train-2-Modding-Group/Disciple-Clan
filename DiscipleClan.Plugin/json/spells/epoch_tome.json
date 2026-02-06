@@ -64,7 +64,7 @@
   "sprites": [
     {
       "id": "EpochTomeSpellCardArt",
-      "path": "textures/Epoch-Tome.png"
+      "path": "textures/spells/Epoch-Tome.png"
     }
   ],
   "game_objects": [

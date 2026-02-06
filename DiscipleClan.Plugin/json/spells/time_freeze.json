@@ -51,7 +51,7 @@
   "sprites": [
     {
       "id": "TimeFreezeCardArt",
-      "path": "textures/Time-Freeze.png"
+      "path": "textures/spells/Time-Freeze.png"
     }
   ],
   "game_objects": [

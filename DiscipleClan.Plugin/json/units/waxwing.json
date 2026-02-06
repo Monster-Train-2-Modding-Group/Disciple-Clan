@@ -63,8 +63,8 @@
     }
   ],
   "sprites": [
-    { "id": "WaxwingCardArt", "path": "textures/WaxwingCharacterArt.png" },
-    { "id": "WaxwingCharacterArt", "path": "textures/WaxwingCharacterArt.png" }
+    { "id": "WaxwingCardArt", "path": "textures/units/WaxwingCharacterArt.png" },
+    { "id": "WaxwingCharacterArt", "path": "textures/units/WaxwingCharacterArt.png" }
   ],
   "game_objects": [
     { "id": "WaxwingCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@WaxwingCardArt" } } },

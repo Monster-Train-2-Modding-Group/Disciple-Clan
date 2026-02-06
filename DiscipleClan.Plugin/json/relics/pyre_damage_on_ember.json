@@ -20,5 +20,5 @@
       "param_int": 1
     }
   ],
-  "sprites": [{ "id": "PyreDamageOnEmberIcon", "path": "textures/PyreFyre.png" }]
+  "sprites": [{ "id": "PyreDamageOnEmberIcon", "path": "textures/status_effects/PyreFyre.png" }]
 }

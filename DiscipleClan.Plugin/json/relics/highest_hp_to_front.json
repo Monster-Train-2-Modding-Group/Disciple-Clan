@@ -20,5 +20,5 @@
       "param_int": 0
     }
   ],
-  "sprites": [{ "id": "HighestHPToFrontIcon", "path": "textures/Mirrorb.png" }]
+  "sprites": [{ "id": "HighestHPToFrontIcon", "path": "textures/relics/Mirrorb.png" }]
 }

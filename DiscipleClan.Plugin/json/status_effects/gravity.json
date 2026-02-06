@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
   "status_effects": [
     {
       "id": "gravity",
@@ -9,14 +9,16 @@
         "chinese": "重力"
       },
       "stackable_names": {
-        "english": "<nobr>Gravity {0}</nobr>",
-        "chinese": "<nobr>重力 {0}</nobr>"
+        "english": "Gravity {0}",
+        "chinese": "重力 {0}"
       },
       "card_tooltips": {
-        "english": "Cannot ascend. At end of turn, descend one floor and remove 1 stack."
+        "english": "Cannot ascend. At end of turn, descend one floor and remove 1 stack.",
+        "chinese": "无法上升。回合结束时下降一层并移除1层。"
       },
       "character_tooltips": {
-        "english": "Cannot ascend. At end of turn, descends one floor and removes 1 stack."
+        "english": "Cannot ascend. At end of turn, descends one floor and removes 1 stack.",
+        "chinese": "无法上升。回合结束时下降一层并移除1层。"
       },
       "notifications": {
         "english": "Gravity",
@@ -30,13 +32,19 @@
       "trigger_stage": "on_post_room_combat",
       "is_stackable": true,
       "show_stack_count": true,
-      "icon": "@GravityIcon"
+      "icon": "@Gravity"
     }
   ],
   "sprites": [
-    { "id": "GravityIcon", "path": "textures/ErrantPinwheel.png" }
+    {
+      "id": "Gravity",
+      "path": "textures/status_effects/ErrantPinwheel.png"
+    }
   ],
   "atlas_icons": [
-    { "id": "GravityIcon", "path": "textures/ErrantPinwheel.png" }
+    {
+      "id": "Gravity",
+      "path": "textures/status_effects/ErrantPinwheel.png"
+    }
   ]
 }

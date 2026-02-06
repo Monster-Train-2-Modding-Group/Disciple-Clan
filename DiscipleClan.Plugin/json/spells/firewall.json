@@ -56,7 +56,7 @@
   "sprites": [
     {
       "id": "FirewallCardArt",
-      "path": "textures/Flashfire.png"
+      "path": "textures/spells/Flashfire.png"
     }
   ],
   "game_objects": [

@@ -61,7 +61,7 @@
   "sprites": [
     {
       "id": "RightTimingBetaCardArt",
-      "path": "textures/Right-Timing.png"
+      "path": "textures/spells/Right-Timing.png"
     }
   ],
   "game_objects": [

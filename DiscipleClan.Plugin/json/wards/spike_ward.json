@@ -90,7 +90,7 @@
       "cards": ["@SpikeWard20"]
     }
   ],
-  "sprites": [{ "id": "SpikeWardCardArt", "path": "textures/Pyrespike.png" }],
+  "sprites": [{ "id": "SpikeWardCardArt", "path": "textures/spells/Pyrespike.png" }],
   "game_objects": [
     {
       "id": "SpikeWardCardArt",

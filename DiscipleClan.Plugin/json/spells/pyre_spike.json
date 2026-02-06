@@ -83,7 +83,7 @@
   "sprites": [
     {
       "id": "PyreSpikeSpellCardArt",
-      "path": "textures/Pyrespike.png"
+      "path": "textures/spells/Pyrespike.png"
     }
   ],
   "game_objects": [

@@ -89,11 +89,11 @@
   "sprites": [
     {
       "id": "DivinerCardArt",
-      "path": "textures/DivinerCharacterArt.png"
+      "path": "textures/units/DivinerCharacterArt.png"
     },
     {
       "id": "DivinerCharacterArt",
-      "path": "textures/DivinerCharacterArt.png"
+      "path": "textures/units/DivinerCharacterArt.png"
     }
   ],
   "game_objects": [

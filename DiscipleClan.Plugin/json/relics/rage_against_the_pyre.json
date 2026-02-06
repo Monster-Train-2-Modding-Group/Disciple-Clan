@@ -20,5 +20,5 @@
       "param_int": 1
     }
   ],
-  "sprites": [{ "id": "RageAgainstThePyreIcon", "path": "textures/FourtuneTellerB.png" }]
+  "sprites": [{ "id": "RageAgainstThePyreIcon", "path": "textures/relics/FourtuneTellerB.png" }]
 }

@@ -39,8 +39,8 @@
     }
   ],
   "sprites": [
-    { "id": "MinervaOwlCardArt", "path": "textures/MinervaCharacterArt.png" },
-    { "id": "MinervaOwlCharacterArt", "path": "textures/MinervaCharacterArt.png" }
+    { "id": "MinervaOwlCardArt", "path": "textures/units/MinervaCharacterArt.png" },
+    { "id": "MinervaOwlCharacterArt", "path": "textures/units/MinervaCharacterArt.png" }
   ],
   "game_objects": [
     { "id": "MinervaOwlCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@MinervaOwlCardArt" } } },

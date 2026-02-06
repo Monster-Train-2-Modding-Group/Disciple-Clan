@@ -221,10 +221,18 @@ Palm Reading still demands a target, with no valid target.
 
 Missing Card Data should be handled
 
-### Runs 4 (Latest)
+### Runs 4
 
 Analog doesn't work, needs Chronolock anyways. No Valid Target.
 
 Pyre Spike is wrong. Flashfire is wrong. We will need to do a spells run
 
 Flashfeather art is way to big, needs to be 3x smaller
+
+### Runs 5
+
+Pyre Ember On Ember spend Relic doesn't work
+
+Disciple Text is broken. 
+
+Disciple missing Symbiote

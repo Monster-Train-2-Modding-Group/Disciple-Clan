@@ -51,7 +51,7 @@
   "sprites": [
     {
       "id": "ChronomancyCardArt",
-      "path": "textures/Chronomancy.png"
+      "path": "textures/spells/Chronomancy.png"
     }
   ],
   "game_objects": [

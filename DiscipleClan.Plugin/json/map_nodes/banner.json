@@ -69,8 +69,8 @@
     }
   ],
   "sprites": [
-    { "id": "BannerDisabled", "path": "textures/BannerDisabled.png" },
-    { "id": "BannerEnabled", "path": "textures/BannerEnabled.png" },
-    { "id": "BannerFrozen", "path": "textures/BannerFrozen.png" }
+    { "id": "BannerDisabled", "path": "textures/map_nodes/BannerDisabled.png" },
+    { "id": "BannerEnabled", "path": "textures/map_nodes/BannerEnabled.png" },
+    { "id": "BannerFrozen", "path": "textures/map_nodes/BannerFrozen.png" }
   ]
 }

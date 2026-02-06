@@ -85,11 +85,11 @@
   "sprites": [
     {
       "id": "MorsowlCardArt",
-      "path": "textures/MorsowlCharacterArt.png"
+      "path": "textures/units/MorsowlCharacterArt.png"
     },
     {
       "id": "MorsowlCharacterArt",
-      "path": "textures/MorsowlCharacterArt.png"
+      "path": "textures/units/MorsowlCharacterArt.png"
     }
   ],
   "game_objects": [

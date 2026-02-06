@@ -98,11 +98,11 @@
   "sprites": [
     {
       "id": "FireshapedCardArt",
-      "path": "textures/FireshapedCharacterArt.png"
+      "path": "textures/units/FireshapedCharacterArt.png"
     },
     {
       "id": "FireshapedCharacterArt",
-      "path": "textures/FireshapedCharacterArt.png"
+      "path": "textures/units/FireshapedCharacterArt.png"
     }
   ],
   "game_objects": [

@@ -38,5 +38,5 @@
       "target_card_trait": "CardTraitExhaustState"
     }
   ],
-  "sprites": [{ "id": "FreeTimeIcon", "path": "textures/FreeTime.png" }]
+  "sprites": [{ "id": "FreeTimeIcon", "path": "textures/relics/FreeTime.png" }]
 }
