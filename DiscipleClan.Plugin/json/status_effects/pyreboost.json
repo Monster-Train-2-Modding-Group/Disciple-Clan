@@ -38,13 +38,13 @@
   "sprites": [
     {
       "id": "Pyreboost",
-      "path": "textures/status_effects/PyreFyre.png"
+      "path": "textures/status_effects/Pyreboost.png"
     }
   ],
   "atlas_icons": [
     {
       "id": "Pyreboost",
-      "path": "textures/status_effects/PyreFyre.png"
+      "path": "textures/status_effects/Pyreboost.png"
     }
   ]
 }

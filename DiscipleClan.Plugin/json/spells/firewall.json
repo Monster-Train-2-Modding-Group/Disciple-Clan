@@ -8,8 +8,8 @@
         "chinese": "火墙"
       },
       "descriptions": {
-        "english": "Apply [effect0.power] [armor] to the Pyre. (Equal to 3x Energy spent this turn)",
-        "chinese": "为圣火施加[effect0.power] [护甲]。（等于3x本回合消耗的[余烬]）"
+        "english": "Apply [trait0.power][armor] to the Pyre for each [ember] spent this turn",
+        "chinese": "为圣火施加[trait0.power][护甲]。随本回合消耗的[ember]提升。"
       },
       "cost": 0,
       "card_type": "spell",
@@ -30,7 +30,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Apply [effect0.power] [armor] to the Pyre. (Equal to 3x Energy spent this turn)"
+          "english": "Apply [trait0.power][armor] to the Pyre for each [ember] spent this turn"
         }
       ]
     }

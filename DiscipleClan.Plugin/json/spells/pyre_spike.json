@@ -8,8 +8,8 @@
         "chinese": "圣火尖刺"
       },
       "descriptions": {
-        "english": "Add [effect0.power] [armor] to the Pyre and +[effect1.power] [damage] to the Pyre. Scales with [ember] spent this battle.",
-        "chinese": "为圣火添加[护甲]并+2[damage]。随本战[余烬]消耗提升。[exhaust]。"
+        "english": "Add +[trait0.power][armor] and +[trait1.power][attack] to the Pyre for each [ember] spent this battle.",
+        "chinese": "为圣火添加+[trait0.power][护甲]和+[trait1.power][攻击]。随本战[余烬]消耗提升。[exhaust]。"
       },
       "cost": 0,
       "cost_type": "x",
@@ -54,7 +54,7 @@
       "id": "PyreSpikeBuffDamageEffect",
       "name": "CardEffectBuffDamage",
       "target_mode": "pyre",
-      "param_int": 2
+      "param_int": 0
     }
   ],
   "traits": [

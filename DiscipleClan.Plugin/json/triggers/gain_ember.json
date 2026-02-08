@@ -20,13 +20,13 @@
     "sprites": [
         {
             "id": "OnGainEmber",
-            "path": "textures/spells/Emberwave.png"
+            "path": "textures/triggers/OnGainEmber.png"
         }
     ],
     "atlas_icons": [
         {
             "id": "OnGainEmber",
-            "path": "textures/spells/Emberwave.png"
+            "path": "textures/triggers/OnGainEmber.png"
         }
     ]
 }

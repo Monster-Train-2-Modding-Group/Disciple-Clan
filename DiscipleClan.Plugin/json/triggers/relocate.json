@@ -20,13 +20,13 @@
     "sprites": [
         {
             "id": "OnRelocate",
-            "path": "textures/status_effects/ErrantPinwheel.png"
+            "path": "textures/triggers/OnRelocate.png"
         }
     ],
     "atlas_icons": [
         {
             "id": "OnRelocate",
-            "path": "textures/status_effects/ErrantPinwheel.png"
+            "path": "textures/triggers/OnRelocate.png"
         }
     ]
 }
