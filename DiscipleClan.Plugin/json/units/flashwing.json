@@ -59,7 +59,7 @@
       "id": "FlashwingOnDeathTrigger",
       "trigger": "on_death",
       "descriptions": {
-        "english": "Apply [effect0.status0.power] [dazed] to and Ascend the enemy that last attacked this unit."
+        "english": "Apply [effect0.status0.power] [dazed] to slayer."
       },
       "effects": [
         "@FlashwingDazedLastAttackerEffect"
@@ -83,14 +83,6 @@
           "status": "dazed"
         }
       ]
-    },
-    {
-      "id": "FlashwingRemoveIcarianEffect",
-      "name": "CardEffectBump",
-      "target_mode": "last_attacker_character",
-      "param_int": 4,
-      "target_team": "heroes",
-      "target_ignore_bosses": true
     }
   ],
   "sprites": [

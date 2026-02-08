@@ -27,6 +27,7 @@ namespace DiscipleClan.Plugin
                     // Class first, then champions, subtypes, cardpools, map_nodes, units, spells, relics, plugin, global
                     c.AddMergedJsonFile(
                         "json/class/chrono.json",
+                        "json/text/text.json",
                         "json/champion/disciple_base.json",
                         "json/champion/disciple_upgrades.json",
                         "json/champion/second_disciple.json",

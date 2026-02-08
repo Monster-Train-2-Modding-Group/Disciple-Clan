@@ -1,0 +1,21 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "replacement_texts": [
+        {
+            "key": "Chronolock",
+            "texts": {
+                "english": "<b>Chronolock</b>",
+                "chinese": "时间锁定"
+            }
+        }
+    ],
+    "additional_tooltips": [
+        {
+            "key": "Chronolock_TooltipText",
+            "texts": {
+                "english": "Chronolock applies a status effect based on the supporting clan.",
+                "chinese": "时间锁定使用支持种族的状态效果。"
+            }
+        }
+    ]
+}

@@ -22,16 +22,12 @@ namespace DiscipleClan.Plugin.StatusEffects
             if (character == null || character.IsDead)
                 return;
 
-            try
-            {
-                character.DebuffDamage(_lastBuff, null, fromStatusEffect: true);
+            character.DebuffDamage(_lastBuff, null, fromStatusEffect: true);
 
-                int stacks = character.GetStatusEffectStacks(GetStatusId());
-                int newBuff = stacks * pyreAttack * pyreNumAttacks;
-                character.BuffDamage(newBuff, null, fromStatusEffect: true);
-                _lastBuff = newBuff;
-            }
-            catch (Exception) { /* ignore */ }
+            int stacks = character.GetStatusEffectStacks(GetStatusId());
+            int newBuff = stacks * pyreAttack * pyreNumAttacks;
+            character.BuffDamage(newBuff, null, fromStatusEffect: true);
+            _lastBuff = newBuff;
         }
 
         public override void OnStacksAdded(CharacterState character, int numStacksAdded, CharacterState.AddStatusEffectParams addStatusEffectParams, ICoreGameManagers coreGameManagers)
@@ -64,20 +60,8 @@ namespace DiscipleClan.Plugin.StatusEffects
         {
             if (saveManager == null)
                 return;
-            try
-            {
-                var signal = saveManager.GetType().GetField("pyreAttackChangedSignal", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)?.GetValue(saveManager);
-                if (signal != null)
-                {
-                    var addListener = signal.GetType().GetMethod("AddListener");
-                    if (addListener != null)
-                    {
-                        var callback = (Action<int, int>)OnPyreAttackChange;
-                        addListener.Invoke(signal, new object[] { callback });
-                    }
-                }
-            }
-            catch (Exception) { /* ignore */ }
+            
+            saveManager.pyreAttackChangedSignal.AddListener(OnPyreAttackChange);
         }
 
         private static int GetDisplayedPyreAttack(SaveManager saveManager)

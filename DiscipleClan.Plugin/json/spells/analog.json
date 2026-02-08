@@ -8,8 +8,8 @@
         "chinese": "模拟"
       },
       "descriptions": {
-        "english": "Apply [effect0.power] [chronolock] to target unit.",
-        "chinese": "对目标单位施加[effect0.power]层[chronolock]。"
+        "english": "Apply [effect0.power] [DiscipleClan.Plugin_Chronolock] to target unit.",
+        "chinese": "对目标单位施加[effect0.power]层[时间锁定]。"
       },
       "cost": 1,
       "card_type": "spell",
@@ -37,7 +37,8 @@
       "name": "@CardEffectAddClassStatus",
       "target_mode": "drop_target_character",
       "target_team": "both",
-      "param_int": 2
+      "param_int": 2,
+      "additional_tooltips": ["@Chronolock_TooltipText"]
     }
   ],
   "sprites": [
