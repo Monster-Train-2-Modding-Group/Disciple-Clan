@@ -1,0 +1,28 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "replacement_texts": [
+        {
+            "key": "CardTraitPyreboost",
+            "texts": {
+                "english": "<b>Pyreboost</b>",
+                "chinese": "圣火强化"
+            }
+        },
+        {
+            "key": "CardTraitPyreboost_CardText",
+            "texts": {
+                "english": "Spell damage scales with Pyre Attack.",
+                "chinese": "法术伤害随圣火攻击提升。"
+            }
+        }
+    ],
+    "additional_tooltips": [
+        {
+            "key": "CardTraitPyreboost_CardText",
+            "texts": {
+                "english": "Spell damage scales with Pyre Attack.",
+                "chinese": "法术伤害随圣火攻击提升。"
+            }
+        }
+    ]
+}

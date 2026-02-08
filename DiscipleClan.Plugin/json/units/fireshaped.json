@@ -23,7 +23,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "When it spawns: +3 [buff] and +2 [regen]."
+          "english": "Starts with +3 [buff] and +2 [emberboost]."
         }
       ]
     }
@@ -36,31 +36,21 @@
         "chinese": "火塑"
       },
       "character_art": "@FireshapedCharacterArt",
-      "size": 2,
-      "health": 20,
-      "attack_damage": 0,
+      "size": 1,
+      "health": 2,
+      "attack_damage": 6,
       "subtypes": [
         "@ChronoSubtype_Pythian",
         "SubtypesData_BannerUnit"
       ],
-      "triggers": [
-        "@FireshapedOnSpawnTrigger"
-      ]
-    }
-  ],
-  "character_triggers": [
-    {
-      "id": "FireshapedOnSpawnTrigger",
-      "trigger": "on_spawn",
-      "descriptions": {
-        "english": " +[effect0.power] [buff], +[effect1.power] [regen]."
-      },
-      "effects": [
+      "starting_status_effects": [
         {
-          "id": "@FireshapedBuffEffect"
+          "status": "buff",
+          "count": 3
         },
         {
-          "id": "@FireshapedRegenEffect"
+          "status": "@emberboost",
+          "count": 2
         }
       ]
     }
@@ -71,28 +61,6 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@Fireshaped"
-    },
-    {
-      "id": "FireshapedBuffEffect",
-      "name": "CardEffectAddStatusEffect",
-      "target_mode": "self",
-      "param_status_effects": [
-        {
-          "count": 3,
-          "status": "buff"
-        }
-      ]
-    },
-    {
-      "id": "FireshapedRegenEffect",
-      "name": "CardEffectAddStatusEffect",
-      "target_mode": "self",
-      "param_status_effects": [
-        {
-          "count": 2,
-          "status": "regen"
-        }
-      ]
     }
   ],
   "sprites": [
