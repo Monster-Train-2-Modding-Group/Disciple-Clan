@@ -17,6 +17,7 @@
       "class": "@Chrono",
       "card_art": "@FirewallCardArt",
       "targetless": true,
+      "targets_room": true,
       "pools": [
         "MegaPool"
       ],
@@ -41,7 +42,8 @@
       "name": "CardEffectAddStatusEffect",
       "target_mode": "pyre",
       "param_status_effect": "armor",
-      "param_int": 0
+      "param_int": 0,
+      "param_bool": false
     }
   ],
   "traits": [

@@ -5,12 +5,6 @@ namespace DiscipleClan.Plugin.RoomModifiers
 {
     public sealed class RoomStateFriendlyDamagePerCapacityModifier : RoomStateModifierBase, IRoomStateDamageModifier, IRoomStateModifier, ILocalizationParamInt, ILocalizationParameterContext
     {
-        public override void Initialize(RoomModifierData roomModifierData, ICoreGameManagers coreGameManagers)
-        {
-            base.Initialize(roomModifierData, coreGameManagers);
-            this.additionalDamagePerCapacity = roomModifierData.GetParamInt();
-        }
-
         public int GetModifiedAttackDamage(Damage.Type damageType, CharacterState attackerState, bool requestingForCharacterStats, ICoreGameManagers coreGameManagers)
         {
             if (requestingForCharacterStats)
@@ -28,7 +22,7 @@ namespace DiscipleClan.Plugin.RoomModifiers
                 if (currentRoom != null)
                 {
                     var capacityInfo = currentRoom.GetCapacityInfo(characterContext.GetTeamType());
-                    return capacityInfo.count * this.additionalDamagePerCapacity;
+                    return capacityInfo.count * this.GetParamInt();
                 }
             }
             return 0;
@@ -38,7 +32,5 @@ namespace DiscipleClan.Plugin.RoomModifiers
         {
             return 0;
         }
-
-        private int additionalDamagePerCapacity;
     }
 }

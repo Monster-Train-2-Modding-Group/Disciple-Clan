@@ -143,6 +143,10 @@
         {
             "id": "DiscipleSymbioteBasicRoomModifier",
             "name": "@RoomStateFriendlyDamagePerCapacityModifier",
+            "extra_title_tooltips": {
+                "english": "Symbiote",
+                "chinese": "本房间友军每占用1容量获得+5[attack]。"
+            },
             "descriptions": {
                 "english": "Friendly units in this room gain +5 [attack] per capacity used.",
                 "chinese": "本房间友军每占用1容量获得+5[attack]。"
@@ -152,6 +156,10 @@
         {
             "id": "DiscipleSymbiotePremiumRoomModifier",
             "name": "@RoomStateFriendlyDamagePerCapacityModifier",
+            "extra_title_tooltips": {
+                "english": "Symbiote II",
+                "chinese": "本房间友军每占用1容量获得+8[attack]。"
+            },
             "descriptions": {
                 "english": "Friendly units in this room gain +8 [attack] per capacity used.",
                 "chinese": "本房间友军每占用1容量获得+8[attack]。"
@@ -161,6 +169,10 @@
         {   
             "id": "DiscipleSymbioteProRoomModifier",
             "name": "@RoomStateFriendlyDamagePerCapacityModifier",
+            "extra_title_tooltips": {
+                "english": "Symbiote III",
+                "chinese": "共生 III"
+            },
             "descriptions": {
                 "english": "Friendly units in this room gain +13 [attack] per capacity used.",
                 "chinese": "本房间友军每占用1容量获得+13[attack]。"

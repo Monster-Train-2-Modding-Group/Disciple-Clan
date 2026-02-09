@@ -31,7 +31,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Add 3 [DiscipleClan.Plugin_Gravity] to target unit. [exhaust]."
+          "english": "Add 3 [DiscipleClan.Plugin_gravity] to target unit. [exhaust]."
         }
       ]
     }

@@ -28,6 +28,7 @@ namespace DiscipleClan.Plugin
                     c.AddMergedJsonFile(
                         "json/class/chrono.json",
                         "json/text/text.json",
+                        "json/text/chronolock.json",
                         "json/champion/disciple_base.json",
                         "json/champion/disciple_upgrades.json",
                         "json/champion/second_disciple.json",
