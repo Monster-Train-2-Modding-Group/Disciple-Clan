@@ -83,7 +83,7 @@ namespace DiscipleClan.Plugin.CardEffects
                 yield break;
 
             CardManager cardManager = coreGameManagers.GetCardManager();
-            cardManager.AddCard(stampCard, CardPile.DeckPileRandom);
+            cardManager.AddNewCard(stampCard, CardPile.DeckPileRandom, false, false, null, false);
 
             yield break;
         }

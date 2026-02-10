@@ -33,7 +33,8 @@ namespace DiscipleClan.Plugin.Wards
             {
                 foreach (var roomModifierData in data.roomModifierData)
                 {
-                    if (Activator.CreateInstance(TypeNameCache.GetType(roomModifierData.GetRoomStateModifierClassName())) is IRoomStateModifier roomStateModifier)
+                    var roomStateModifier = Activator.CreateInstance(TypeNameCache.GetType(roomModifierData.GetRoomStateModifierClassName())) as IRoomStateModifier;
+                    if (roomStateModifier != null)
                     {
                         roomStateModifier.Initialize(roomModifierData, saveManager);
                         list.Add(roomStateModifier);

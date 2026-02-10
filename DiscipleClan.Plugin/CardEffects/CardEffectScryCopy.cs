@@ -45,7 +45,7 @@ namespace DiscipleClan.Plugin.CardEffects
                     ignoreTempUpgrades = true,
                     copyModifiersFromCard = chosenCardState
                 };
-                cardManager.AddCard(cardData, CardPile.HandPile);
+                cardManager.AddNewCard(cardData, CardPile.HandPile, false, false, null, false);
 
                 screenManager.SetScreenActive(ScreenName.Deck, false, null);
             });
