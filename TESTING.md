@@ -236,3 +236,5 @@ Pyre Ember On Ember spend Relic doesn't work
 Disciple Text is broken. 
 
 Disciple missing Symbiote
+
+### Runs 6
