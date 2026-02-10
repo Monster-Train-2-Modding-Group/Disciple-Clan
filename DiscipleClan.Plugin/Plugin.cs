@@ -6,6 +6,7 @@ using TrainworksReloaded.Base.Extensions;
 using TrainworksReloaded.Core;
 using TrainworksReloaded.Core.Extensions;
 using TrainworksReloaded.Core.Interfaces;
+using DiscipleClan.Plugin.Wards;
 
 namespace DiscipleClan.Plugin
 {
@@ -13,11 +14,38 @@ namespace DiscipleClan.Plugin
     public class Plugin : BaseUnityPlugin
     {
         internal static new ManualLogSource Logger = new(MyPluginInfo.PLUGIN_GUID);
+
+        internal static Lazy<WardManager> WardManager = new(() => new WardManager());
         
         // Plugin startup logic. This function is automatically called when your plugin initializes
         public void Awake()
         {
             Logger = base.Logger;
+
+            var wardManager = WardManager.Value;
+            DepInjector.AddProvider(wardManager);
+
+            Railend.ConfigurePreAction(builder =>
+            {
+                builder.RegisterInstance(wardManager);
+                builder.Collection.Register<IDataFinalizer>(typeof(WardFinalizer));
+
+                
+                //Register Room Modifier Data
+                builder.RegisterSingleton<IRegister<WardData>, WardRegister>();
+                builder.RegisterSingleton<WardRegister, WardRegister>();
+                builder.Register<
+                    IDataPipeline<IRegister<WardData>, WardData>,
+                    WardPipeline
+                >();
+                builder.RegisterInitializer<IRegister<WardData>>(x =>
+                {
+                    var pipeline = builder.GetInstance<
+                        IDataPipeline<IRegister<WardData>, WardData>
+                    >();
+                    pipeline.Run(x);
+                });
+            });
 
             var builder = Railhead.GetBuilder();
             builder.Configure(

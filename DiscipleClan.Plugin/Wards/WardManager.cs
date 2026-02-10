@@ -14,9 +14,6 @@ namespace DiscipleClan.Plugin.Wards
         private readonly Dictionary<int, List<WardState>> _rooms = new();
         private readonly List<(WardState Ward, int RoomIndex)> _addLater = new();
 
-        /// <summary>Singleton for use in patches and CardEffectAddWard. Set by Plugin.</summary>
-        public static WardManager? Instance { get; set; }
-
         /// <summary>Add a ward to the given room (0-based floor index). Silently ignores if room full.</summary>
         public void AddWard(WardState ward, int roomIndex)
         {
