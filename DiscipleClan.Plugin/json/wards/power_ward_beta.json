@@ -2,53 +2,85 @@
   "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
   "cards": [
     {
-      "id": "SpawnPowerWardBeta",
-      "names": { "english": "Vigor Ward", "chinese": "活力守卫" },
-      "card_art": "@PowerWardBetaCardArt",
+      "id": "PowerWardBetaCard",
+      "names": {
+        "english": "Vigor Ward",
+        "chinese": "活力守卫"
+      },
+      "descriptions": {
+        "english": "Add a Vigor Ward to a room. Friendly damage +5%.",
+        "chinese": "在房间添加活力守卫。友军伤害+5%。"
+      },
       "cost": 1,
-      "card_type": "monster",
+      "card_type": "spell",
       "rarity": "uncommon",
       "class": "@Chrono",
-      "pools": [],
+      "card_art": "@PowerWardBetaCardArt",
       "targets_room": true,
-      "effects": [{ "id": "@SpawnPowerWardBetaEffect" }],
-      "lore_tooltips": [{ "english": "+attack to units; +attack relocated." }]
-    }
-  ],
-  "characters": [
-    {
-      "id": "PowerWardBeta",
-      "names": { "english": "Vigor Ward", "chinese": "活力守卫" },
-      "character_art": "@PowerWardBetaCharacterArt",
-      "size": 1,
-      "health": 8,
-      "attack_damage": 4,
-      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+      "targetless": false,
+      "effects": [
+        {
+          "id": "@PowerWardBetaAddWardEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Friendly damage in this room increased by 5%."
+        }
+      ]
     }
   ],
   "effects": [
     {
-      "id": "SpawnPowerWardBetaEffect",
-      "name": "CardEffectSpawnMonster",
-      "target_mode": "drop_target_character",
-      "param_character": "@PowerWardBeta"
+      "id": "PowerWardBetaAddWardEffect",
+      "name": "@CardEffectAddWard",
+      "param_str": "@PowerWardBeta",
+      "param_bool": false
     }
   ],
   "sprites": [
-    { "id": "PowerWardBetaCardArt", "path": "textures/relics/Mirrorb.png" },
-    { "id": "PowerWardBetaCharacterArt", "path": "textures/relics/Mirrorb.png" }
+    {
+      "id": "PowerWardBetaCardArt",
+      "path": "textures/relics/Mirrorb.png"
+    }
   ],
   "game_objects": [
-    { "id": "PowerWardBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@PowerWardBetaCardArt" } } },
     {
-      "id": "PowerWardBetaCharacterArt",
-      "type": "character_art",
+      "id": "PowerWardBetaCardArt",
+      "type": "card_art",
       "extensions": {
-        "character_art": {
-          "sprite": "@PowerWardBetaCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        "card_art": {
+          "sprite": "@PowerWardBetaCardArt"
         }
       }
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "DisciplePowerWardBetaModifier",
+      "name": "@RoomStateFriendlyDamageAdditionModifier",
+      "descriptions": {
+        "english": "Friendly damage in this room increased by 5.",
+        "chinese": "本房间友军伤害提高5。"
+      },
+      "param_int": 5
+    }
+  ],
+  "wards": [
+    {
+      "id": "PowerWardBeta",
+      "title": {
+        "english": "Vigor Ward",
+        "chinese": "活力守卫"
+      },
+      "descriptions": {
+        "english": "Friendly damage in this room increased by 5%.",
+        "chinese": "本房间友军伤害提高5%。"
+      },
+      "icon": "@PowerWardBetaCardArt",
+      "param_room_modifiers": [
+        "@DisciplePowerWardBetaModifier"
+      ]
     }
   ]
 }

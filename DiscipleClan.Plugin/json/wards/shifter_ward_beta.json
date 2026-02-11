@@ -2,53 +2,96 @@
   "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
   "cards": [
     {
-      "id": "SpawnShifterWardBeta",
-      "names": { "english": "Overward", "chinese": "越卫" },
-      "card_art": "@ShifterWardBetaCardArt",
+      "id": "ShifterWardBetaCard",
+      "names": {
+        "english": "Overward",
+        "chinese": "越卫"
+      },
+      "descriptions": {
+        "english": "Add an Overward to a room. Before combat, descend the unit in the back.",
+        "chinese": "在房间添加越卫。战斗前，后排单位下降一层。"
+      },
       "cost": 1,
-      "card_type": "monster",
+      "card_type": "spell",
       "rarity": "uncommon",
       "class": "@Chrono",
-      "pools": [],
+      "card_art": "@ShifterWardBetaCardArt",
       "targets_room": true,
-      "effects": [{ "id": "@SpawnShifterWardBetaEffect" }],
-      "lore_tooltips": [{ "english": "Descend friendly units after combat." }]
-    }
-  ],
-  "characters": [
-    {
-      "id": "ShifterWardBeta",
-      "names": { "english": "Overward", "chinese": "越卫" },
-      "character_art": "@ShifterWardBetaCharacterArt",
-      "size": 1,
-      "health": 7,
-      "attack_damage": 5,
-      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+      "targetless": false,
+      "effects": [
+        {
+          "id": "@ShifterWardBetaAddWardEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Before combat, descend the unit in the back."
+        }
+      ]
     }
   ],
   "effects": [
     {
-      "id": "SpawnShifterWardBetaEffect",
-      "name": "CardEffectSpawnMonster",
-      "target_mode": "drop_target_character",
-      "param_character": "@ShifterWardBeta"
+      "id": "ShifterWardBetaAddWardEffect",
+      "name": "@CardEffectAddWard",
+      "param_str": "@ShifterWardBeta",
+      "param_bool": false
+    },
+    {
+      "id": "ShifterWardBetaBumpEffect",
+      "name": "CardEffectBump",
+      "target_mode": "back_in_room",
+      "target_team": "monsters",
+      "param_int": -1
     }
   ],
   "sprites": [
-    { "id": "ShifterWardBetaCardArt", "path": "textures/status_effects/ErrantPinwheel.png" },
-    { "id": "ShifterWardBetaCharacterArt", "path": "textures/status_effects/ErrantPinwheel.png" }
+    {
+      "id": "ShifterWardBetaCardArt",
+      "path": "textures/status_effects/ErrantPinwheel.png"
+    }
   ],
   "game_objects": [
-    { "id": "ShifterWardBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@ShifterWardBetaCardArt" } } },
     {
-      "id": "ShifterWardBetaCharacterArt",
-      "type": "character_art",
+      "id": "ShifterWardBetaCardArt",
+      "type": "card_art",
       "extensions": {
-        "character_art": {
-          "sprite": "@ShifterWardBetaCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        "card_art": {
+          "sprite": "@ShifterWardBetaCardArt"
         }
       }
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "DiscipleShifterWardBetaModifier",
+      "name": "RoomStateAddEffectPostCombatModifier",
+      "descriptions": {
+        "english": "After combat, descend the unit in the back.",
+        "chinese": "战斗前，后排单位下降一层。"
+      },
+      "param_effects": [
+        {
+          "id": "@ShifterWardBetaBumpEffect"
+        }
+      ]
+    }
+  ],
+  "wards": [
+    {
+      "id": "ShifterWardBeta",
+      "title": {
+        "english": "Overward",
+        "chinese": "越卫"
+      },
+      "descriptions": {
+        "english": "After combat, descend the unit in the back.",
+        "chinese": "战斗后，后排单位下降一层。"
+      },
+      "icon": "@ShifterWardBetaCardArt",
+      "param_room_modifiers": [
+        "@DiscipleShifterWardBetaModifier"
+      ]
     }
   ]
 }

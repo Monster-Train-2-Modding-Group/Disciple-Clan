@@ -2,53 +2,101 @@
   "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
   "cards": [
     {
-      "id": "SpawnHaruspexWardBeta",
-      "names": { "english": "Haruspex Ward Beta", "chinese": "占卜守卫乙" },
-      "card_art": "@HaruspexWardBetaCardArt",
+      "id": "HaruspexWardBetaCard",
+      "names": {
+        "english": "Haruspex Ward",
+        "chinese": "占卜守卫"
+      },
+      "descriptions": {
+        "english": "Add a Haruspex Ward to a room. Harvest.",
+        "chinese": "在房间添加占卜守卫。收割。"
+      },
       "cost": 1,
-      "card_type": "monster",
+      "card_type": "spell",
       "rarity": "uncommon",
       "class": "@Chrono",
-      "pools": [],
+      "card_art": "@HaruspexWardBetaCardArt",
       "targets_room": true,
-      "effects": [{ "id": "@SpawnHaruspexWardBetaEffect" }],
-      "lore_tooltips": [{ "english": "Harvest." }]
-    }
-  ],
-  "characters": [
-    {
-      "id": "HaruspexWardBeta",
-      "names": { "english": "Haruspex Ward Beta", "chinese": "占卜守卫乙" },
-      "character_art": "@HaruspexWardBetaCharacterArt",
-      "size": 1,
-      "health": 7,
-      "attack_damage": 4,
-      "subtypes": ["@ChronoSubtype_Ward", "SubtypesData_BannerUnit"]
+      "targetless": false,
+      "effects": [
+        {
+          "id": "@HaruspexWardBetaAddWardEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Harvest."
+        }
+      ]
     }
   ],
   "effects": [
     {
-      "id": "SpawnHaruspexWardBetaEffect",
-      "name": "CardEffectSpawnMonster",
-      "target_mode": "drop_target_character",
-      "param_character": "@HaruspexWardBeta"
+      "id": "HaruspexWardBetaAddWardEffect",
+      "name": "@CardEffectAddWard",
+      "param_str": "@HaruspexWardBeta",
+      "param_bool": false
+    },
+    {
+      "id": "HaruspexWardBetaEffect",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "param_upgrade": "@HaruspexWardBetaCardUpgrade",
+      "target_mode": "room",
+      "target_team": "monsters"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "HaruspexWardBetaCardUpgrade",
+      "bonus_attack": 3,
+      "bonus_health": 3
     }
   ],
   "sprites": [
-    { "id": "HaruspexWardBetaCardArt", "path": "textures/relics/Mirrorc.png" },
-    { "id": "HaruspexWardBetaCharacterArt", "path": "textures/relics/Mirrorc.png" }
+    {
+      "id": "HaruspexWardBetaCardArt",
+      "path": "textures/relics/Mirrorc.png"
+    }
   ],
   "game_objects": [
-    { "id": "HaruspexWardBetaCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@HaruspexWardBetaCardArt" } } },
     {
-      "id": "HaruspexWardBetaCharacterArt",
-      "type": "character_art",
+      "id": "HaruspexWardBetaCardArt",
+      "type": "card_art",
       "extensions": {
-        "character_art": {
-          "sprite": "@HaruspexWardBetaCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 1.0, "y": 1.0, "z": 1.0 } }
+        "card_art": {
+          "sprite": "@HaruspexWardBetaCardArt"
         }
       }
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "HaruspexWardBetaRoomModifier",
+      "name": "RoomStateAddEffectOnUnitDeath",
+      "descriptions": {
+        "english": "<b>Harvest:</b> Allies get +3/+3.",
+        "chinese": "<b>收割：</b> 友军获得 +3/+3。"
+      },
+      "param_effects": [
+        {
+          "id": "@HaruspexWardBetaEffect"
+        }
+      ]
+    }
+  ],
+  "wards": [
+    {
+      "id": "HaruspexWardBeta",
+      "title": {
+        "english": "Haruspex Ward Beta",
+        "chinese": "占卜守卫乙"
+      },
+      "descriptions": {
+        "english": "Harvest.",
+        "chinese": "收割。"
+      },
+      "icon": "@HaruspexWardBetaCardArt",
+      "param_room_modifiers": []
     }
   ]
 }

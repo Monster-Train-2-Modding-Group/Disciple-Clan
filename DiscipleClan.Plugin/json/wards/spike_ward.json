@@ -3,7 +3,10 @@
   "cards": [
     {
       "id": "SpikeWard5",
-      "names": { "english": "Spike Ward", "chinese": "尖刺守印" },
+      "names": {
+        "english": "Spike Ward",
+        "chinese": "尖刺守印"
+      },
       "descriptions": {
         "english": "Deal 5 [damage] to a random enemy in the room.",
         "chinese": "对房间内随机敌人造成5[damage]。"
@@ -15,12 +18,23 @@
       "card_art": "@SpikeWardCardArt",
       "targets_room": true,
       "targetless": false,
-      "effects": [{ "id": "@SpikeWard5Effect" }],
-      "lore_tooltips": [{ "english": "Ward: when units fight, deal damage to a random enemy." }]
+      "effects": [
+        {
+          "id": "@SpikeWard5Effect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Ward: when units fight, deal damage to a random enemy."
+        }
+      ]
     },
     {
       "id": "SpikeWard10",
-      "names": { "english": "Spike Ward", "chinese": "尖刺守印" },
+      "names": {
+        "english": "Spike Ward",
+        "chinese": "尖刺守印"
+      },
       "descriptions": {
         "english": "Deal 10 [damage] to a random enemy in the room.",
         "chinese": "对房间内随机敌人造成10[damage]。"
@@ -32,12 +46,23 @@
       "card_art": "@SpikeWardCardArt",
       "targets_room": true,
       "targetless": false,
-      "effects": [{ "id": "@SpikeWard10Effect" }],
-      "lore_tooltips": [{ "english": "Ward: when units fight, deal damage to a random enemy." }]
+      "effects": [
+        {
+          "id": "@SpikeWard10Effect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Ward: when units fight, deal damage to a random enemy."
+        }
+      ]
     },
     {
       "id": "SpikeWard20",
-      "names": { "english": "Spike Ward", "chinese": "尖刺守印" },
+      "names": {
+        "english": "Spike Ward",
+        "chinese": "尖刺守印"
+      },
       "descriptions": {
         "english": "Deal 20 [damage] to a random enemy in the room.",
         "chinese": "对房间内随机敌人造成20[damage]。"
@@ -49,27 +74,53 @@
       "card_art": "@SpikeWardCardArt",
       "targets_room": true,
       "targetless": false,
-      "effects": [{ "id": "@SpikeWard20Effect" }],
-      "lore_tooltips": [{ "english": "Ward: when units fight, deal damage to a random enemy." }]
+      "effects": [
+        {
+          "id": "@SpikeWard20Effect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Ward: when units fight, deal damage to a random enemy."
+        }
+      ]
     }
   ],
   "effects": [
     {
       "id": "SpikeWard5Effect",
+      "name": "@CardEffectAddWard",
+      "param_str": "@SpikeWard5",
+      "param_bool": false
+    },
+    {
+      "id": "SpikeWard10Effect",
+      "name": "@CardEffectAddWard",
+      "param_str": "@SpikeWard10",
+      "param_bool": false
+    },
+    {
+      "id": "SpikeWard20Effect",
+      "name": "@CardEffectAddWard",
+      "param_str": "@SpikeWard20",
+      "param_bool": false
+    },
+    {
+      "id": "SpikeWard5DamageEffect",
       "name": "CardEffectDamage",
       "target_mode": "random_in_room",
       "target_team": "heroes",
       "param_int": 5
     },
     {
-      "id": "SpikeWard10Effect",
+      "id": "SpikeWard10DamageEffect",
       "name": "CardEffectDamage",
       "target_mode": "random_in_room",
       "target_team": "heroes",
       "param_int": 10
     },
     {
-      "id": "SpikeWard20Effect",
+      "id": "SpikeWard20DamageEffect",
       "name": "CardEffectDamage",
       "target_mode": "random_in_room",
       "target_team": "heroes",
@@ -79,23 +130,126 @@
   "card_pools": [
     {
       "id": "SpikeWard5Pool",
-      "cards": ["@SpikeWard5"]
+      "cards": [
+        "@SpikeWard5"
+      ]
     },
     {
       "id": "SpikeWard10Pool",
-      "cards": ["@SpikeWard10"]
+      "cards": [
+        "@SpikeWard10"
+      ]
     },
     {
       "id": "SpikeWard20Pool",
-      "cards": ["@SpikeWard20"]
+      "cards": [
+        "@SpikeWard20"
+      ]
     }
   ],
-  "sprites": [{ "id": "SpikeWardCardArt", "path": "textures/spells/Pyrespike.png" }],
+  "sprites": [
+    {
+      "id": "SpikeWardCardArt",
+      "path": "textures/spells/Pyrespike.png"
+    }
+  ],
   "game_objects": [
     {
       "id": "SpikeWardCardArt",
       "type": "card_art",
-      "extensions": { "card_art": { "sprite": "@SpikeWardCardArt" } }
+      "extensions": {
+        "card_art": {
+          "sprite": "@SpikeWardCardArt"
+        }
+      }
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "DiscipleSpikeWard5Modifier",
+      "name": "RoomStateAddEffectPreCombatModifier",
+      "descriptions": {
+        "english": "Deal 5 [damage] to a random enemy when combat starts.",
+        "chinese": "战斗开始时对随机敌人造成5[damage]。"
+      },
+      "param_effects": [
+        {
+          "id": "@SpikeWard5DamageEffect"
+        }
+      ]
+    },
+    {
+      "id": "DiscipleSpikeWard10Modifier",
+      "name": "RoomStateAddEffectPreCombatModifier",
+      "descriptions": {
+        "english": "Deal 10 [damage] to a random enemy when combat starts.",
+        "chinese": "战斗开始时对随机敌人造成10[damage]。"
+      },
+      "param_effects": [
+        {
+          "id": "@SpikeWard10DamageEffect"
+        }
+      ]
+    },
+    {
+      "id": "DiscipleSpikeWard20Modifier",
+      "name": "RoomStateAddEffectPreCombatModifier",
+      "descriptions": {
+        "english": "Deal 20 [damage] to a random enemy when combat starts.",
+        "chinese": "战斗开始时对随机敌人造成20[damage]。"
+      },
+      "param_effects": [
+        {
+          "id": "@SpikeWard20DamageEffect"
+        }
+      ]
+    }
+  ],
+  "wards": [
+    {
+      "id": "SpikeWard5",
+      "title": {
+        "english": "Spike Ward",
+        "chinese": "尖刺守印"
+      },
+      "descriptions": {
+        "english": "Deal 5 [damage] to a random enemy in the room.",
+        "chinese": "对房间内随机敌人造成5[damage]。"
+      },
+      "icon": "@SpikeWardCardArt",
+      "param_room_modifiers": [
+        "@DiscipleSpikeWard5Modifier"
+      ]
+    },
+    {
+      "id": "SpikeWard10",
+      "title": {
+        "english": "Spike Ward",
+        "chinese": "尖刺守印"
+      },
+      "descriptions": {
+        "english": "Deal 10 [damage] to a random enemy in the room.",
+        "chinese": "对房间内随机敌人造成10[damage]。"
+      },
+      "icon": "@SpikeWardCardArt",
+      "param_room_modifiers": [
+        "@DiscipleSpikeWard10Modifier"
+      ]
+    },
+    {
+      "id": "SpikeWard20",
+      "title": {
+        "english": "Spike Ward",
+        "chinese": "尖刺守印"
+      },
+      "descriptions": {
+        "english": "Deal 20 [damage] to a random enemy in the room.",
+        "chinese": "对房间内随机敌人造成20[damage]。"
+      },
+      "icon": "@SpikeWardCardArt",
+      "param_room_modifiers": [
+        "@DiscipleSpikeWard20Modifier"
+      ]
     }
   ]
 }

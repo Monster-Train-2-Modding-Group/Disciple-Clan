@@ -3,6 +3,7 @@ using DiscipleClan.Plugin.Wards;
 using TrainworksReloaded.Base.Effect;
 using TrainworksReloaded.Core.Interfaces;
 using TrainworksReloaded.Core;
+using TrainworksReloaded.Base.Extensions;
 
 namespace DiscipleClan.Plugin.CardEffects
 {
@@ -36,8 +37,9 @@ namespace DiscipleClan.Plugin.CardEffects
             var wardManager = container.GetInstance<WardManager>();
             if (wardRegister == null || wardManager == null)
                 yield break;
-
-            if (!wardRegister.TryGetValue(wardId, out var wardData) || wardData == null)
+                
+            var lookupId = wardId.ToId("DiscipleClan.Plugin", "Ward");
+            if (!wardRegister.TryLookupId(lookupId, out var wardData, out var _, null) || wardData == null)
                 yield break;
 
             int roomIndex = cardEffectParams.selectedRoom;
