@@ -7,6 +7,7 @@ using TrainworksReloaded.Core;
 using TrainworksReloaded.Core.Extensions;
 using TrainworksReloaded.Core.Interfaces;
 using DiscipleClan.Plugin.Wards;
+using SimpleInjector;
 
 namespace DiscipleClan.Plugin
 {
@@ -28,7 +29,7 @@ namespace DiscipleClan.Plugin
             Railend.ConfigurePreAction(builder =>
             {
                 builder.RegisterInstance(wardManager);
-                builder.Collection.Register<IDataFinalizer>(typeof(WardFinalizer));
+                builder.Collection.Append(typeof(WardFinalizer), typeof(WardFinalizer), Lifestyle.Transient);
 
                 
                 //Register Room Modifier Data

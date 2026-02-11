@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -12,10 +13,24 @@ namespace DiscipleClan.Plugin.Patches
     /// Merges the room's ward modifiers into GetRoomStateModifiersFromTrainRoomAttachments
     /// so wards affect the room via the same modifier iteration as train attachments.
     /// </summary>
-    [HarmonyPatch(typeof(RoomState), "GetRoomStateModifiersFromTrainRoomAttachments", new[] { typeof(Team.Type) })]
+    [HarmonyPatch]
     public static class GetRoomStateModifiersFromTrainRoomAttachmentsPatch
     {
-        static void Postfix(RoomState __instance, ref IEnumerable<IRoomStateModifier> __result, MethodBase __originalMethod)
+        /// <summary>Bind to the non-generic overload only to avoid AmbiguousMatchException with the generic overload.</summary>
+        static MethodBase TargetMethod()
+        {
+            return typeof(RoomState)
+                .GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+                .Where(m =>
+                    m.Name == "GetRoomStateModifiersFromTrainRoomAttachments" &&
+                    !m.IsGenericMethodDefinition &&
+                    m.GetParameters().Length == 1 &&
+                    m.GetParameters()[0].ParameterType == typeof(Team.Type))
+                .Single();
+        }
+
+        // Original returns System.Collections.IEnumerable (non-generic); __result must match for Harmony.
+        static void Postfix(RoomState __instance, ref IEnumerable __result, MethodBase __originalMethod)
         {
             if (__instance == null || __result == null || __originalMethod == null || __originalMethod.IsGenericMethod)
                 return;
@@ -27,7 +42,8 @@ namespace DiscipleClan.Plugin.Patches
 
             int roomIndex = __instance.GetRoomIndex();
             var wardModifiers = wardManager.GetModifiersForRoom(roomIndex);
-            __result = __result.Concat(wardModifiers);
+            var typedOriginal = __result.Cast<IRoomStateModifier>();
+            __result = typedOriginal.Concat(wardModifiers);
         }
     }
 
@@ -49,7 +65,7 @@ namespace DiscipleClan.Plugin.Patches
         }
 
         // Keep result typed as object so Harmony can always bind, but infer T from the method return type.
-        static void Postfix(RoomState __instance, ref IEnumerable<IRoomStateModifier>  __result, MethodBase __originalMethod)
+        static void Postfix(RoomState __instance, ref IEnumerable __result, MethodBase __originalMethod)
         {
             if (__instance == null || __result == null) return;
             if (__originalMethod is not MethodInfo mi) return;
@@ -71,7 +87,8 @@ namespace DiscipleClan.Plugin.Patches
             if (!extra.Any()) return;
 
             // Snapshot into a List<T> to avoid deferred-exec surprises.
-            __result = __result.Concat(extra);
+            var typedOriginal = __result.Cast<IRoomStateModifier>();
+            __result = typedOriginal.Concat(extra);
         }
 
         static Type? GetIEnumerableElementType(Type type)

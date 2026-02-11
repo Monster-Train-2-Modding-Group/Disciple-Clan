@@ -48,7 +48,7 @@
   "sprites": [
     {
       "id": "ShifterWardBetaCardArt",
-      "path": "textures/status_effects/ErrantPinwheel.png"
+      "path": "textures/relics/ErrantPinwheel.png"
     }
   ],
   "game_objects": [

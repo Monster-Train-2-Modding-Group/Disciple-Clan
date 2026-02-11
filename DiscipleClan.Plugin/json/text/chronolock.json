@@ -11,10 +11,14 @@
     ],
     "additional_tooltips": [
         {
-            "key": "Chronolock_TooltipText",
-            "texts": {
+            "id": "Chronolock_TooltipText",
+            "title": {
+                "english": "Chronolock",
+                "chinese": "时间锁定"
+            },
+            "descriptions": {
                 "english": "Chronolock applies a status effect based on the supporting clan.",
-                "chinese": "时间锁定使用支持种族的状态效果。"
+                "chinese": "时间锁定使用支持种族的状态效果。（未实现）"
             }
         }
     ]
