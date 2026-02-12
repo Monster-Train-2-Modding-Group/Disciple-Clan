@@ -1,3 +1,6 @@
+using DiscipleClan.Plugin;
+using HarmonyLib;
+using LogLevel = BepInEx.Logging.LogLevel;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,26 +18,35 @@ namespace DiscipleClan.Plugin.Wards
 
         private WardManager? _manager;
 
+        private static void Log(LogLevel level, string message) => Plugin.Logger.Log(level, $"[WardUI] {message}");
+
         public void SetManager(WardManager manager)
         {
             _manager = manager;
+            Log(LogLevel.Debug, "SetManager called");
         }
 
         /// <summary>Rebuild ward icon hierarchy for the given room (floor index).</summary>
         public void SetupWardIcons(int roomIndex)
         {
             if (_manager == null)
+            {
+                Log(LogLevel.Warning, "SetupWardIcons skipped: manager null");
                 return;
+            }
 
             foreach (Transform child in transform)
                 Destroy(child.gameObject);
 
             var wards = _manager.GetWards(roomIndex);
-            int i = 0;
+            int shown = 0;
             foreach (var ward in wards)
             {
                 if (ward?.iconSprite == null)
+                {
+                    Log(LogLevel.Debug, $"SetupWardIcons room {roomIndex}: skipping ward (iconSprite null, titleKey={ward?.titleKey})");
                     continue;
+                }
 
                 var icon = new GameObject("Ward Icon");
                 icon.transform.SetParent(transform);
@@ -45,14 +57,16 @@ namespace DiscipleClan.Plugin.Wards
                 var rect = icon.GetComponent<RectTransform>();
                 if (rect != null)
                 {
-                    rect.offsetMax = new Vector2(GetContainerWidth(i), rect.offsetMax.y);
+                    rect.offsetMax = new Vector2(GetContainerWidth(shown), rect.offsetMax.y);
                     rect.sizeDelta = new Vector2(0.48f, 0.82f);
                 }
-                i++;
+                shown++;
 
                 if (!string.IsNullOrEmpty(ward.titleKey) || !string.IsNullOrEmpty(ward.descriptionKey))
                     AddTooltip(icon, ward.titleKey, ward.descriptionKey);
             }
+
+            Log(LogLevel.Debug, $"SetupWardIcons room {roomIndex}: showed {shown} icon(s)");
         }
 
         private static float GetContainerWidth(int count)
@@ -65,11 +79,9 @@ namespace DiscipleClan.Plugin.Wards
             var tooltip = go.AddComponent<LocalizedTooltipProvider>();
             if (tooltip == null)
                 return;
-            var t = HarmonyLib.Traverse.Create(tooltip);
-            if (!string.IsNullOrEmpty(titleKey))
-                t.Field("tooltipTitleKey").SetValue(titleKey);
-            if (!string.IsNullOrEmpty(bodyKey))
-                t.Field("tooltipBodyKey").SetValue(bodyKey);
+
+            AccessTools.Field(typeof(LocalizedTooltipProvider), "tooltipTitleKey").SetValue(tooltip, titleKey);
+            AccessTools.Field(typeof(LocalizedTooltipProvider), "tooltipBodyKey").SetValue(tooltip, bodyKey);
         }
     }
 }

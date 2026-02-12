@@ -63,6 +63,9 @@ namespace DiscipleClan.Plugin.Wards
             var id = configuration.GetSection("id").ParseString();
             if (id == null)
                 return null;
+                
+            logger.Log(LogLevel.Info,
+                $"Loading Ward {key} {id} path: {configuration.GetPath()}...");
 
             var name = key.GetId("Ward", id);
             var descriptionKey = $"WardData_descriptionKey-{name}";
