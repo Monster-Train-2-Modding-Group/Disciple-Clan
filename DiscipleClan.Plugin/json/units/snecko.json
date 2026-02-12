@@ -59,7 +59,7 @@
       "id": "SneckoEndTurnTrigger",
       "trigger": "end_turn_pre_hand_discard",
       "descriptions": {
-        "english": "End of turn: ascend 2 floors."
+        "english": "Ascend to the top floor."
       },
       "effects": [
         {
@@ -85,11 +85,11 @@
   "sprites": [
     {
       "id": "SneckoCardArt",
-      "path": "textures/units/WaxwingCharacterArt.png"
+      "path": "textures/units/GalilizardCharacterArt.png"
     },
     {
       "id": "SneckoCharacterArt",
-      "path": "textures/units/WaxwingCharacterArt.png"
+      "path": "textures/units/GalilizardCharacterArt.png"
     }
   ],
   "game_objects": [

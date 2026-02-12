@@ -47,7 +47,7 @@ namespace DiscipleClan.Plugin.Patches
         }
     }
 
-        
+
     [HarmonyPatch]
     public static class GetRoomStateModifiersFromTrainRoomAttachmentsGenericPatch
     {
@@ -61,7 +61,8 @@ namespace DiscipleClan.Plugin.Patches
                     m.IsGenericMethodDefinition &&
                     m.GetParameters().Length == 1 &&
                     m.GetParameters()[0].ParameterType == typeof(Team.Type))
-                .Single();
+                .Single()
+                .MakeGenericMethod(typeof(object));
         }
 
         // Keep result typed as object so Harmony can always bind, but infer T from the method return type.

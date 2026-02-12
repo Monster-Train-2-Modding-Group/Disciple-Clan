@@ -64,11 +64,14 @@ namespace DiscipleClan.Plugin.CardEffects
             string? wardId = cardEffectState.GetParamStr();
             if (string.IsNullOrEmpty(wardId))
                 return false;
+            Plugin.Logger.LogInfo($"Testing CardEffectAddWard {wardId}");
             var container = Railend.GetContainer();
             var wardRegister = container.GetInstance<WardRegister>();
             if (wardRegister == null)
                 return false;
-            if (!wardRegister.TryGetValue(wardId, out var wardData) || wardData == null)
+                
+            var lookupId = wardId.ToId("DiscipleClan.Plugin", "Ward");
+            if (!wardRegister.TryLookupId(lookupId, out var wardData, out var _, null) || wardData == null)
                 return false;
             if (cardEffectParams.selectedRoom < 0)
                 return false;

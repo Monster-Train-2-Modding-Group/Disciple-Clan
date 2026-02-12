@@ -17,7 +17,7 @@
       "class": "@Chrono",
       "card_art": "@PowerWardBetaCardArt",
       "targets_room": true,
-      "targetless": false,
+      "targetless": true,
       "effects": [
         {
           "id": "@PowerWardBetaAddWardEffect"

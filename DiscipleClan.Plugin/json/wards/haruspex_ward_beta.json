@@ -17,7 +17,7 @@
       "class": "@Chrono",
       "card_art": "@HaruspexWardBetaCardArt",
       "targets_room": true,
-      "targetless": false,
+      "targetless": true,
       "effects": [
         {
           "id": "@HaruspexWardBetaAddWardEffect"
