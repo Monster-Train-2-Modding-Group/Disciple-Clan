@@ -29,7 +29,7 @@ namespace DiscipleClan.Plugin
             Railend.ConfigurePreAction(builder =>
             {
                 builder.RegisterInstance(wardManager);
-                builder.Collection.Append(typeof(WardFinalizer), typeof(WardFinalizer), Lifestyle.Transient);
+                builder.Collection.Append(typeof(IDataFinalizer), typeof(WardFinalizer), Lifestyle.Transient);
 
                 
                 //Register Room Modifier Data

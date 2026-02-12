@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using BepInEx.Logging;
+using DiscipleClan.Plugin;
 using UnityEngine;
 
 namespace DiscipleClan.Plugin.Wards
@@ -17,18 +19,29 @@ namespace DiscipleClan.Plugin.Wards
         private readonly List<(WardState Ward, int RoomIndex)> _addLater = new();
         private WardUI? _wardUI;
 
+        private static void Log(LogLevel level, string message) => Plugin.Logger.Log(level, $"[WardManager] {message}");
+
         /// <summary>Add a ward to the given room (0-based floor index). Silently ignores if room full. Sets up ward UI for that room.</summary>
         public void AddWard(WardState ward, int roomIndex)
         {
             if (ward == null || roomIndex < 0)
+            {
+                Log(LogLevel.Warning, $"AddWard skipped: ward null={ward == null}, roomIndex={roomIndex}");
                 return;
+            }
             if (!_rooms.TryGetValue(roomIndex, out var list))
             {
                 list = new List<WardState>();
                 _rooms[roomIndex] = list;
+                Log(LogLevel.Debug, $"Created ward list for room {roomIndex}");
             }
-            if (list.Count < MaxWardsPerRoom)
-                list.Add(ward);
+            if (list.Count >= MaxWardsPerRoom)
+            {
+                Log(LogLevel.Debug, $"AddWard skipped: room {roomIndex} full ({list.Count}/{MaxWardsPerRoom})");
+                return;
+            }
+            list.Add(ward);
+            Log(LogLevel.Info, $"Added ward to room {roomIndex} (count={list.Count}, titleKey={ward.titleKey})");
 
             _wardUI?.SetupWardIcons(roomIndex);
         }
@@ -37,13 +50,20 @@ namespace DiscipleClan.Plugin.Wards
         public void AddWardLater(WardState ward, int roomIndex)
         {
             if (ward == null || roomIndex < 0)
+            {
+                Log(LogLevel.Warning, $"AddWardLater skipped: ward null={ward == null}, roomIndex={roomIndex}");
                 return;
+            }
             _addLater.Add((ward, roomIndex));
+            Log(LogLevel.Debug, $"Queued ward for room {roomIndex} (queue size={_addLater.Count})");
         }
 
         /// <summary>Apply any queued AddWardLater entries. Call from game hook (e.g. pre-combat).</summary>
         public void FlushAddLater()
         {
+            var count = _addLater.Count;
+            if (count == 0) return;
+            Log(LogLevel.Debug, $"FlushAddLater: applying {count} queued ward(s)");
             foreach (var (ward, roomIndex) in _addLater)
                 AddWard(ward, roomIndex);
             _addLater.Clear();
@@ -72,8 +92,11 @@ namespace DiscipleClan.Plugin.Wards
         /// <summary>Clear all wards (and add-later queue). Call on scenario/room setup.</summary>
         public void ResetWards()
         {
+            var roomCount = _rooms.Count;
+            var laterCount = _addLater.Count;
             _rooms.Clear();
             _addLater.Clear();
+            Log(LogLevel.Info, $"ResetWards: cleared {roomCount} room(s), {laterCount} queued");
         }
 
         public void NewProviderAvailable(IProvider newProvider)
@@ -99,7 +122,10 @@ namespace DiscipleClan.Plugin.Wards
 
             Transform? parent = GetWardUIParent(roomManager);
             if (parent == null)
+            {
+                Log(LogLevel.Warning, "EnsureWardUI: could not get parent transform from RoomManager");
                 return;
+            }
 
             var go = new GameObject("Ward Container");
             go.transform.SetParent(parent);
@@ -108,6 +134,7 @@ namespace DiscipleClan.Plugin.Wards
 
             _wardUI = go.AddComponent<WardUI>();
             _wardUI.SetManager(this);
+            Log(LogLevel.Info, "WardUI created and attached to RoomManager");
         }
 
         private static Transform? GetWardUIParent(RoomManager roomManager)

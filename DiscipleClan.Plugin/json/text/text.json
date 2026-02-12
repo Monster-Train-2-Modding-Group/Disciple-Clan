@@ -11,6 +11,13 @@
         {
             "key": "CardTraitPyreboost_CardText",
             "texts": {
+                "english": "<b>Pyreboost</b>.",
+                "chinese": "法术伤害随圣火攻击提升。"
+            }
+        },
+        {
+            "key": "CardTraitPyreboost_TooltipText",
+            "texts": {
                 "english": "Spell damage scales with Pyre Attack.",
                 "chinese": "法术伤害随圣火攻击提升。"
             }
