@@ -48,8 +48,9 @@ namespace DiscipleClan.Plugin.Wards
                     continue;
                 }
 
-                var icon = new GameObject("Ward Icon");
+                var icon = new GameObject() { name = "Ward Icon" };
                 icon.transform.SetParent(transform);
+                var canvas_renderer = icon.AddComponent<CanvasRenderer>();
                 var iconImage = icon.AddComponent<Image>();
                 iconImage.sprite = ward.iconSprite;
 
