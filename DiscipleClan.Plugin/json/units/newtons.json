@@ -3,33 +3,84 @@
   "cards": [
     {
       "id": "SpawnNewtons",
-      "names": { "english": "Newton", "chinese": "牛顿" },
+      "names": {
+        "english": "Newton",
+        "chinese": "牛顿"
+      },
       "card_art": "@NewtonsCardArt",
       "cost": 2,
       "card_type": "monster",
       "rarity": "rare",
       "class": "@Chrono",
-      "pools": ["UnitsAllBanner"],
+      "pools": [
+        "UnitsAllBanner"
+      ],
       "targets_room": true,
-      "effects": [{ "id": "@SpawnNewtonsEffect" }],
-      "lore_tooltips": [{ "english": "Starts with [gravity]." }]
+      "effects": [
+        {
+          "id": "@SpawnNewtonsEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Starts with [gravity]."
+        }
+      ]
     }
   ],
   "characters": [
     {
       "id": "Newtons",
-      "names": { "english": "Newton", "chinese": "牛顿" },
+      "names": {
+        "english": "Newton",
+        "chinese": "牛顿"
+      },
       "character_art": "@NewtonsCharacterArt",
       "size": 1,
       "health": 1,
       "attack_damage": 1,
-      "subtypes": ["@ChronoSubtype_Pythian", "SubtypesData_BannerUnit"],
+      "subtypes": [
+        "@ChronoSubtype_Pythian",
+        "SubtypesData_BannerUnit"
+      ],
+      "triggers": [
+        "@NewtonRelocateTrigger"
+      ],
       "starting_status_effects": [
-        { "count": 1, "status": "@gravity" }
+        {
+          "count": 2,
+          "status": "@gravity"
+        }
       ]
     }
   ],
+  "character_triggers": [
+    {
+      "id": "NewtonRelocateTrigger",
+      "trigger": "@OnRelocate",
+      "descriptions": {
+        "english": "Get +[effect0.upgrade.bonus_damage][attack] and +[effect0.upgrade.bonus_hp][health]."
+      },
+      "effects": [
+        "@NewTonRelocateUpgradeEffect"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "NewTonRelocateUpgrade",
+      "bonus_damage": 1,
+      "bonus_hp": 1
+    }
+  ],
   "effects": [
+    {
+      "id": "NewTonRelocateUpgradeEffect",
+      "name": "CardEffectAddCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@NewTonRelocateUpgrade",
+      "param_int_2": 2
+    },
     {
       "id": "SpawnNewtonsEffect",
       "name": "CardEffectSpawnMonster",
@@ -39,18 +90,43 @@
     }
   ],
   "sprites": [
-    { "id": "NewtonsCardArt", "path": "textures/units/NewtonCharacterArt.png" },
-    { "id": "NewtonsCharacterArt", "path": "textures/units/NewtonCharacterArt.png" }
+    {
+      "id": "NewtonsCardArt",
+      "path": "textures/units/NewtonCharacterArt.png"
+    },
+    {
+      "id": "NewtonsCharacterArt",
+      "path": "textures/units/NewtonCharacterArt.png"
+    }
   ],
   "game_objects": [
-    { "id": "NewtonsCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@NewtonsCardArt" } } },
+    {
+      "id": "NewtonsCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@NewtonsCardArt"
+        }
+      }
+    },
     {
       "id": "NewtonsCharacterArt",
       "type": "character_art",
       "extensions": {
         "character_art": {
           "sprite": "@NewtonsCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 0.33, "y": 0.33, "z": 0.33 } }
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 0.2,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.33,
+              "y": 0.33,
+              "z": 0.33
+            }
+          }
         }
       }
     }

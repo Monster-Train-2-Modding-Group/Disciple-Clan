@@ -37,8 +37,8 @@
       },
       "character_art": "@JellyScholarCharacterArt",
       "size": 1,
-      "health": 4,
-      "attack_damage": 10,
+      "health": 2,
+      "attack_damage": 20,
       "subtypes": [
         "@ChronoSubtype_Eternal",
         "SubtypesData_BannerUnit"

@@ -9,8 +9,7 @@
                 "chinese": "该房间友军+[effect0.upgrade.bonus_damage][attack]、+[effect0.upgrade.bonus_hp][health]。"
             },
             "effects": [
-                "@DiscipleShifterBasicDamageEffect",
-                "@DiscipleShifterBasicHPEffect"
+                "@DiscipleShifterBasicEffect"
             ]
         },
         {
@@ -21,8 +20,7 @@
                 "chinese": "该房间友军+[effect0.upgrade.bonus_damage][attack]、+[effect0.upgrade.bonus_hp][health]。"
             },
             "effects": [
-                "@DiscipleShifterPremiumDamageEffect",
-                "@DiscipleShifterPremiumHPEffect"
+                "@DiscipleShifterPremiumEffect"
             ]
         },
         {
@@ -33,8 +31,7 @@
                 "chinese": "该房间友军+[effect0.upgrade.bonus_damage][attack]、+[effect0.upgrade.bonus_hp][health]。"
             },
             "effects": [
-                "@DiscipleShifterProDamageEffect",
-                "@DiscipleShifterProHPEffect"
+                "@DiscipleShifterProEffect"
             ]
         },
         {
@@ -76,46 +73,25 @@
     ],
     "effects": [
         {
-            "id": "DiscipleShifterBasicDamageEffect",
+            "id": "DiscipleShifterBasicEffect",
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@DiscipleShifterTempDamage2"
+            "param_upgrade": "@DiscipleShifterBasicUpgrade"
         },
         {
-            "id": "DiscipleShifterBasicHPEffect",
+            "id": "DiscipleShifterPremiumEffect",
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@DiscipleShifterTempHP2"
+            "param_upgrade": "@DiscipleShifterPremiumUpgrade"
         },
         {
-            "id": "DiscipleShifterPremiumDamageEffect",
+            "id": "DiscipleShifterProEffect",
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@DiscipleShifterTempDamage4"
-        },
-        {
-            "id": "DiscipleShifterPremiumHPEffect",
-            "name": "CardEffectAddTempCardUpgradeToUnits",
-            "target_mode": "room",
-            "target_team": "monsters",
-            "param_upgrade": "@DiscipleShifterTempHP4"
-        },
-        {
-            "id": "DiscipleShifterProDamageEffect",
-            "name": "CardEffectAddTempCardUpgradeToUnits",
-            "target_mode": "room",
-            "target_team": "monsters",
-            "param_upgrade": "@DiscipleShifterTempDamage6"
-        },
-        {
-            "id": "DiscipleShifterProHPEffect",
-            "name": "CardEffectAddTempCardUpgradeToUnits",
-            "target_mode": "room",
-            "target_team": "monsters",
-            "param_upgrade": "@DiscipleShifterTempHP6"
+            "param_upgrade": "@DiscipleShifterProUpgrade"
         },
         {
             "id": "DiscipleWardmasterBasicAddWardEffect",
@@ -182,27 +158,18 @@
     ],
     "upgrades": [
         {
-            "id": "DiscipleShifterTempDamage2",
-            "bonus_damage": 2
-        },
-        {
-            "id": "DiscipleShifterTempHP2",
+            "id": "DiscipleShifterBasicUpgrade",
+            "bonus_damage": 2,
             "bonus_hp": 2
         },
         {
-            "id": "DiscipleShifterTempDamage4",
-            "bonus_damage": 4
-        },
-        {
-            "id": "DiscipleShifterTempHP4",
+            "id": "DiscipleShifterPremiumUpgrade",
+            "bonus_damage": 4,
             "bonus_hp": 4
         },
         {
-            "id": "DiscipleShifterTempDamage6",
-            "bonus_damage": 6
-        },
-        {
-            "id": "DiscipleShifterTempHP6",
+            "id": "DiscipleShifterProUpgrade",
+            "bonus_damage": 6,
             "bonus_hp": 6
         },
         {
