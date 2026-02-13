@@ -5,7 +5,7 @@
       "id": "SpawnFireshaped",
       "names": {
         "english": "Fireshaped",
-        "chinese": "火塑"
+        "chinese": "火之形"
       },
       "card_art": "@FireshapedCardArt",
       "cost": 0,
@@ -33,7 +33,7 @@
       "id": "Fireshaped",
       "names": {
         "english": "Fireshaped",
-        "chinese": "火塑"
+        "chinese": "火之形"
       },
       "character_art": "@FireshapedCharacterArt",
       "size": 1,

@@ -6,7 +6,7 @@
             "trigger": "@OnRelocate",
             "descriptions": {
                 "english": "Give friendly units in the room +[effect0.upgrade.bonus_damage] [attack] and +[effect0.upgrade.bonus_hp] [health].",
-                "chinese": "该房间友军+[effect0.upgrade.bonus_damage][attack]、+[effect0.upgrade.bonus_hp][health]。"
+                "chinese": "使友方单位获得 +[effect0.upgrade.bonus_damage][attack]，+[effect1.upgrade.bonus_hp][health]。"
             },
             "effects": [
                 "@DiscipleShifterBasicDamageEffect",
@@ -18,7 +18,7 @@
             "trigger": "@OnRelocate",
             "descriptions": {
                 "english": "Give friendly units in the room +[effect0.upgrade.bonus_damage] [attack] and +[effect0.upgrade.bonus_hp] [health].",
-                "chinese": "该房间友军+[effect0.upgrade.bonus_damage][attack]、+[effect0.upgrade.bonus_hp][health]。"
+                "chinese": "使友方单位获得 +[effect0.upgrade.bonus_damage][attack]，+[effect1.upgrade.bonus_hp][health]。"
             },
             "effects": [
                 "@DiscipleShifterPremiumDamageEffect",
@@ -30,7 +30,7 @@
             "trigger": "@OnRelocate",
             "descriptions": {
                 "english": "Give friendly units in the room +[effect0.upgrade.bonus_damage] [attack] and +[effect0.upgrade.bonus_hp] [health].",
-                "chinese": "该房间友军+[effect0.upgrade.bonus_damage][attack]、+[effect0.upgrade.bonus_hp][health]。"
+                "chinese": "使友方单位获得 +[effect0.upgrade.bonus_damage][attack]，+[effect1.upgrade.bonus_hp][health]。"
             },
             "effects": [
                 "@DiscipleShifterProDamageEffect",
@@ -42,7 +42,7 @@
             "trigger": "pre_combat",
             "descriptions": {
                 "english": "Add a Ward to Hand that deals 5 [damage] to a random enemy.",
-                "chinese": "战斗后：在本房间添加守印，对随机敌人造成5[damage]。"
+                "chinese": "获得一张<b>叉卫</b>，<b>叉卫</b>会在战斗之前随机对一个敌方单位造成 5 点伤害。"
             },
             "hide_visual_and_ignore_silence": true,
             "effects": [
@@ -54,7 +54,7 @@
             "trigger": "pre_combat",
             "descriptions": {
                 "english": "Add a Ward to Hand that deals 10 [damage] to a random enemy.",
-                "chinese": "战斗后：在本房间添加守印，对随机敌人造成10[damage]。"
+                "chinese": "获得一张<b>叉卫</b>，<b>叉卫</b>会在战斗之前随机对一个敌方单位造成 10 点伤害。"
             },
             "hide_visual_and_ignore_silence": true,
             "effects": [
@@ -66,7 +66,7 @@
             "trigger": "pre_combat",
             "descriptions": {
                 "english": "Add a Ward to Hand that deals 20 [damage] to a random enemy.",
-                "chinese": "战斗后：在本房间添加守印，对随机敌人造成20[damage]。"
+                "chinese": "获得一张<b>叉卫</b>，<b>叉卫</b>会在战斗之前随机对一个敌方单位造成 20 点伤害。"
             },
             "hide_visual_and_ignore_silence": true,
             "effects": [
@@ -145,11 +145,11 @@
             "name": "@RoomStateFriendlyDamagePerCapacityModifier",
             "extra_title_tooltips": {
                 "english": "Symbiote",
-                "chinese": "本房间友军每占用1容量获得+5[attack]。"
+                "chinese": "共生体"
             },
             "descriptions": {
                 "english": "Friendly units in this room gain +5 [attack] per capacity used.",
-                "chinese": "本房间友军每占用1容量获得+5[attack]。"
+                "chinese": "每有一个已使用的[capacity]，友方单位+5[attack]。"
             },
             "param_int": 5
         },
@@ -158,11 +158,11 @@
             "name": "@RoomStateFriendlyDamagePerCapacityModifier",
             "extra_title_tooltips": {
                 "english": "Symbiote II",
-                "chinese": "本房间友军每占用1容量获得+8[attack]。"
+                "chinese": "共生体 II"
             },
             "descriptions": {
                 "english": "Friendly units in this room gain +8 [attack] per capacity used.",
-                "chinese": "本房间友军每占用1容量获得+8[attack]。"
+                "chinese": "每有一个已使用的[capacity]，友方单位+8[attack]。"
             },
             "param_int": 8
         },
@@ -171,11 +171,11 @@
             "name": "@RoomStateFriendlyDamagePerCapacityModifier",
             "extra_title_tooltips": {
                 "english": "Symbiote III",
-                "chinese": "共生 III"
+                "chinese": "共生体 III"
             },
             "descriptions": {
                 "english": "Friendly units in this room gain +13 [attack] per capacity used.",
-                "chinese": "本房间友军每占用1容量获得+13[attack]。"
+                "chinese": "每有一个已使用的[capacity]，友方单位+13[attack]。"
             },
             "param_int": 13
         }
@@ -209,7 +209,7 @@
             "id": "DiscipleWardmasterBasic",
             "titles": {
                 "english": "Wardmaster",
-                "chinese": "守印"
+                "chinese": "卫之主"
             },
             "bonus_damage": 0,
             "bonus_hp": 10,
@@ -223,7 +223,7 @@
             "id": "DiscipleWardmasterPremium",
             "titles": {
                 "english": "Wardmaster II",
-                "chinese": "守印 II"
+                "chinese": "卫之主 II"
             },
             "bonus_damage": 0,
             "bonus_hp": 30,
@@ -237,7 +237,7 @@
             "id": "DiscipleWardmasterPro",
             "titles": {
                 "english": "Wardmaster III",
-                "chinese": "守印 III"
+                "chinese": "卫之主 III"
             },
             "bonus_damage": 0,
             "bonus_hp": 60,
@@ -251,7 +251,7 @@
             "id": "DiscipleSymbioteBasic",
             "titles": {
                 "english": "Symbiote",
-                "chinese": "共生"
+                "chinese": "共生体"
             },
             "bonus_damage": 0,
             "bonus_hp": 10,
@@ -265,7 +265,7 @@
             "id": "DiscipleSymbiotePremium",
             "titles": {
                 "english": "Symbiote II",
-                "chinese": "共生 II"
+                "chinese": "共生体 II"
             },
             "bonus_damage": 0,
             "bonus_hp": 20,
@@ -279,7 +279,7 @@
             "id": "DiscipleSymbiotePro",
             "titles": {
                 "english": "Symbiote III",
-                "chinese": "共生 III"
+                "chinese": "共生体 III"
             },
             "bonus_damage": 0,
             "bonus_hp": 30,
@@ -293,7 +293,7 @@
             "id": "DiscipleShifterBasic",
             "titles": {
                 "english": "Shifter",
-                "chinese": "移形"
+                "chinese": "转变"
             },
             "bonus_damage": 0,
             "bonus_hp": 0,
@@ -306,7 +306,7 @@
             "id": "DiscipleShifterPremium",
             "titles": {
                 "english": "Shifter II",
-                "chinese": "移形 II"
+                "chinese": "转变 II"
             },
             "bonus_damage": 20,
             "bonus_hp": 10,
@@ -319,7 +319,7 @@
             "id": "DiscipleShifterPro",
             "titles": {
                 "english": "Shifter III",
-                "chinese": "移形 III"
+                "chinese": "转变 III"
             },
             "bonus_damage": 45,
             "bonus_hp": 35,

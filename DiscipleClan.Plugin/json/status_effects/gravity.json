@@ -14,11 +14,11 @@
       },
       "card_tooltips": {
         "english": "Cannot ascend. At end of turn, descend one floor and remove 1 stack.",
-        "chinese": "无法上升。回合结束时下降一层并移除1层。"
+        "chinese": "单位无法[ascend]。战斗结束时[descend]一层。<br>[descend]后的单位会参与下一层的战斗。每[descend]一层移除一层[DiscipleClan.Plugin_gravity]。"
       },
       "character_tooltips": {
         "english": "Cannot ascend. At end of turn, descends one floor and removes 1 stack.",
-        "chinese": "无法上升。回合结束时下降一层并移除1层。"
+        "chinese": "无法[ascend]。战斗结束时[descend]一层。<br>[descend]后会参与下一层的战斗。每[descend]一层移除一层[DiscipleClan.Plugin_gravity]。"
       },
       "notifications": {
         "english": "Gravity",

@@ -9,7 +9,7 @@
       },
       "descriptions": {
         "english": "Return consumed cards to your hand. Scales with [ember] spent this battle.",
-        "chinese": "将已消耗的牌返回手牌。随本战[余烬]消耗提升。"
+        "chinese": "随机将 [x] 张被消耗的卡牌置于你的手牌中。"
       },
       "cost": 0,
       "cost_type": "x",

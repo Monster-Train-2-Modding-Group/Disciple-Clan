@@ -18,7 +18,7 @@
             },
             "descriptions": {
                 "english": "Chronolock applies a status effect based on the supporting clan.",
-                "chinese": "时间锁定使用支持种族的状态效果。（未实现）"
+                "chinese": "根据配对的氏族施加不同的状态效果。（未实现）"
             }
         }
     ]

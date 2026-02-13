@@ -10,11 +10,11 @@
       },
       "card_tooltips": {
         "english": "At end of turn, ascend one floor. If at top floor, this unit is sacrificed.",
-        "chinese": "回合结束时上升一层。若已在顶层，该单位被牺牲。"
+        "chinese": "单位每回合结束时会[ascend]，当[ascend]到薪火室时会死亡。"
       },
       "character_tooltips": {
         "english": "At end of turn, ascends one floor. If at top floor, this unit is sacrificed.",
-        "chinese": "回合结束时上升一层。若已在顶层，该单位被牺牲。"
+        "chinese": "每回合结束时会[ascend]，当[ascend]到薪火室时会死亡。"
       },
       "notifications": {
         "english": "Icarian",

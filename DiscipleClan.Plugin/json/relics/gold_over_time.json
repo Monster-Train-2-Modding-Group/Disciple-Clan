@@ -4,7 +4,7 @@
     {
       "id": "GoldOverTime",
       "type": "collectable",
-      "names": { "english": "Gold Over Time", "chinese": "随时间获金" },
+      "names": { "english": "Gold Over Time", "chinese": "幸运饼干" },
       "descriptions": { "english": "Gain [gold] over time. (Placeholder: vanilla effect.)", "chinese": "随时间获得[金币]。（占位：原版效果。）" },
       "icon": "@GoldOverTimeIcon",
       "icon_small": "@GoldOverTimeIcon",

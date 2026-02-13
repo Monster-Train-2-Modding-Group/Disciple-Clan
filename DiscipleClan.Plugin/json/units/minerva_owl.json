@@ -3,7 +3,7 @@
   "cards": [
     {
       "id": "SpawnMinervaOwl",
-      "names": { "english": "Minerva Owl", "chinese": "密涅瓦猫头鹰" },
+      "names": { "english": "Minerva Owl", "chinese": "密涅瓦的猫头鹰" },
       "card_art": "@MinervaOwlCardArt",
       "cost": 1,
       "card_type": "monster",
@@ -18,7 +18,7 @@
   "characters": [
     {
       "id": "MinervaOwl",
-      "names": { "english": "Minerva Owl", "chinese": "密涅瓦猫头鹰" },
+      "names": { "english": "Minerva Owl", "chinese": "密涅瓦的猫头鹰" },
       "character_art": "@MinervaOwlCharacterArt",
       "size": 1,
       "health": 3,

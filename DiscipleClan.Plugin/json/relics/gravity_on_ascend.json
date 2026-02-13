@@ -6,11 +6,11 @@
             "type": "collectable",
             "names": {
                 "english": "Gravity On Ascend",
-                "chinese": "上升重力"
+                "chinese": "错误的风车"
             },
             "descriptions": {
-                "english": "When a friendly unit ascends, apply 1 [gravity] to it.",
-                "chinese": "当友方单位上升时，对其施加1层[重力]。"
+                "english": "When a friendly unit ascends, apply 1 [DiscipleClan.Plugin_gravity] to it.",
+                "chinese": "友方单位[ascend]时，获得[DiscipleClan.Plugin_gravity] 1。"
             },
             "icon": "@GravityOnAscendIcon",
             "icon_small": "@GravityOnAscendIcon",

@@ -4,8 +4,8 @@
     {
       "id": "GoldOnPyreKill",
       "type": "collectable",
-      "names": { "english": "Gold On Pyre Kill", "chinese": "圣火击杀获金" },
-      "descriptions": { "english": "Gain [gold] when the Pyre kills a unit.", "chinese": "圣火击杀单位时获得[金币]。" },
+      "names": { "english": "Gold On Pyre Kill", "chinese": "愚人王冠" },
+      "descriptions": { "english": "Gain 5 [coin] when the Pyre kills a unit.", "chinese": "当薪火消灭一个单位时，获得 5[coin]。" },
       "icon": "@GoldOnPyreKillIcon",
       "icon_small": "@GoldOnPyreKillIcon",
       "lore_tooltips": [{ "english": "Gold when Pyre kills unit." }],

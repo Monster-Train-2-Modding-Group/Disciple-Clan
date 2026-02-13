@@ -5,11 +5,11 @@
       "id": "Seek",
       "names": {
         "english": "Seek",
-        "chinese": "探寻"
+        "chinese": "搜寻"
       },
       "descriptions": {
         "english": "Choose 1 card from your draw pile and draw it.",
-        "chinese": "从牌堆中选择1张牌并抽到手中。[exhaust]。"
+        "chinese": "从抽牌堆中选择 [effect0.power] 张牌抽取。"
       },
       "cost": 0,
       "card_type": "spell",

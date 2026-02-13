@@ -6,11 +6,11 @@
       "type": "collectable",
       "names": {
         "english": "Pyre Damage On Ember",
-        "chinese": "余烬增伤"
+        "chinese": "给薪火加火"
       },
       "descriptions": {
         "english": "Pyre deals extra damage per [ember]. (Placeholder: vanilla.)",
-        "chinese": "圣火根据[余烬]造成额外伤害。（占位：原版。）"
+        "chinese": "每当你获得一点[ember]时，你的薪火获得 +1[attack]。（占位：原版。）"
       },
       "icon": "@PyreDamageOnEmberIcon",
       "icon_small": "@PyreDamageOnEmberIcon",

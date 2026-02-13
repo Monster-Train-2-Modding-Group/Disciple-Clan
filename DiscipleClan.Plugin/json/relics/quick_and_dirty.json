@@ -4,7 +4,7 @@
     {
       "id": "QuickAndDirty",
       "type": "collectable",
-      "names": { "english": "Quick And Dirty", "chinese": "快而糙" },
+      "names": { "english": "Quick And Dirty", "chinese": "节拍器" },
       "descriptions": { "english": "TBD. (Placeholder: draw.)", "chinese": "待定。（占位：抽牌。）" },
       "icon": "@QuickAndDirtyIcon",
       "icon_small": "@QuickAndDirtyIcon",

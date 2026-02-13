@@ -5,7 +5,7 @@
       "id": "HaruspexWardBetaCard",
       "names": {
         "english": "Haruspex Ward",
-        "chinese": "占卜守卫"
+        "chinese": "火卫"
       },
       "descriptions": {
         "english": "Add a Haruspex Ward to a room. Harvest.",
@@ -89,7 +89,7 @@
       "id": "HaruspexWardBeta",
       "title": {
         "english": "Haruspex Ward Beta",
-        "chinese": "占卜守卫乙"
+        "chinese": "火卫"
       },
       "descriptions": {
         "english": "Harvest.",

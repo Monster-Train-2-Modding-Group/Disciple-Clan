@@ -4,8 +4,8 @@
     {
       "id": "RefundXCosts",
       "type": "collectable",
-      "names": { "english": "Refund X Costs", "chinese": "退还X费" },
-      "descriptions": { "english": "Refund X cost spells. (Placeholder: conserve energy.)", "chinese": "退还X费法术。（占位：保留能量。）" },
+      "names": { "english": "Refund X Costs", "chinese": "守夜人" },
+      "descriptions": { "english": "Refund X cost spells. (Placeholder: conserve energy.)", "chinese": "当打出<b>费用为</b> [x] 的卡牌后，<b>返还</b>[ember]。（占位：保留能量。）" },
       "icon": "@RefundXCostsIcon",
       "icon_small": "@RefundXCostsIcon",
       "lore_tooltips": [{ "english": "Refund X cost spells." }],

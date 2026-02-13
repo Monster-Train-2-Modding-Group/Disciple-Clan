@@ -5,11 +5,11 @@
       "id": "PalmReading",
       "names": {
         "english": "Palm Reading",
-        "chinese": "掌纹占卜"
+        "chinese": "读掌心术"
       },
       "descriptions": {
         "english": "Look at the top 2 cards of your draw pile. Discard any of them.",
-        "chinese": "查看牌堆顶2张牌，可丢弃其中任意张。"
+        "chinese": "从抽牌堆顶端查看 2 张卡牌，并舍弃其中任意几张牌。"
       },
       "cost": 0,
       "card_type": "spell",

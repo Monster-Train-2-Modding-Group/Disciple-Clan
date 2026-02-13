@@ -9,11 +9,11 @@
       "prefab": "@ChronoBannerMapIcon",
       "titles": {
         "english": "Arcadian Banner",
-        "chinese": "阿卡迪亚战旗"
+        "chinese": "桃源战旗"
       },
       "descriptions": {
         "english": "Hire an Arcadian Unit",
-        "chinese": "获得一个阿卡迪亚单位。"
+        "chinese": "获得一个桃源单位。"
       },
       "pools": [
         "RandomChosenMainClassUnit",

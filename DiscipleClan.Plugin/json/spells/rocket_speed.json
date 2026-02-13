@@ -5,11 +5,11 @@
       "id": "RocketSpeedSpell",
       "names": {
         "english": "Rocket Speed",
-        "chinese": "火箭速度"
+        "chinese": "火箭加速"
       },
       "descriptions": {
         "english": "Apply [quick] to the Pyre.",
-        "chinese": "为圣火施加1层[quick]。[exhaust]。"
+        "chinese": "使你的薪火获得[quick]。"
       },
       "cost": 1,
       "card_type": "spell",

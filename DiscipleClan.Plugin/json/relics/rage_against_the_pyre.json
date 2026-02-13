@@ -6,11 +6,11 @@
       "type": "collectable",
       "names": {
         "english": "Rage Against The Pyre",
-        "chinese": "怒对圣火"
+        "chinese": "储盐瓶"
       },
       "descriptions": {
         "english": "Whenever the pyre takes damage, gain 5 [gold]. Pyre gets +10 [attack].",
-        "chinese": "每当圣火受到伤害时，获得5[金币]。圣火获得+10[攻击]。"
+        "chinese": "每当薪火受到伤害时，获得5[金币]。薪火获得+10[攻击]。"
       },
       "icon": "@RageAgainstThePyreIcon",
       "icon_small": "@RageAgainstThePyreIcon",

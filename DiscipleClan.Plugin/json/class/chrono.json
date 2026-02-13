@@ -5,10 +5,11 @@
       "id": "Chrono",
       "titles": {
         "english": "Arcadian",
-        "chinese": "阿卡迪亚"
+        "chinese": "桃源"
       },
       "descriptions": {
-        "english": "Dead prophets and oracles who climbed from the abyss and eschewed redemption."
+        "english": "Dead prophets and oracles who climbed from the abyss and eschewed redemption.",
+        "chinese": "死去的预言家们从深渊之中爬了上来，并躲避了救赎。"
       },
       "subclass_descriptions": {
         "english": "Arcadian"

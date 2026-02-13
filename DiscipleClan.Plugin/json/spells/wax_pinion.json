@@ -5,11 +5,11 @@
       "id": "WaxPinion",
       "names": {
         "english": "Wax Pinion",
-        "chinese": "蜡羽"
+        "chinese": "浸蜡之羽"
       },
       "descriptions": {
         "english": "Ascend target unit [effect0.power] floors.",
-        "chinese": "使目标单位上升[effect0.power]层。"
+        "chinese": "使目标单位[ascend][effect0.power]层。"
       },
       "cost": 0,
       "card_type": "spell",

@@ -5,7 +5,7 @@
       "id": "SpawnFortuneFinder",
       "names": {
         "english": "Fortune Teller",
-        "chinese": "占卜师"
+        "chinese": "算命先生"
       },
       "card_art": "@FortuneFinderCardArt",
       "cost": 1,
@@ -21,7 +21,7 @@
   "characters": [
     {
       "id": "FortuneFinder",
-      "names": { "english": "Fortune Teller", "chinese": "占卜师" },
+      "names": { "english": "Fortune Teller", "chinese": "算命先生" },
       "character_art": "@FortuneFinderCharacterArt",
       "size": 1,
       "health": 10,
@@ -35,7 +35,7 @@
       "id": "FortuneFinderOnRelocateTrigger",
       "descriptions": {
         "english": "Gain +[effect0.power] [coin].",
-        "chinese": "获得 +[effect0.power] [currency]。"
+        "chinese": "+[effect0.power] [coin]。"
       },
       "trigger": "@OnRelocate",
       "effects": ["@FortuneFinderOnRelocateEffect" ]

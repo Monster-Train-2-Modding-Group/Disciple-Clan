@@ -6,27 +6,27 @@
       "class_name": "@StatusEffectPyreboostState",
       "names": {
         "english": "Pyreboost",
-        "chinese": "圣火强化"
+        "chinese": "薪火协同"
       },
       "stackable_names": {
         "english": "Pyreboost {0}",
-        "chinese": "圣火强化 {0}"
+        "chinese": "薪火协同 {0}"
       },
       "card_tooltips": {
         "english": "Unit's attack is improved by Pyre Attack.",
-        "chinese": "单位的攻击随圣火攻击提升。"
+        "chinese": "每有一层薪火协同，单位增加等同于薪火[attack]的[attack]。"
       },
       "character_tooltips": {
         "english": "This unit's attack is improved by Pyre Attack.",
-        "chinese": "此单位的攻击随圣火攻击提升。"
+        "chinese": "每有一层薪火协同，增加等同于薪火[attack]的[attack]。"
       },
       "notifications": {
         "english": "Pyreboost",
-        "chinese": "圣火强化"
+        "chinese": "薪火协同"
       },
       "replacement_texts": {
         "english": "<b>Pyreboost</b>",
-        "chinese": "<b>圣火强化</b>"
+        "chinese": "<b>薪火协同</b>"
       },
       "display_category": "positive",
       "trigger_stage": "on_monster_team_turn_begin",

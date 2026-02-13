@@ -53,7 +53,8 @@
       "id": "JellyScholarPostCombatTrigger",
       "trigger": "post_combat",
       "descriptions": {
-        "english": "Gain +[effect0.upgrade0.bonushp] [health] and +[effect0.upgrade0.bonussize] [capacity]."
+        "english": "Gain +[effect0.upgrade0.bonushp] [health] and +[effect0.upgrade0.bonussize] [capacity].",
+        "chinese": "+[effect0.upgrade0.bonushp][health]，+[effect0.upgrade0.bonussize][capacity]。"
       },
       "effects": [
         {

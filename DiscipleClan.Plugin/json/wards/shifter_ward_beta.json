@@ -5,7 +5,7 @@
       "id": "ShifterWardBetaCard",
       "names": {
         "english": "Overward",
-        "chinese": "越卫"
+        "chinese": "过卫"
       },
       "descriptions": {
         "english": "Add an Overward to a room. Before combat, descend the unit in the back.",
@@ -82,7 +82,7 @@
       "id": "ShifterWardBeta",
       "title": {
         "english": "Overward",
-        "chinese": "越卫"
+        "chinese": "过卫"
       },
       "descriptions": {
         "english": "After combat, descend the unit in the back.",

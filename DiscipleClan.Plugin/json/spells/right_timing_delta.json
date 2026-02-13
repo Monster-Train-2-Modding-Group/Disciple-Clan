@@ -5,11 +5,11 @@
       "id": "RightTimingDelta",
       "names": {
         "english": "Right Timing Delta",
-        "chinese": "正时丁"
+        "chinese": "正确时机"
       },
       "descriptions": {
         "english": "Deal [effect0.power] [damage] to target unit. Scales with Right Timing Delta in deck.",
-        "chinese": "对目标单位造成[effect0.power][damage]。随牌组中正时丁数量提升。"
+        "chinese": "你的卡组中每有一张<b>正确时机</b>，造成 [effect0.power] 点伤害。"
       },
       "cost": 2,
       "card_type": "spell",

@@ -5,7 +5,7 @@
       "id": "SpikeWard5",
       "names": {
         "english": "Spike Ward",
-        "chinese": "尖刺守印"
+        "chinese": "叉卫"
       },
       "descriptions": {
         "english": "Affix a Ward: Deals 5 [damage] to a random enemy before combat. ",
@@ -33,7 +33,7 @@
       "id": "SpikeWard10",
       "names": {
         "english": "Spike Ward",
-        "chinese": "尖刺守印"
+        "chinese": "叉卫"
       },
       "descriptions": {
         "english": "Deal 10 [damage] to a random enemy in the room.",
@@ -61,7 +61,7 @@
       "id": "SpikeWard20",
       "names": {
         "english": "Spike Ward",
-        "chinese": "尖刺守印"
+        "chinese": "叉卫"
       },
       "descriptions": {
         "english": "Deal 20 [damage] to a random enemy in the room.",
@@ -210,7 +210,7 @@
       "id": "SpikeWard5",
       "title": {
         "english": "Spike Ward",
-        "chinese": "尖刺守印"
+        "chinese": "叉卫"
       },
       "descriptions": {
         "english": "Deal 5 [damage] to a random enemy in the room.",
@@ -225,7 +225,7 @@
       "id": "SpikeWard10",
       "title": {
         "english": "Spike Ward",
-        "chinese": "尖刺守印"
+        "chinese": "叉卫"
       },
       "descriptions": {
         "english": "Deal 10 [damage] to a random enemy in the room.",
@@ -240,7 +240,7 @@
       "id": "SpikeWard20",
       "title": {
         "english": "Spike Ward",
-        "chinese": "尖刺守印"
+        "chinese": "叉卫"
       },
       "descriptions": {
         "english": "Deal 20 [damage] to a random enemy in the room.",

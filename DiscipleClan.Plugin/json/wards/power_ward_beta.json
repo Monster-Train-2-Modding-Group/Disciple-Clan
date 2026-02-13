@@ -5,7 +5,7 @@
       "id": "PowerWardBetaCard",
       "names": {
         "english": "Vigor Ward",
-        "chinese": "活力守卫"
+        "chinese": "元卫"
       },
       "descriptions": {
         "english": "Add a Vigor Ward to a room. Friendly damage +5%.",
@@ -71,7 +71,7 @@
       "id": "PowerWardBeta",
       "title": {
         "english": "Vigor Ward",
-        "chinese": "活力守卫"
+        "chinese": "元卫"
       },
       "descriptions": {
         "english": "Friendly damage in this room increased by 5%.",

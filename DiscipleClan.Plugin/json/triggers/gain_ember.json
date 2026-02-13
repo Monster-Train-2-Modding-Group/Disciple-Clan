@@ -5,14 +5,15 @@
             "id": "OnGainEmber",
             "names": {
                 "english": "Gain Ember",
-                "chinese": "获得余烬"
+                "chinese": "余烬印迹"
             },
             "descriptions": {
-                "english": "Triggers whenever the player gains Ember (energy)."
+                "english": "Triggers whenever the player gains Ember (energy).",
+                "chinese": "获得 [ember] 时触发，每获得一点触发一次。"
             },
             "notifications": {
                 "english": "Gain Ember",
-                "chinese": "获得余烬时"
+                "chinese": "余烬印迹"
             },
             "sprite": "@OnGainEmber"
         }

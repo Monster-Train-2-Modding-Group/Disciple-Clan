@@ -66,11 +66,11 @@
       "id": "DiscipleEphemeralBasic",
       "titles": {
         "english": "Ephemeral",
-        "chinese": "昙华"
+        "chinese": "瞬时"
       },
       "descriptions": {
         "english": "When you play a [consume] card in this room, discard it instead and gain rebate (1).",
-        "chinese": "在本房间打出[消耗]牌时改为弃掉并获得回馈(1)。"
+        "chinese": "每回合前 1 次打出带有[consume]的卡牌后，会<b>返还</b>其费用并将其放入弃牌堆。"
       },
       "bonus_damage": 0,
       "bonus_hp": 20,
@@ -81,11 +81,11 @@
       "id": "DiscipleEphemeralPremium",
       "titles": {
         "english": "Ephemeral II",
-        "chinese": "昙华 II"
+        "chinese": "瞬时 II"
       },
       "descriptions": {
         "english": "When you play a [consume] card in this room, discard it instead and gain rebate (2).",
-        "chinese": "在本房间打出[消耗]牌时改为弃掉并获得回馈(2)。"
+        "chinese": "每回合前 2 次打出带有[consume]的卡牌后，会<b>返还</b>其费用并将其放入弃牌堆。"
       },
       "bonus_damage": 5,
       "bonus_hp": 50,
@@ -96,11 +96,11 @@
       "id": "DiscipleEphemeralPro",
       "titles": {
         "english": "Ephemeral III",
-        "chinese": "昙华 III"
+        "chinese": "瞬时 III"
       },
       "descriptions": {
         "english": "When you play a [consume] card in this room, discard it instead and gain rebate (3).",
-        "chinese": "在本房间打出[消耗]牌时改为弃掉并获得回馈(3)。"
+        "chinese": "每回合前 3 次打出带有[consume]的卡牌后，会<b>返还</b>其费用并将其放入弃牌堆。"
       },
       "bonus_damage": 5,
       "bonus_hp": 110,
@@ -111,11 +111,11 @@
       "id": "DiscipleFlamelinkedBasic",
       "titles": {
         "english": "Flamelinked",
-        "chinese": "焰契"
+        "chinese": "薪火联系"
       },
       "descriptions": {
-        "english": "Gain 1 [pyreboost] and 1 [hide until boss].",
-        "chinese": "获得1层[焰增]和1层[遇王前隐匿]。"
+        "english": "Gain 1 [DiscipleClan.Plugin_pyreboost] and 1 [DiscipleClan.Plugin_hideuntilboss].",
+        "chinese": "获得1层[DiscipleClan.Plugin_pyreboost]和1层[DiscipleClan.Plugin_hideuntilboss]。"
       },
       "bonus_damage": 0,
       "bonus_hp": 2,
@@ -136,11 +136,11 @@
       "id": "DiscipleFlamelinkedPremium",
       "titles": {
         "english": "Flamelinked II",
-        "chinese": "焰契 II"
+        "chinese": "薪火联系 II"
       },
       "descriptions": {
-        "english": "Gain 2 [pyreboost] and 1 [hide until boss].",
-        "chinese": "获得2层[焰增]和1层[遇王前隐匿]。"
+        "english": "Gain 2 [DiscipleClan.Plugin_pyreboost] and 1 [DiscipleClan.Plugin_hideuntilboss].",
+        "chinese": "获得2层[DiscipleClan.Plugin_pyreboost]和1层[DiscipleClan.Plugin_hideuntilboss]。"
       },
       "bonus_damage": 0,
       "bonus_hp": 2,
@@ -161,11 +161,11 @@
       "id": "DiscipleFlamelinkedPro",
       "titles": {
         "english": "Flamelinked III",
-        "chinese": "焰契 III"
+        "chinese": "薪火联系 III"
       },
       "descriptions": {
-        "english": "Gain 3 [pyreboost] and 1 [hide until boss].",
-        "chinese": "获得3层[焰增]和1层[遇王前隐匿]。"
+        "english": "Gain 3 [DiscipleClan.Plugin_pyreboost] and 1 [DiscipleClan.Plugin_hideuntilboss].",
+        "chinese": "获得3层[DiscipleClan.Plugin_pyreboost]和1层[DiscipleClan.Plugin_hideuntilboss]。"
       },
       "bonus_damage": 0,
       "bonus_hp": 2,
@@ -186,7 +186,7 @@
       "id": "DiscipleEchoBasic",
       "titles": {
         "english": "Echo",
-        "chinese": "回响"
+        "chinese": "回音"
       },
       "descriptions": {
         "english": "When spawned: share 1 buff type with friendly units (50% stacks).",
@@ -203,7 +203,7 @@
       "id": "DiscipleEchoPremium",
       "titles": {
         "english": "Echo II",
-        "chinese": "回响 II"
+        "chinese": "回音 II"
       },
       "descriptions": {
         "english": "When spawned: share 2 buff types with friendly units (50% stacks).",
@@ -220,7 +220,7 @@
       "id": "DiscipleEchoPro",
       "titles": {
         "english": "Echo III",
-        "chinese": "回响 III"
+        "chinese": "回音 III"
       },
       "descriptions": {
         "english": "When spawned: share 3 buff types with friendly units (50% stacks).",

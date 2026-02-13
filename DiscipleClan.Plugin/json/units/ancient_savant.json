@@ -5,7 +5,7 @@
       "id": "SpawnAncientSavant",
       "names": {
         "english": "Shimmersnail",
-        "chinese": "闪蜗"
+        "chinese": "闪光蜗牛"
       },
       "card_art": "@AncientSavantCardArt",
       "cost": 2,
@@ -33,7 +33,7 @@
       "id": "AncientSavant",
       "names": {
         "english": "Shimmersnail",
-        "chinese": "闪蜗"
+        "chinese": "闪光蜗牛"
       },
       "character_art": "@AncientSavantCharacterArt",
       "size": 3,

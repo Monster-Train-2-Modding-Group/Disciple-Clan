@@ -5,11 +5,11 @@
       "id": "TimeFreeze",
       "names": {
         "english": "Time Freeze",
-        "chinese": "时间凝固"
+        "chinese": "时间冻结"
       },
       "descriptions": {
         "english": "Freeze all cards in hand.",
-        "chinese": "冻结手牌中所有卡牌。"
+        "chinese": "[freeze]你的整个卡组。"
       },
       "cost": 2,
       "card_type": "spell",

@@ -5,11 +5,11 @@
       "id": "RightTimingBeta",
       "names": {
         "english": "Right Timing Beta",
-        "chinese": "正时乙"
+        "chinese": "同步"
       },
       "descriptions": {
         "english": "Deal 5 [damage] to target unit.",
-        "chinese": "对目标单位造成5[damage]。"
+        "chinese": "造成 [effect0.power] 点伤害。<br><b>保存</b>: 所有的<b>同步</b>增加 10 点伤害。"
       },
       "cost": 1,
       "card_type": "spell",
