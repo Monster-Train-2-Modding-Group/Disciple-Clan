@@ -8,8 +8,8 @@
         "chinese": "占卜守卫"
       },
       "descriptions": {
-        "english": "Add a Haruspex Ward to a room. Harvest.",
-        "chinese": "在房间添加占卜守卫。收割。"
+        "english": "Attach a Ward: <b>Harvest:</b> Allies get +3[attack]/+3[health].",
+        "chinese": "附加守印：<b>收割：</b> 友军获得 +3[attack]/+3[health]。"
       },
       "cost": 1,
       "card_type": "spell",
@@ -25,7 +25,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Harvest."
+          "english": "Ward: when units fight, give allies +3/+3."
         }
       ]
     }
@@ -33,7 +33,9 @@
   "effects": [
     {
       "id": "HaruspexWardBetaAddWardEffect",
-      "name": "@CardEffectAddWard",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "param_upgrade": "@HaruspexWardBetaRoomModifierUpgrade",
+      "param_int_2": 4,
       "param_str": "@HaruspexWardBeta",
       "param_bool": false
     },
@@ -46,6 +48,12 @@
     }
   ],
   "upgrades": [
+    {
+      "id": "HaruspexWardBetaRoomModifierUpgrade",
+      "room_modifier_upgrades": [
+        "@HaruspexWardBetaRoomModifier"
+      ]
+    },
     {
       "id": "HaruspexWardBetaCardUpgrade",
       "bonus_attack": 3,
@@ -74,8 +82,8 @@
       "id": "HaruspexWardBetaRoomModifier",
       "name": "RoomStateAddEffectOnUnitDeath",
       "descriptions": {
-        "english": "<b>Harvest:</b> Allies get +3/+3.",
-        "chinese": "<b>收割：</b> 友军获得 +3/+3。"
+        "english": "<b>Harvest:</b> Allies get +3[attack]/+3[health].",
+        "chinese": "<b>收割：</b> 友军获得 +3[attack]/+3[health]。"
       },
       "param_effects": [
         {
@@ -92,8 +100,8 @@
         "chinese": "占卜守卫乙"
       },
       "descriptions": {
-        "english": "Harvest.",
-        "chinese": "收割。"
+        "english": "When units die, give allies +3[attack]/+3[health].",
+        "chinese": "当单位死亡时，友军获得 +3[attack]/+3[health]。"
       },
       "icon": "@HaruspexWardBetaCardArt",
       "param_room_modifiers": []

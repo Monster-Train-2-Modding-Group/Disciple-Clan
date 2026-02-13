@@ -8,8 +8,8 @@
         "chinese": "活力守卫"
       },
       "descriptions": {
-        "english": "Add a Vigor Ward to a room. Friendly damage +5%.",
-        "chinese": "在房间添加活力守卫。友军伤害+5%。"
+        "english": "Attach a Ward: Allies get +5 [damage].",
+        "chinese": "附加守印：友军获得 +5 [damage]。"
       },
       "cost": 1,
       "card_type": "spell",
@@ -25,7 +25,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Friendly damage in this room increased by 5%."
+          "english": "Ward: when units fight, give allies +5 [damage]."
         }
       ]
     }
@@ -33,9 +33,19 @@
   "effects": [
     {
       "id": "PowerWardBetaAddWardEffect",
-      "name": "@CardEffectAddWard",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "param_upgrade": "@PowerWardBetaRoomModifierUpgrade",
+      "param_int_2": 4,
       "param_str": "@PowerWardBeta",
       "param_bool": false
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "PowerWardBetaRoomModifierUpgrade",
+      "room_modifier_upgrades": [
+        "@DisciplePowerWardBetaModifier"
+      ]
     }
   ],
   "sprites": [
@@ -60,8 +70,8 @@
       "id": "DisciplePowerWardBetaModifier",
       "name": "@RoomStateFriendlyDamageAdditionModifier",
       "descriptions": {
-        "english": "Friendly damage in this room increased by 5.",
-        "chinese": "本房间友军伤害提高5。"
+        "english": "Allies get +5 [damage].",
+        "chinese": "友军获得 +5 [damage]。"
       },
       "param_int": 5
     }
@@ -74,8 +84,8 @@
         "chinese": "活力守卫"
       },
       "descriptions": {
-        "english": "Friendly damage in this room increased by 5%.",
-        "chinese": "本房间友军伤害提高5%。"
+        "english": "Friendly damage in this room increased by 5.",
+        "chinese": "友军伤害提高5。"
       },
       "icon": "@PowerWardBetaCardArt",
       "param_room_modifiers": [

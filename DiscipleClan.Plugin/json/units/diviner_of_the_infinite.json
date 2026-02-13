@@ -29,7 +29,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "[retain]. Each turn this is not played, it gains -1 [ember]."
+          "english": "[retain]. Reduce [ember] by 1 each turn this is not played."
         }
       ]
     }
@@ -38,6 +38,10 @@
     {
       "id": "DivinerOfTheInfiniteRetainStateTrigger",
       "trigger": "on_unplayed_positive",
+      "descriptions": {
+        "english": "Reduce [ember] by 1.",
+        "chinese": "减少1[ember]。"
+      },
       "effects": [
         "@DivinerOfTheInfiniteRetainStateEffect"
       ]
@@ -59,7 +63,7 @@
       "character_art": "@DivinerCharacterArt",
       "size": 3,
       "health": 50,
-      "attack_damage": 35,
+      "attack_damage": 65,
       "subtypes": [
         "@ChronoSubtype_Eternal",
         "SubtypesData_BannerUnit"
@@ -75,7 +79,7 @@
     },
     {
       "id": "DivinerOfTheInfiniteRetainStateEffect",
-      "name": "CardEffectAddTempCardUpgradeToCardsInHand",
+      "name": "@CardEffectAddTempCardUpgradeToParentCard",
       "target_mode": "self",
       "param_upgrade": "@DivinerOfTheInfiniteRetainStateUpgrade"
     }

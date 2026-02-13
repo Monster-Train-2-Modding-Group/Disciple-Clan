@@ -29,23 +29,23 @@ namespace DiscipleClan.Plugin
             Railend.ConfigurePreAction(builder =>
             {
                 builder.RegisterInstance(wardManager);
-                builder.Collection.Append(typeof(IDataFinalizer), typeof(WardFinalizer), Lifestyle.Transient);
+                // builder.Collection.Append(typeof(IDataFinalizer), typeof(WardFinalizer), Lifestyle.Transient);
 
                 
                 //Register Room Modifier Data
-                builder.RegisterSingleton<IRegister<WardData>, WardRegister>();
-                builder.RegisterSingleton<WardRegister, WardRegister>();
-                builder.Register<
-                    IDataPipeline<IRegister<WardData>, WardData>,
-                    WardPipeline
-                >();
-                builder.RegisterInitializer<IRegister<WardData>>(x =>
-                {
-                    var pipeline = builder.GetInstance<
-                        IDataPipeline<IRegister<WardData>, WardData>
-                    >();
-                    pipeline.Run(x);
-                });
+                // builder.RegisterSingleton<IRegister<WardData>, WardRegister>();
+                // builder.RegisterSingleton<WardRegister, WardRegister>();
+                // builder.Register<
+                //     IDataPipeline<IRegister<WardData>, WardData>,
+                //     WardPipeline
+                // >();
+                // builder.RegisterInitializer<IRegister<WardData>>(x =>
+                // {
+                //     var pipeline = builder.GetInstance<
+                //         IDataPipeline<IRegister<WardData>, WardData>
+                //     >();
+                //     pipeline.Run(x);
+                // });
             });
 
             var builder = Railhead.GetBuilder();
