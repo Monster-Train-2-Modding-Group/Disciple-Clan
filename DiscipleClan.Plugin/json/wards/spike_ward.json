@@ -147,6 +147,14 @@
       "param_bool": false
     },
     {
+      "id": "SpikeWard20Effect",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "param_upgrade": "@SpikeWard20Upgrade",
+      "param_int_2": 4,
+      "param_str": "@SpikeWard20",
+      "param_bool": false
+    },
+    {
       "id": "SpikeWard5DamageEffect",
       "name": "CardEffectDamage",
       "target_mode": "random_in_room",

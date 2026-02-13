@@ -34,7 +34,7 @@
     {
       "id": "EmberMakerOnHitTrigger",
       "trigger": "on_hit",
-      "descriptions": { "english": "Add [emberboost]." },
+      "descriptions": { "english": "Apply [DiscipleClan.Plugin_emberboost]." },
       "effects": [{ "id": "@EmberMakerAddEmberboostEffect" }]
     }
   ],

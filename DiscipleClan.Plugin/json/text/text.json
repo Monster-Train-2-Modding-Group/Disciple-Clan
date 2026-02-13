@@ -11,7 +11,7 @@
         {
             "key": "CardTraitPyreboost_CardText",
             "texts": {
-                "english": "<b>Pyreboost</b>.",
+                "english": "<b>Pyreboost</b>",
                 "chinese": "法术伤害随圣火攻击提升。"
             }
         },

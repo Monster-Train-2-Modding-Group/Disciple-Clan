@@ -8,7 +8,7 @@
         "chinese": "正时乙"
       },
       "descriptions": {
-        "english": "Deal 5 [damage] to target unit.",
+        "english": "Deal 5 damage.",
         "chinese": "对目标单位造成5[damage]。"
       },
       "cost": 1,
@@ -49,6 +49,9 @@
     {
       "id": "RightTimingBetaOnUnplayedTrigger",
       "trigger": "on_unplayed_positive",
+      "descriptions": {
+        "english": "Increase magic power of all Right Timing Beta by 10."
+      },
       "trigger_effects": [
         {
           "trigger_effect": "CardTriggerEffectBuffSpellDamageAllCardsOfThisType",

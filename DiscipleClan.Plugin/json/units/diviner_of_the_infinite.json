@@ -62,11 +62,17 @@
       },
       "character_art": "@DivinerCharacterArt",
       "size": 3,
-      "health": 50,
-      "attack_damage": 65,
+      "health": 30,
+      "attack_damage": 55,
       "subtypes": [
         "@ChronoSubtype_Eternal",
         "SubtypesData_BannerUnit"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "damage shield",
+          "count": 2
+        }
       ]
     }
   ],
