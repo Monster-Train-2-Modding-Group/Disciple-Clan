@@ -17,16 +17,16 @@
       "class": "@Chrono",
       "card_art": "@FirewallCardArt",
       "targetless": false,
-      "targets_room": true,
+      "targets_room": false,
       "pools": [
         "MegaPool"
       ],
       "effects": [
         {
-          "id": "@FirewallPyreEffect"
+          "id": "@FirewallMonsterEffect"
         },
         {
-          "id": "@FirewallMonsterEffect"
+          "id": "@FirewallPyreEffect"
         }
       ],
       "traits": [

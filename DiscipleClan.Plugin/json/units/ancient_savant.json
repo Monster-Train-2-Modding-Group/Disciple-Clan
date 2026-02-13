@@ -23,7 +23,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Enchants other friendly units in the room with Quick (Ambush)."
+          "english": "Grants [ambush] to other friendly units in the room."
         }
       ]
     }
@@ -58,6 +58,9 @@
     {
       "id": "AncientSavantEnchantTrigger",
       "trigger": "after_spawn_enchant",
+      "descriptions": {
+        "english": "Grants [ambush]."
+      },
       "effects": [
         {
           "id": "@AncientSavantEnchantEffect"
