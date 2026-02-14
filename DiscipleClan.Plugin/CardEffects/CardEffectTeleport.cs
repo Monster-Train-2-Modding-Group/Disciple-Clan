@@ -71,20 +71,13 @@ namespace DiscipleClan.Plugin.CardEffects
                 if (i == currentFloor)
                     continue;
 
+                if (room.GetIsPyreRoom())
+                    continue;
+
                 Team.Type teamType = target.GetTeamType();
                 if (room.GetRemainingSpawnPointCount(teamType) == 0)
                     continue;
-                // Monsters cannot be teleported to the pyre room
-                if (teamType == Team.Type.Monsters && room.GetIsPyreRoom())
-                    continue;
-                // Boss can only move to pyre during Relentless phase
-                if (target.IsOuterTrainBoss() && room.GetIsPyreRoom())
-                {
-                    BossState bossState = target.GetBossState();
-                    if (bossState != null && bossState.GetCurrentAttackPhase() != BossState.AttackPhase.Relentless)
-                        continue;
-                }
-
+                    
                 availableFloors.Add(i);
             }
 

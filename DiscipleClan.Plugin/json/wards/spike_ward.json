@@ -8,7 +8,7 @@
         "chinese": "叉卫"
       },
       "descriptions": {
-        "english": "Affix a Ward: Deals 5 [damage] to a random enemy before combat. ",
+        "english": "Attach a Ward: Deals 5 [damage] to a random enemy before combat.",
         "chinese": "附加守印：战斗前对房间内随机敌人造成5[damage]。"
       },
       "cost": 0,
@@ -18,6 +18,9 @@
       "card_art": "@SpikeWardCardArt",
       "targets_room": true,
       "targetless": true,
+      "traits": [
+        "@SpikeWard5ExhaustTrait"
+      ],
       "effects": [
         {
           "id": "@SpikeWard5Effect"
@@ -46,6 +49,9 @@
       "card_art": "@SpikeWardCardArt",
       "targets_room": true,
       "targetless": true,
+      "traits": [
+        "@SpikeWard10ExhaustTrait"
+      ],
       "effects": [
         {
           "id": "@SpikeWard10Effect"
@@ -74,6 +80,9 @@
       "card_art": "@SpikeWardCardArt",
       "targets_room": true,
       "targetless": true,
+      "traits": [
+        "@SpikeWard20ExhaustTrait"
+      ],
       "effects": [
         {
           "id": "@SpikeWard20Effect"
@@ -86,22 +95,62 @@
       ]
     }
   ],
+  "traits": [
+    {
+      "id": "SpikeWard5ExhaustTrait",
+      "name": "CardTraitExhaustState"
+    },
+    {
+      "id": "SpikeWard10ExhaustTrait",
+      "name": "CardTraitExhaustState"
+    },
+    {
+      "id": "SpikeWard20ExhaustTrait",
+      "name": "CardTraitExhaustState"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "SpikeWard5Upgrade",
+      "room_modifier_upgrades": [
+        "@DiscipleSpikeWard5Modifier"
+      ]
+    },
+    {
+      "id": "SpikeWard10Upgrade",
+      "room_modifier_upgrades": [
+        "@DiscipleSpikeWard10Modifier"
+      ]
+    },
+    {
+      "id": "SpikeWard20Upgrade",
+      "room_modifier_upgrades": [
+        "@DiscipleSpikeWard20Modifier"
+      ]
+    }
+  ],
   "effects": [
     {
       "id": "SpikeWard5Effect",
-      "name": "@CardEffectAddWard",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "param_upgrade": "@SpikeWard5Upgrade",
+      "param_int_2": 4,
       "param_str": "@SpikeWard5",
       "param_bool": false
     },
     {
       "id": "SpikeWard10Effect",
-      "name": "@CardEffectAddWard",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "param_upgrade": "@SpikeWard10Upgrade",
+      "param_int_2": 4,
       "param_str": "@SpikeWard10",
       "param_bool": false
     },
     {
       "id": "SpikeWard20Effect",
-      "name": "@CardEffectAddWard",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "param_upgrade": "@SpikeWard20Upgrade",
+      "param_int_2": 4,
       "param_str": "@SpikeWard20",
       "param_bool": false
     },

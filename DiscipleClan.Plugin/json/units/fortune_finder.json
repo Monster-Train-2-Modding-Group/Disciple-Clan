@@ -12,22 +12,40 @@
       "card_type": "monster",
       "rarity": "common",
       "class": "@Chrono",
-      "pools": ["UnitsAllBanner"],
+      "pools": [
+        "UnitsAllBanner"
+      ],
       "targets_room": true,
-      "effects": [{ "id": "@SpawnFortuneFinderEffect" }],
-      "lore_tooltips": [{ "english": "On Relocate: +20 [gold]." }]
+      "effects": [
+        {
+          "id": "@SpawnFortuneFinderEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "On Relocate: +20 [gold]."
+        }
+      ]
     }
   ],
   "characters": [
     {
       "id": "FortuneFinder",
-      "names": { "english": "Fortune Teller", "chinese": "算命先生" },
+      "names": {
+        "english": "Fortune Teller",
+        "chinese": "算命先生"
+      },
       "character_art": "@FortuneFinderCharacterArt",
       "size": 1,
       "health": 10,
       "attack_damage": 2,
-      "subtypes": ["@ChronoSubtype_Pythian", "SubtypesData_BannerUnit"],
-      "triggers": ["@FortuneFinderOnRelocateTrigger"]
+      "subtypes": [
+        "@ChronoSubtype_Pythian",
+        "SubtypesData_BannerUnit"
+      ],
+      "triggers": [
+        "@FortuneFinderOnRelocateTrigger"
+      ]
     }
   ],
   "character_triggers": [
@@ -38,7 +56,9 @@
         "chinese": "+[effect0.power] [coin]。"
       },
       "trigger": "@OnRelocate",
-      "effects": ["@FortuneFinderOnRelocateEffect" ]
+      "effects": [
+        "@FortuneFinderOnRelocateEffect"
+      ]
     }
   ],
   "effects": [
@@ -56,18 +76,43 @@
     }
   ],
   "sprites": [
-    { "id": "FortuneFinderCardArt", "path": "textures/units/FortuneTellerCharacterArt.png" },
-    { "id": "FortuneFinderCharacterArt", "path": "textures/units/FortuneTellerCharacterArt.png" }
+    {
+      "id": "FortuneFinderCardArt",
+      "path": "textures/units/FortuneTellerCharacterArt.png"
+    },
+    {
+      "id": "FortuneFinderCharacterArt",
+      "path": "textures/units/FortuneTellerCharacterArt.png"
+    }
   ],
   "game_objects": [
-    { "id": "FortuneFinderCardArt", "type": "card_art", "extensions": { "card_art": { "sprite": "@FortuneFinderCardArt" } } },
+    {
+      "id": "FortuneFinderCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@FortuneFinderCardArt"
+        }
+      }
+    },
     {
       "id": "FortuneFinderCharacterArt",
       "type": "character_art",
       "extensions": {
         "character_art": {
           "sprite": "@FortuneFinderCharacterArt",
-          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 0.33, "y": 0.33, "z": 0.33 } }
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 0.2,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.33,
+              "y": 0.33,
+              "z": 0.33
+            }
+          }
         }
       }
     }

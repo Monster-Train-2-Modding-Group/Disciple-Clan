@@ -8,7 +8,7 @@
         "chinese": "过卫"
       },
       "descriptions": {
-        "english": "Add an Overward to a room. Before combat, descend the unit in the back.",
+        "english": "Attach a Ward: After combat, descend the unit in the back.",
         "chinese": "在房间添加越卫。战斗前，后排单位下降一层。"
       },
       "cost": 1,
@@ -25,15 +25,25 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Before combat, descend the unit in the back."
+          "english": "Ward: before combat, descend the unit in the back."
         }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ShifterWardBetaRoomModifierUpgrade",
+      "room_modifier_upgrades": [
+        "@DiscipleShifterWardBetaModifier"
       ]
     }
   ],
   "effects": [
     {
       "id": "ShifterWardBetaAddWardEffect",
-      "name": "@CardEffectAddWard",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "param_upgrade": "@ShifterWardBetaRoomModifierUpgrade",
+      "param_int_2": 4,
       "param_str": "@ShifterWardBeta",
       "param_bool": false
     },
@@ -68,7 +78,7 @@
       "name": "RoomStateAddEffectPostCombatModifier",
       "descriptions": {
         "english": "After combat, descend the unit in the back.",
-        "chinese": "战斗前，后排单位下降一层。"
+        "chinese": "战斗后，后排单位下降一层。"
       },
       "param_effects": [
         {
@@ -85,7 +95,7 @@
         "chinese": "过卫"
       },
       "descriptions": {
-        "english": "After combat, descend the unit in the back.",
+        "english": "When units fight, descend the unit in the back.",
         "chinese": "战斗后，后排单位下降一层。"
       },
       "icon": "@ShifterWardBetaCardArt",

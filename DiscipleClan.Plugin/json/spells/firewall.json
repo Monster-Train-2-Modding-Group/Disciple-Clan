@@ -8,22 +8,25 @@
         "chinese": "火墙"
       },
       "descriptions": {
-        "english": "Apply +[trait0.power] [armor] to the Pyre for each [ember] spent this turn.",
-        "chinese": "为薪火施加+[trait0.power] [armor]。随本回合消耗的[ember]提升。"
+        "english": "Apply +[trait0.power] [armor] to the target creature and pyre for each time this spell is played this battle.",
+        "chinese": "为目标单位和薪火施加[armor] [trait0.power]。随本战本法术使用次数提升。"
       },
       "cost": 0,
       "card_type": "spell",
       "rarity": "common",
       "class": "@Chrono",
       "card_art": "@FirewallCardArt",
-      "targetless": true,
-      "targets_room": true,
+      "targetless": false,
+      "targets_room": false,
       "pools": [
         "MegaPool"
       ],
       "effects": [
         {
-          "id": "@FirewallEffect"
+          "id": "@FirewallMonsterEffect"
+        },
+        {
+          "id": "@FirewallPyreEffect"
         }
       ],
       "traits": [
@@ -31,16 +34,24 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Apply +[trait0.power] [armor] to the Pyre for each [ember] spent this turn."
+          "english": "Apply +[trait0.power] [armor] to the target creature and pyre for each time this spell is played this battle."
         }
       ]
     }
   ],
   "effects": [
     {
-      "id": "FirewallEffect",
+      "id": "FirewallPyreEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "pyre",
+      "param_status_effect": "armor",
+      "param_int": 0,
+      "param_bool": false
+    },
+    {
+      "id": "FirewallMonsterEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "drop_target_character",
       "param_status_effect": "armor",
       "param_int": 0,
       "param_bool": false
@@ -50,8 +61,8 @@
     {
       "id": "FirewallScaling",
       "name": "CardTraitScalingAddStatusEffect",
-      "param_tracked_value": "played_cost",
-      "param_entry_duration": "this_turn",
+      "param_tracked_value": "times_played",
+      "param_entry_duration": "this_battle",
       "param_int": 3
     }
   ],
