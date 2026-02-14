@@ -9,7 +9,7 @@
       },
       "descriptions": {
         "english": "Attach a Ward: <b>Harvest:</b> Allies get +3[attack]/+3[health].",
-        "chinese": "附加守印：<b>收割：</b> 友军获得 +3[attack]/+3[health]。"
+        "chinese": "附加守印：<b>收割：</b> 友方单位获得 +3[attack]，+3[health]。"
       },
       "cost": 1,
       "card_type": "spell",
@@ -83,7 +83,7 @@
       "name": "RoomStateAddEffectOnUnitDeath",
       "descriptions": {
         "english": "<b>Harvest:</b> Allies get +3[attack]/+3[health].",
-        "chinese": "<b>收割：</b> 友军获得 +3[attack]/+3[health]。"
+        "chinese": "<b>收割：</b> 友方单位获得 +3[attack]，+3[health]。"
       },
       "param_effects": [
         {
@@ -101,7 +101,7 @@
       },
       "descriptions": {
         "english": "When units die, give allies +3[attack]/+3[health].",
-        "chinese": "当单位死亡时，友军获得 +3[attack]/+3[health]。"
+        "chinese": "当单位死亡时，友方单位获得 +3[attack]，+3[health]。"
       },
       "icon": "@HaruspexWardBetaCardArt",
       "param_room_modifiers": []

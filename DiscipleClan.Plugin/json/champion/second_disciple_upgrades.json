@@ -6,7 +6,7 @@
       "trigger": "on_status_effect_changed",
       "descriptions": {
         "english": "Give 50% stacks to friendly units in the room.",
-        "chinese": "给房间内友军50%层数。"
+        "chinese": "给房间内友方单位50%层数。"
       },
       "effects": [
         "@DiscipleEchoBasicShareBuffsEffect"
@@ -17,7 +17,7 @@
       "trigger": "on_spawn",
       "descriptions": {
         "english": "Give 100% stacks to friendly units in the room.",
-        "chinese": "给房间内友军100%层数。"
+        "chinese": "给房间内友方单位100%层数。"
       },
       "effects": [
         "@DiscipleEchoPremiumShareBuffsEffect"
@@ -28,7 +28,7 @@
       "trigger": "on_spawn",
       "descriptions": {
         "english": "Give 200% stacks to friendly units in the room.",
-        "chinese": "给房间内友军200%层数。"
+        "chinese": "给房间内友方单位200%层数。"
       },
       "effects": [
         "@DiscipleEchoProShareBuffsEffect"
@@ -190,7 +190,7 @@
       },
       "descriptions": {
         "english": "When spawned: share 1 buff type with friendly units (50% stacks).",
-        "chinese": "入场时：与友军分享1种增益（50%层数）。"
+        "chinese": "入场时：与友方单位分享1种增益（50%层数）。"
       },
       "bonus_damage": 10,
       "bonus_hp": 0,
@@ -207,7 +207,7 @@
       },
       "descriptions": {
         "english": "When spawned: share 2 buff types with friendly units (50% stacks).",
-        "chinese": "入场时：与友军分享2种增益（50%层数）。"
+        "chinese": "入场时：与友方单位分享2种增益（50%层数）。"
       },
       "bonus_damage": 35,
       "bonus_hp": 10,
@@ -224,7 +224,7 @@
       },
       "descriptions": {
         "english": "When spawned: share 3 buff types with friendly units (50% stacks).",
-        "chinese": "入场时：与友军分享3种增益（50%层数）。"
+        "chinese": "入场时：与友方单位分享3种增益（50%层数）。"
       },
       "bonus_damage": 75,
       "bonus_hp": 30,

@@ -40,7 +40,7 @@
       "trigger": "on_unplayed_positive",
       "descriptions": {
         "english": "Reduce [ember] by 1.",
-        "chinese": "减少1[ember]。"
+        "chinese": "费用 -1[ember]。"
       },
       "effects": [
         "@DivinerOfTheInfiniteRetainStateEffect"
