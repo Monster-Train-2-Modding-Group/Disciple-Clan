@@ -23,7 +23,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Post combat: +12 [health] and +1 capacity to self."
+          "english": "End of turn: +10 [attack], +12 [health], and +1 capacity to self. Expands the room's capacity by 1."
         }
       ]
     }
@@ -44,21 +44,20 @@
         "SubtypesData_BannerUnit"
       ],
       "triggers": [
-        "@JellyScholarPostCombatTrigger"
+        "@JellyScholarEndTurnTrigger"
       ]
     }
   ],
   "character_triggers": [
     {
-      "id": "JellyScholarPostCombatTrigger",
-      "trigger": "post_combat",
+      "id": "JellyScholarEndTurnTrigger",
+      "trigger": "end_turn_pre_hand_discard",
       "descriptions": {
-        "english": "Gain +[effect0.upgrade0.bonushp] [health] and +[effect0.upgrade0.bonussize] [capacity]."
+        "english": "Gain +[effect0.upgrade0.bonusdamage] [attack], +[effect0.upgrade0.bonushp] [health], and +[effect0.upgrade0.bonussize] [capacity]. Increase room [capacity] by 1."
       },
       "effects": [
-        {
-          "id": "@JellyScholarGrowEffect"
-        }
+        "@JellyScholarGrowEffect",
+        "@JellyScholarAttachCapacityEffect"
       ]
     }
   ],
@@ -70,17 +69,44 @@
       "param_character": "@JellyScholar"
     },
     {
+      "id": "JellyScholarAttachCapacityEffect",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "target_mode": "room",
+      "param_upgrade": "@JellyScholarRoomCapacityUpgrade",
+      "param_int_2": 1,
+      "param_str": "",
+      "param_bool": false
+    },
+    {
       "id": "JellyScholarGrowEffect",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "name": "CardEffectAddCardUpgradeToUnits",
       "target_mode": "self",
-      "param_upgrade": "@JellyScholarGrowUpgrade"
+      "param_upgrade": "@JellyScholarGrowUpgrade",
+      "param_int_2": 1
     }
   ],
   "upgrades": [
     {
       "id": "JellyScholarGrowUpgrade",
+      "bonus_damage": 5,
       "bonus_hp": 12,
       "bonus_size": 1
+    },
+    {
+      "id": "JellyScholarRoomCapacityUpgrade",
+      "room_modifier_upgrades": [
+        "@JellyScholarCapacityModifier"
+      ]
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "JellyScholarCapacityModifier",
+      "name": "RoomStateCapacityModifier",
+      "descriptions": {
+        "english": "This room has +1 capacity."
+      },
+      "param_int": 1
     }
   ],
   "sprites": [

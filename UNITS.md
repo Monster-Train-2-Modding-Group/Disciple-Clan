@@ -16,7 +16,7 @@ Reference for all units in the mod. Data derived from `units.csv`. For champions
 | Flashfeather | Flashwing | Common | Unit | Starts with [icarian]. When dies: Dazed 2 to last attacker | Seer | untested |
 | Galilizard | Snecko | Uncommon | Unit | Starts with 12 [gravity]. End of turn: ascend 2 floors | Pythian | untested |
 | Fate Behemoth | Diviner of the Infinite | Uncommon | Unit | Retained; -1 cost each turn unplayed | Eternal | untested |
-| Jelly Scholar | JellyScholar | Uncommon | Unit | Post combat: +12 [health] and +1 capacity to self | Eternal | untested |
+| Jelly Scholar | JellyScholar | Uncommon | Unit | End of turn: +10 [attack], +12 [health], +1 capacity to self; expands room capacity by 1 | Eternal | untested |
 | Newton | Newtons | Rare | Unit | Starts with [gravity] | Pythian | untested |
 | Embermaker | EmberMaker | Uncommon | Unit | On hit: add [emberboost] to last attacked | Eternal | untested |
 | Minerva Owl | MinervaOwl | Rare | Unit | Starts with [sweep] and [pyreboost] | Seer | untested |
@@ -30,7 +30,7 @@ Reference for all units in the mod. Data derived from `units.csv`. For champions
 
 - **Pythian** — Fireshaped (On spawn: +3 buff, +2 regen), Fortune Teller (On Relocate: +20 gold), Newton (Starts with gravity), Galilizard (Starts with 12 gravity; end of turn ascend 2)
 - **Seer** — Waxwing (Starts with Icarian; on relocate +5 attack temp to self), Flashfeather (Starts with Icarian; when dies Dazed 2 to last attacker), Minerva Owl (Starts with sweep + pyreboost), Morsowl (Starts with Icarian; room +1 ember; when dies gain 3 ember)
-- **Eternal** — Shimmersnail (Grant Quick to others), Fulgursnail (Enchant with Pyreboost), Cindershell, Embermaker (On hit: emberboost to last attacked), Jelly Scholar (Post combat: +12 health +1 capacity to self), Fate Behemoth (Retained; -1 cost per turn unplayed)
+- **Eternal** — Shimmersnail (Grant Quick to others), Fulgursnail (Enchant with Pyreboost), Cindershell, Embermaker (On hit: emberboost to last attacked), Jelly Scholar (End of turn: +10 attack, +12 health, +1 capacity to self; expands room capacity by 1), Fate Behemoth (Retained; -1 cost per turn unplayed)
 ---
 
 ## Implementation Reference
