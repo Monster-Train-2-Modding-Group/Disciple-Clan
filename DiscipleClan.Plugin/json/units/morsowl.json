@@ -20,11 +20,6 @@
         {
           "id": "@SpawnMorsowlEffect"
         }
-      ],
-      "lore_tooltips": [
-        {
-          "english": "Starts with [icarian]. Room: +1 [ember]. When this unit dies: gain 3 [ember]."
-        }
       ]
     }
   ],
