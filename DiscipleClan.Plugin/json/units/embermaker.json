@@ -33,7 +33,7 @@
   "character_triggers": [
     {
       "id": "EmberMakerOnHitTrigger",
-      "trigger": "on_hit",
+      "trigger": "on_attacking",
       "descriptions": { "english": "Apply [DiscipleClan.Plugin_emberboost].", "chinese": "对被攻击的单位施加[DiscipleClan.Plugin_emberboost] 1。" },
       "effects": [{ "id": "@EmberMakerAddEmberboostEffect" }]
     }
