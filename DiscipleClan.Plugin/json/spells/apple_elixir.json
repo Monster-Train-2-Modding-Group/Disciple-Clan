@@ -8,7 +8,7 @@
         "chinese": "苹果药"
       },
       "descriptions": {
-        "english": "Apply [effect0.power] [DiscipleClan.Plugin_gravity] to target unit.",
+        "english": "Apply [effect0.status0.power] [DiscipleClan.Plugin_gravity] to target unit.",
         "chinese": "获得[DiscipleClan.Plugin_gravity] [effect0.status0.power]。"
       },
       "cost": 1,
@@ -49,8 +49,12 @@
       "target_mode": "drop_target_character",
       "target_team": "both",
       "target_ignore_bosses": true,
-      "param_int": 3,
-      "param_status_effect": "@gravity"
+      "param_status_effects": [
+        {
+          "status": "@gravity",
+          "count": 3
+        }
+      ]
     }
   ],
   "sprites": [

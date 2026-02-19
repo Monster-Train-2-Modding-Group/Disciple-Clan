@@ -45,8 +45,12 @@
       "name": "CardEffectAddStatusEffect",
       "target_mode": "drop_target_character",
       "target_team": "both",
-      "param_status_effect": "sweep",
-      "param_int": 1
+      "param_status_effects": [
+        {
+          "status": "sweep",
+          "count": 1
+        }
+      ]
     },
     {
       "id": "EpochTomeHalveEffect",

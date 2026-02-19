@@ -44,16 +44,24 @@
       "id": "FirewallPyreEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "pyre",
-      "param_status_effect": "armor",
-      "param_int": 0,
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 0
+        }
+      ],
       "param_bool": false
     },
     {
       "id": "FirewallMonsterEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "drop_target_character",
-      "param_status_effect": "armor",
-      "param_int": 0,
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 0
+        }
+      ],
       "param_bool": false
     }
   ],

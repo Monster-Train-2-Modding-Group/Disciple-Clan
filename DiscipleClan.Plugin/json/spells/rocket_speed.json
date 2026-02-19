@@ -40,7 +40,12 @@
       "id": "RocketSpeedSpellEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "pyre",
-      "param_status_effect": "quick",
+      "param_status_effects": [
+        {
+          "status": "ambush",
+          "count": 1
+        }
+      ],
       "param_int": 1
     }
   ],

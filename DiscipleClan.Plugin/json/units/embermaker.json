@@ -49,8 +49,12 @@
       "id": "EmberMakerAddEmberboostEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "last_attacked_character",
-      "param_status_effect": "@emberboost",
-      "param_int": 1
+      "param_status_effects": [
+        {
+          "status": "@emberboost",
+          "count": 1
+        }
+      ]
     }
   ],
   "sprites": [
