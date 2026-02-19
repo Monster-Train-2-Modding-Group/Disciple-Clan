@@ -61,8 +61,11 @@
           "draft": {
             "draft_pool": "@ChronoBannerPool",
             "class_type": "main|subclass|nonclass",
-            "draft_options_count": 3,
-            "rarity_floor": "common"
+            "draft_options_count": 2,
+            "rarity_floor": "uncommon",
+            "ignore_relic_rarity_override": true,
+            "is_service_merchant_reward": true
+
           }
         }
       ]
