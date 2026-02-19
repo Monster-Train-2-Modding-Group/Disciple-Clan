@@ -12,7 +12,7 @@
         },
         "cost": 1,
         "card_type": "spell",
-        "rarity": "common",
+        "rarity": "starter",
         "class": "@Chrono",
         "card_art": "@PatternShiftCardArt",
         "targets_room": true,
