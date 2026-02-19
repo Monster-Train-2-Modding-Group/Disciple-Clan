@@ -1,0 +1,200 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "character_triggers": [
+    {
+      "id": "DiscipleWardmasterBasicAddWardTrigger",
+      "trigger": "pre_combat",
+      "descriptions": {
+        "english": "Apply a Spike Ward to this room.",
+        "chinese": "在本房间附加叉卫。"
+      },
+      "hide_visual_and_ignore_silence": true,
+      "effects": ["@DiscipleWardmasterBasicAddWardEffect"]
+    },
+    {
+      "id": "DiscipleWardmasterPremiumAddWardTrigger",
+      "trigger": "pre_combat",
+      "descriptions": {
+        "english": "Apply a Spike Ward to this room.",
+        "chinese": "在本房间附加叉卫。"
+      },
+      "hide_visual_and_ignore_silence": true,
+      "effects": ["@DiscipleWardmasterPremiumAddWardEffect"]
+    },
+    {
+      "id": "DiscipleWardmasterProAddWardTrigger",
+      "trigger": "pre_combat",
+      "descriptions": {
+        "english": "Apply a Spike Ward to this room.",
+        "chinese": "在本房间附加叉卫。"
+      },
+      "hide_visual_and_ignore_silence": true,
+      "effects": ["@DiscipleWardmasterProAddWardEffect"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "DiscipleWardmasterBasicAddWardEffect",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "target_mode": "room",
+      "param_upgrade": "@SpikeWard5Upgrade",
+      "param_int_2": 4,
+      "param_str": "@SpikeWard5",
+      "param_bool": false
+    },
+    {
+      "id": "DiscipleWardmasterPremiumAddWardEffect",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "target_mode": "room",
+      "param_upgrade": "@SpikeWard10Upgrade",
+      "param_int_2": 4,
+      "param_str": "@SpikeWard10",
+      "param_bool": false
+    },
+    {
+      "id": "DiscipleWardmasterProAddWardEffect",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "target_mode": "room",
+      "param_upgrade": "@SpikeWard20Upgrade",
+      "param_int_2": 4,
+      "param_str": "@SpikeWard20",
+      "param_bool": false
+    },
+    {
+      "id": "SpikeWard5DamageEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "random_in_room",
+      "target_team": "heroes",
+      "param_int": 5
+    },
+    {
+      "id": "SpikeWard10DamageEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "random_in_room",
+      "target_team": "heroes",
+      "param_int": 10
+    },
+    {
+      "id": "SpikeWard20DamageEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "random_in_room",
+      "target_team": "heroes",
+      "param_int": 20
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "DiscipleWardmasterBasic",
+      "titles": { "english": "Wardmaster", "chinese": "卫之主" },
+      "bonus_damage": 0,
+      "bonus_hp": 10,
+      "trigger_upgrades": ["@DiscipleWardmasterBasicAddWardTrigger"],
+      "show_description_on_cards": true,
+      "use_upgrade_highlight_tags": true
+    },
+    {
+      "id": "DiscipleWardmasterPremium",
+      "titles": { "english": "Wardmaster II", "chinese": "卫之主 II" },
+      "bonus_damage": 0,
+      "bonus_hp": 30,
+      "trigger_upgrades": ["@DiscipleWardmasterPremiumAddWardTrigger"],
+      "show_description_on_cards": true,
+      "use_upgrade_highlight_tags": true
+    },
+    {
+      "id": "DiscipleWardmasterPro",
+      "titles": { "english": "Wardmaster III", "chinese": "卫之主 III" },
+      "bonus_damage": 0,
+      "bonus_hp": 60,
+      "trigger_upgrades": ["@DiscipleWardmasterProAddWardTrigger"],
+      "show_description_on_cards": true,
+      "use_upgrade_highlight_tags": true
+    },
+    {
+      "id": "SpikeWard5Upgrade",
+      "room_modifier_upgrades": ["@DiscipleSpikeWard5Modifier"]
+    },
+    {
+      "id": "SpikeWard10Upgrade",
+      "room_modifier_upgrades": ["@DiscipleSpikeWard10Modifier"]
+    },
+    {
+      "id": "SpikeWard20Upgrade",
+      "room_modifier_upgrades": ["@DiscipleSpikeWard20Modifier"]
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "DiscipleSpikeWard5Modifier",
+      "name": "RoomStateAddEffectPreCombatModifier",
+      "descriptions": {
+        "english": "Deal 5 [damage] to a random enemy when combat starts.",
+        "chinese": "战斗开始时对随机敌人造成5[damage]。"
+      },
+      "param_effects": [{ "id": "@SpikeWard5DamageEffect" }]
+    },
+    {
+      "id": "DiscipleSpikeWard10Modifier",
+      "name": "RoomStateAddEffectPreCombatModifier",
+      "descriptions": {
+        "english": "Deal 10 [damage] to a random enemy when combat starts.",
+        "chinese": "战斗开始时对随机敌人造成10[damage]。"
+      },
+      "param_effects": [{ "id": "@SpikeWard10DamageEffect" }]
+    },
+    {
+      "id": "DiscipleSpikeWard20Modifier",
+      "name": "RoomStateAddEffectPreCombatModifier",
+      "descriptions": {
+        "english": "Deal 20 [damage] to a random enemy when combat starts.",
+        "chinese": "战斗开始时对随机敌人造成20[damage]。"
+      },
+      "param_effects": [{ "id": "@SpikeWard20DamageEffect" }]
+    }
+  ],
+  "wards": [
+    {
+      "id": "SpikeWard5",
+      "title": { "english": "Spike Ward", "chinese": "叉卫" },
+      "descriptions": {
+        "english": "Deal 5 [damage] to a random enemy in the room.",
+        "chinese": "对房间内随机敌人造成5[damage]。"
+      },
+      "icon": "@SpikeWardCardArt",
+      "param_room_modifiers": ["@DiscipleSpikeWard5Modifier"]
+    },
+    {
+      "id": "SpikeWard10",
+      "title": { "english": "Spike Ward", "chinese": "叉卫" },
+      "descriptions": {
+        "english": "Deal 10 [damage] to a random enemy in the room.",
+        "chinese": "对房间内随机敌人造成10[damage]。"
+      },
+      "icon": "@SpikeWardCardArt",
+      "param_room_modifiers": ["@DiscipleSpikeWard10Modifier"]
+    },
+    {
+      "id": "SpikeWard20",
+      "title": { "english": "Spike Ward", "chinese": "叉卫" },
+      "descriptions": {
+        "english": "Deal 20 [damage] to a random enemy in the room.",
+        "chinese": "对房间内随机敌人造成20[damage]。"
+      },
+      "icon": "@SpikeWardCardArt",
+      "param_room_modifiers": ["@DiscipleSpikeWard20Modifier"]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SpikeWardCardArt",
+      "path": "textures/spells/Pyrespike.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SpikeWardCardArt",
+      "type": "card_art",
+      "extensions": { "card_art": { "sprite": "@SpikeWardCardArt" } }
+    }
+  ]
+}
