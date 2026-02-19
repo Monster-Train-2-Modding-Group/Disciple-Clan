@@ -5,7 +5,7 @@
       "id": "SpawnSnecko",
       "names": {
         "english": "Galilizard",
-        "chinese": "加利蜥"
+        "chinese": "加利蜥蜴"
       },
       "card_art": "@SneckoCardArt",
       "cost": 2,
@@ -33,7 +33,7 @@
       "id": "Snecko",
       "names": {
         "english": "Galilizard",
-        "chinese": "加利蜥"
+        "chinese": "加利蜥蜴"
       },
       "character_art": "@SneckoCharacterArt",
       "size": 3,
@@ -59,7 +59,8 @@
       "id": "SneckoEndTurnTrigger",
       "trigger": "end_turn_pre_hand_discard",
       "descriptions": {
-        "english": "Ascend to the top floor."
+        "english": "Ascend to the top floor.",
+        "chinese": "[ascend]两次。"
       },
       "effects": [
         {

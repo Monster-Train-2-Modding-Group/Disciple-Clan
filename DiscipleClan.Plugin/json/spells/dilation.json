@@ -5,11 +5,11 @@
       "id": "Dilation",
       "names": {
         "english": "Dilation",
-        "chinese": "扩张"
+        "chinese": "膨胀"
       },
       "descriptions": {
-        "english": "Apply +[effect0.upgrade.bonus_hp] [health] and +[effect0.upgrade.bonus_size] capacity to target unit. Scales with [ember] spent this battle.",
-        "chinese": "对目标单位施加+8[health]和+1容量（临时）。消耗所有剩余[ember]。本回合消耗的[ember]越多，效果越强。"
+        "english": "Apply +[effect0.upgrade.bonushp] [health] and +[effect0.upgrade.bonussize] capacity to target unit. Scales with [ember] spent this battle.",
+        "chinese": "获得 +[effect0.upgrade.bonussize][x][capacity]，+[effect0.upgrade.bonushp][x][health]。"
       },
       "cost": 0,
       "cost_type": "x",

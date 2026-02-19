@@ -5,7 +5,7 @@
       "id": "SpawnWaxwing",
       "names": {
         "english": "Waxwing",
-        "chinese": "蜡翼"
+        "chinese": "蜡翅"
       },
       "card_art": "@WaxwingCardArt",
       "cost": 1,
@@ -21,7 +21,7 @@
   "characters": [
     {
       "id": "Waxwing",
-      "names": { "english": "Waxwing", "chinese": "蜡翼" },
+      "names": { "english": "Waxwing", "chinese": "蜡翅" },
       "character_art": "@WaxwingCharacterArt",
       "size": 1,
       "health": 3,
@@ -36,7 +36,7 @@
       "id": "WaxwingOnRelocateTrigger",
       "descriptions": {
         "english": "+5 [attack].",
-        "chinese": "本回合+5[attack]（临时）。"
+        "chinese": "+5[attack]。"
       },
       "trigger": "@OnRelocate",
       "effects": [{ "id": "@WaxwingOnRelocateEffect" }]

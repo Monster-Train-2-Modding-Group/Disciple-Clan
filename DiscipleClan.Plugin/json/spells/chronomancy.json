@@ -5,11 +5,11 @@
       "id": "Chronomancy",
       "names": {
         "english": "Chronomancy",
-        "chinese": "时间术"
+        "chinese": "时间魔法"
       },
       "descriptions": {
-        "english": "Unplayable. Units you play gain Ambush 1.",
-        "chinese": "无法打出。你打出的单位获得1层先攻。"
+        "english": "Unplayable. Units you play gain [quick].",
+        "chinese": "在手牌时本回合打出的单位获得[quick]。"
       },
       "cost": 0,
       "card_type": "spell",

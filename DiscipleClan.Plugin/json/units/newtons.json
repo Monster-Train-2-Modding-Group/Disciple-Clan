@@ -59,7 +59,8 @@
       "id": "NewtonRelocateTrigger",
       "trigger": "@OnRelocate",
       "descriptions": {
-        "english": "Get +[effect0.upgrade.bonus_damage][attack] and +[effect0.upgrade.bonus_hp][health]."
+        "english": "Get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+        "chinese": "+[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
       },
       "effects": [
         "@NewTonRelocateUpgradeEffect"

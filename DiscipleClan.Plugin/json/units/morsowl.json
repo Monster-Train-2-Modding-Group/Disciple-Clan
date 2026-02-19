@@ -5,7 +5,7 @@
       "id": "SpawnMorsowl",
       "names": {
         "english": "Morsowl",
-        "chinese": "莫索猫头鹰"
+        "chinese": "莫尔索"
       },
       "card_art": "@MorsowlCardArt",
       "cost": 1,
@@ -28,7 +28,7 @@
       "id": "Morsowl",
       "names": {
         "english": "Morsowl",
-        "chinese": "莫索猫头鹰"
+        "chinese": "莫尔索"
       },
       "character_art": "@MorsowlCharacterArt",
       "size": 1,
@@ -54,7 +54,8 @@
       "id": "MorsowlOnDeathTrigger",
       "trigger": "on_death",
       "descriptions": {
-        "english": "Gain [effect0.power] [ember]."
+        "english": "Gain [effect0.power] [ember].",
+        "chinese": "获得 [effect0.power][ember]。"
       },
       "effects": [
         {

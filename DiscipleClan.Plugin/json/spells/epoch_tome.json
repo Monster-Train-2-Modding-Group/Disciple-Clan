@@ -5,11 +5,11 @@
       "id": "EpochTomeSpell",
       "names": {
         "english": "Epoch Tome",
-        "chinese": "纪元之书"
+        "chinese": "地平线之书"
       },
       "descriptions": {
         "english": "Apply 1 [sweep] to target unit. Halve their [attack].",
-        "chinese": "对目标单位施加1层[横扫]。其[attack]减半。[exhaust]。"
+        "chinese": "获得[sweep]。<br>[attack]减少一半。"
       },
       "cost": 2,
       "card_type": "spell",
@@ -45,8 +45,12 @@
       "name": "CardEffectAddStatusEffect",
       "target_mode": "drop_target_character",
       "target_team": "both",
-      "param_status_effect": "sweep",
-      "param_int": 1
+      "param_status_effects": [
+        {
+          "status": "sweep",
+          "count": 1
+        }
+      ]
     },
     {
       "id": "EpochTomeHalveEffect",

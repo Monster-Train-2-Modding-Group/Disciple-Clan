@@ -4,10 +4,10 @@
     {
       "id": "FreeTime",
       "type": "collectable",
-      "names": { "english": "Free Time", "chinese": "闲暇" },
+      "names": { "english": "Free Time", "chinese": "空闲时间" },
       "descriptions": {
         "english": "Spell cards cost 1 less [ember] and gain [consume].",
-        "chinese": "法术牌消耗减少1[余烬]并获得[消耗]。"
+        "chinese": "所有法术费用 -1[ember]并获得[consume]。"
       },
       "icon": "@FreeTimeIcon",
       "icon_small": "@FreeTimeIcon",

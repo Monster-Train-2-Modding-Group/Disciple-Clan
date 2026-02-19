@@ -5,11 +5,11 @@
       "id": "PyreSpikeSpell",
       "names": {
         "english": "Pyre Spike",
-        "chinese": "圣火尖刺"
+        "chinese": "薪火尖刺"
       },
       "descriptions": {
         "english": "Add +[trait0.power] [armor] and +[trait1.power][attack] to the Pyre for each [ember] spent this battle.",
-        "chinese": "为圣火添加+[trait0.power][护甲]和+[trait1.power][攻击]。随本战[余烬]消耗提升。[exhaust]。"
+        "chinese": "使你的薪火获得 +[trait1.power][x][attack] 与 [trait0.power][x] [armor]。"
       },
       "cost": 0,
       "cost_type": "x",
@@ -47,8 +47,12 @@
       "id": "PyreSpikeAddPyreStatusEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "pyre",
-      "param_status_effect": "armor",
-      "param_int": 0
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 0
+        }
+      ]
     },
     {
       "id": "PyreSpikeBuffDamageEffect",
@@ -65,7 +69,12 @@
       "param_entry_duration": "this_battle",
       "param_use_scaling_params": true,
       "param_int": 2,
-      "param_status_effect": "armor"
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 0
+        }
+      ]
     },
     {
       "id": "PyreSpikeScalingBuff",

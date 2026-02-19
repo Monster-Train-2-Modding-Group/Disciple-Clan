@@ -5,7 +5,7 @@
       "id": "SpawnFlashwing",
       "names": {
         "english": "Flashfeather",
-        "chinese": "闪羽"
+        "chinese": "闪光羽毛"
       },
       "card_art": "@FlashwingCardArt",
       "cost": 1,
@@ -33,7 +33,7 @@
       "id": "Flashwing",
       "names": {
         "english": "Flashfeather",
-        "chinese": "闪羽"
+        "chinese": "闪光羽毛"
       },
       "character_art": "@FlashwingCharacterArt",
       "size": 1,
@@ -59,7 +59,8 @@
       "id": "FlashwingOnDeathTrigger",
       "trigger": "on_death",
       "descriptions": {
-        "english": "Apply [effect0.status0.power] [dazed] to slayer."
+        "english": "Apply [effect0.status0.power] [dazed] to slayer.",
+        "chinese": "对最后攻击的敌方单位施加[dazed] [effect0.status0.power]。"
       },
       "effects": [
         "@FlashwingDazedLastAttackerEffect"

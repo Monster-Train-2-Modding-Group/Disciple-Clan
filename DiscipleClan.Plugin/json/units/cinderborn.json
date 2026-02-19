@@ -5,7 +5,7 @@
       "id": "SpawnCinderborn",
       "names": {
         "english": "Cindershell",
-        "chinese": "灰壳"
+        "chinese": "煤渣坚壳"
       },
       "card_art": "@CinderbornCardArt",
       "cost": 1,
@@ -33,7 +33,7 @@
       "id": "Cinderborn",
       "names": {
         "english": "Cindershell",
-        "chinese": "灰壳"
+        "chinese": "煤渣坚壳"
       },
       "character_art": "@CinderbornCharacterArt",
       "size": 2,
@@ -52,7 +52,7 @@
       "trigger": "@OnGainEmber",
       "descriptions": {
         "english": "Gain +2 [attack].",
-        "chinese": "获得+2[attack]。"
+        "chinese": "+2[attack]。"
       },
       "effects": [{ "id": "@CinderbornGainAttackEffect" }]
     }

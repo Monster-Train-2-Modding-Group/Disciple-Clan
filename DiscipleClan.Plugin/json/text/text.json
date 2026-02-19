@@ -5,21 +5,21 @@
             "key": "CardTraitPyreboost",
             "texts": {
                 "english": "<b>Pyreboost</b>",
-                "chinese": "圣火强化"
+                "chinese": "薪火协同"
             }
         },
         {
             "key": "CardTraitPyreboost_CardText",
             "texts": {
                 "english": "<b>Pyreboost</b>",
-                "chinese": "法术伤害随圣火攻击提升。"
+                "chinese": "法术增加等同于薪火[attack]的伤害。"
             }
         },
         {
             "key": "CardTraitPyreboost_TooltipText",
             "texts": {
                 "english": "Spell damage scales with Pyre Attack.",
-                "chinese": "法术伤害随圣火攻击提升。"
+                "chinese": "增加等同于薪火[attack]的伤害。"
             }
         }
     ],
@@ -28,7 +28,7 @@
             "key": "CardTraitPyreboost_CardText",
             "texts": {
                 "english": "Spell damage scales with Pyre Attack.",
-                "chinese": "法术伤害随圣火攻击提升。"
+                "chinese": "法术增加等同于薪火[attack]的伤害。"
             }
         }
     ]

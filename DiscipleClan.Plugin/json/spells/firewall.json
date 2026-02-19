@@ -9,7 +9,7 @@
       },
       "descriptions": {
         "english": "Apply +[trait0.power] [armor] to the target creature and pyre for each time this spell is played this battle.",
-        "chinese": "为目标单位和圣火施加+[trait0.power] [护甲]。随本战本法术使用次数提升。"
+        "chinese": "为目标单位和薪火施加[armor] [trait0.power]。随本战本法术使用次数提升。"
       },
       "cost": 0,
       "card_type": "spell",
@@ -44,16 +44,24 @@
       "id": "FirewallPyreEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "pyre",
-      "param_status_effect": "armor",
-      "param_int": 0,
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 0
+        }
+      ],
       "param_bool": false
     },
     {
       "id": "FirewallMonsterEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "drop_target_character",
-      "param_status_effect": "armor",
-      "param_int": 0,
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 0
+        }
+      ],
       "param_bool": false
     }
   ],

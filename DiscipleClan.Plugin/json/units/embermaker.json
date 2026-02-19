@@ -5,7 +5,7 @@
       "id": "SpawnEmberMaker",
       "names": {
         "english": "Embermaker",
-        "chinese": "余烬匠"
+        "chinese": "余烬螨"
       },
       "card_art": "@EmberMakerCardArt",
       "cost": 1,
@@ -21,7 +21,7 @@
   "characters": [
     {
       "id": "EmberMaker",
-      "names": { "english": "Embermaker", "chinese": "余烬匠" },
+      "names": { "english": "Embermaker", "chinese": "余烬螨" },
       "character_art": "@EmberMakerCharacterArt",
       "size": 2,
       "health": 20,
@@ -34,7 +34,7 @@
     {
       "id": "EmberMakerOnHitTrigger",
       "trigger": "on_hit",
-      "descriptions": { "english": "Apply [DiscipleClan.Plugin_emberboost]." },
+      "descriptions": { "english": "Apply [DiscipleClan.Plugin_emberboost].", "chinese": "对被攻击的单位施加[DiscipleClan.Plugin_emberboost] 1。" },
       "effects": [{ "id": "@EmberMakerAddEmberboostEffect" }]
     }
   ],
@@ -49,8 +49,12 @@
       "id": "EmberMakerAddEmberboostEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "last_attacked_character",
-      "param_status_effect": "@emberboost",
-      "param_int": 1
+      "param_status_effects": [
+        {
+          "status": "@emberboost",
+          "count": 1
+        }
+      ]
     }
   ],
   "sprites": [

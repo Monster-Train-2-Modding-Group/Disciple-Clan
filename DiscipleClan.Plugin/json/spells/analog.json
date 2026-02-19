@@ -5,11 +5,11 @@
       "id": "Analog",
       "names": {
         "english": "Analog",
-        "chinese": "模拟"
+        "chinese": "类似模拟"
       },
       "descriptions": {
         "english": "Apply [effect0.power] [DiscipleClan.Plugin_Chronolock] to target unit.",
-        "chinese": "对目标单位施加[effect0.power]层[时间锁定]。"
+        "chinese": "对目标单位施加[effect0.power]层[DiscipleClan.Plugin_Chronolock]。"
       },
       "cost": 1,
       "card_type": "spell",

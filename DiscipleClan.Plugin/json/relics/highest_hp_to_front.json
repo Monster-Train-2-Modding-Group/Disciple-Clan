@@ -4,8 +4,8 @@
     {
       "id": "HighestHPToFront",
       "type": "collectable",
-      "names": { "english": "Highest HP To Front", "chinese": "最高血上前" },
-      "descriptions": { "english": "Highest HP unit moves to front. (Placeholder: bump on turn end.)", "chinese": "最高血量单位移至前排。（占位：回合末 bump。）" },
+      "names": { "english": "Highest HP To Front", "chinese": "无名神器" },
+      "descriptions": { "english": "Highest HP unit moves to front. (Placeholder: bump on turn end.)", "chinese": "你的回合结束时，每层生命值最高的单位会移动到该层前排。（占位：回合末 bump。）" },
       "icon": "@HighestHPToFrontIcon",
       "icon_small": "@HighestHPToFrontIcon",
       "lore_tooltips": [{ "english": "Highest HP unit moves to front." }],

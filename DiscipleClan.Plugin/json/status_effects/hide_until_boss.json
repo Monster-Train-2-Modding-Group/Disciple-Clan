@@ -6,23 +6,23 @@
       "class_name": "@StatusEffectHideUntilBossState",
       "names": {
         "english": "Hide Until Boss",
-        "chinese": "遇王前隐匿"
+        "chinese": "无动于衷"
       },
       "card_tooltips": {
         "english": "This unit cannot be targeted until the boss wave.",
-        "chinese": "该单位在首领波次前无法被选为目标。"
+        "chinese": "单位在首领加入战斗之前不会被攻击。"
       },
       "character_tooltips": {
         "english": "Cannot be targeted until the boss wave.",
-        "chinese": "首领波次前无法被选为目标。"
+        "chinese": "在首领加入战斗之前不会被攻击。"
       },
       "notifications": {
         "english": "Hide Until Boss",
-        "chinese": "遇王前隐匿"
+        "chinese": "无动于衷"
       },
       "replacement_texts": {
         "english": "<b>Hide Until Boss</b>",
-        "chinese": "<b>遇王前隐匿</b>"
+        "chinese": "<b>无动于衷</b>"
       },
       "display_category": "persistent",
       "is_stackable": false,

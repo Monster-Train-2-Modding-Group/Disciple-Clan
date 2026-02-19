@@ -4,11 +4,11 @@
         "id": "PatternShift",
         "names": {
             "english": "Pattern Shift",
-            "chinese": "形态转换"
+            "chinese": "转变模式"
         },
         "descriptions": {
             "english": "Teleport a unit to a random floor.",
-            "chinese": "将单位随机传送到另一层。"
+            "chinese": "将一个单位<b>传送</b>到随机一层。"
         },
         "cost": 1,
         "card_type": "spell",

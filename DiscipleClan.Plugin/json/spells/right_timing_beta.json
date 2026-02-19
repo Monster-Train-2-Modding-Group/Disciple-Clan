@@ -5,11 +5,11 @@
       "id": "RightTimingBeta",
       "names": {
         "english": "Right Timing Beta",
-        "chinese": "正时乙"
+        "chinese": "同步"
       },
       "descriptions": {
         "english": "Deal 5 damage.",
-        "chinese": "对目标单位造成5[damage]。"
+        "chinese": "造成 [effect0.power] 点伤害。"
       },
       "cost": 1,
       "card_type": "spell",
@@ -50,7 +50,8 @@
       "id": "RightTimingBetaOnUnplayedTrigger",
       "trigger": "on_unplayed_positive",
       "descriptions": {
-        "english": "Increase magic power of all Right Timing Beta by 10."
+        "english": "Increase magic power of all Right Timing Beta by 10.",
+        "chinese": "所有的<b>同步</b>获得 +10 [magicpower]。"
       },
       "trigger_effects": [
         {

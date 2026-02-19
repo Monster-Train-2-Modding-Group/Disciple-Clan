@@ -9,11 +9,11 @@
       "prefab": "@ChronoBannerMapIcon",
       "titles": {
         "english": "Arcadian Banner",
-        "chinese": "阿卡迪亚战旗"
+        "chinese": "桃源战旗"
       },
       "descriptions": {
         "english": "Hire an Arcadian Unit",
-        "chinese": "获得一个阿卡迪亚单位。"
+        "chinese": "获得一个桃源单位。"
       },
       "pools": [
         "RandomChosenMainClassUnit",
@@ -61,8 +61,11 @@
           "draft": {
             "draft_pool": "@ChronoBannerPool",
             "class_type": "main|subclass|nonclass",
-            "draft_options_count": 3,
-            "rarity_floor": "common"
+            "draft_options_count": 2,
+            "rarity_floor": "uncommon",
+            "ignore_relic_rarity_override": true,
+            "is_service_merchant_reward": true
+
           }
         }
       ]

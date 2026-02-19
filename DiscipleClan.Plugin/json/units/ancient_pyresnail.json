@@ -5,7 +5,7 @@
       "id": "SpawnAncientPyreSnail",
       "names": {
         "english": "Ancient Pyresnail",
-        "chinese": "古余烬蜗"
+        "chinese": "闪电蜗牛"
       },
       "card_art": "@AncientPyreSnailCardArt",
       "cost": 1,
@@ -33,7 +33,7 @@
       "id": "AncientPyreSnail",
       "names": {
         "english": "Ancient Pyresnail",
-        "chinese": "古余烬蜗"
+        "chinese": "闪电蜗牛"
       },
       "character_art": "@AncientPyreSnailCharacterArt",
       "size": 5,
@@ -59,7 +59,8 @@
       "id": "AncientPyreSnailEnchantTrigger",
       "trigger": "after_spawn_enchant",
       "descriptions": {
-        "english": "Grants [DiscipleClan.Plugin_pyreboost]"
+        "english": "Grants [DiscipleClan.Plugin_pyreboost]",
+        "chinese": "获得[DiscipleClan.Plugin_pyreboost] [effect0.status0.power]。"
       },
       "effects": [
         {

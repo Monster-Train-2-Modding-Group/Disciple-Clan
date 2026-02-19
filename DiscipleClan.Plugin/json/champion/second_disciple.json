@@ -3,7 +3,7 @@
   "cards": [
     {
       "id": "SpawnSecondDisciple",
-      "names": { "english": "Glaukopis", "chinese": "灰眸" },
+      "names": { "english": "Glaukopis", "chinese": "白头鹰" },
       "card_art": "@SecondDiscipleCardArt",
       "cost": 0,
       "card_type": "monster",
@@ -19,7 +19,7 @@
   "characters": [
     {
       "id": "SecondDisciple",
-      "names": { "english": "Glaukopis", "chinese": "灰眸" },
+      "names": { "english": "Glaukopis", "chinese": "白头鹰" },
       "character_art": "@SecondDiscipleCharacterArt",
       "size": 2,
       "health": 10,

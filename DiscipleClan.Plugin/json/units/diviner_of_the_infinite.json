@@ -5,7 +5,7 @@
       "id": "SpawnDivineroftheInfinite",
       "names": {
         "english": "Diviner of the Infinite",
-        "chinese": "无限占卜师"
+        "chinese": "命运之巨兽"
       },
       "card_art": "@DivinerCardArt",
       "cost": 5,
@@ -40,7 +40,7 @@
       "trigger": "on_unplayed_positive",
       "descriptions": {
         "english": "Reduce [ember] by 1.",
-        "chinese": "减少1[ember]。"
+        "chinese": "费用 -1[ember]。"
       },
       "effects": [
         "@DivinerOfTheInfiniteRetainStateEffect"
@@ -58,7 +58,7 @@
       "id": "DivineroftheInfinite",
       "names": {
         "english": "Diviner of the Infinite",
-        "chinese": "命运巨兽"
+        "chinese": "命运之巨兽"
       },
       "character_art": "@DivinerCharacterArt",
       "size": 3,

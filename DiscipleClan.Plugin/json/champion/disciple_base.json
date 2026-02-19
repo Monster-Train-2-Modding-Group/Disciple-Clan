@@ -5,7 +5,7 @@
       "id": "SpawnDisciple",
       "names": {
         "english": "Disciple",
-        "chinese": "门徒"
+        "chinese": "信徒"
       },
       "card_art": "@DiscipleCardArt",
       "cost": 0,
@@ -32,7 +32,7 @@
       "id": "Disciple",
       "names": {
         "english": "Disciple",
-        "chinese": "门徒"
+        "chinese": "信徒"
       },
       "character_art": "@DiscipleCharacterArt",
       "size": 2,

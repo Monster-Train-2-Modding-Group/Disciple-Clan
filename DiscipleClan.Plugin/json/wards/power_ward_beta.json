@@ -5,11 +5,11 @@
       "id": "PowerWardBetaCard",
       "names": {
         "english": "Vigor Ward",
-        "chinese": "活力守卫"
+        "chinese": "元卫"
       },
       "descriptions": {
         "english": "Attach a Ward: Allies get +5 [damage].",
-        "chinese": "附加守印：友军获得 +5 [damage]。"
+        "chinese": "附加守印：友方单位获得 +5 [damage]。"
       },
       "cost": 1,
       "card_type": "spell",
@@ -71,7 +71,7 @@
       "name": "@RoomStateFriendlyDamageAdditionModifier",
       "descriptions": {
         "english": "Allies get +5 [damage].",
-        "chinese": "友军获得 +5 [damage]。"
+        "chinese": "友方单位获得 +5 [damage]。"
       },
       "param_int": 5
     }
@@ -81,11 +81,11 @@
       "id": "PowerWardBeta",
       "title": {
         "english": "Vigor Ward",
-        "chinese": "活力守卫"
+        "chinese": "元卫"
       },
       "descriptions": {
         "english": "Friendly damage in this room increased by 5.",
-        "chinese": "友军伤害提高5。"
+        "chinese": "友方单位伤害提高5。"
       },
       "icon": "@PowerWardBetaCardArt",
       "param_room_modifiers": [

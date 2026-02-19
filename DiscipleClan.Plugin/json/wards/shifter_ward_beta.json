@@ -5,7 +5,7 @@
       "id": "ShifterWardBetaCard",
       "names": {
         "english": "Overward",
-        "chinese": "越卫"
+        "chinese": "过卫"
       },
       "descriptions": {
         "english": "Attach a Ward: After combat, descend the unit in the back.",
@@ -92,7 +92,7 @@
       "id": "ShifterWardBeta",
       "title": {
         "english": "Overward",
-        "chinese": "越卫"
+        "chinese": "过卫"
       },
       "descriptions": {
         "english": "When units fight, descend the unit in the back.",

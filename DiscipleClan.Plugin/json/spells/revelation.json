@@ -3,8 +3,8 @@
   "cards": [
     {
       "id": "Revelation",
-      "names": { "english": "Revelation", "chinese": "启示" },
-      "descriptions": { "english": "Look at the top 4 cards of your draw pile. Add a copy of 1 to your hand. [exhaust].", "chinese": "查看牌堆顶4张牌，将其中1张的复制加入手牌。[exhaust]。" },
+      "names": { "english": "Revelation", "chinese": "启示录" },
+      "descriptions": { "english": "Look at the top 4 cards of your draw pile. Add a copy of 1 to your hand. [exhaust].", "chinese": "查看抽牌堆顶端的 4 张牌并选择其中一张牌，将一张这张卡牌复制品加入手牌。" },
       "cost": 1,
       "card_type": "spell",
       "rarity": "uncommon",

@@ -4,8 +4,8 @@
     {
       "id": "FirstBuffExtraStack",
       "type": "collectable",
-      "names": { "english": "First Buff Extra Stack", "chinese": "首增益额外层" },
-      "descriptions": { "english": "First buff each combat gets +1 stack. (Placeholder: status multiplier.)", "chinese": "每战首个增益+1层。（占位：状态倍率。）" },
+      "names": { "english": "First Buff Extra Stack", "chinese": "状态强化" },
+      "descriptions": { "english": "First buff each combat gets +1 stack. (Placeholder: status multiplier.)", "chinese": "每场战斗友方单位获得的第一个[buff]会额外增加1层。（占位：状态倍率。）" },
       "icon": "@FirstBuffExtraStackIcon",
       "icon_small": "@FirstBuffExtraStackIcon",
       "lore_tooltips": [{ "english": "First buff each combat +1 stack." }],
