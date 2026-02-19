@@ -3,56 +3,39 @@
   "cards": [
     {
       "id": "SpawnFireshaped",
-      "names": {
-        "english": "Fireshaped",
-        "chinese": "火之形"
-      },
+      "names": { "english": "Fireshaped", "chinese": "火之形" },
       "card_art": "@FireshapedCardArt",
       "cost": 0,
       "card_type": "monster",
       "rarity": "uncommon",
       "class": "@Chrono",
-      "pools": [
-        "UnitsAllBanner"
-      ],
+      "pools": ["UnitsAllBanner"],
       "targets_room": true,
-      "effects": [
-        {
-          "id": "@SpawnFireshapedEffect"
-        }
-      ],
-      "lore_tooltips": [
-        {
-          "english": "Starts with +3 [buff] and +2 [emberboost]."
-        }
-      ]
+      "effects": [{ "id": "@SpawnFireshapedEffect" }]
     }
   ],
   "characters": [
     {
       "id": "Fireshaped",
-      "names": {
-        "english": "Fireshaped",
-        "chinese": "火之形"
-      },
+      "names": { "english": "Fireshaped", "chinese": "火之形" },
       "character_art": "@FireshapedCharacterArt",
       "size": 1,
       "health": 2,
       "attack_damage": 6,
-      "subtypes": [
-        "@ChronoSubtype_Pythian",
-        "SubtypesData_BannerUnit"
-      ],
+      "subtypes": ["@ChronoSubtype_Pythian", "SubtypesData_BannerUnit"],
       "starting_status_effects": [
-        {
-          "status": "buff",
-          "count": 3
-        },
-        {
-          "status": "@emberboost",
-          "count": 2
-        }
-      ]
+        { "status": "buff", "count": 3 },
+        { "status": "@emberboost", "count": 2 }
+      ],
+      "triggers": ["@FireshapedOnRelocateTrigger"]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "FireshapedOnRelocateTrigger",
+      "trigger": "@OnRelocate",
+      "descriptions": { "english": "Gain 1 [emberboost]." },
+      "effects": [{ "id": "@FireshapedOnRelocateEffect" }]
     }
   ],
   "effects": [
@@ -61,27 +44,23 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@Fireshaped"
+    },
+    {
+      "id": "FireshapedOnRelocateEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [{ "count": 1, "status": "@emberboost" }]
     }
   ],
   "sprites": [
-    {
-      "id": "FireshapedCardArt",
-      "path": "textures/units/FireshapedCharacterArt.png"
-    },
-    {
-      "id": "FireshapedCharacterArt",
-      "path": "textures/units/FireshapedCharacterArt.png"
-    }
+    { "id": "FireshapedCardArt", "path": "textures/units/FireshapedCharacterArt.png" },
+    { "id": "FireshapedCharacterArt", "path": "textures/units/FireshapedCharacterArt.png" }
   ],
   "game_objects": [
     {
       "id": "FireshapedCardArt",
       "type": "card_art",
-      "extensions": {
-        "card_art": {
-          "sprite": "@FireshapedCardArt"
-        }
-      }
+      "extensions": { "card_art": { "sprite": "@FireshapedCardArt" } }
     },
     {
       "id": "FireshapedCharacterArt",
@@ -89,18 +68,7 @@
       "extensions": {
         "character_art": {
           "sprite": "@FireshapedCharacterArt",
-          "transform": {
-            "position": {
-              "x": 0,
-              "y": 0.2,
-              "z": 0
-            },
-            "scale": {
-              "x": 0.33,
-              "y": 0.33,
-              "z": 0.33
-            }
-          }
+          "transform": { "position": { "x": 0, "y": 0.2, "z": 0 }, "scale": { "x": 0.33, "y": 0.33, "z": 0.33 } }
         }
       }
     }
