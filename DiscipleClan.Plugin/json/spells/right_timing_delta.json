@@ -59,9 +59,8 @@
     {
       "id": "RightTimingDeltaScaling",
       "name": "CardTraitScalingAddDamagePerCard",
-      "param_tracked_value": "type_in_deck",
+      "param_tracked_value": "num_specific_cards_in_deck",
       "param_entry_duration": "this_battle",
-      "param_card_type": "any",
       "param_card": "@RightTimingDelta",
       "param_use_scaling_params": true,
       "param_int": 15
