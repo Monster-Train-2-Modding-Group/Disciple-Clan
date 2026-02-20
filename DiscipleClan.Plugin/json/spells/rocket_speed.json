@@ -17,6 +17,7 @@
       "class": "@Chrono",
       "card_art": "@RocketSpeedSpellCardArt",
       "targetless": true,
+      "targets_room": true,
       "pools": [
         "MegaPool"
       ],

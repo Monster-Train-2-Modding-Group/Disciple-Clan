@@ -13,7 +13,7 @@
       "rarity": "common",
       "class": "@Chrono",
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [

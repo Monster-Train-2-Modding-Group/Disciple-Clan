@@ -59,8 +59,8 @@
       "id": "AncientSavantEnchantTrigger",
       "trigger": "after_spawn_enchant",
       "descriptions": {
-        "english": "Grants [quick].",
-        "chinese": "获得[quick]。"
+        "english": "Grants [ambush].",
+        "chinese": "获得[ambush]。"
       },
       "effects": [
         {
