@@ -4,7 +4,7 @@
     {
       "id": "HaruspexWardBetaSpell",
       "names": { "english": "Haruspex Ward Beta", "chinese": "占卜守卫乙" },
-      "descriptions": { "english": "Apply [effect0.power] [damage] to [front_in_room]. Ward spell.", "chinese": "对[front_in_room]造成[effect0.power][damage]。守卫法术。" },
+      "descriptions": { "english": "Apply [effect0.power] damage to [front_in_room]. Ward spell.", "chinese": "对[front_in_room]造成 [effect0.power] 点伤害。守卫法术。" },
       "cost": 1,
       "card_type": "spell",
       "rarity": "uncommon",

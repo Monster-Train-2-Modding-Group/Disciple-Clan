@@ -118,7 +118,7 @@ Firewall doesn't work, no valid target.
 - **Champion Art** – Scaled down class character art (DiscipleClassDisplay) in `class/chrono.json` from 3.6 to 1.2.
 - **Palm Reading** – Removed duplicate “[consume]” from description (trait still applies); lore now explains consume. Removed “Prophecy” (card doesn’t have it).
 - **Pattern Shift** – Description reworded to “Teleport a unit to a random floor.”; lore “Random floor (excluding current).”.
-- **Pyre Spike** – Description fixed from broken placeholders to “Deal 12 [damage] to the front enemy in the room.”.
+- **Pyre Spike** – Description fixed from broken placeholders to “Deal 12 damage to the front enemy in the room.”.
 - **Analog** – Description simplified to “Draw 1 card.”; lore_tooltip added for [chronolock] (class mechanic).
 - **Ancient Pyresnail, Fortune Teller, Wax Pinion** – Lore/descriptions clarified; all three are [ward] (ChronoSubtype_Ward in subtypes). Ancient Pyresnail character art scale set to 0.33 in game_objects.
 - **Firewall** – Set `targetless: false` and `targets_pyre: true` so Pyre can be selected as target; effect already `target_mode: pyre`.
@@ -151,8 +151,8 @@ Flashfire doesn't do anything.
 **Resolved in JSON/code:**
 - **Gravity (Loads 2):** Relic `gravity_on_ascend.json` now uses `"status": "@gravity"` so the gravity status effect resolves.
 - **OnRelocate InvalidCastException:** `OnRelocatePatch.GetCombatManager` now uses reflection for `GetCoreManagers().GetCombatManager()` instead of casting to `ICoreGameManagers`.
-- **Flashfire:** Description set to "Deal 15 [damage] to the front enemy in the room."; effect given `target_team: "heroes"` so it targets enemies.
-- **Horizon Tome (Epoch Tome):** Spell description set to "Deal 10 [damage] to all enemies in the front. Reduce their [attack] by half."; unit character_art scale set to 0.7.
+- **Flashfire:** Description set to "Deal 15 damage to the front enemy in the room."; effect given `target_team: "heroes"` so it targets enemies.
+- **Horizon Tome (Epoch Tome):** Spell description set to "Deal 10 damage to all enemies in the front. Reduce their [attack] by half."; unit character_art scale set to 0.7.
 - **Disciple / Horizon Tome scale:** Disciple character_art scale reduced to 0.7 in `disciple_base.json`; Epoch Tome unit character_art scale set to 0.7.
 - **Shifter:** Shifter Basic no longer gives +10 attack (bonus_damage 0); Shifter trigger descriptions hidden on card via `hide_visual_and_ignore_silence: true` to avoid double "Relocate" text.
 - **Wardmaster:** Descriptions already present in `disciple_upgrades.json`; if still missing in-game, may need framework/trigger wiring (Ward effect not implemented yet).
@@ -206,7 +206,7 @@ Palm Reading still demands a target, with no valid target.
 - **Wardmaster double text** – Added explicit `descriptions` to each Wardmaster upgrade (one line each); set `hide_visual_and_ignore_silence: true` on Wardmaster character_triggers so trigger wording does not show twice on the card.
 - **Pattern Shift** – Marked `unbalanced` in `spells.csv`.
 - **Triggers in description** – Removed trigger wording from card lore for Waxwing and Fortune Teller (lore no longer duplicates trigger text).
-- **Flashfire (unit)** – Added lore_tooltips: "[ward]. Deal 15 [damage] to the front enemy in the room when played."
+- **Flashfire (unit)** – Added lore_tooltips: "[ward]. Deal 15 damage to the front enemy in the room when played."
 - **Jelly Scholar** – Added lore "Resolve: +12 [health] and +1 capacity to this room."; added subtype `@ChronoSubtype_Seer` for type line.
 - **Waxwing** – Removed `@ChronoSubtype_Ward` from subtypes; character art scale set to 0.33 (1/3).
 

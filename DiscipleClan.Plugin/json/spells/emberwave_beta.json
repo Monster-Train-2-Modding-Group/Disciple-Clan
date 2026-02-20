@@ -4,7 +4,7 @@
     {
       "id": "EmberwaveBeta",
       "names": { "english": "Emberwave Beta", "chinese": "余烬波" },
-      "descriptions": { "english": "Deal [effect0.power] [damage] to [front_in_room]. Scales with [ember].", "chinese": "每有一点[ember]，造成 [effect0.power] 点伤害。" },
+      "descriptions": { "english": "Deal [effect0.power] damage to [front_in_room]. Scales with [ember].", "chinese": "每有一点[ember]，造成 [effect0.power] 点伤害。" },
       "cost": 1,
       "card_type": "spell",
       "rarity": "uncommon",

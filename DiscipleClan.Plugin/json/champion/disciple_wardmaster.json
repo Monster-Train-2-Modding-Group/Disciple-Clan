@@ -128,8 +128,8 @@
       "id": "DiscipleSpikeWard5Modifier",
       "name": "RoomStateAddEffectPreCombatModifier",
       "descriptions": {
-        "english": "Deal 5 [damage] to a random enemy when combat starts.",
-        "chinese": "战斗开始时对随机敌人造成5[damage]。"
+        "english": "Deal 5 damage to a random enemy when combat starts.",
+        "chinese": "战斗开始时对随机敌人造成5伤害。"
       },
       "param_effects": [{ "id": "@SpikeWard5DamageEffect" }]
     },
@@ -137,8 +137,8 @@
       "id": "DiscipleSpikeWard10Modifier",
       "name": "RoomStateAddEffectPreCombatModifier",
       "descriptions": {
-        "english": "Deal 10 [damage] to a random enemy when combat starts.",
-        "chinese": "战斗开始时对随机敌人造成10[damage]。"
+        "english": "Deal 10 damage to a random enemy when combat starts.",
+        "chinese": "战斗开始时对随机敌人造成10伤害。"
       },
       "param_effects": [{ "id": "@SpikeWard10DamageEffect" }]
     },
@@ -146,8 +146,8 @@
       "id": "DiscipleSpikeWard20Modifier",
       "name": "RoomStateAddEffectPreCombatModifier",
       "descriptions": {
-        "english": "Deal 20 [damage] to a random enemy when combat starts.",
-        "chinese": "战斗开始时对随机敌人造成20[damage]。"
+        "english": "Deal 20 damage to a random enemy when combat starts.",
+        "chinese": "战斗开始时对随机敌人造成20伤害。"
       },
       "param_effects": [{ "id": "@SpikeWard20DamageEffect" }]
     }
@@ -157,8 +157,8 @@
       "id": "SpikeWard5",
       "title": { "english": "Spike Ward", "chinese": "叉卫" },
       "descriptions": {
-        "english": "Deal 5 [damage] to a random enemy in the room.",
-        "chinese": "对房间内随机敌人造成5[damage]。"
+        "english": "Deal 5 damage to a random enemy in the room.",
+        "chinese": "对房间内随机敌人造成5伤害。"
       },
       "icon": "@SpikeWardCardArt",
       "param_room_modifiers": ["@DiscipleSpikeWard5Modifier"]
@@ -167,8 +167,8 @@
       "id": "SpikeWard10",
       "title": { "english": "Spike Ward", "chinese": "叉卫" },
       "descriptions": {
-        "english": "Deal 10 [damage] to a random enemy in the room.",
-        "chinese": "对房间内随机敌人造成10[damage]。"
+        "english": "Deal 10 damage to a random enemy in the room.",
+        "chinese": "对房间内随机敌人造成10伤害。"
       },
       "icon": "@SpikeWardCardArt",
       "param_room_modifiers": ["@DiscipleSpikeWard10Modifier"]
@@ -177,8 +177,8 @@
       "id": "SpikeWard20",
       "title": { "english": "Spike Ward", "chinese": "叉卫" },
       "descriptions": {
-        "english": "Deal 20 [damage] to a random enemy in the room.",
-        "chinese": "对房间内随机敌人造成20[damage]。"
+        "english": "Deal 20 damage to a random enemy in the room.",
+        "chinese": "对房间内随机敌人造成20伤害。"
       },
       "icon": "@SpikeWardCardArt",
       "param_room_modifiers": ["@DiscipleSpikeWard20Modifier"]

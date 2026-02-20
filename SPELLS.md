@@ -26,8 +26,8 @@ Reference for all spells in the mod. Data derived from `spells.csv`.
 | Time Stamp | TimeStamp | 3 | Rare | Consume | TimeStamp effect + sacrifice | untested |
 | Pattern Shift | PatternShift | 0 | Starter | — | Teleport unit to random floor | unbalanced |
 | Apple Elixir | AppleElixir | 1 | Common | — | Add 3 [gravity] to target unit | untested |
-| Right Timing Beta | RightTimingBeta | 1 | Common | — | Deal 5 [damage] to target; On unplayed: +10 spell damage next time | untested |
-| Right Timing Delta | RightTimingDelta | 2 | Rare | — | Deal 15 [damage] to target; On kill: add copy; scales with copies in deck | untested |
+| Right Timing Beta | RightTimingBeta | 1 | Common | — | Deal 5 damage to target; On unplayed: +10 spell damage next time | untested |
+| Right Timing Delta | RightTimingDelta | 2 | Rare | — | Deal 15 damage to target; On kill: add copy; scales with copies in deck | untested |
 | Wax Pinion | WaxPinion | 0 | Common | — | Ascend target unit 4 floors (friendly or enemy) | untested |
 
 ---
