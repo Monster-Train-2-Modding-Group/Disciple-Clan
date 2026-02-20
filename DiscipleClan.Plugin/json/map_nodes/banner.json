@@ -62,7 +62,7 @@
             "draft_pool": "@ChronoBannerPool",
             "class_type": "main|subclass|nonclass",
             "draft_options_count": 2,
-            "rarity_floor": "common"
+            "rarity_floor": "uncommon"
           }
         }
       ]
