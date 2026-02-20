@@ -34,7 +34,7 @@
     {
       "id": "FireshapedOnRelocateTrigger",
       "trigger": "@OnRelocate",
-      "descriptions": { "english": "Gain 1 [emberboost]." },
+      "descriptions": { "english": "Gain 1 [DiscipleClan.Plugin_emberboost]." },
       "effects": [{ "id": "@FireshapedOnRelocateEffect" }]
     }
   ],
